@@ -1,0 +1,9 @@
+.orange { 
+  color:#FF6600; 
+}
+.flottantegauche { 
+  float: left; margin-right: 5px; padding-right: 5px; 
+}
+.flottantedroite { 
+  float: right; margin-left: 5px; padding-left: 5px; 
+}

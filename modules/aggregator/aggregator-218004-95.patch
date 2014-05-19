@@ -1,0 +1,425 @@
+diff --git a/modules/aggregator/aggregator.admin.inc b/modules/aggregator/aggregator.admin.inc
+index 9f92a67..8b817c0 100644
+--- a/modules/aggregator/aggregator.admin.inc
++++ b/modules/aggregator/aggregator.admin.inc
+@@ -77,7 +77,7 @@ function aggregator_form_feed($form, &$form_state, stdClass $feed = NULL) {
+   $form['url'] = array('#type' => 'textfield',
+     '#title' => t('URL'),
+     '#default_value' => isset($feed->url) ? $feed->url : '',
+-    '#maxlength' => 255,
++    '#maxlength' => NULL,
+     '#description' => t('The fully-qualified URL of the feed.'),
+     '#required' => TRUE,
+   );
+diff --git a/modules/aggregator/aggregator.install b/modules/aggregator/aggregator.install
+index f19d7de..b84556a 100644
+--- a/modules/aggregator/aggregator.install
++++ b/modules/aggregator/aggregator.install
+@@ -130,10 +130,8 @@ function aggregator_schema() {
+         'description' => 'Title of the feed.',
+       ),
+       'url' => array(
+-        'type' => 'varchar',
+-        'length' => 255,
++        'type' => 'text',
+         'not null' => TRUE,
+-        'default' => '',
+         'description' => 'URL to the feed.',
+       ),
+       'refresh' => array(
+@@ -155,10 +153,8 @@ function aggregator_schema() {
+         'description' => 'Time when this feed was queued for refresh, 0 if not queued.',
+       ),
+       'link' => array(
+-        'type' => 'varchar',
+-        'length' => 255,
++        'type' => 'text',
+         'not null' => TRUE,
+-        'default' => '',
+         'description' => 'The parent website of the feed; comes from the <link> element in the feed.',
+       ),
+       'description' => array(
+@@ -202,13 +198,13 @@ function aggregator_schema() {
+       )
+     ),
+     'primary key' => array('fid'),
+-    'unique keys' => array(
+-      'url'  => array('url'),
+-      'title' => array('title'),
+-    ),
+     'indexes' => array(
++      'url'  => array(array('url', 255)),
+       'queued' => array('queued'),
+     ),
++    'unique keys' => array(
++      'title' => array('title'),
++    ),
+   );
+ 
+   $schema['aggregator_item'] = array(
+@@ -233,10 +229,8 @@ function aggregator_schema() {
+         'description' => 'Title of the feed item.',
+       ),
+       'link' => array(
+-        'type' => 'varchar',
+-        'length' => 255,
++        'type' => 'text',
+         'not null' => TRUE,
+-        'default' => '',
+         'description' => 'Link to the feed item.',
+       ),
+       'author' => array(
+@@ -258,9 +252,8 @@ function aggregator_schema() {
+         'description' => 'Posted date of the feed item, as a Unix timestamp.',
+       ),
+       'guid' => array(
+-        'type' => 'varchar',
+-        'length' => 255,
+-        'not null' => FALSE,
++        'type' => 'text',
++        'not null' => TRUE,
+         'description' => 'Unique identifier for the feed item.',
+       )
+     ),
+@@ -280,6 +273,11 @@ function aggregator_schema() {
+ }
+ 
+ /**
++ * @addtogroup updates-6.x-to-7.x
++ * @{
++ */
++
++/**
+  * Add hash column to aggregator_feed table.
+  */
+ function aggregator_update_7000() {
+@@ -306,3 +304,27 @@ function aggregator_update_7002() {
+   db_add_index('aggregator_feed', 'queued', array('queued'));
+ }
+ 
++/**
++ * @} End of "addtogroup updates-6.x-to-7.x"
++ */
++
++/**
++ * @addtogroup updates-7.x-extra
++ * @{
++ */
++
++/**
++ * Increase the length of {aggregator_feed}.url.
++ */
++function aggregator_update_7003() {
++  db_drop_unique_key('aggregator_feed', 'url');
++  db_change_field('aggregator_feed', 'url', 'url', array('type' => 'text', 'not null' => TRUE, 'description' => 'URL to the feed.'));
++  db_change_field('aggregator_feed', 'link', 'link', array('type' => 'text', 'not null' => TRUE, 'description' => 'The parent website of the feed; comes from the <link> element in the feed.'));
++  db_change_field('aggregator_item', 'link', 'link', array('type' => 'text', 'not null' => TRUE, 'description' => 'Link to the feed item.'));
++  db_change_field('aggregator_item', 'guid', 'guid', array('type' => 'text', 'not null' => TRUE, 'description' => 'Unique identifier for the feed item.'));
++  db_add_index('aggregator_feed', 'url', array(array('url', 255)));
++}
++
++/**
++ * @} End of "addtogroup updates-7.x-extra"
++ */
+diff --git a/modules/aggregator/aggregator.module b/modules/aggregator/aggregator.module
+index 686f424..93457c6 100644
+--- a/modules/aggregator/aggregator.module
++++ b/modules/aggregator/aggregator.module
+@@ -534,6 +534,7 @@ function aggregator_save_feed($edit) {
+         'url' => $edit['url'],
+         'refresh' => $edit['refresh'],
+         'block' => $edit['block'],
++        'link' => '',
+         'description' => '',
+         'image' => '',
+       ))
+@@ -568,15 +569,13 @@ function aggregator_remove($feed) {
+   // Call hook_aggregator_remove() on all modules.
+   module_invoke_all('aggregator_remove', $feed);
+   // Reset feed.
+-  db_merge('aggregator_feed')
+-    ->key(array('fid' => $feed->fid))
++  db_update('aggregator_feed')
++    ->condition('fid', $feed->fid)
+     ->fields(array(
+       'checked' => 0,
+       'hash' => '',
+       'etag' => '',
+       'modified' => 0,
+-      'description' => $feed->description,
+-      'image' => $feed->image,
+     ))
+     ->execute();
+ }
+diff --git a/modules/aggregator/aggregator.test b/modules/aggregator/aggregator.test
+index bd7dd5f..24205fc 100644
+--- a/modules/aggregator/aggregator.test
++++ b/modules/aggregator/aggregator.test
+@@ -350,6 +350,35 @@ class AddFeedTestCase extends AggregatorTestCase {
+     // Delete feed.
+     $this->deleteFeed($feed);
+   }
++
++  /**
++   * Tests feeds with very long URLs.
++   */
++  function testAddLongFeed() {
++    // Create a feed with a URL of > 255 characters.
++    $long_url = "https://www.google.com/search?ix=heb&sourceid=chrome&ie=UTF-8&q=angie+byron#sclient=psy-ab&hl=en&safe=off&source=hp&q=angie+byron&pbx=1&oq=angie+byron&aq=f&aqi=&aql=&gs_sm=3&gs_upl=0l0l0l10534l0l0l0l0l0l0l0l0ll0l0&bav=on.2,or.r_gc.r_pw.r_cp.,cf.osb&fp=a70b6b1f0abe28d8&biw=1629&bih=889&ix=heb";
++    $feed = $this->createFeed($long_url);
++
++    // Create a second feed of > 255 characters, where the only difference is
++    // after the 255th character.
++    $long_url_2 = "https://www.google.com/search?ix=heb&sourceid=chrome&ie=UTF-8&q=angie+byron#sclient=psy-ab&hl=en&safe=off&source=hp&q=angie+byron&pbx=1&oq=angie+byron&aq=f&aqi=&aql=&gs_sm=3&gs_upl=0l0l0l10534l0l0l0l0l0l0l0l0ll0l0&bav=on.2,or.r_gc.r_pw.r_cp.,cf.osb&fp=a70b6b1f0abe28d8&biw=1629&bih=889";
++    $feed_2 = $this->createFeed($long_url_2);
++
++    // Check feed data.
++    $this->assertTrue($this->uniqueFeed($feed->title, $feed->url), 'The first long URL feed is unique.');
++    $this->assertTrue($this->uniqueFeed($feed_2->title, $feed_2->url), 'The second long URL feed is unique.');
++
++    // Check feed source.
++    $this->drupalGet('aggregator/sources/' . $feed->fid);
++    $this->assertResponse(200, 'Long URL feed source exists.');
++    $this->assertText($feed->title, 'Page title');
++    $this->drupalGet('aggregator/sources/' . $feed->fid . '/categorize');
++    $this->assertResponse(200, 'Long URL feed categorization page exists.');
++
++    // Delete feeds.
++    $this->deleteFeed($feed);
++    $this->deleteFeed($feed_2);
++  }
+ }
+ 
+ class CategorizeFeedTestCase extends AggregatorTestCase {
+diff --git a/modules/simpletest/simpletest.info b/modules/simpletest/simpletest.info
+index b0bf9b2..5583c2f 100644
+--- a/modules/simpletest/simpletest.info
++++ b/modules/simpletest/simpletest.info
+@@ -40,7 +40,6 @@ files[] = tests/update.test
+ files[] = tests/xmlrpc.test
+ files[] = tests/upgrade/upgrade.test
+ files[] = tests/upgrade/upgrade.comment.test
+-files[] = tests/upgrade/update.field.test
+ files[] = tests/upgrade/upgrade.filter.test
+ files[] = tests/upgrade/upgrade.forum.test
+ files[] = tests/upgrade/upgrade.locale.test
+@@ -49,7 +48,9 @@ files[] = tests/upgrade/upgrade.node.test
+ files[] = tests/upgrade/upgrade.taxonomy.test
+ files[] = tests/upgrade/upgrade.trigger.test
+ files[] = tests/upgrade/upgrade.translatable.test
+-files[] = tests/upgrade/update.trigger.test
+ files[] = tests/upgrade/upgrade.upload.test
+-files[] = tests/upgrade/update.user.test
+ files[] = tests/upgrade/upgrade.user.test
++files[] = tests/upgrade/update.aggregator.test
++files[] = tests/upgrade/update.trigger.test
++files[] = tests/upgrade/update.field.test
++files[] = tests/upgrade/update.user.test
+diff --git a/modules/simpletest/tests/upgrade/drupal-7.aggregator.database.php b/modules/simpletest/tests/upgrade/drupal-7.aggregator.database.php
+new file mode 100644
+index 0000000..00ea7d2
+--- /dev/null
++++ b/modules/simpletest/tests/upgrade/drupal-7.aggregator.database.php
+@@ -0,0 +1,149 @@
++<?php
++/**
++ * @file
++ * Test content for the aggregator update path.
++ */
++
++db_insert('aggregator_feed')->fields(array(
++  'fid',
++  'title',
++  'url',
++  'refresh',
++  'checked',
++  'queued',
++  'link',
++  'description',
++  'image',
++  'hash',
++  'etag',
++  'modified',
++  'block',
++))
++  ->values(array(
++  'fid' => '1',
++  'title' => 'Drupal commit log',
++  'url' => 'http://drupal.org/commitlog/feed',
++  'refresh' => '3600',
++  'checked' => '1347209523',
++  'queued' => '0',
++  'link' => 'http://drupal.org/versioncontrol/garbage/path',
++  'description' => '',
++  'image' => '',
++  'hash' => '84f57ae5bffa7fd56942a6293be91244d8551cd18204a7c7de6a17065ea4d54d',
++  'etag' => '"1347206975"',
++  'modified' => '1347206975',
++  'block' => '5',
++))
++  ->execute();
++
++db_insert('aggregator_item')->fields(array(
++  'iid',
++  'fid',
++  'title',
++  'link',
++  'author',
++  'description',
++  'timestamp',
++  'guid',
++))
++  ->values(array(
++  'iid' => '1',
++  'fid' => '1',
++  'title' => 'Domain Access: Commit b904022 on 7.x-2.x authored by bforchhammer, committed by agentrickard',
++  'link' => 'http://drupal.org/commitlog/commit/2%2C410/b90402243b4a9dee0d2e2c4a729dcb2f58dc53c0',
++  'author' => 'bforchhammer',
++  'description' => "<div class=\"view view-commitlog-commit-items view-id-commitlog_commit_items view-display-id-block_1 view-dom-id-10\">\n    \n  \n  \n      <div class=\"view-content\">\n        <div class=\"views-row views-row-1 views-row-odd views-row-first\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/project/domain.git/blob/b90402243b4a9dee0d2e2c4a729dcb2f58dc53c0:/domain_source/domain_source.info\">/domain_source/domain_source.info</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">1 addition & 1 deletion</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"minus\">-</span><span class=\"no-op\"> </span><span class=\"no-op\"> </span><span class=\"no-op\"> </span><span class=\"no-op\"> </span><span class=\"no-op\"> </span></span></span>\n  </div>\n  </div>\n  <div class=\"views-row views-row-2 views-row-even views-row-last\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/project/domain.git/blob/b90402243b4a9dee0d2e2c4a729dcb2f58dc53c0:/domain_source/domain_source.views.inc\">/domain_source/domain_source.views.inc</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">13 additions & 1 deletion</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"minus\">-</span></span></span>\n  </div>\n  </div>\n    </div>\n  \n  \n  \n  \n  \n  \n</div>\n<pre>Patch #1685658 by bforchhammer. Better handling of current domain for Domain Source.\n</pre>",
++  'timestamp' => '1347206044',
++  'guid' => 'VCS Operation 3936918 at http://drupal.org',
++))
++  ->values(array(
++  'iid' => '2',
++  'fid' => '1',
++  'title' => 'Video: Commit b0b7ff0 on 7.x-2.x by Jorrit',
++  'link' => 'http://drupal.org/commitlog/commit/846/b0b7ff08fed89c76454aa54627cc219361365d7b',
++  'author' => 'Jorrit',
++  'description' => "<div class=\"view view-commitlog-commit-items view-id-commitlog_commit_items view-display-id-block_1 view-dom-id-9\">\n    \n  \n  \n      <div class=\"view-content\">\n        <div class=\"views-row views-row-1 views-row-odd views-row-first\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/project/video.git/blob/b0b7ff08fed89c76454aa54627cc219361365d7b:/libraries/phpvideotoolkit/phpvideotoolkit.php5.php\">/libraries/phpvideotoolkit/phpvideotoolkit.php5.php</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">5 additions & 5 deletions</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"minus\">-</span><span class=\"minus\">-</span><span class=\"minus\">-</span><span class=\"no-op\"> </span></span></span>\n  </div>\n  </div>\n  <div class=\"views-row views-row-2 views-row-even\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/project/video.git/blob/b0b7ff08fed89c76454aa54627cc219361365d7b:/tests/TranscoderAbstractionFactoryFfmpeg.test\">/tests/TranscoderAbstractionFactoryFfmpeg.test</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">21 additions & 7 deletions</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"minus\">-</span><span class=\"minus\">-</span></span></span>\n  </div>\n  </div>\n  <div class=\"views-row views-row-3 views-row-odd views-row-last\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/project/video.git/blob/b0b7ff08fed89c76454aa54627cc219361365d7b:/transcoders/TranscoderAbstractionFactoryFfmpeg.inc\">/transcoders/TranscoderAbstractionFactoryFfmpeg.inc</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">31 additions & 22 deletions</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"minus\">-</span><span class=\"minus\">-</span><span class=\"minus\">-</span></span></span>\n  </div>\n  </div>\n    </div>\n  \n  \n  \n  \n  \n  \n</div>\n<pre>Issue #1492296 by Jorrit: Added support for avconv binaries instead of FFmpeg.\n</pre>",
++  'timestamp' => '1347206397',
++  'guid' => 'VCS Operation 3936924 at http://drupal.org',
++))
++  ->values(array(
++  'iid' => '3',
++  'fid' => '1',
++  'title' => 'Remove Login Tabs: Commit 6e1eb5a on 7.x-1.x by highrockmedia',
++  'link' => 'http://drupal.org/commitlog/commit/41%2C610/6e1eb5a4a952db3264e7696e840ac3d797f4b477',
++  'author' => 'highrockmedia',
++  'description' => "<div class=\"view view-commitlog-commit-items view-id-commitlog_commit_items view-display-id-block_1 view-dom-id-8\">\n    \n  \n  \n      <div class=\"view-content\">\n        <div class=\"views-row views-row-1 views-row-odd views-row-first views-row-last\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/sandbox/highrockmedia/1702096.git/blob/6e1eb5a4a952db3264e7696e840ac3d797f4b477:/readme.txt\">/readme.txt</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">10 additions & 2 deletions</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"minus\">-</span></span></span>\n  </div>\n  </div>\n    </div>\n  \n  \n  \n  \n  \n  \n</div>\n<pre>Updating readme\n</pre>",
++  'timestamp' => '1347206401',
++  'guid' => 'VCS Operation 3936920 at http://drupal.org',
++))
++  ->values(array(
++  'iid' => '4',
++  'fid' => '1',
++  'title' => 'TimeGroup: Commit 6ed4c08 on 7.x-1.x by Sweetchuck',
++  'link' => 'http://drupal.org/commitlog/commit/40%2C448/6ed4c085e5d9a8d33e091e1b8a65c73eab2dc99e',
++  'author' => 'Sweetchuck',
++  'description' => "<div class=\"view view-commitlog-commit-items view-id-commitlog_commit_items view-display-id-block_1 view-dom-id-7\">\n    \n  \n  \n      <div class=\"view-content\">\n        <div class=\"views-row views-row-1 views-row-odd views-row-first views-row-last\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/sandbox/Sweetchuck/1666642.git/blob/6ed4c085e5d9a8d33e091e1b8a65c73eab2dc99e:/includes/ctools/export_ui/timegroup.inc\">/includes/ctools/export_ui/timegroup.inc</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">1 addition & 1 deletion</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"minus\">-</span><span class=\"no-op\"> </span><span class=\"no-op\"> </span><span class=\"no-op\"> </span><span class=\"no-op\"> </span><span class=\"no-op\"> </span></span></span>\n  </div>\n  </div>\n    </div>\n  \n  \n  \n  \n  \n  \n</div>\n<pre>CTools UI - Wrong default value for timeoffset fix.\n</pre>",
++  'timestamp' => '1347206533',
++  'guid' => 'VCS Operation 3936942 at http://drupal.org',
++))
++  ->values(array(
++  'iid' => '5',
++  'fid' => '1',
++  'title' => 'Domain Access: Commit 1140172 on 6.x-2.x authored by bforchhammer, committed by agentrickard',
++  'link' => 'http://drupal.org/commitlog/commit/2%2C410/11401723f5c5d11032dd141ba4939ed889a7a915',
++  'author' => 'bforchhammer',
++  'description' => "<div class=\"view view-commitlog-commit-items view-id-commitlog_commit_items view-display-id-block_1 view-dom-id-6\">\n    \n  \n  \n      <div class=\"view-content\">\n        <div class=\"views-row views-row-1 views-row-odd views-row-first\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/project/domain.git/blob/11401723f5c5d11032dd141ba4939ed889a7a915:/domain_source/domain_source.views.inc\">/domain_source/domain_source.views.inc</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">33 additions & 1 deletion</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"no-op\"> </span></span></span>\n  </div>\n  </div>\n  <div class=\"views-row views-row-2 views-row-even views-row-last\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/project/domain.git/blob/11401723f5c5d11032dd141ba4939ed889a7a915:/domain_source/includes/domain_source_handler_filter_domain_id.inc\">/domain_source/includes/domain_source_handler_filter_domain_id.inc</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">28 additions & 0 deletions</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span></span></span>\n  </div>\n  </div>\n    </div>\n  \n  \n  \n  \n  \n  \n</div>\n<pre>Patch #1685658 by bforchhammer. Better handling of current domain for Domain Source.\n</pre>",
++  'timestamp' => '1347206541',
++  'guid' => 'VCS Operation 3936926 at http://drupal.org',
++))
++  ->values(array(
++  'iid' => '6',
++  'fid' => '1',
++  'title' => 'Domain Access: Commit 19b1c36 on 7.x-2.x by agentrickard',
++  'link' => 'http://drupal.org/commitlog/commit/2%2C410/19b1c366d86cecd8a9f6e1a6e835c0566f5c02db',
++  'author' => 'agentrickard',
++  'description' => "<div class=\"view view-commitlog-commit-items view-id-commitlog_commit_items view-display-id-block_1 view-dom-id-5\">\n    \n  \n  \n      <div class=\"view-content\">\n        <div class=\"views-row views-row-1 views-row-odd views-row-first views-row-last\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/project/domain.git/blob/19b1c366d86cecd8a9f6e1a6e835c0566f5c02db:/domain_source/includes/domain_source_handler_filter_domain_id.inc\">/domain_source/includes/domain_source_handler_filter_domain_id.inc</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">28 additions & 0 deletions</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span></span></span>\n  </div>\n  </div>\n    </div>\n  \n  \n  \n  \n  \n  \n</div>\n<pre>Adds new Views file to Domain Source.\n</pre>",
++  'timestamp' => '1347206601',
++  'guid' => 'VCS Operation 3936928 at http://drupal.org',
++))
++  ->values(array(
++  'iid' => '7',
++  'fid' => '1',
++  'title' => 'Domain Access: Commit d2d5456 on 7.x-3.x by agentrickard',
++  'link' => 'http://drupal.org/commitlog/commit/2%2C410/d2d5456cad6ca57bb72e743da6a7112a74d7a331',
++  'author' => 'agentrickard',
++  'description' => "<div class=\"view view-commitlog-commit-items view-id-commitlog_commit_items view-display-id-block_1 view-dom-id-4\">\n    \n  \n  \n      <div class=\"view-content\">\n        <div class=\"views-row views-row-1 views-row-odd views-row-first views-row-last\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/project/domain.git/blob/d2d5456cad6ca57bb72e743da6a7112a74d7a331:/domain_source/includes/domain_source_handler_filter_domain_id.inc\">/domain_source/includes/domain_source_handler_filter_domain_id.inc</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">29 additions & 0 deletions</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span></span></span>\n  </div>\n  </div>\n    </div>\n  \n  \n  \n  \n  \n  \n</div>\n<pre>Adds new Views file to Domain Source.\n</pre>",
++  'timestamp' => '1347206620',
++  'guid' => 'VCS Operation 3936930 at http://drupal.org',
++))
++  ->values(array(
++  'iid' => '8',
++  'fid' => '1',
++  'title' => 'Skarabee: Commit 400b519 on 7.x-1.x by sboersma',
++  'link' => 'http://drupal.org/commitlog/commit/23%2C278/400b5190f59b1cb58d6b27fa10ac668e9580aa73',
++  'author' => 'sboersma',
++  'description' => "<div class=\"view view-commitlog-commit-items view-id-commitlog_commit_items view-display-id-block_1 view-dom-id-3\">\n    \n  \n  \n      <div class=\"view-content\">\n        <div class=\"views-row views-row-1 views-row-odd views-row-first views-row-last\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/sandbox/sboersma/1176520.git/blob/400b5190f59b1cb58d6b27fa10ac668e9580aa73:/skarabee.install\">/skarabee.install</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">3 additions & 3 deletions</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"minus\">-</span><span class=\"minus\">-</span><span class=\"minus\">-</span><span class=\"no-op\"> </span></span></span>\n  </div>\n  </div>\n    </div>\n  \n  \n  \n  \n  \n  \n</div>\n<pre>sboersma: Changed variable deletion method.\n</pre>",
++  'timestamp' => '1347206709',
++  'guid' => 'VCS Operation 3936932 at http://drupal.org',
++))
++  ->values(array(
++  'iid' => '9',
++  'fid' => '1',
++  'title' => 'Config entity listing plugin API: Commit dd3fa73 on 8.x-list by damiankloip',
++  'link' => 'http://drupal.org/commitlog/commit/43%2C586/dd3fa73b0bcdca833bbde1d1ddb3cefe42003693',
++  'author' => 'damiankloip',
++  'description' => "<div class=\"view view-commitlog-commit-items view-id-commitlog_commit_items view-display-id-block_1 view-dom-id-2\">\n    \n  \n  \n      <div class=\"view-content\">\n        <div class=\"views-row views-row-1 views-row-odd views-row-first views-row-last\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/sandbox/damiankloip/1778654.git/blob/dd3fa73b0bcdca833bbde1d1ddb3cefe42003693:/core/modules/config/lib/Drupal/config/Tests/ConfigEntityListingTest.php\">/core/modules/config/lib/Drupal/config/Tests/ConfigEntityListingTest.php</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">10 additions & 2 deletions</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"minus\">-</span></span></span>\n  </div>\n  </div>\n    </div>\n  \n  \n  \n  \n  \n  \n</div>\n<pre>Added tests for getList() method\n</pre>",
++  'timestamp' => '1347206738',
++  'guid' => 'VCS Operation 3936936 at http://drupal.org',
++))
++  ->values(array(
++  'iid' => '10',
++  'fid' => '1',
++  'title' => 'AutoSlave: Commit 76891da on 7.x-1.x by gielfeldt',
++  'link' => 'http://drupal.org/commitlog/commit/42%2C968/76891daf3cea9c294daf56a26760cb1bf33ea58a',
++  'author' => 'gielfeldt',
++  'description' => "<div class=\"view view-commitlog-commit-items view-id-commitlog_commit_items view-display-id-block_1 view-dom-id-1\">\n    \n  \n  \n      <div class=\"view-content\">\n        <div class=\"views-row views-row-1 views-row-odd views-row-first\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/project/autoslave.git/blob/76891daf3cea9c294daf56a26760cb1bf33ea58a:/autoslave.module\">/autoslave.module</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">10 additions & 7 deletions</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"minus\">-</span><span class=\"minus\">-</span><span class=\"minus\">-</span></span></span>\n  </div>\n  </div>\n  <div class=\"views-row views-row-2 views-row-even views-row-last\">\n      \n  <div class=\"views-field-path\">\n                <span class=\"field-content\"><a href=\"http://drupalcode.org/project/autoslave.git/blob/76891daf3cea9c294daf56a26760cb1bf33ea58a:/autoslave/database.inc\">/autoslave/database.inc</a></span>\n  </div>\n  \n  <div class=\"views-field-changed-lines\">\n                <span class=\"field-content\">10 additions & 2 deletions</span>\n  </div>\n  \n  <div class=\"views-field-visual-diffstat\">\n                <span class=\"field-content\"><span class=\"versioncontrol-diffstat clear-block\"><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"plus\">+</span><span class=\"minus\">-</span></span></span>\n  </div>\n  </div>\n    </div>\n  \n  \n  \n  \n  \n  \n</div>\n<pre>Keep track of affected tables per commit.\n</pre>",
++  'timestamp' => '1347206751',
++  'guid' => 'VCS Operation 3936934 at http://drupal.org',
++))
++  ->execute();
+diff --git a/modules/simpletest/tests/upgrade/update.aggregator.test b/modules/simpletest/tests/upgrade/update.aggregator.test
+new file mode 100644
+index 0000000..d413577
+--- /dev/null
++++ b/modules/simpletest/tests/upgrade/update.aggregator.test
+@@ -0,0 +1,47 @@
++<?php
++/**
++ * @file
++ * Tests schema changes in aggregator.module.
++ */
++class AggregatorUpdatePathTestCase extends UpdatePathTestCase {
++
++  public static function getInfo() {
++    return array(
++      'name' => 'Aggregator update path',
++      'description' => 'Aggregator update path tests.',
++      'group' => 'Upgrade path',
++    );
++  }
++
++  public function setUp() {
++    // Use the normal installation and add our feed data.
++    $path = drupal_get_path('module', 'simpletest') . '/tests/upgrade';
++    $this->databaseDumpFiles = array(
++      $path . '/drupal-7.bare.standard_all.database.php.gz',
++      $path . '/drupal-7.aggregator.database.php',
++    );
++    parent::setUp();
++
++    // Our test data only relies on aggregator.module.
++    $this->uninstallModulesExcept(array('aggregator'));
++  }
++
++  /**
++   * Tests that the aggregator.module update is successful.
++   */
++  public function testAggregatorUpdate() {
++    // Get a selection of the fields affected by the schema update.
++    $query = db_select('aggregator_feed', 'af');
++    $query->join('aggregator_item', 'ai', 'af.fid = ai.fid');
++    $query
++      ->fields('af', array('url', 'link'))
++      ->fields('ai', array('link', 'guid'));
++
++    $pre_update_data = $query->execute()->fetchAll();
++    $this->assertTrue($this->performUpgrade(), 'The update was completed successfully.');
++    $post_update_data = $query->execute()->fetchAll();
++
++    $this->assertTrue($pre_update_data == $post_update_data, 'Feed data was preserved during the update.');
++  }
++
++}

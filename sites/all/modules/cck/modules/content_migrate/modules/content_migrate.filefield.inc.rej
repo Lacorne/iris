@@ -1,0 +1,10 @@
+--- modules/content_migrate/modules/content_migrate.filefield.inc
++++ modules/content_migrate/modules/content_migrate.filefield.inc
+@@ -28,7 +28,6 @@
+     // Module names and types changed.
+     $field_value['module'] = 'file';
+     $field_value['type'] = 'file';
+-    break;
+   }
+ }
+ 
