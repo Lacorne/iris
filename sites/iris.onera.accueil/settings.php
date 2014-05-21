@@ -554,3 +554,4 @@ $conf['proxy_exceptions'] = array('127.0.0.1', 'localhost');
 pour desacve le clean url
 */
 $conf['clean_url'] = 1;
+
