@@ -1,0 +1,9 @@
+{
+  "formatters": ["compact"],
+  "gradients": false,
+  "unqualified-attributes": false,
+  "outline-none": false,
+  "compatible-vendor-prefixes": false,
+  "box-sizing": false,
+  "ids": false
+}
