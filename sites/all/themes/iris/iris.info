@@ -5,7 +5,8 @@ screenshot  = screenshot.png
 core        = 7.x
 engine      = phptemplate
 
-stylesheets[all][] = iris.css
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/iris.css
 
 regions[header]         = Header
 regions[navigation]     = Navigation bar
