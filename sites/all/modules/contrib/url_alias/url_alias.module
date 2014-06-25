@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file
+ *   url_alias module functions.
+ */
+
+/**
+ * Implements hook_entity_uuid_load().
+ */
+function url_alias_entity_uuid_load(&$entities, $entity_type) {
+  $info = entity_get_info($entity_type);
+  // we only care about entities with URLs.
+  if (!isset($info['uri callback'])) {
+    return;
+  }
+
+  $callback = $info['uri callback'];
+  foreach ($entities as $id => $entity) {
+    $path = $callback($entity);
+    $aliases = _url_alias_load($path['path']);
+
+    // Ignore local IDs.
+    foreach($aliases as &$alias) {
+      unset($alias->pid);
+      unset($alias->source);
+    }
+
+    $entities[$id]->url_alias = $aliases;
+  }
+}
+
+/**
+ * Implements hook_entity_uuid_save().
+ */
+function url_alias_entity_uuid_save(&$entity, $entity_type) {
+  $info = entity_get_info($entity_type);
+  // We only care when there is a url callback and aliases are present.
+  if (empty($entity->url_alias) || !isset($info['uri callback'])) {
+    return FALSE;
+  }
+
+  $callback = $info['uri callback'];
+  $uri = $callback($entity);
+  $path = $uri['path'];
+
+  // Delete existing aliases.
+  path_delete(array('source' => $path));
+
+  foreach ($entity->url_alias as $alias) {
+    $entry = (array) $alias;
+    $entry['source'] = $path;
+    dpm($entry, 'entry');
+    path_save($entry);
+  }
+}
+
+
+/**
+ * Load all aliases associated with a path.
+ *
+ * @param
+ *   $path The source path to look up.
+ *
+ * @return
+ *   Array of paths or NULL if none found.
+ */
+function _url_alias_load($path) {
+  return db_select('url_alias')
+    ->condition('source', $path)
+    ->fields('url_alias')
+    ->execute()
+    ->fetchAll(PDO::FETCH_OBJ);
+}

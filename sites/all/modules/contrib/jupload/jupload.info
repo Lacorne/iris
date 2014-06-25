@@ -1,0 +1,16 @@
+; $Id
+name = JUpload
+description = "Adds a UI to allow users to upload multiple large files using Java based FTP solution"
+core = 7.x
+package = Media
+
+
+configure = admin/config/media/jupload
+
+
+; Information added by drupal.org packaging script on 2012-09-13
+version = "7.x-1.0-beta1"
+core = "7.x"
+project = "jupload"
+datestamp = "1347551580"
+

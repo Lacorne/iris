@@ -1,0 +1,7 @@
+--- a/file_aliases.info
++++ b/file_aliases.info
+@@ -7,4 +7,3 @@
+ files[] = file_aliases.install
+ files[] = file_aliases.module
+ files[] = modules/filefield_paths.inc
+-

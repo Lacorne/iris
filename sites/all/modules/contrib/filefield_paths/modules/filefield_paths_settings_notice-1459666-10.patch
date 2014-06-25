@@ -1,0 +1,15 @@
+diff --git a/modules/filefield_paths.inc b/modules/filefield_paths.inc
+index 4411ca3..b21775e 100644
+--- a/modules/filefield_paths.inc
++++ b/modules/filefield_paths.inc
+@@ -42,6 +42,10 @@ function filefield_paths_filefield_paths_field_settings() {
+  * Implements hook_filefield_paths_process_file().
+  */
+ function filefield_paths_filefield_paths_process_file($type, $entity, $field, $instance, $langcode, &$items) {
++  if (empty($instance['settings']['filefield_paths'])) {
++    return;
++  }
++
+   $settings = $instance['settings']['filefield_paths'];
+   foreach ($items as &$file) {
+     if ($file['timestamp'] == REQUEST_TIME || $settings['active_updating']) {

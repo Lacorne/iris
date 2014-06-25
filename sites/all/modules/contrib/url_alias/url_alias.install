@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ *   URL Alias installation functions.
+ */
+
+// Include UUID schema helper functions.
+module_load_include('inc', 'uuid', 'uuid.schema');
+
+/**
+ * Implements hook_schema_alter().
+ */
+function url_alias_schema_alter(&$schema = array()) {
+  _url_alias_schema_generate($schema);
+}
+
+/**
+ * Implements hook_install().
+ */
+function url_alias_install() {
+  $schema = array();
+  _url_alias_schema_generate($schema);
+  uuid_add_field($schema, 'url_alias');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function url_alias_uninstall() {
+  $schema = array();
+  _url_alias_schema_generate($schema);
+  uuid_drop_field($schema, 'url_alias');
+}
+
+/**
+ * Generate the schema for add UUID support to {url_alias}
+ */
+function _url_alias_schema_generate(&$schema) {
+  uuid_schema_generate($schema, 'url_alias');
+}
