@@ -1,9 +1,0 @@
-#ignore flash packages
-flash/com/*
-flash/nl/*
-#ignore swf out
-*.swf
-#ignore swc libraries
-*.swc
-#ignore self
-#.gitignore
