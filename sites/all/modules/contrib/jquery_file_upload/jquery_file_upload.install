@@ -4,6 +4,56 @@
  * @file
  * Install, and uninstall functions for the jquery_file_upload module.
  */
+
+/**
+ * Implements hook_requirements().
+ */
+function jquery_file_upload_requirements($phase) {
+  $requirements = array();
+
+  $t = get_t();
+
+  if ($phase == 'install') {
+    $exists = jquery_file_upload_library_exists();
+    if ($exists) {
+      $requirements['jquery_file_upload'] = array(
+          'title' => $t('jQuery File Upload'),
+          'description' => "jQuery File Upload plugin installed successfully",
+          'severity' => REQUIREMENT_OK,
+      );
+    }
+    else {
+      $requirements['jquery_file_upload'] = array(
+          'title' => $t('jQuery File Upload'),
+          'description' => "jQuery File Upload plugin needs to be installed, please download from <a href='https://github.com/compujohnny/jQuery-File-Upload/archive/master.zip'>https://github.com/compujohnny/jQuery-File-Upload/archive/master.zip</a> then extract and copy the css, js and img folders in the modules directory under jquery_file_upload/lib",
+          'severity' => REQUIREMENT_ERROR,
+      );
+    }
+  }
+
+  return $requirements;
+}
+
+/**
+ * Check that all library file required exists
+ */
+function jquery_file_upload_library_exists() {
+
+  $base_lib_path = DRUPAL_ROOT.'/'.drupal_get_path('module', 'jquery_file_upload').'/lib';
+
+  return  file_exists($base_lib_path  . '/js/jquery.fileupload.js') &&
+          file_exists($base_lib_path . '/js/jquery.fileupload-ui.js') &&
+          file_exists($base_lib_path . '/js/jquery.fileupload-fp.js') &&
+          file_exists($base_lib_path . '/js/jquery.iframe-transport.js') &&
+          file_exists($base_lib_path . '/js/vendor/jquery.ui.widget.js') &&
+          file_exists($base_lib_path . '/js/cors/jquery.postmessage-transport.js') &&
+          file_exists($base_lib_path . '/css/jquery.fileupload-ui-noscript.css') &&
+          file_exists($base_lib_path . '/css/jquery.fileupload-ui.css');
+}
+
+/**
+ * Implements hook_schema().
+ */
 function jquery_file_upload_schema() {
   $schema['jquery_file_upload'] = array(
       'description' => t('Stores files sizes for each user.'),
@@ -38,7 +88,10 @@ function jquery_file_upload_schema() {
   return $schema;
 }
 
-function jquery_file_upload_install(){
+/**
+ * Implements hook_install().
+ */
+function jquery_file_upload_install() {
   $type_values = array(
       'op' => 'Save content type',
       'type' => 'jquery_uploader_node',
@@ -95,8 +148,8 @@ function jquery_file_upload_install(){
       'label' => 'Image',
       'description' => '',
       'settings' => array(
-      'file_extensions' => 'gif jpeg jpg png tiff asf avi mpeg mpg wmv vob mov mp4 flv txt doc docx xls xlsx ppt pptx mp3', // default 'txt'
-  ),
+          'file_extensions' => 'gif jpeg jpg png tiff asf avi mpeg mpg wmv vob mov mp4 flv txt doc docx xls xlsx ppt pptx mp3', // default 'txt'
+      ),
       'widget' => array(
           'type' => 'file_generic',
           'weight' => 1,
@@ -115,21 +168,25 @@ function jquery_file_upload_install(){
   }
 }
 
-function jquery_file_upload_uninstall(){
+/**
+ * Implements hook_uninstall().
+ */
+function jquery_file_upload_uninstall() {
   $user_roles = user_roles(TRUE);
-  foreach($user_roles as $index=>$role){
-     if(strpos($role, ' ') > 0){
-       $current_role = str_replace(' ', '_', $role);
-     }else{
-       $current_role = $role;
-     }
-     variable_del('max_file_size_'.$current_role);
-     variable_del('max_quota_'.$current_role);
-   }
-   
-   
-   /////////////////////////////////////////////////
-   $sql = 'SELECT nid FROM {node} n WHERE n.type = :type';
+  foreach ($user_roles as $index => $role) {
+    if (strpos($role, ' ') > 0) {
+      $current_role = str_replace(' ', '_', $role);
+    }
+    else {
+      $current_role = $role;
+    }
+    variable_del('max_file_size_' . $current_role);
+    variable_del('max_quota_' . $current_role);
+  }
+
+
+  /////////////////////////////////////////////////
+  $sql = 'SELECT nid FROM {node} n WHERE n.type = :type';
   $result = db_query($sql, array(':type' => 'jquery_uploader_node'));
   $nids = array();
   foreach ($result as $row) {

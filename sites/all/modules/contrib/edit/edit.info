@@ -3,11 +3,17 @@ description = In-place content editing.
 package = Spark
 core = 7.x
 
-dependencies[] = entity
+files[] = tests/edit_loading.test
 
-; Information added by drupal.org packaging script on 2013-01-28
-version = "7.x-1.0-alpha6"
+dependencies[] = contextual
+dependencies[] = entity
+dependencies[] = field (>=7.22)
+dependencies[] = libraries (>=2.x)
+dependencies[] = ctools
+
+; Information added by Drupal.org packaging script on 2014-01-24
+version = "7.x-1.0"
 core = "7.x"
 project = "edit"
-datestamp = "1359406981"
+datestamp = "1390581855"
 
