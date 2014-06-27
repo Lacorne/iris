@@ -1,0 +1,39 @@
+/*Mixins effets type degrades, bordures arrondies, text-shadows*/
+
+/*
+* Function to reconstruct eventualy the args passed in parameters
+*/
+join(delim, args)
+    buf = ''
+    for arg, index in args
+      if index
+        buf += delim + arg
+      else
+        buf += arg
+
+/*
+* Linear background 
+* size: height in px for svg
+* actif: as true/false
+* bgcolor: for default bgcolor if no gradient
+* dir: direction
+* args: colors to compose the gradiant
+*/
+bg-linear-gradient(size, actif, bgcolor, dir, args...)
+  if actif
+    background-color bgcolor
+    if legacy-browser-support
+      background linear-gradient-image(size dir, args)
+    else
+      background linear-gradient(dir, join(', ', args))
+  else
+    background-color bgcolor
+
+/*
+* Ellipsis text
+*/
+ellipsis-txt(size)
+  text-overflow: ellipsis;
+  width: size;
+  white-space: nowrap;
+  overflow: hidden;

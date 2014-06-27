@@ -15,9 +15,27 @@ Drupal doit mettre à jour le nouveau chemin des modules contrib qui ont été dépl
 - diff: https://www.drupal.org/project/diff
 - strongarm: https://www.drupal.org/project/strongarm
 
+=> Pour des besoins de fonctionnement du site
+- superfish: https://www.drupal.org/project/superfish
+
 #Modules mis à jour
 - context: https://www.drupal.org/project/context
   Le module en place étant en version beta ... La dernière release a été installée.
 - jquery_update 7.x-2.2 vers 7.x-2.4
   => se rendre dans "admin/config/development/jquery_update", puis selectionner 1.5 dans la partie "Alternate jQuery version for administrative pages".
   => laisser 1.10 dans "Default jQuery Version".
+
+#Nouveaux modules utilisés:
+- context
+- superfish
+- features
+- diff
+- strongarm
+
+#Liste des features
+sites/all/modules/features/iris:
+- iris_views
+
+#Envol
+Bdd créée: d7_envol
+Dossier créé: sites/all/iris.onera.envol
