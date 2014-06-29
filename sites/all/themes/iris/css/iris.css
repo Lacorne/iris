@@ -1,6 +1,6 @@
-/*! Onera_iris_project 26-06-2014|17:31:44 */
+/*! Onera_iris_project 29-06-2014|11:06:38 */
 
-/* line 16 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+/* line 67 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
 
 /* line 2 : c:\wamp\www\onera\iris\sites\all\themes\iris\node_modules\grunt-contrib-stylus\node_modules\stylus\lib\functions\index.styl */
 
@@ -11,7 +11,7 @@
 
 /* line 297 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\_conf.styl */
 
-/* line 9 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\_conf.styl */
+/* line 10 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\_conf.styl */
 
 /* line 14 : c:\wamp\www\onera\iris\sites\all\themes\iris\node_modules\nib\lib\nib\index.styl */
 
@@ -97,7 +97,29 @@
 
 /* line 33 : c:\wamp\www\onera\iris\sites\all\themes\iris\node_modules\nib\lib\nib\size.styl */
 
-/* line 33 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\_effects.styl */
+/* line 7 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\grid.styl */
+
+/* line 41 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\grid.styl */
+body {
+  width: 100%;
+  zoom: 1;
+}
+
+/* line 24 : c:\wamp\www\onera\iris\sites\all\themes\iris\node_modules\nib\lib\nib\clearfix.styl */
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+
+/* line 28 : c:\wamp\www\onera\iris\sites\all\themes\iris\node_modules\nib\lib\nib\clearfix.styl */
+body:after {
+  clear: both;
+}
+
+/* line 79 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\grid.styl */
+
+/* line 79 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\_effects.styl */
 
 /* line 40 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\_effects.styl */
 
@@ -248,5 +270,167 @@
   box-sizing: border-box;
   width: 1024px;
   margin: 0 auto;
+  padding: 20px 10px;
   background: #fff;
+  zoom: 1;
+}
+
+/* line 24 : c:\wamp\www\onera\iris\sites\all\themes\iris\node_modules\nib\lib\nib\clearfix.styl */
+#main:before,
+#main:after {
+  content: "";
+  display: table;
+}
+
+/* line 28 : c:\wamp\www\onera\iris\sites\all\themes\iris\node_modules\nib\lib\nib\clearfix.styl */
+#main:after {
+  clear: both;
+}
+
+/* line 20 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+
+/* line 21 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+.sidebar-first #content {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 735.9999999999999px;
+  margin: 0 10.00000000000008px;
+  *width: 735.9999999999999px -correction;
+  *margin: 0 10.00000000000008px -correction;
+  margin-left: 262.00000000000006px;
+  margin-right: -997.9999999999999px;
+}
+
+/* line 25 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+.sidebar-first .region-sidebar-first {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 231.99999999999986px;
+  margin: 0 10.00000000000008px;
+  *width: 231.99999999999986px -correction;
+  *margin: 0 10.00000000000008px -correction;
+  margin-right: -241.99999999999991px;
+}
+
+/* line 30 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+
+/* line 31 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+.sidebar-second #content {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 735.9999999999999px;
+  margin: 0 10.00000000000008px;
+  *width: 735.9999999999999px -correction;
+  *margin: 0 10.00000000000008px -correction;
+  margin-right: -745.9999999999999px;
+}
+
+/* line 34 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+.sidebar-second .region-sidebar-second {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 231.99999999999986px;
+  margin: 0 10.00000000000008px;
+  *width: 231.99999999999986px -correction;
+  *margin: 0 10.00000000000008px -correction;
+  margin-left: 766.0000000000001px;
+  margin-right: -997.9999999999999px;
+}
+
+/* line 40 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+
+/* line 41 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+.two-sidebars #content {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 483.99999999999983px;
+  margin: 0 10.00000000000008px;
+  *width: 483.99999999999983px -correction;
+  *margin: 0 10.00000000000008px -correction;
+  margin-left: 262.00000000000006px;
+  margin-right: -745.9999999999999px;
+}
+
+/* line 45 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+.two-sidebars .region-sidebar-first {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 231.99999999999986px;
+  margin: 0 10.00000000000008px;
+  *width: 231.99999999999986px -correction;
+  *margin: 0 10.00000000000008px -correction;
+  margin-right: -241.99999999999991px;
+}
+
+/* line 48 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+.two-sidebars .region-sidebar-second {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 231.99999999999986px;
+  margin: 0 10.00000000000008px;
+  *width: 231.99999999999986px -correction;
+  *margin: 0 10.00000000000008px -correction;
+  margin-left: 766.0000000000001px;
+  margin-right: -997.9999999999999px;
+}
+
+/* line 54 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+
+/* line 55 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+
+/* line 56 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+
+/* line 57 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+.front .view-lefil .view-content .views-row-odd {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 231.99999999999986px;
+  margin: 0 0 0 10.00000000000008px;
+  *width: 231.99999999999986px -correction;
+  *margin: 0 10.00000000000008px -correction;
+}
+
+/* line 59 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+.front .view-lefil .view-content .views-row-even {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 231.99999999999986px;
+  margin: 0 10.00000000000008px 0 0;
+  *width: 231.99999999999986px -correction;
+  *margin: 0 10.00000000000008px -correction;
+}
+
+/* line 61 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+
+/* line 62 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+.front .view-lefil .view-display-id-first_news .views-row-odd {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 483.99999999999983px;
+  margin: 0;
+  *width: 483.99999999999983px -correction;
+  *margin: 0 10.00000000000008px -correction;
+}
+
+/* line 64 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+
+/* line 65 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+.front .view-lefil .view-display-id-sticky_news .views-row-odd {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 231.99999999999986px;
+  margin: 0 10.00000000000008px 0 0;
+  *width: 231.99999999999986px -correction;
+  *margin: 0 10.00000000000008px -correction;
 }

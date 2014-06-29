@@ -12,4 +12,55 @@
   box-sizing border-box
   width 1024px
   margin 0 auto
+  padding 20px 10px
   background #fff
+  clearfix()
+
+// The layout when there is only one sidebar, the left one.
+.sidebar-first
+  #content
+    column(9)
+    push(3)
+    pull(-12)
+  .region-sidebar-first
+    column(3)
+    pull(-3)
+
+// The layout when there is only one sidebar, the right one.
+.sidebar-second
+  #content
+    column(9)
+    pull(-9)
+  .region-sidebar-second
+    column(3)
+    push(9)
+    pull(-12)
+
+// The layout when there are two sidebars.
+.two-sidebars
+  #content
+    column(6)
+    push(3)
+    pull(-9)
+  .region-sidebar-first
+    column(3)
+    pull(-3)
+  .region-sidebar-second
+    column(3)
+    push(9)
+    pull(-12)
+
+// Structure of home page
+.front
+  .view-lefil
+    .view-content
+      .views-row-odd
+        column(3, 12, noright)
+      .views-row-even
+        column(3, 12, noleft)
+    .view-display-id-first_news
+      .views-row-odd
+        column(6, 12, nomargin)
+    .view-display-id-sticky_news
+      .views-row-odd
+        column(3, 12, noleft)
