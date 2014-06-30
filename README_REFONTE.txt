@@ -1,4 +1,6 @@
-# Modifications structurelles
+#update
+Passage à D7.28 plus mise à jour des modules contrib.
+
 # Gestion des modules
 Les modules ont été réorganisés de cette manière:
 sites/all/modules
@@ -46,6 +48,19 @@ Collapsiblock utilise cette fonction et retournait une erreur.
 Le patch suivant à été utilisé:
 https://www.drupal.org/node/1429956
 Le #3.
+
+#Content Type
+Modification du type de contenu actualités.
+Ajout d'un champ catégorie (Podcast, ...)
+Ajout d'un champ image (image remontée sur la home)
+Ajout des view mode big img, small img (utilisés dans la vue "le fil").
+
+#views
+Création de la view "le fil" qui est un update + renommage de la vue "une2"
+Dans cette vue, la page a été modifée pour afficher 2 attachements:
+- First news: l'actualité la plus récente
+- Sticky: l'actualité épinglée en haut des listes (la plus récente des épinglées).
+Le type d'affichage est un rendered entity, afin d'afficher les view modes désirés (comportant les champs désirés, et les images dans leur bons formats grâce aux styles d'images.)
 
 #Envol
 Bdd créée: d7_envol
