@@ -439,6 +439,12 @@ function iris_preprocess_block(&$variables, $hook) {
           break;
       }
       break;
+    case 'block':
+      if ($variables['block']->region == 'sidebar_first') {
+        $variables['attributes_array']['role'] = 'navigation';
+        if ( $variables['block']->subject != '') $variables['classes_array'][] = 'block-' . strtolower(str_replace(array(' ', '/', '\''), '-', $variables['block']->subject));
+      }
+      break;
   }
 }
 
