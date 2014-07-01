@@ -1,0 +1,35 @@
+/* System Layout for iris */
+
+// The layout when there is only one sidebar, the left one.
+.sidebar-first
+  #content
+    column(9)
+    push(3)
+    pull(-12)
+  .region-sidebar-first
+    column(3)
+    pull(-3)
+
+// The layout when there is only one sidebar, the right one.
+.sidebar-second
+  #content
+    column(9)
+    pull(-9)
+  .region-sidebar-second
+    column(3)
+    push(9)
+    pull(-12)
+
+// The layout when there are two sidebars.
+.two-sidebars
+  #content
+    column(6)
+    push(3)
+    pull(-9)
+  .region-sidebar-first
+    column(3)
+    pull(-3)
+  .region-sidebar-second
+    column(3)
+    push(9)
+    pull(-12)

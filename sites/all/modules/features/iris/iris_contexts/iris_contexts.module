@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Iris contexts feature.
+ */
+
+include_once 'iris_contexts.features.inc';

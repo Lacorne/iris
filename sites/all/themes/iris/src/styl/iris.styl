@@ -3,9 +3,11 @@
 // Imports
 @import '../../lib/styl/_conf'
 @import '../../lib/styl/_effects'
+@import '../../lib/styl/layout.styl'
 @import '../../lib/styl/header.styl'
 @import '../../lib/styl/footer.styl'
 @import '../../lib/styl/navigation-superfish.styl'
+@import '../../lib/styl/sidebars.styl'
 
 body
   font-family arial
@@ -17,45 +19,21 @@ body
   margin 0 auto
   padding 20px 10px
   background #fff
+  font-size 13px
+  color #666
   clearfix()
 
-// The layout when there is only one sidebar, the left one.
-.sidebar-first
-  #content
-    column(9)
-    push(3)
-    pull(-12)
-  .region-sidebar-first
-    column(3)
-    pull(-3)
-
-// The layout when there is only one sidebar, the right one.
-.sidebar-second
-  #content
-    column(9)
-    pull(-9)
-  .region-sidebar-second
-    column(3)
-    push(9)
-    pull(-12)
-
-// The layout when there are two sidebars.
-.two-sidebars
-  #content
-    column(6)
-    push(3)
-    pull(-9)
-  .region-sidebar-first
-    column(3)
-    pull(-3)
-  .region-sidebar-second
-    column(3)
-    push(9)
-    pull(-12)
+// Generic Elements
+.page__title
+  font-size 22px
+  color #000
+  text-transform uppercase
+  margin-bottom 12px
 
 // Structure of home page
 .front
   .view-lefil
+    line-height 1.5
     .view-content
       .views-row-odd
         column(3, 12, noright)
@@ -68,84 +46,37 @@ body
       .views-row-odd
         column(3, 12, noleft)
 
-// Left Menu
-.region-sidebar-first
-  .collapsiblock
-    a
-      background #333
-      position relative
+// Gestion affichage news
+.view-display-id-first_news
+  .view-mode-teaser_big_img
+    position relative
+    background #333
+    .wrapper-info
+      absolute bottom 0 left 0 right 0
+      box-sizing border-box
+      padding 15px 20px 20px
       color #fff
+      bg-linear-gradient(300px, true, #000, top, rgba(0,0,0,.6), rgba(0,0,0,.6))
+    .field-name-field-category
+      color #00ccff
       text-transform uppercase
-      text-decoration none
       font-size 12px
-      padding 12px 20px 12px 51px
-      &:before
-        display block
-        absolute top 0 bottom 0 left 0
-        width 36px
-        background #46a4b8 url('../images/icones.png') 0 0 no-repeat
-        content " "
-      &:after
-        display block
-        content "▲"
-        absolute top 15px right 20px
-        font-size 6px
+      line-height 1
+    .node__title
+      color #fff
+      font-size 18px
+      margin 10px 0
+      line-height 1
+      a
         color #fff
-        transform scaleX(1.5)
-  .block-outils
-    .collapsiblock
-      a
-        &:before
-          background-position center -11px
-  .block-contacts
-    .collapsiblock
-      a
-        &:before
-          background-position center -50px
-  .block-informatique
-    .collapsiblock
-      a
-        &:before
-          background-position center -87px
-  .block-nouveaux-arrivants
-    .collapsiblock
-      a
-        &:before
-          background-position center -125px
-  .block-transports
-    .collapsiblock
-      a
-        &:before
-          background-position center -161px
-  .collapsiblockCollapsed
-    a
-      &:after
-        content "▼"
-  .collapsiblock-processed
-    ul
-      background #f3f3f3
-      padding 6px 0
-      &:nth-child(2n+1)
-        background #eaeaea
-      a
-        position relative
-        font-size 12px
-        color #5e5d5d
-        padding 7px 15px 7px 30px
-        display block
         text-decoration none
-        transition background-color .5s, color .5s
-        &:before
-          content "■"
-          display block
-          absolute top 6px left 15px
-          font-size 11px
-          color #999
-          transition color .5s
-        &:hover
-          background-color #46a4b8
-          color #fff
-          transition background-color .5s, color .5s
-          &:before
-            color #333
-            transition color .5s
+    .links
+      absolute bottom 5px right 5px
+      line-height 1
+
+.view-lefil:not(.view-display-id-first_news)
+  .view-mode-teaser_small_img
+    height 330px
+  .field-name-body
+    white-space normal
+    overflow hidden

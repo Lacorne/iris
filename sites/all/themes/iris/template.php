@@ -294,6 +294,12 @@ function iris_preprocess_node(&$variables, $hook) {
 
   $variables['title_attributes_array']['class'][] = 'node__title';
   $variables['title_attributes_array']['class'][] = 'node-title';
+
+  // Add suggestions for node
+  $variables['theme_hook_suggestions'][] = 'node' . '__' . $variables['view_mode'];
+
+  // Add node_url for template node
+  $variables['content']['node_url'] = $variables['node_url'];
 }
 
 /**

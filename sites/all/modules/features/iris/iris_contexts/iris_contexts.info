@@ -1,0 +1,13 @@
+name = Iris contexts
+description = Contextes Iris
+core = 7.x
+package = Iris
+version = 7.x-1.0
+project = iris_contexts
+dependencies[] = block
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = superfish
+features[context][] = common_blocks
+features[ctools][] = context:context:3
+features[features_api][] = api:2

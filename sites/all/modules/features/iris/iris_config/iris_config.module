@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Iris config feature.
+ */
+
+include_once 'iris_config.features.inc';
