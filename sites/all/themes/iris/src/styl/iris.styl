@@ -50,6 +50,7 @@ body
 .view-display-id-first_news
   .view-mode-teaser_big_img
     position relative
+    min-height 142px
     background #333
     .wrapper-info
       absolute bottom 0 left 0 right 0
@@ -58,10 +59,19 @@ body
       color #fff
       bg-linear-gradient(300px, true, #000, top, rgba(0,0,0,.6), rgba(0,0,0,.6))
     .field-name-field-category
+      display inline-block
+      position relative
       color #00ccff
       text-transform uppercase
       font-size 12px
       line-height 1
+      &:after
+        display block
+        box-sizing border-box
+        absolute top 0 bottom 0 right -10px
+        content '›'
+        font-size 19px
+        line-height .45em
     .node__title
       color #fff
       font-size 18px
