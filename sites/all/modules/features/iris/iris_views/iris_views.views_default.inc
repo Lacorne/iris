@@ -78,7 +78,7 @@ function iris_views_views_default_views() {
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
-  /* Filter criterion: Contenu: Has taxonomy term */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
@@ -97,12 +97,12 @@ function iris_views_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  /* Champ: Contenu: Image */
+  /* Champ: Broken/missing handler */
   $handler->display->display_options['fields']['field_jquery_uploader_file']['id'] = 'field_jquery_uploader_file';
   $handler->display->display_options['fields']['field_jquery_uploader_file']['table'] = 'field_data_field_jquery_uploader_file';
   $handler->display->display_options['fields']['field_jquery_uploader_file']['field'] = 'field_jquery_uploader_file';
   $handler->display->display_options['fields']['field_jquery_uploader_file']['label'] = '';
-  /* Champ: Contenu: Body */
+  /* Champ: Broken/missing handler */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -432,7 +432,7 @@ function iris_views_views_default_views() {
     0 => 'page',
     1 => 'story',
   );
-  /* Filter criterion: Contenu: Has taxonomy term */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
@@ -642,7 +642,7 @@ function iris_views_views_default_views() {
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<a href="/actualites">Toute l\'actualité</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="/actualites" class="bigbutton blue">Toute l\'actualité</a>';
   $handler->display->display_options['footer']['area']['format'] = '3';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -797,7 +797,7 @@ function iris_views_views_default_views() {
     t('Bloc home 2 - Actus2'),
     t('Home page'),
     t('Le fil'),
-    t('<a href="/actualites">Toute l\'actualité</a>'),
+    t('<a href="/actualites" class="bigbutton blue">Toute l\'actualité</a>'),
     t('First News'),
     t('L\'actualité la plus récente, affichée en 1'),
     t('Sticky'),
@@ -833,7 +833,7 @@ function iris_views_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['view_mode'] = 'full';
-  /* Filter criterion: Contenu: Has taxonomy term */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
@@ -903,7 +903,7 @@ function iris_views_views_default_views() {
     'story' => 'story',
     'page' => 'page',
   );
-  /* Filter criterion: Contenu: Has taxonomy term */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
@@ -1060,11 +1060,11 @@ function iris_views_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Sort criterion: Terme de taxonomie: Poids */
+  /* Sort criterion: Broken/missing handler */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  /* Filter criterion: Contenu: Has taxonomy term */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';

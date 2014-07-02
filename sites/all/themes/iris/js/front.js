@@ -56,7 +56,9 @@
       titleShortNew,
       imgShortNew,
       catShortNew,
-      heightFieldBody
+      heightFieldBody,
+      linkReadMore,
+      linksShortNew
     ;
 
     containerShortNew.each(function(){
@@ -64,8 +66,11 @@
       titleShortNew = $(this).find('.node__title');
       imgShortNew = $(this).find('.field-type-image');
       catShortNew = $(this).find('.field-name-field-category');
+      linkReadMore = $(this).find('.readmore');
+      linksShortNew = $(this).find('.links');
       fieldBodyShortNew = $(this).find('.field-name-body');
-      heightFieldBody = $(this).height() - titleShortNew.height() - imgShortNew.height() - catShortNew.height();
+
+      heightFieldBody = $(this).height() - titleShortNew.outerHeight(true) - imgShortNew.outerHeight(true) - catShortNew.outerHeight(true) - linksShortNew.outerHeight(true) - linkReadMore.outerHeight(true);
       console.log(heightFieldBody);
       fieldBodyShortNew.css({'height':heightFieldBody + 'px'}).ellipsis();
     });
