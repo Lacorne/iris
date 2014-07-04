@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the envol contexts feature.
+ */
+
+include_once 'envol_contexts.features.inc';

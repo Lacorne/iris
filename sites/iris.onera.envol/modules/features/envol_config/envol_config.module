@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the envol config feature.
+ */
+
+include_once 'envol_config.features.inc';
