@@ -219,6 +219,14 @@ function envol_html_head_alter(&$head) {
 }
 
 /**
+ * Implement hook_preprocess().
+ */
+function envol_preprocess(&$variables, $hook) {
+  global $base_url;
+  $variables['base_url'] = $base_url;
+}
+
+/**
  * Override or insert variables into the page template.
  *
  * @param $variables

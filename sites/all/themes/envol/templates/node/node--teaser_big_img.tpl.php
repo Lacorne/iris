@@ -20,7 +20,7 @@
       <?php print render($title_suffix); ?>
     <?php endif; ?>
     <?php print render($content['body']); ?>
-    <a href="<?php print $content['node_url']; ?>" class="readmore">Suite</a>
+    <a href="<?php print $base_url . $content['node_url']; ?>" class="readmore">Suite</a>
     <?php print render($content['links']); ?>
   </div>
 
