@@ -1,0 +1,230 @@
+/*! Onera_iris_project 02-07-2014|21:54:06 */
+
+/* line 165 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+
+/* line 2 : c:\wamp\www\onera\iris\sites\all\themes\iris\node_modules\grunt-contrib-stylus\node_modules\stylus\lib\functions\index.styl */
+
+/* line 13 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 16 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  line-height: 1;
+}
+
+/* line 20 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 23 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  quotes: none;
+}
+
+/* line 27 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 30 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+del {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: line-through;
+}
+
+/* line 34 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+dfn,
+em,
+font,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 37 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+ins {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+/* line 41 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+kbd {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 44 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+q {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  quotes: none;
+}
+
+/* line 48 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 51 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  list-style: none;
+}
+
+/* line 55 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+li,
+fieldset,
+form,
+label,
+legend {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 58 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 63 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 66 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+*:focus {
+  outline: 0;
+}

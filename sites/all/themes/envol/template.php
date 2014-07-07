@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Contains functions to alter Drupal's markup for the Iris theme.
+ * Contains functions to alter Drupal's markup for the Envol theme.
  *
  * IMPORTANT WARNING: DO NOT MODIFY THIS FILE.
  *
@@ -19,25 +19,25 @@
  * @return
  *   A string containing the breadcrumb output.
  */
-function iris_breadcrumb($variables) {
+function envol_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   $output = '';
 
   // Determine if we are to display the breadcrumb.
-  $show_breadcrumb = theme_get_setting('iris_breadcrumb');
+  $show_breadcrumb = theme_get_setting('envol_breadcrumb');
   if ($show_breadcrumb == 'yes' || $show_breadcrumb == 'admin' && arg(0) == 'admin') {
 
     // Optionally get rid of the homepage link.
-    $show_breadcrumb_home = theme_get_setting('iris_breadcrumb_home');
+    $show_breadcrumb_home = theme_get_setting('envol_breadcrumb_home');
     if (!$show_breadcrumb_home) {
       array_shift($breadcrumb);
     }
 
     // Return the breadcrumb with separators.
     if (!empty($breadcrumb)) {
-      $breadcrumb_separator = filter_xss_admin(theme_get_setting('iris_breadcrumb_separator'));
+      $breadcrumb_separator = filter_xss_admin(theme_get_setting('envol_breadcrumb_separator'));
       $trailing_separator = $title = '';
-      if (theme_get_setting('iris_breadcrumb_title')) {
+      if (theme_get_setting('envol_breadcrumb_title')) {
         $item = menu_get_item();
         if (!empty($item['tab_parent'])) {
           // If we are on a non-default tab, use the tab's title.
@@ -47,7 +47,7 @@ function iris_breadcrumb($variables) {
           $breadcrumb[] = drupal_get_title();
         }
       }
-      elseif (theme_get_setting('iris_breadcrumb_trailing')) {
+      elseif (theme_get_setting('envol_breadcrumb_trailing')) {
         $trailing_separator = $breadcrumb_separator;
       }
 
@@ -79,16 +79,16 @@ function iris_breadcrumb($variables) {
  *   An array of variables to pass to the theme template.
  * @param $hook
  *   The name of the template being rendered. This is usually "html", but can
- *   also be "maintenance_page" since iris_preprocess_maintenance_page() calls
+ *   also be "maintenance_page" since envol_preprocess_maintenance_page() calls
  *   this function to have consistent variables.
  */
-function iris_preprocess_html(&$variables, $hook) {
+function envol_preprocess_html(&$variables, $hook) {
   // Add variables and paths needed for HTML5 and responsive support.
   $variables['base_path'] = base_path();
-  $variables['path_to_iris'] = drupal_get_path('theme', 'iris');
+  $variables['path_to_envol'] = drupal_get_path('theme', 'envol');
   // Get settings for HTML5 and responsive support. array_filter() removes
   // items from the array that have been disabled.
-  $html5_respond_meta = array_filter((array) theme_get_setting('iris_html5_respond_meta'));
+  $html5_respond_meta = array_filter((array) theme_get_setting('envol_html5_respond_meta'));
   $variables['add_respond_js']          = in_array('respond', $html5_respond_meta);
   $variables['add_html5_shim']          = in_array('html5', $html5_respond_meta);
   $variables['default_mobile_metatags'] = in_array('meta', $html5_respond_meta);
@@ -107,8 +107,8 @@ function iris_preprocess_html(&$variables, $hook) {
     drupal_add_http_header('X-UA-Compatible', 'IE=edge,chrome=1');
   }
 
-  $variables['skip_link_anchor'] = check_plain(theme_get_setting('iris_skip_link_anchor'));
-  $variables['skip_link_text']   = check_plain(theme_get_setting('iris_skip_link_text'));
+  $variables['skip_link_anchor'] = check_plain(theme_get_setting('envol_skip_link_anchor'));
+  $variables['skip_link_text']   = check_plain(theme_get_setting('envol_skip_link_text'));
 
   // Return early, so the maintenance page does not call any of the code below.
   if ($hook != 'html') {
@@ -169,6 +169,13 @@ function iris_preprocess_html(&$variables, $hook) {
         break;
     }
   }
+
+  //Special for multisie views
+  if ( isset($_GET['ajax']) && $_GET['ajax'] == 1 ) {
+        // Add suggestions for page
+        $variables['theme_hook_suggestions'][] = 'html__ajax';
+  }
+
 }
 
 /**
@@ -179,7 +186,7 @@ function iris_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("html" in this case.)
  */
-function iris_process_html(&$variables, $hook) {
+function envol_process_html(&$variables, $hook) {
   // Flatten out html_attributes.
   $variables['html_attributes'] = drupal_attributes($variables['html_attributes_array']);
 }
@@ -187,7 +194,7 @@ function iris_process_html(&$variables, $hook) {
 /**
  * Override or insert variables in the html_tag theme function.
  */
-function iris_process_html_tag(&$variables) {
+function envol_process_html_tag(&$variables) {
   $tag = &$variables['element'];
 
   if ($tag['#tag'] == 'style' || $tag['#tag'] == 'script') {
@@ -204,7 +211,7 @@ function iris_process_html_tag(&$variables) {
 /**
  * Implement hook_html_head_alter().
  */
-function iris_html_head_alter(&$head) {
+function envol_html_head_alter(&$head) {
   // Simplify the meta tag for character encoding.
   if (isset($head['system_meta_content_type']['#attributes']['content'])) {
     $head['system_meta_content_type']['#attributes'] = array('charset' => str_replace('text/html; charset=', '', $head['system_meta_content_type']['#attributes']['content']));
@@ -219,7 +226,7 @@ function iris_html_head_alter(&$head) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-function iris_preprocess_page(&$variables, $hook) {
+function envol_preprocess_page(&$variables, $hook) {
   // Find the title of the menu used by the secondary links.
   $secondary_links = variable_get('menu_secondary_links_source', 'user-menu');
   if ($secondary_links) {
@@ -229,10 +236,11 @@ function iris_preprocess_page(&$variables, $hook) {
   else {
     $variables['secondary_menu_heading'] = '';
   }
-  // If front page load le fil from envol
-  if ($variables['is_front']) {
-    $lefil = drupal_http_request('http://iris.envol.local/lefil?ajax=1');
-    $variables['page']['content']['lefil'] = $lefil->data;
+
+  //Special for multisie views
+  if ( isset($_GET['ajax']) && $_GET['ajax'] == 1 ) {
+        // Add suggestions for page
+        $variables['theme_hook_suggestions'][] = 'page__ajax';
   }
 }
 
@@ -244,10 +252,10 @@ function iris_preprocess_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("maintenance_page" in this case.)
  */
-function iris_preprocess_maintenance_page(&$variables, $hook) {
-  iris_preprocess_html($variables, $hook);
-  // There's nothing maintenance-related in iris_preprocess_page(). Yet.
-  //iris_preprocess_page($variables, $hook);
+function envol_preprocess_maintenance_page(&$variables, $hook) {
+  envol_preprocess_html($variables, $hook);
+  // There's nothing maintenance-related in envol_preprocess_page(). Yet.
+  //envol_preprocess_page($variables, $hook);
 }
 
 /**
@@ -258,8 +266,8 @@ function iris_preprocess_maintenance_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("maintenance_page" in this case.)
  */
-function iris_process_maintenance_page(&$variables, $hook) {
-  iris_process_html($variables, $hook);
+function envol_process_maintenance_page(&$variables, $hook) {
+  envol_process_html($variables, $hook);
   // Ensure default regions get a variable. Theme authors often forget to remove
   // a deleted region's variable in maintenance-page.tpl.
   foreach (array('header', 'navigation', 'highlighted', 'help', 'content', 'sidebar_first', 'sidebar_second', 'footer', 'bottom') as $region) {
@@ -277,7 +285,7 @@ function iris_process_maintenance_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-function iris_preprocess_node(&$variables, $hook) {
+function envol_preprocess_node(&$variables, $hook) {
   // Add $unpublished variable.
   $variables['unpublished'] = (!$variables['status']) ? TRUE : FALSE;
 
@@ -315,7 +323,7 @@ function iris_preprocess_node(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("comment" in this case.)
  */
-function iris_preprocess_comment(&$variables, $hook) {
+function envol_preprocess_comment(&$variables, $hook) {
   // If comment subjects are disabled, don't display them.
   if (variable_get('comment_subject_field_' . $variables['node']->type, 1) == 0) {
     $variables['title'] = '';
@@ -346,17 +354,17 @@ function iris_preprocess_comment(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("region" in this case.)
  */
-function iris_preprocess_region(&$variables, $hook) {
+function envol_preprocess_region(&$variables, $hook) {
   // Sidebar regions get some extra classes and a common template suggestion.
   if (strpos($variables['region'], 'sidebar_') === 0) {
     $variables['classes_array'][] = 'column';
     $variables['classes_array'][] = 'sidebar';
-    // Allow a region-specific template to override Iris's region--sidebar.
+    // Allow a region-specific template to override envol's region--sidebar.
     array_unshift($variables['theme_hook_suggestions'], 'region__sidebar');
   }
   // Use a template with no wrapper for the content region.
   elseif ($variables['region'] == 'content') {
-    // Allow a region-specific template to override Iris's region--no-wrapper.
+    // Allow a region-specific template to override envol's region--no-wrapper.
     array_unshift($variables['theme_hook_suggestions'], 'region__no_wrapper');
   }
   // Add a SMACSS-style class for header region.
@@ -373,7 +381,7 @@ function iris_preprocess_region(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("block" in this case.)
  */
-function iris_preprocess_block(&$variables, $hook) {
+function envol_preprocess_block(&$variables, $hook) {
   // Use a template with no wrapper for the page's main content.
   if ($variables['block_html_id'] == 'block-system-main') {
     $variables['theme_hook_suggestions'][] = 'block__no_wrapper';
@@ -383,7 +391,7 @@ function iris_preprocess_block(&$variables, $hook) {
   if ($variables['block_id'] == 1) {
     $variables['classes_array'][] = 'first';
   }
-  // The last_in_region property is set in iris_page_alter().
+  // The last_in_region property is set in envol_page_alter().
   if (isset($variables['block']->last_in_region)) {
     $variables['classes_array'][] = 'last';
   }
@@ -467,7 +475,7 @@ function iris_preprocess_block(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("block" in this case.)
  */
-function iris_process_block(&$variables, $hook) {
+function envol_process_block(&$variables, $hook) {
   // Drupal 7 should use a $title variable instead of $block->subject.
   $variables['title'] = isset($variables['block']->subject) ? $variables['block']->subject : '';
 }
@@ -481,7 +489,7 @@ function iris_process_block(&$variables, $hook) {
  * @param $page
  *   Nested array of renderable elements that make up the page.
  */
-function iris_page_alter(&$page) {
+function envol_page_alter(&$page) {
   // Look in each visible region for blocks.
   foreach (system_region_list($GLOBALS['theme'], REGIONS_VISIBLE) as $region => $name) {
     if (!empty($page[$region])) {
@@ -503,7 +511,7 @@ function iris_page_alter(&$page) {
  * Prevent user-facing field styling from screwing up node edit forms by
  * renaming the classes on the node edit form's field wrappers.
  */
-function iris_form_node_form_alter(&$form, &$form_state, $form_id) {
+function envol_form_node_form_alter(&$form, &$form_state, $form_id) {
   // Remove if #1245218 is backported to D7 core.
   foreach (array_keys($form) as $item) {
     if (strpos($item, 'field_') === 0) {
@@ -525,7 +533,7 @@ function iris_form_node_form_alter(&$form, &$form_state, $form_id) {
  *
  * @ingroup themeable
  */
-function iris_menu_local_tasks(&$variables) {
+function envol_menu_local_tasks(&$variables) {
   $output = '';
 
   // Add theme hook suggestions for tab type.
@@ -560,13 +568,13 @@ function iris_menu_local_tasks(&$variables) {
  *
  * @ingroup themeable
  */
-function iris_menu_local_task($variables) {
+function envol_menu_local_task($variables) {
   $type = $class = FALSE;
 
   $link = $variables['element']['#link'];
   $link_text = $link['title'];
 
-  // Check for tab type set in iris_menu_local_tasks().
+  // Check for tab type set in envol_menu_local_tasks().
   if (is_array($variables['element']['#theme'])) {
     $type = in_array('menu_local_task__secondary', $variables['element']['#theme']) ? 'tabs-secondary' : 'tabs-primary';
   }
@@ -604,7 +612,7 @@ function iris_menu_local_task($variables) {
 /**
  * Implements hook_preprocess_menu_link().
  */
-function iris_preprocess_menu_link(&$variables, $hook) {
+function envol_preprocess_menu_link(&$variables, $hook) {
   foreach ($variables['element']['#attributes']['class'] as $key => $class) {
     switch ($class) {
       // Menu module classes.
@@ -641,7 +649,7 @@ function iris_preprocess_menu_link(&$variables, $hook) {
 /**
  * Returns HTML for status and/or error messages, grouped by type.
  */
-function iris_status_messages($variables) {
+function envol_status_messages($variables) {
   $display = $variables['display'];
   $output = '';
 
@@ -673,7 +681,7 @@ function iris_status_messages($variables) {
 /**
  * Returns HTML for a marker for new or updated content.
  */
-function iris_mark($variables) {
+function envol_mark($variables) {
   $type = $variables['type'];
 
   if ($type == MARK_NEW) {
@@ -687,6 +695,6 @@ function iris_mark($variables) {
 /**
  * Alters the default Panels render callback so it removes the panel separator.
  */
-function iris_panels_default_style_render_region($variables) {
+function envol_panels_default_style_render_region($variables) {
   return implode('', $variables['panes']);
 }

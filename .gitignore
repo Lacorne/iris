@@ -6,4 +6,5 @@
 # sites/*/private
 
 sites/all/themes/iris/node_modules
+sites/all/themes/envol/node_modules
 sites/sites.php

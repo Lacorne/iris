@@ -1,0 +1,42 @@
+name        = Envol
+description = Envol Theme for Drupal
+screenshot  = screenshot.png
+
+core        = 7.x
+engine      = phptemplate
+
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/envol.css
+
+;scripts[] = js/vendors/jquery.browser.min.js
+;scripts[] = js/front.js
+
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[content]        = Content
+regions[sidebar_first]  = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[footer]         = Footer
+regions[bottom]         = Page bottom
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
+
+settings[envol_breadcrumb]           = yes
+settings[envol_breadcrumb_separator] = ' › '
+settings[envol_breadcrumb_home]      = 1
+settings[envol_breadcrumb_trailing]  = 0
+settings[envol_breadcrumb_title]     = 0
+settings[envol_skip_link_anchor]     = main-menu
+settings[envol_skip_link_text]       = Jump to navigation
+settings[envol_html5_respond_meta][] = respond
+settings[envol_html5_respond_meta][] = html5
+settings[envol_html5_respond_meta][] = meta
+
+; Information added by Drupal.org packaging script on 2014-04-30
+version = "7.x-0.1"
+core = "7.x"
+project = "envol"
+datestamp = "1398864829"
+

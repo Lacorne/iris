@@ -44,10 +44,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'edit' => array(
-            'editor' => 'form',
-          ),
-          'trim_length' => 300,
+          'trim_length' => 100,
         ),
         'type' => 'text_summary_or_trimmed',
         'weight' => 2,
@@ -112,11 +109,7 @@ function envol_config_field_default_field_instances() {
       'teaser_big_img' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
-        'settings' => array(
-          'edit' => array(
-            'editor' => 'form',
-          ),
-        ),
+        'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
       ),
@@ -180,9 +173,6 @@ function envol_config_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'edit' => array(
-            'editor' => 'form',
-          ),
           'image_link' => 'content',
           'image_style' => 484,
         ),

@@ -345,7 +345,7 @@ ini_set('session.cookie_lifetime', 2000000);
  * Remove the leading hash signs to enable.
  */
 # $conf['site_name'] = 'My Drupal site';
-# $conf['theme_default'] = 'garland';
+$conf['theme_default'] = 'envol';
 # $conf['anonymous'] = 'Visitor';
 
 /**
