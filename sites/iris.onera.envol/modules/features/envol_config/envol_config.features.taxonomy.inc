@@ -32,6 +32,121 @@ function envol_config_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'localisation' => array(
+      'name' => 'Localisation',
+      'machine_name' => 'localisation',
+      'description' => 'Noms des différents centres de l\'Onera',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'tags' => array(
+      'name' => 'Étiquettes',
+      'machine_name' => 'tags',
+      'description' => 'Utilisez les étiquettes pour regrouper les articles sur des sujets similaires dans des catégories.',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'thematique_analyse' => array(
+      'name' => 'Thématique Analyse',
+      'machine_name' => 'thematique_analyse',
+      'description' => 'Gestion des thématiques de la rubrique Analyse',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'thematique_focus' => array(
+      'name' => 'Thématique Focus',
+      'machine_name' => 'thematique_focus',
+      'description' => 'Gestion des thématiques de la rubrique Focus',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'thematique_invite' => array(
+      'name' => 'Thématique Invité',
+      'machine_name' => 'thematique_invite',
+      'description' => 'Gestion des thématique de la rubrique Invité',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'vocabulary_12' => array(
       'name' => 'Mois',
       'machine_name' => 'vocabulary_12',
