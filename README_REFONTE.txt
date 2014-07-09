@@ -8,7 +8,7 @@ sites/all/modules
   - custom: contient les modules custom, par conséquent susceptibles d'êtres modifiés
   - features: contient les features (sauvegarde de configurations sous forme de fichiers)
 
-Lors de la récupération de cette récupération, executer la commande drush cc all depuis la racine du site.
+Lors de la récupération, executer la commande drush cc all depuis la racine du site.
 Drupal doit mettre à jour le nouveau chemin des modules contrib qui ont été déplacés.
 
 #Nouveaux modules ajoutés
@@ -17,6 +17,7 @@ Drupal doit mettre à jour le nouveau chemin des modules contrib qui ont été dépl
 - diff: https://www.drupal.org/project/diff
 - strongarm: https://www.drupal.org/project/strongarm
 - display suite: https://www.drupal.org/project/ds
+- field collection: https://www.drupal.org/project/field_collection
 
 => Pour des besoins de fonctionnement du site
 - superfish: https://www.drupal.org/project/superfish
@@ -36,10 +37,17 @@ Drupal doit mettre à jour le nouveau chemin des modules contrib qui ont été dépl
 - strongarm
 - transliteration
 - display suite
+- field collection
 
 #Liste des features
-sites/all/modules/features/iris:
+sites/iris.onera.accueil/modules/features:
+- iris_config
+- iris_contexts
 - iris_views
+sites/iris.onera.envol/modules/features:
+- envol_config
+- envol_contexts
+- envol_views
 
 #Patch
 Le module collapsibblock présentait un bug JS avec l'utilisation de la dernière version de jQuery.
@@ -50,18 +58,40 @@ https://www.drupal.org/node/1429956
 Le #3.
 
 #Content Type
-Modification du type de contenu actualités.
-Ajout d'un champ catégorie (Podcast, ...)
-Ajout d'un champ image (image remontée sur la home)
-Ajout des view mode big img, small img (utilisés dans la vue "le fil").
+Les nouveaux content type sont présents sur Envol
 
 #views
-Création de la view "le fil" qui est un update + renommage de la vue "une2"
-Dans cette vue, la page a été modifée pour afficher 2 attachements:
-- First news: l'actualité la plus récente
-- Sticky: l'actualité épinglée en haut des listes (la plus récente des épinglées).
-Le type d'affichage est un rendered entity, afin d'afficher les view modes désirés (comportant les champs désirés, et les images dans leur bons formats grâce aux styles d'images.)
+Les nouvelles views sont présentes sur Envol
 
 #Envol
 Bdd créée: d7_envol
 Dossier créé: sites/all/iris.onera.envol
+
+#Actions à faire:
+Iris:
+Activer le theme Iris et le mettre par défaut
+Désactiver le module External Links
+Créer un contenu de type "Page 2".
+Mettre en titre "Le fil", et indiquer comme alias "lefil"
+Aller dans "admin/config/system/site-information" et indiquer en page d'accueil "lefil"
+Dans admin/config/development/jquery_update indiquer en default la 1.10 et indiquer 1.5 pour la version administration
+
+Envol:
+Activer le theme Envol et le mettre par défaut
+Dans modules, désactiver les modules core "overlay" et "Toolbar"
+Dans admin/config/development/jquery_update indiquer en default la 1.10 et indiquer 1.5 pour la version administration
+
+#Commandes Drush
+Iris:
+drush iris.onera.accueil en features
+drush iris.onera.accueil en iris_config
+drush iris.onera.accueil en iris_contexts
+drush iris.onera.accueil en iris_views
+drush iris.onera.accueil cc all -y -v
+
+Envol:
+drush iris.onera.envol en features
+drush iris.onera.envol en envol_config
+drush iris.onera.envol en envol_contexts
+drush iris.onera.envol en envol_views
+drush iris.onera.envol cc all -y -v

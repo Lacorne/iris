@@ -194,7 +194,7 @@ function envol_config_field_default_field_bases() {
       ),
       'repeat' => 0,
       'timezone_db' => '',
-      'todate' => 'optional',
+      'todate' => '',
       'tz_handling' => 'none',
       'views_base_columns' => array(),
       'views_base_table' => 0,

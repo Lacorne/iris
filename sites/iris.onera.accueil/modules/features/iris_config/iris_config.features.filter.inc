@@ -91,28 +91,5 @@ function iris_config_filter_default_formats() {
     ),
   );
 
-  // Exported format: redaction.
-  $formats[5] = array(
-    'format' => 5,
-    'name' => 'redaction',
-    'cache' => 1,
-    'status' => 1,
-    'weight' => 0,
-    'filters' => array(
-      'filter_autop' => array(
-        'weight' => 10,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'filter_url' => array(
-        'weight' => 10,
-        'status' => 1,
-        'settings' => array(
-          'filter_url_length' => 72,
-        ),
-      ),
-    ),
-  );
-
   return $formats;
 }

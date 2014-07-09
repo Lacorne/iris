@@ -223,7 +223,7 @@ function envol_html_head_alter(&$head) {
  */
 function envol_preprocess(&$variables, $hook) {
   global $base_url;
-  $variables['base_url'] = $base_url;
+  ($base_url == 'http://iris.onera.fr') ? $variables['base_url'] = $base_url . '/envol' : $variables['base_url'] = $base_url;
 }
 
 /**
@@ -318,9 +318,25 @@ function envol_preprocess_node(&$variables, $hook) {
 
   // Add suggestions for node
   $variables['theme_hook_suggestions'][] = 'node' . '__' . $variables['view_mode'];
+  $variables['theme_hook_suggestions'][] = 'node' . '__' . $variables['view_mode'] . '__' . $variables['type'];
 
   // Add node_url for template node
   $variables['content']['node_url'] = $variables['node_url'];
+
+  // Check if analyse, so we create a array of parole experts in content
+  if($variables['type'] == 'analyse'){
+    if (isset($variables['content']['field_paroles_experts'])) {
+      $paroles_experts = $variables['content']['field_paroles_experts'];
+      $nb_pe = count($paroles_experts['#items']);
+      foreach ($paroles_experts['#items'] as $key => $value) {
+        $item = $paroles_experts['#items'][$key]['value'];
+        $variables['content']['experts'][$key]['name'] = $paroles_experts[$key]['entity']['field_collection_item'][$item]['field_nom_prenom'][0]['#markup'];
+        $variables['content']['experts'][$key]['function'] = $paroles_experts[$key]['entity']['field_collection_item'][$item]['field_fonction_titre'][0]['#markup'];
+        $variables['content']['experts'][$key]['localisation'] = $paroles_experts[$key]['entity']['field_collection_item'][$item]['field_localisation'][0]['#title'];
+        $variables['content']['experts'][$key]['visuel'] = $paroles_experts[$key]['entity']['field_collection_item'][$item]['field_visuel'][0]['#item']['uri'];
+      }
+    }
+  }
 }
 
 /**

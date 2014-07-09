@@ -220,6 +220,8 @@ function iris_html_head_alter(&$head) {
  *   The name of the template being rendered ("page" in this case.)
  */
 function iris_preprocess_page(&$variables, $hook) {
+  global $base_url;
+
   // Find the title of the menu used by the secondary links.
   $secondary_links = variable_get('menu_secondary_links_source', 'user-menu');
   if ($secondary_links) {
@@ -231,7 +233,8 @@ function iris_preprocess_page(&$variables, $hook) {
   }
   // If front page load le fil from envol
   if ($variables['is_front']) {
-    $lefil = drupal_http_request('http://iris.envol.local/lefil?ajax=1');
+    ($base_url == 'http://iris.onera.fr') ? $lefil = drupal_http_request($base_url . '/envol/lefil?ajax=1') : $lefil = drupal_http_request('http://iris.envol.local/lefil?ajax=1'); ;
+    
     $variables['page']['content']['lefil'] = $lefil->data;
   }
 }
@@ -305,6 +308,7 @@ function iris_preprocess_node(&$variables, $hook) {
 
   // Add node_url for template node
   $variables['content']['node_url'] = $variables['node_url'];
+
 }
 
 /**

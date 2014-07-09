@@ -132,7 +132,7 @@ function envol_config_field_default_field_instances() {
     'label' => 'Parole d\'expert',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -168,7 +168,7 @@ function envol_config_field_default_field_instances() {
     'label' => 'Photo',
     'required' => 1,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -192,9 +192,9 @@ function envol_config_field_default_field_instances() {
       ),
       'filefield_paths_enabled' => 1,
       'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
+      'max_resolution' => '220x270',
+      'min_resolution' => '220x270',
+      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -568,7 +568,7 @@ function envol_config_field_default_field_instances() {
     'label' => 'Collaborateurs',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1077,7 +1077,7 @@ function envol_config_field_default_field_instances() {
     'label' => 'Collaborateurs',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1406,7 +1406,7 @@ function envol_config_field_default_field_instances() {
     'label' => 'Collaborateurs',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
