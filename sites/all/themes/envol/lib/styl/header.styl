@@ -9,9 +9,20 @@
     box-sizing border-box
     absolute top left right
     z-index -1
-    height 405px
+    height 200px
     border-top solid 25px #303133
-    background linear-gradient(left, 0% #165d6f, 50% #4aa6b9, 100% #165d6f)
+    background linear-gradient(top, #fff, 92px #fff, 92px #000)
+  &:after
+    content " "
+    display block
+    box-sizing border-box
+    absolute top left 40% right
+    z-index -1
+    height 200px
+    border-top solid 25px #303133
+    background linear-gradient(top, #fff, 92px #fff, 92px #ed0361)
+    .page-lefil &
+      background linear-gradient(top, #fff, 92px #fff, 92px #ed0361)
   .wrapper-content-header
     position relative
     box-sizing border-box
@@ -19,6 +30,15 @@
     height 138px
     margin 0 auto
     padding 0 20px
+    &:after
+      content " "
+      display block
+      box-sizing border-box
+      absolute bottom left 270px right
+      height 22px
+      background #64747d
+      .page-lefil &
+        background #ed0361
     .header__site-name
       absolute top 0 left 20px
       width 55px
@@ -34,10 +54,6 @@
         color #fff
     .header__logo
       box-sizing border-box
-      absolute top 55px
-      width 163px
-      height 64px
-    .header__site-slogan
-      absolute top 35px left 117px
-      color #fff
-      font-size 15px
+      absolute top 40px left 15px
+      width 205px
+      height 65px

@@ -47,21 +47,5 @@ function iris_config_filter_default_formats() {
     ),
   );
 
-  // Exported format: PHP code.
-  $formats[2] = array(
-    'format' => 2,
-    'name' => 'PHP code',
-    'cache' => 0,
-    'status' => 1,
-    'weight' => 0,
-    'filters' => array(
-      'php_code' => array(
-        'weight' => 0,
-        'status' => 1,
-        'settings' => array(),
-      ),
-    ),
-  );
-
   return $formats;
 }

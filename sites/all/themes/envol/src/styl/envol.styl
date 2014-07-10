@@ -6,8 +6,8 @@
 @import '../../lib/styl/layout.styl'
 @import '../../lib/styl/header.styl'
 @import '../../lib/styl/footer.styl'
-@import '../../lib/styl/navigation-superfish.styl'
-@import '../../lib/styl/sidebars.styl'
+//@import '../../lib/styl/navigation-superfish.styl'
+//@import '../../lib/styl/sidebars.styl'
 
 body
   font-family arial
@@ -47,118 +47,3 @@ body
     background #46a4b8
 
 // Structure of home page
-.front
-  .view-lefil
-    line-height 1.5
-    .view-content
-      .views-row-odd
-        column(3, 12, noright)
-      .views-row-even
-        column(3, 12, noleft)
-    .view-display-id-first_news
-      .views-row-odd
-        column(6, 12, nomargin)
-    .view-display-id-sticky_news
-      .views-row-odd
-        column(3, 12, noleft)
-    .view-content
-      .views-row
-        margin-bottom 20px
-
-// Gestion affichage news
-.view-lefil
-  .wrapper-info
-    clearfix()
-  .field-name-field-category
-    display inline-block
-    position relative
-    margin 0 0 10px
-    color #13a0b2
-    text-transform uppercase
-    font-size 12px
-    line-height 1
-    &:after
-      display block
-      box-sizing border-box
-      absolute top 0 bottom 0 right -15px
-      content '›'
-      font-size 19px
-      line-height .45em
-  .field-name-field-image-actu
-    margin-bottom 8px
-  .node__title
-    color #000
-    font-size 14px
-    margin 0 0 10px
-    line-height 1.3
-    a
-      color #000
-      text-decoration none
-  .readmore
-    //absolute bottom 0 right 0
-    color #13a0b2
-    text-decoration none
-    line-height 1
-    float right
-  .links
-    //absolute bottom 0 left 0
-    line-height 1
-    float left
-    li
-      padding 0
-
-.view-display-id-first_news
-  .view-mode-teaser_big_img
-    position relative
-    min-height 142px
-    background #333
-    .field-name-field-image-actu
-      margin-bottom 0
-    .wrapper-info
-      absolute bottom 0 left 0 right 0
-      box-sizing border-box
-      padding 15px 20px 20px
-      color #fff
-      bg-linear-gradient(300px, true, #000, top, rgba(0,0,0,.6), rgba(0,0,0,.6))
-    .node__title
-      color #fff
-      font-size 18px
-      margin 10px 0
-      line-height 1
-      a
-        color #fff
-    .field-name-field-category
-      color #00ccff
-    .readmore
-        position relative
-        color #00ccff
-        float right
-        line-height inherit
-    .links
-      absolute bottom 5px right 20px
-      left auto
-      line-height 1
-      clear both
-
-.view-mode-teaser_small_img
-  height 330px
-  max-height 330px
-  .wrapper-info
-    position relative
-    padding-left 15px
-    &:before
-      content " "
-      display block
-      width 2px
-      height 20px
-      background #13a0b2
-      absolute top 0 left 0
-    &:after
-      content " "
-      display block
-      width 2px
-      background #02e3ff
-      absolute top 20px bottom -12px left 0
-  .field-name-body
-    white-space normal
-    overflow hidden
