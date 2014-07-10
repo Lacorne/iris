@@ -36,6 +36,7 @@
     hide($content['links']);
     hide($content['field_paroles_experts']);
     if (isset($content['experts'])) {
+      $li_elm = '';
       foreach ($content['experts'] as $key => $value) {
         $name_exp = $content['experts'][$key]['name'];
         $function_epx = $content['experts'][$key]['function'];

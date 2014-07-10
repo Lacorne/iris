@@ -18,6 +18,7 @@ Drupal doit mettre à jour le nouveau chemin des modules contrib qui ont été dépl
 - strongarm: https://www.drupal.org/project/strongarm
 - display suite: https://www.drupal.org/project/ds
 - field collection: https://www.drupal.org/project/field_collection
+- wysiwyg_template: https://www.drupal.org/project/wysiwyg_template
 
 => Pour des besoins de fonctionnement du site
 - superfish: https://www.drupal.org/project/superfish
