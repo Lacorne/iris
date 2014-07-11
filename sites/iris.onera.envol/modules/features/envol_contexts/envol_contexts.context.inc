@@ -26,46 +26,10 @@ function envol_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'superfish-1' => array(
-          'module' => 'superfish',
-          'delta' => '1',
+        'menu-menu-menu-haut' => array(
+          'module' => 'menu',
+          'delta' => 'menu-menu-haut',
           'region' => 'navigation',
-          'weight' => '-10',
-        ),
-        'block-8' => array(
-          'module' => 'block',
-          'delta' => '8',
-          'region' => 'sidebar_first',
-          'weight' => '-10',
-        ),
-        'block-28' => array(
-          'module' => 'block',
-          'delta' => '28',
-          'region' => 'sidebar_first',
-          'weight' => '-9',
-        ),
-        'block-21' => array(
-          'module' => 'block',
-          'delta' => '21',
-          'region' => 'sidebar_first',
-          'weight' => '-8',
-        ),
-        'block-22' => array(
-          'module' => 'block',
-          'delta' => '22',
-          'region' => 'sidebar_first',
-          'weight' => '-7',
-        ),
-        'block-23' => array(
-          'module' => 'block',
-          'delta' => '23',
-          'region' => 'sidebar_first',
-          'weight' => '-6',
-        ),
-        'block-6' => array(
-          'module' => 'block',
-          'delta' => '6',
-          'region' => 'sidebar_second',
           'weight' => '-10',
         ),
       ),

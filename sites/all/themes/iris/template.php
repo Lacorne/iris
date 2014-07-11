@@ -233,7 +233,7 @@ function iris_preprocess_page(&$variables, $hook) {
   }
   // If front page load le fil from envol
   if ($variables['is_front']) {
-    ($base_url == 'http://iris.onera.fr') ? $lefil = drupal_http_request($base_url . '/envol/lefil?ajax=1') : $lefil = drupal_http_request('http://iris.envol.local/lefil?ajax=1'); ;
+    ($base_url == 'http://iris.onera.fr') ? $lefil = drupal_http_request($base_url . '/envol/dist/lefil?ajax=1') : $lefil = drupal_http_request('http://iris.envol.local/dist/lefil?ajax=1');
     
     $variables['page']['content']['lefil'] = $lefil->data;
   }

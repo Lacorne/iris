@@ -6,9 +6,23 @@
 @import '../../lib/styl/layout.styl'
 @import '../../lib/styl/header.styl'
 @import '../../lib/styl/footer.styl'
-//@import '../../lib/styl/navigation-superfish.styl'
+@import '../../lib/styl/navigation.styl'
 //@import '../../lib/styl/sidebars.styl'
 
+// Specials
+.left
+  float left
+.right
+  float right
+.clear
+  clear both
+
+.mr20
+  margin-right 20px
+.ml20
+  margin-left 20px
+
+// General
 body
   font-family arial
 
@@ -24,15 +38,76 @@ body
   clearfix()
 
 // Generic Elements
+.node-teaser
+  clearfix()
+
 .page__title
-  font-size 22px
+  font-size 40px
   color #000
-  text-transform uppercase
   margin-bottom 16px
 
+.node-title
+  color #000
+  & a
+    color #000
+    text-decoration none
+
+.field-name-field-category
+  color #666
+  text-transform uppercase
+  position relative
+  display inline-block
+  font-size 12px
+  margin-top 5px
+  &:after
+    display block
+    box-sizing border-box
+    absolute top 0 bottom 0 right -15px
+    content '›'
+    font-size 19px
+    line-height .45em
+
+.field-name-field-date
+  font-size 16px
+  font-weight bold
+
+.field-name-body
+  font-size 13px
+
+// Views
+.views-row
+  padding 20px 0
+  border-bottom solid 1px #eaeaea
+.views-row-first
+  padding-top 0
+.views-row-last
+  border none
 .view-footer
   clear both
   text-align center
+.readmore
+  float right
+  color #8fa5b1
+  text-decoration none
+.item-list
+  .pager
+    font-weight bold
+    li
+      padding 8px 5px
+      margin 0
+    .pager-next,
+    .pager-previous
+      display none
+    .pager-first,
+    .pager-last
+      color #000
+      font-size 14px
+      letter-spacing -5px
+      & a
+        color #000
+    & a
+      text-decoration none
+
 
 .bigbutton
   display inline-block
@@ -47,3 +122,20 @@ body
     background #46a4b8
 
 // Structure of home page
+
+// Structure of views lefil
+.page-lefil
+  .field-name-field-date
+    color #ed0361
+  .node-teaser
+    .wrapper-info
+      .node-title
+        font-size 16px
+        margin 12px 0
+  .pager
+    .pager-item
+      & a
+        color #ed0361
+    .pager-current
+      color #fff
+      background #ed0361

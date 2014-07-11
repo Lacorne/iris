@@ -20,6 +20,15 @@ function envol_config_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'collapsiblock_settings';
+  $strongarm->value = array(
+    'block-menu-menu-menu-haut' => '1',
+  );
+  $export['collapsiblock_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_agenda';
   $strongarm->value = '1';
   $export['comment_agenda'] = $strongarm;
@@ -289,6 +298,13 @@ function envol_config_strongarm() {
   $strongarm->name = 'date_default_timezone';
   $strongarm->value = 'Europe/Paris';
   $export['date_default_timezone'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_envol_long';
+  $strongarm->value = 'd F Y';
+  $export['date_format_envol_long'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

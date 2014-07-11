@@ -177,6 +177,61 @@ function envol_views_views_default_views() {
   $handler->display->display_options['filters']['taxonomy_vocabulary_7_tid']['vocabulary'] = 'vocabulary_7';
   $handler->display->display_options['block_description'] = 'Bloc home 2 - Actus2';
 
+  /* Display: Le fil */
+  $handler = $view->new_display('page', 'Le fil', 'lefil');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Le fil';
+  $handler->display->display_options['display_description'] = 'Fil d\'actualités sur Envol';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '◄◄';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '◄';
+  $handler->display->display_options['pager']['options']['tags']['next'] = '►';
+  $handler->display->display_options['pager']['options']['tags']['last'] = '►►';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'story' => 'story',
+    'feed' => 'feed',
+  );
+  /* Critère de filtrage: Date : Date (node) */
+  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
+  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter']['default_date'] = 'now -66 days';
+  $handler->display->display_options['filters']['date_filter']['year_range'] = '-0:+1';
+  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
+    'node.created' => 'node.created',
+  );
+  $handler->display->display_options['path'] = 'lefil';
+
   /* Display: Le fil pour Iris */
   $handler = $view->new_display('page', 'Le fil pour Iris', 'home_lefil');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -197,7 +252,7 @@ function envol_views_views_default_views() {
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<a href="/actualites" class="bigbutton blue">Toute l\'actualité</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="http://iris.envol.local/lefil" class="bigbutton blue">Toute l\'actualité</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -231,7 +286,7 @@ function envol_views_views_default_views() {
   $handler->display->display_options['filters']['sticky']['table'] = 'node';
   $handler->display->display_options['filters']['sticky']['field'] = 'sticky';
   $handler->display->display_options['filters']['sticky']['value'] = '0';
-  $handler->display->display_options['path'] = 'lefil';
+  $handler->display->display_options['path'] = 'dist/lefil';
 
   /* Display: First News */
   $handler = $view->new_display('attachment', 'First News', 'first_news');
@@ -351,9 +406,14 @@ function envol_views_views_default_views() {
     t('Block'),
     t('Bloc home 1 - lefil'),
     t('Bloc home 2 - Actus2'),
-    t('Le fil pour Iris'),
     t('Le fil'),
-    t('<a href="/actualites" class="bigbutton blue">Toute l\'actualité</a>'),
+    t('Fil d\'actualités sur Envol'),
+    t('◄◄'),
+    t('◄'),
+    t('►'),
+    t('►►'),
+    t('Le fil pour Iris'),
+    t('<a href="http://iris.envol.local/lefil" class="bigbutton blue">Toute l\'actualité</a>'),
     t('First News'),
     t('L\'actualité la plus récente, affichée en 1'),
     t('Sticky'),

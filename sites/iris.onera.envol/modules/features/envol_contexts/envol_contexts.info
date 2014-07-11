@@ -7,6 +7,7 @@ project = envol_contexts
 dependencies[] = block
 dependencies[] = context
 dependencies[] = ctools
+dependencies[] = menu
 dependencies[] = superfish
 features[context][] = common_blocks
 features[ctools][] = context:context:3
