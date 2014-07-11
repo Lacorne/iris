@@ -12,5 +12,5 @@ Aller dans admin/config/regional/date-time/formats
 -> Ajouter un format de date sous cette forme d F Y
 
 Aller dans admin/config/regional/date-time
--> Ajouter un type de date "Envol Lon" dont le format sera "XX Juillet 2014"
+-> Ajouter un type de date "Envol Long" dont le format sera "XX Juillet 2014"
 
