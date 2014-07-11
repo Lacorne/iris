@@ -22,7 +22,7 @@ function envol_config_ctools_plugin_api($module = NULL, $api = NULL) {
 function envol_config_image_default_styles() {
   $styles = array();
 
-  // Exported image style: 232x155.
+  // Exported image style: 232.
   $styles['232'] = array(
     'name' => '232',
     'label' => '232',

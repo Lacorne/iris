@@ -23,7 +23,7 @@ regions[bottom]         = Page bottom
 regions[page_top]       = Page top
 regions[page_bottom]    = Page bottom
 
-settings[envol_breadcrumb]           = yes
+settings[envol_breadcrumb]           = no
 settings[envol_breadcrumb_separator] = ' › '
 settings[envol_breadcrumb_home]      = 1
 settings[envol_breadcrumb_trailing]  = 0

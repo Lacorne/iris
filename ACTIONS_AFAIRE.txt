@@ -1,0 +1,16 @@
+# Livraison du 11/07/2014
+-------------------------
+Commandes drush:
+----------------
+drush iris.onera.accueil fr-all -yv
+drush iris.onera.accueil cc all -yv
+
+drush iris.onera.envol fr-all -yv
+drush iris.onera.envol cc all -yv
+
+Aller dans admin/config/regional/date-time/formats
+-> Ajouter un format de date sous cette forme d F Y
+
+Aller dans admin/config/regional/date-time
+-> Ajouter un type de date "Envol Lon" dont le format sera "XX Juillet 2014"
+

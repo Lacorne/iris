@@ -150,6 +150,9 @@ function envol_preprocess_html(&$variables, $hook) {
       case 'views_page':
         // Is this a Views page?
         $variables['classes_array'][] = 'page-views';
+        // Check if analyse, we set a special head title
+        $head_title = $variables['head_title'];
+        if ($variables['menu_item']['path'] == 'analyse') $variables['head_title'] = ucfirst($variables['menu_item']['path']) . ' | ' . $head_title;
         break;
       case 'page_manager_blog':
       case 'page_manager_blog_user':
@@ -296,7 +299,6 @@ function envol_process_maintenance_page(&$variables, $hook) {
 function envol_preprocess_node(&$variables, $hook) {
   // Add $unpublished variable.
   $variables['unpublished'] = (!$variables['status']) ? TRUE : FALSE;
-
   // Add pubdate to submitted variable.
   $variables['pubdate'] = '<time pubdate datetime="' . format_date($variables['node']->created, 'custom', 'c') . '">' . $variables['date'] . '</time>';
   if ($variables['display_submitted']) {

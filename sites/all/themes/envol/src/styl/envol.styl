@@ -26,6 +26,9 @@
 body
   font-family arial
 
+img
+  display block
+
 #main
   position relative
   box-sizing border-box
@@ -45,6 +48,14 @@ body
   font-size 40px
   color #000
   margin-bottom 16px
+.page-analyse
+  &.page-views
+    .node
+      h1
+        @extend .page__title
+        margin-top 10px
+        margin-left -3px
+        letter-spacing -1px
 
 .node-title
   color #000
@@ -67,9 +78,15 @@ body
     font-size 19px
     line-height .45em
 
-.field-name-field-date
-  font-size 16px
+.wrapper-thematique
+  font-size 14px
   font-weight bold
+  text-transform uppercase
+
+.field-name-field-date
+  font-size 15px
+  font-weight bold
+  text-transform uppercase
 
 .field-name-body
   font-size 13px
@@ -139,3 +156,29 @@ body
     .pager-current
       color #fff
       background #ed0361
+
+// Structure page analyse
+.page-analyse
+  .field-name-field-date
+    color #91b355
+  .view-mode-full
+    .wrapper-thematique
+      color #91b355
+    .field-name-field-chapo
+      box-sizing border-box
+      padding 20px
+      color #fff
+      font-size 16px
+      background #1c1c1b
+      .field-item
+        border-left solid 1px #fff
+        padding-left 20px
+        line-height 1.4em
+    .field-name-field-date
+      margin 15px 0
+    .field-name-body
+      line-height 1.3em
+    h2
+      color #000
+      font-size 14px
+      margin 10px 0
