@@ -34,11 +34,20 @@
         $visuel_epx = file_create_url($content['experts'][$key]['visuel']);
         $exp_elm .= '<li>
                     <span class="visuel-exp"><img src="' . $visuel_epx . '" class="visuel-exp-thumbnail" /></span>
-                    <span class="name-exp">' . $name_exp . '</span>
-                    <span class="function-exp">' . $function_epx . '</span>
-                    <span class="localisation-exp">' . $localisation_epx . '</span>
+                    <div class="wrapper-info">
+                      <span class="name-exp">' . $name_exp . '</span>
+                      <span class="function-exp">' . $function_epx . '</span>
+                      <span class="localisation-exp">' . $localisation_epx . '</span>
+                    </div>
                    </li>';
       }
+      $wrapper_expert = '<div class="wrapper-experts"><h2 class="title-encart">Paroles d\'experts</h2><ul>' . $exp_elm . '</ul></div>';
+
+      $save_body = $content['body'][0]['#markup'];
+      $new_body = explode('</p>', $save_body);
+      $new_body['1'] = $wrapper_expert . $new_body['1'];
+      $new_body = implode('</p>', $new_body);
+      $content['body'][0]['#markup'] = $new_body;
     }
 
   ?>
@@ -54,13 +63,8 @@
     <?php print render($content['field_auteur']);?>
   </div>
 
-  <div class="wrapper-experts">
-    <ul>
-      <?php print $exp_elm; ?>
-    </ul>
-  </div>
-
-  <div class="wrapper-collaborateurs">
+  <div class="wrapper-collaborateurs clear">
+    <p class="first">Cet article a été réalisé en collaboration avec</p>
     <?php print render($content['field_collaborateurs']);?>
   </di>
 
