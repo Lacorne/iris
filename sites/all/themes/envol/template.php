@@ -238,6 +238,8 @@ function envol_preprocess(&$variables, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 function envol_preprocess_page(&$variables, $hook) {
+  global $base_url;
+  
   // Find the title of the menu used by the secondary links.
   $secondary_links = variable_get('menu_secondary_links_source', 'user-menu');
   if ($secondary_links) {
@@ -253,6 +255,11 @@ function envol_preprocess_page(&$variables, $hook) {
         // Add suggestions for page
         $variables['theme_hook_suggestions'][] = 'page__ajax';
   }
+
+  //Set a variable to return to Iris
+  ($base_url == 'http://iris.onera.fr') ? $back_to_iris = $base_url : $back_to_iris = 'http://iris.local';
+  $variables['page']['back_to_iris'] = $back_to_iris;
+
 }
 
 /**
@@ -338,7 +345,7 @@ function envol_preprocess_node(&$variables, $hook) {
         $item = $paroles_experts['#items'][$key]['value'];
         $variables['content']['experts'][$key]['name'] = $paroles_experts[$key]['entity']['field_collection_item'][$item]['field_nom_prenom'][0]['#markup'];
         $variables['content']['experts'][$key]['function'] = $paroles_experts[$key]['entity']['field_collection_item'][$item]['field_fonction_titre'][0]['#markup'];
-        $variables['content']['experts'][$key]['localisation'] = $paroles_experts[$key]['entity']['field_collection_item'][$item]['field_localisation'][0]['#title'];
+        $variables['content']['experts'][$key]['localisation'] = $paroles_experts[$key]['entity']['field_collection_item'][$item]['field_localisation'][0]['#markup'];
         $variables['content']['experts'][$key]['visuel'] = $paroles_experts[$key]['entity']['field_collection_item'][$item]['field_visuel'][0]['#item']['uri'];
 
       }

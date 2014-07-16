@@ -125,7 +125,8 @@ img
     & a
       text-decoration none
 
-
+.wrapper-close-button
+  text-align center
 .bigbutton
   display inline-block
   box-sizing border-box
@@ -137,6 +138,10 @@ img
   &.blue
     color #fff
     background #46a4b8
+  &.green
+    color #fff
+    background #91b355
+
 
 // Structure of home page
 
@@ -162,6 +167,13 @@ img
   .field-name-field-date
     color #91b355
   .view-mode-full
+    position relative
+    h2
+      color #000
+      font-size 15px
+      margin 0 0 15px
+    p
+      margin-bottom 15px
     .wrapper-thematique
       color #91b355
     .field-name-field-chapo
@@ -200,12 +212,55 @@ img
           margin-bottom 5px
           strong
             font-size 15px
-    h2
-      color #000
-      font-size 15px
-      margin 0 0 15px
-    p
-      margin-bottom 15px
+    .wrapper-experts-complete
+      absolute top -2px bottom 0 left 0 right 0
+      display none
+      box-sizing border-box
+      background #fff
+      z-index 100
+      .node-title
+        font-size 40px
+      .field-name-field-visuel
+        float left
+        margin-right 20px
+      .field-name-field-nom-prenom,
+      .field-name-field-fonction-titre,
+      .field-name-field-localisation
+        font-size 15px
+        font-weight bold
+        color #000
+      .field-name-field-nom-prenom
+        display inline
+        div
+          display inline
+        strong
+          color #91b355
+      .field-name-field-fonction-titre
+        display inline
+        div
+          display inline
+      .field-name-field-localisation
+        color #91b355
+        margin-top 5px
+      .field-name-field-parole-expert
+        padding-top 20px
+        line-height 1.3em
+        strong
+          font-size 14px
+      .field-collection-container
+        border none
+        margin 0
+        .field-item
+          margin 25px 0 0
+      .field-collection-view
+        padding 0 0 25px
+        margin 0
+        border-bottom solid 1px #eaeaea
+      .field-collection-view-final
+        border none
+      .entity-field-collection-item
+        .field-item
+          margin 0
   .wrapper-experts
     position relative
     box-sizing border-box
@@ -215,6 +270,7 @@ img
     float left
     margin 0 20px 0 0
     width 260px
+    cursor pointer
     &:before,
     &:after
       content " "
@@ -233,6 +289,7 @@ img
       font-size 16px
       color #fff
       margin 0
+      letter-spacing 0.18em
     li
       clearfix()
       margin-top 20px

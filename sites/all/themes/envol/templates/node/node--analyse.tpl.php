@@ -51,7 +51,7 @@
     }
 
   ?>
-  <?php //print render($content); ?>
+
   <div class="wrapper-image">
     <?php print render($content['field_visuel']);?>
     <?php print render($content['field_chapo']);?>
@@ -66,7 +66,28 @@
   <div class="wrapper-collaborateurs clear">
     <p class="first">Cet article a été réalisé en collaboration avec</p>
     <?php print render($content['field_collaborateurs']);?>
-  </di>
+  </div>
+
+  <?php
+    // Modification of name, to add "questions à ..."
+    if (isset($content['field_paroles_experts'])) {
+      foreach ($content['field_paroles_experts']['#items'] as $key => $value) {
+        
+        $item = $content['field_paroles_experts']['#items'][$key]['value'];
+        $save_name = $content['field_paroles_experts'][$key]['entity']['field_collection_item'][$item]['field_nom_prenom'][0]['#markup'];
+        $new_name = 'Questions à <strong>' . $save_name . '</strong>, ';
+        $content['field_paroles_experts'][$key]['entity']['field_collection_item'][$item]['field_nom_prenom'][0]['#markup'] = $new_name;
+
+      }
+    }
+  ?>
+  <div class="wrapper-experts-complete">
+    <h2 class="node-title">Paroles d'experts</h2>
+    <?php print render($content['field_paroles_experts']);?>
+    <div class="wrapper-close-button">
+      <a href="#" class="close bigbutton green">Retour à l'article</a>
+    </div>
+  </div>
 
   <?php print render($content['links']); ?>
 

@@ -21,7 +21,7 @@
       <?php if ($site_name || $site_slogan): ?>
         <?php if ($site_name): ?>
           <h1 class="header__site-name" id="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link" rel="home"><span><?php print $site_name; ?></span></a>
+            <a href="<?php print $page['back_to_iris']; ?>" title="<?php print t('Home Iris'); ?>" class="header__site-link" rel="home"><span>Iris</span></a>
           </h1>
         <?php endif; ?>
 
