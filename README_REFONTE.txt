@@ -22,6 +22,7 @@ Drupal doit mettre à jour le nouveau chemin des modules contrib qui ont été dépl
 
 => Pour des besoins de fonctionnement du site
 - superfish: https://www.drupal.org/project/superfish
+- flippy: https://www.drupal.org/project/flippy
 
 #Modules mis à jour
 - context: https://www.drupal.org/project/context

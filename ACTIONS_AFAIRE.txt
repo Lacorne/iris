@@ -1,4 +1,4 @@
-# Livraison du 11/07/2014
+﻿# Livraison du 11/07/2014
 -------------------------
 Commandes drush:
 ----------------
@@ -25,3 +25,11 @@ drush iris.onera.envol fr-all -yv
 drush iris.onera.envol cc all -yv
 
 Désactiver le module "External Links"
+
+# Livraison du 18/07/2014
+-------------------------
+drush iris.onera.accueil fr-all -yv
+drush iris.onera.accueil cc all -yv
+
+drush iris.onera.envol fr-all -yv
+drush iris.onera.envol cc all -yv

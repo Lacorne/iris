@@ -45,3 +45,25 @@
       background #91b355
       &:before
         color #91b355
+
+// Gestion des couleurs quand l'active trail n'est pas en place
+.node-type-story
+  #navigation
+    .menu li:nth-child(1) a
+      color #fff
+      background #ed0361
+      &:before
+        content "▼"
+        display block
+        absolute bottom -11px left 0 right 0
+        text-align center
+        transform scaleX(1.15)
+        color #ed0361
+      &:after
+        content "▼"
+        display block
+        color #fff
+        absolute bottom -20px left 0 right 0
+        text-align center
+        transform scaleX(1.15)
+    

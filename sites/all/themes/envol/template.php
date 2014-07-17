@@ -250,10 +250,17 @@ function envol_preprocess_page(&$variables, $hook) {
     $variables['secondary_menu_heading'] = '';
   }
 
-  //Special for multisie views
+  // Special for multisie views
   if ( isset($_GET['ajax']) && $_GET['ajax'] == 1 ) {
-        // Add suggestions for page
-        $variables['theme_hook_suggestions'][] = 'page__ajax';
+    // Add suggestions for page
+    $variables['theme_hook_suggestions'][] = 'page__ajax';
+  }
+
+  // Create suggestion with node tpe
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+    // Add suggestions for page
+    $variables['theme_hook_suggestions'][] = 'page__' . $node->type;
   }
 
   //Set a variable to return to Iris

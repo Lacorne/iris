@@ -477,10 +477,141 @@ function envol_config_strongarm() {
           'weight' => '9',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'flippy_pager' => array(
+          'teaser' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          'teaser_big_img' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'teaser_small_img' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '6',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_custom_sorting_story';
+  $strongarm->value = 0;
+  $export['flippy_custom_sorting_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_ellipse_story';
+  $strongarm->value = '...';
+  $export['flippy_ellipse_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_firstlast_story';
+  $strongarm->value = 0;
+  $export['flippy_firstlast_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_first_label_story';
+  $strongarm->value = '« First';
+  $export['flippy_first_label_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_head_story';
+  $strongarm->value = 1;
+  $export['flippy_head_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_last_label_story';
+  $strongarm->value = 'Last »';
+  $export['flippy_last_label_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_loop_story';
+  $strongarm->value = 0;
+  $export['flippy_loop_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_next_label_story';
+  $strongarm->value = 'Evènement suivant ›';
+  $export['flippy_next_label_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_order_story';
+  $strongarm->value = 'ASC';
+  $export['flippy_order_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_prev_label_story';
+  $strongarm->value = '‹ Evènement précédent';
+  $export['flippy_prev_label_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_random_label_story';
+  $strongarm->value = 'Random';
+  $export['flippy_random_label_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_random_story';
+  $strongarm->value = 0;
+  $export['flippy_random_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_show_empty_story';
+  $strongarm->value = 0;
+  $export['flippy_show_empty_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_sort_story';
+  $strongarm->value = 'created';
+  $export['flippy_sort_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_story';
+  $strongarm->value = 1;
+  $export['flippy_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_truncate_story';
+  $strongarm->value = '';
+  $export['flippy_truncate_story'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
