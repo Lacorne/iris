@@ -14,3 +14,14 @@ Aller dans admin/config/regional/date-time/formats
 Aller dans admin/config/regional/date-time
 -> Ajouter un type de date "Envol Long" dont le format sera "XX Juillet 2014"
 
+# Livraison du 17/07/2014
+-------------------------
+Commandes drush:
+----------------
+drush iris.onera.accueil fr-all -yv
+drush iris.onera.accueil cc all -yv
+
+drush iris.onera.envol fr-all -yv
+drush iris.onera.envol cc all -yv
+
+Désactiver le module "External Links"
