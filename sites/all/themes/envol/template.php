@@ -267,6 +267,11 @@ function envol_preprocess_page(&$variables, $hook) {
   ($base_url == 'http://iris.onera.fr') ? $back_to_iris = $base_url : $back_to_iris = 'http://iris.local';
   $variables['page']['back_to_iris'] = $back_to_iris;
 
+  //Temporaire Fake 22 July
+  if (arg(0) == 'agenda' || arg(0) == 'agenda-detail' || arg(0) == 'invite' || arg(0) == 'home' || arg(0) == 'standby') {
+    $variables['theme_hook_suggestions'][] = 'page__fake';
+  }
+
 }
 
 /**

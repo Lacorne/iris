@@ -1,4 +1,4 @@
-/*! Onera_iris_project 02-07-2014|21:54:06 */
+/*! Onera_iris_project 18-07-2014|02:01:14 */
 
 /* line 165 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
 
@@ -263,6 +263,18 @@ body:after {
 }
 
 /* line 22 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\header.styl */
+#header .wrapper-content-header:before {
+  content: " ";
+  display: block;
+  background: url("../images/demo22/header.png") 0 0 no-repeat;
+  width: 213px;
+  height: 64px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+/* line 29 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\header.styl */
 #header .wrapper-content-header .header__site-name {
   position: absolute;
   top: 0;
@@ -277,13 +289,13 @@ body:after {
   line-height: 2em;
 }
 
-/* line 32 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\header.styl */
+/* line 39 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\header.styl */
 #header .wrapper-content-header .header__site-name .header__site-link {
   text-decoration: none;
   color: #fff;
 }
 
-/* line 35 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\header.styl */
+/* line 42 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\header.styl */
 #header .wrapper-content-header .header__logo {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -294,7 +306,7 @@ body:after {
   height: 64px;
 }
 
-/* line 40 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\header.styl */
+/* line 47 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\header.styl */
 #header .wrapper-content-header .header__site-slogan {
   position: absolute;
   top: 35px;
@@ -303,13 +315,26 @@ body:after {
   font-size: 15px;
 }
 
-/* line 44 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\header.styl */
+/* line 51 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\header.styl */
 
-/* line 44 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\footer.styl */
+/* line 51 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\footer.styl */
 
 /* line 2 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\footer.styl */
+.wrapper-quizz {
+  height: 193px;
+  background: #46a4b8;
+  text-align: center;
+}
 
-/* line 2 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\navigation-superfish.styl */
+/* line 6 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\footer.styl */
+#footer {
+  height: 44px;
+  background: #1c1c1b url("../images/demo22/footer.jpg") center center no-repeat;
+}
+
+/* line 9 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\footer.styl */
+
+/* line 9 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\navigation-superfish.styl */
 
 /* line 3 : c:\wamp\www\onera\iris\sites\all\themes\iris\lib\styl\navigation-superfish.styl */
 #navigation {

@@ -1,0 +1,5 @@
+name = Fake pages Module
+description = "Fake pages for demo of 22 July 2014"
+core = 7.x
+package = Envol
+version = "7.x"

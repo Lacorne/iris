@@ -10,31 +10,32 @@
     list-style none
     display inline
     padding 0
-    margin 0
-    font-size 13px
+    font-size 12px
     font-weight bold
-    margin 0 10px
+    margin 0 7px
     &.first
       margin-left 0
+    &.last
+      margin-right 0
   a
     position relative
     color #333
     text-decoration none
     text-transform uppercase
-    padding 5px 10px
+    padding 5px 9px
     &.active
       color #fff
       &:before
         content "▼"
         display block
-        absolute bottom -11px left 0 right 0
+        absolute bottom -10px left 0 right 0
         text-align center
         transform scaleX(1.15)
       &:after
         content "▼"
         display block
         color #fff
-        absolute bottom -20px left 0 right 0
+        absolute bottom -19px left 0 right 0
         text-align center
         transform scaleX(1.15)
     .page-lefil &.active
@@ -55,7 +56,7 @@
       &:before
         content "▼"
         display block
-        absolute bottom -11px left 0 right 0
+        absolute bottom -10px left 0 right 0
         text-align center
         transform scaleX(1.15)
         color #ed0361
@@ -63,7 +64,7 @@
         content "▼"
         display block
         color #fff
-        absolute bottom -20px left 0 right 0
+        absolute bottom -19px left 0 right 0
         text-align center
         transform scaleX(1.15)
     

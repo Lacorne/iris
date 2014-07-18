@@ -505,7 +505,7 @@ function envol_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'flippy_custom_sorting_story';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['flippy_custom_sorting_story'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -554,21 +554,21 @@ function envol_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'flippy_next_label_story';
-  $strongarm->value = 'Evènement suivant ›';
+  $strongarm->value = 'Evènement suivant <span>►►</span>';
   $export['flippy_next_label_story'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'flippy_order_story';
-  $strongarm->value = 'ASC';
+  $strongarm->value = 'DESC';
   $export['flippy_order_story'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'flippy_prev_label_story';
-  $strongarm->value = '‹ Evènement précédent';
+  $strongarm->value = '<span>◄◄</span> Evènement précédent';
   $export['flippy_prev_label_story'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -912,7 +912,7 @@ function envol_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_frontpage';
-  $strongarm->value = 'lefil';
+  $strongarm->value = 'home';
   $export['site_frontpage'] = $strongarm;
 
   $strongarm = new stdClass();

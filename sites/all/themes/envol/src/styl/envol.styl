@@ -125,6 +125,31 @@ img
     & a
       text-decoration none
 
+// flippy pager
+.flippy
+  font-weight bold
+  li
+    padding 0
+    margin 0
+  .prev,
+  .next
+    color #000
+    font-size 12px
+    text-transform uppercase
+    span
+      color #000
+      letter-spacing -5px
+    & a
+      color #000
+  .prev
+    absolute bottom 0 left 70px
+    span
+      margin-right 4px
+  .next
+    absolute bottom 0 right 40px
+  & a
+    text-decoration none
+
 .wrapper-close-button
   text-align center
 .bigbutton
@@ -141,11 +166,24 @@ img
   &.green
     color #fff
     background #91b355
+  &.pink
+    color #fff
+    background #ed0361
 
 
 // Structure of home page
 
-// Structure of views lefil
+// Structure of views lefil and page le fil (node-type-story)
+.page-lefil
+  #content
+    position relative
+    &:before
+      content " "
+      display block
+      width 1px
+      absolute top 56px bottom 40px right 0
+      background #000
+
 .page-lefil,
 .node-type-story
   .field-name-field-date
@@ -162,9 +200,90 @@ img
     .pager-current
       color #fff
       background #ed0361
+  .sidebars
+    margin-top 40px
+
+.node-type-story
+  #content
+    position relative
+    &:before
+      content " "
+      display block
+      width 1px
+      absolute top 35px bottom 0 right 0
+      background #000
+  .wrapper-info
+    padding-left 53px
+    padding-bottom 45px
+    position relative
+    &:before
+      content " "
+      display block
+      width 1px
+      absolute top 292px bottom 0 left 34px
+      background #ed0361
+    &:after
+      content " "
+      display block
+      width 35px
+      height 109px
+      absolute top 292px left 0
+      background url('../images/demo22/print.jpg') 0 0 no-repeat
+  .wrapper-image
+    float left
+    margin-right 20px
+    margin-bottom 20px
+  h1.node__title
+    font-size 34px
+    margin 15px 0
+  .field-name-field-chapo
+    font-weight bold
+    margin-bottom 15px
+    line-height 1.3em
+  .field-name-body
+    line-height 1.3em
+    a
+      color #ed0361
+  .wrapper-pager
+    absolute bottom 0 left 0 right 0
+    .flippy
+      .prev,
+      .next
+        a
+          color #ed0361
+        span
+          color #000
+    .bigbutton
+      absolute bottom 6px left 273px
 
 // Structure page analyse
 .page-analyse
+  .sidebars
+    margin-top 32px
+  .wrapper-analyse
+    position relative
+    &:before
+      content " "
+      display block
+      width 1px
+      absolute top 0 bottom 0 right -20px
+      background #000
+  .wrapper-left-padding
+    padding-left 53px
+    position relative
+    &:before
+      content " "
+      display block
+      width 1px
+      absolute top 0 bottom 0 left 34px
+      background #91b355
+    &:after
+      content " "
+      display block
+      width 35px
+      height 109px
+      absolute top 0 left 0
+      background url('../images/demo22/print.jpg') 0 0 no-repeat
   .field-name-field-date
     color #91b355
   .view-mode-full
@@ -187,6 +306,9 @@ img
         border-left solid 1px #fff
         padding-left 20px
         line-height 1.4em
+    .field-name-field-visuel
+      img
+        width 100%
     .field-name-field-date
       margin 15px 0
     .field-name-body

@@ -100,12 +100,13 @@
       $sidebar_second = render($page['sidebar_second']);
     ?>
 
-    <?php if ($sidebar_first || $sidebar_second): ?>
-      <aside class="sidebars">
-        <?php print $sidebar_first; ?>
-        <?php print $sidebar_second; ?>
+    <?php // Reactive when real situtation if ($sidebar_first || $sidebar_second): ?>
+      <aside class="sidebars region-sidebar-second">
+        <?php // Reactive when real situtation print $sidebar_first; ?>
+        <?php // Reactive when real situtation print $sidebar_second; ?>
+        <img src="<?php print $base_path . drupal_get_path('theme', 'envol'); ?>/images/demo22/lefil-block-droite.jpg" />
       </aside>
-    <?php endif; ?>
+    <?php // Reactive when real situtation endif; ?>
 
   </div>
 

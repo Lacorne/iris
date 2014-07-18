@@ -1,0 +1,88 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function fake_pages_menu() {
+
+  $items['agenda'] = array(
+    'title' => 'Agenda',
+    'page callback' => 'fake_pages_agenda',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+  );
+
+  $items['agenda-detail'] = array(
+    'title' => 'Agenda',
+    'page callback' => 'fake_pages_agenda_detail',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+  );
+
+  $items['invite'] = array(
+    'title' => 'Invite',
+    'page callback' => 'fake_pages_invite',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+  );
+
+  $items['home'] = array(
+    'title' => 'Accueil',
+    'page callback' => 'fake_pages_home',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+  );
+
+  $items['standby'] = array(
+    'title' => 'Accueil',
+    'page callback' => 'fake_pages_home',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function fake_pages_theme($existing, $type, $theme, $path) {
+  return array(
+    'agenda' => array(
+      'template' => 'agenda',
+      'path' => $path . '/theme',
+    ),
+    'agenda-detail' => array(
+      'template' => 'agenda-detail',
+      'path' => $path . '/theme',
+    ),
+    'invite' => array(
+      'template' => 'invite',
+      'path' => $path . '/theme',
+    ),
+    'home' => array(
+      'template' => 'home',
+      'path' => $path . '/theme',
+    ),
+  );
+}
+
+/**
+ * Page callback
+ */
+function fake_pages_agenda($args) {
+    drupal_set_title('Agenda');
+    return theme('agenda');
+}
+function fake_pages_agenda_detail($args) {
+    drupal_set_title('Agenda');
+    return theme('agenda-detail');
+}
+function fake_pages_invite($args) {
+    drupal_set_title('L\'invité');
+    return theme('invite');
+}
+function fake_pages_home($args) {
+    drupal_set_title('Accueil');
+    return theme('home');
+}

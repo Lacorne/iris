@@ -52,20 +52,23 @@
 
   ?>
 
-  <div class="wrapper-image">
-    <?php print render($content['field_visuel']);?>
-    <?php print render($content['field_chapo']);?>
-  </div>
+  <div class="wrapper-analyse">
+    <div class="wrapper-image">
+      <?php print render($content['field_visuel']);?>
+      <?php print render($content['field_chapo']);?>
+    </div>
 
-  <div class="wrapper-info">
-    <?php print render($content['field_date']);?>
-    <?php print render($content['body']);?>
-    <?php print render($content['field_auteur']);?>
-  </div>
-
-  <div class="wrapper-collaborateurs clear">
-    <p class="first">Cet article a été réalisé en collaboration avec</p>
-    <?php print render($content['field_collaborateurs']);?>
+    <div class="wrapper-info">
+      <?php print render($content['field_date']);?>
+      <div class="wrapper-left-padding">
+        <?php print render($content['body']);?>
+        <?php print render($content['field_auteur']);?>
+        <div class="wrapper-collaborateurs clear">
+          <p class="first">Cet article a été réalisé en collaboration avec</p>
+          <?php print render($content['field_collaborateurs']);?>
+        </div>
+      </div>
+    </div>
   </div>
 
   <?php

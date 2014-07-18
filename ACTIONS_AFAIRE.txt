@@ -28,8 +28,19 @@ Désactiver le module "External Links"
 
 # Livraison du 18/07/2014
 -------------------------
+Livraison spéciale démo du 22 Juillet.
+
 drush iris.onera.accueil fr-all -yv
 drush iris.onera.accueil cc all -yv
 
 drush iris.onera.envol fr-all -yv
 drush iris.onera.envol cc all -yv
+
+Après cela:
+- Vérifier dans "admin/config/system/site-information" que la Page d'accueil par défaut
+est bien "home", sinon indiquer "home".
+- Vérifier que le module "Fake pages Module" est bien activé, sinon l'activer
+Ce module permet de créer des fausses pages pour la démo.
+Il sera supprimé par la suite.
+
+

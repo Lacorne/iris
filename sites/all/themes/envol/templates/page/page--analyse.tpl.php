@@ -21,7 +21,7 @@
       <?php if ($site_name || $site_slogan): ?>
         <?php if ($site_name): ?>
           <h1 class="header__site-name" id="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link" rel="home"><span><?php print $site_name; ?></span></a>
+            <a href="<?php print $page['back_to_iris']; ?>" title="<?php print t('Home Iris'); ?>" class="header__site-link" rel="home"><span>Iris</span></a>
           </h1>
         <?php endif; ?>
 
@@ -68,8 +68,6 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      <?php print render($page['content']['lefil']); ?>
-      <br /><br /><img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-insitu.jpg" />
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
     </div>
@@ -107,22 +105,14 @@
       $sidebar_second = render($page['sidebar_second']);
     ?>
 
-    <?php if ($sidebar_first || $sidebar_second): ?>
-      <aside class="sidebars">
-        <?php print $sidebar_first; ?>
-        <?php //print $sidebar_second; ?>
-        <section class="region region-sidebar-second column sidebar">
-          <a href="/envol/analyse"><img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-sidebar-droite-envol.jpg" /></a>
-          <a href="/envol/agenda"><img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-sidebar-droite-agenda.jpg" /></a>
-          <img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-sidebar-droite-plus.jpg" />
-        </section>
+    <?php // Reactive when real situtation if ($sidebar_first || $sidebar_second): ?>
+      <aside class="sidebars region-sidebar-second">
+        <?php // Reactive when real situtation print $sidebar_first; ?>
+        <?php // Reactive when real situtation print $sidebar_second; ?>
+        <img src="<?php print $base_path . drupal_get_path('theme', 'envol'); ?>/images/demo22/analyse-block-droite.jpg" />
       </aside>
-    <?php endif; ?>
+    <?php // Reactive when real situtation endif; ?>
 
-  </div>
-
-  <div class="wrapper-quizz">
-    <img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-quizz.jpg" />
   </div>
 
   <footer class="footer" id="footer" role="banner">

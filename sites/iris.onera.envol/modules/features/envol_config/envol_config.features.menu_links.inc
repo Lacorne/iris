@@ -10,6 +10,26 @@
 function envol_config_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: menu-menu-haut_agenda:agenda
+  $menu_links['menu-menu-haut_agenda:agenda'] = array(
+    'menu_name' => 'menu-menu-haut',
+    'link_path' => 'agenda',
+    'router_path' => 'agenda',
+    'link_title' => 'Agenda',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-menu-haut_agenda:agenda',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -43,
+    'customized' => 1,
+  );
   // Exported menu link: menu-menu-haut_analyse:analyse
   $menu_links['menu-menu-haut_analyse:analyse'] = array(
     'menu_name' => 'menu-menu-haut',
@@ -27,7 +47,67 @@ function envol_config_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => -48,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-menu-haut_chroniques:standby
+  $menu_links['menu-menu-haut_chroniques:standby'] = array(
+    'menu_name' => 'menu-menu-haut',
+    'link_path' => 'standby',
+    'router_path' => 'standby',
+    'link_title' => 'Chroniques',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-menu-haut_chroniques:standby',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -44,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-menu-haut_ensemble:standby
+  $menu_links['menu-menu-haut_ensemble:standby'] = array(
+    'menu_name' => 'menu-menu-haut',
+    'link_path' => 'standby',
+    'router_path' => 'standby',
+    'link_title' => 'Ensemble',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-menu-haut_ensemble:standby',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-menu-haut_focus:standby
+  $menu_links['menu-menu-haut_focus:standby'] = array(
+    'menu_name' => 'menu-menu-haut',
+    'link_path' => 'standby',
+    'router_path' => 'standby',
+    'link_title' => 'Focus',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-menu-haut_focus:standby',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
     'customized' => 1,
   );
   // Exported menu link: menu-menu-haut_le-fil:lefil
@@ -50,10 +130,56 @@ function envol_config_menu_default_menu_links() {
     'weight' => -50,
     'customized' => 1,
   );
+  // Exported menu link: menu-menu-haut_linvit:invite
+  $menu_links['menu-menu-haut_linvit:invite'] = array(
+    'menu_name' => 'menu-menu-haut',
+    'link_path' => 'invite',
+    'router_path' => 'invite',
+    'link_title' => 'L\'invité',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-menu-haut_linvit:invite',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-menu-haut_une-journe-avec:standby
+  $menu_links['menu-menu-haut_une-journe-avec:standby'] = array(
+    'menu_name' => 'menu-menu-haut',
+    'link_path' => 'standby',
+    'router_path' => 'standby',
+    'link_title' => 'Une journée avec',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-menu-haut_une-journe-avec:standby',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -45,
+    'customized' => 1,
+  );
   // Translatables
   // Included for use with string extractors like potx.
+  t('Agenda');
   t('Analyse');
+  t('Chroniques');
+  t('Ensemble');
+  t('Focus');
+  t('L\'invité');
   t('Le fil');
+  t('Une journée avec');
 
 
   return $menu_links;
