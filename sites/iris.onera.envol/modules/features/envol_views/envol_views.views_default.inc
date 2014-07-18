@@ -398,7 +398,7 @@ function envol_views_views_default_views() {
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<a href="http://iris.envol.local/lefil" class="bigbutton blue">Toute l\'actualité</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="http://iris.onera:8086/envol/lefil" class="bigbutton blue">Toute l\'actualité</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -559,7 +559,7 @@ function envol_views_views_default_views() {
     t('►'),
     t('►►'),
     t('Le fil pour Iris'),
-    t('<a href="http://iris.envol.local/lefil" class="bigbutton blue">Toute l\'actualité</a>'),
+    t('<a href="http://iris.onera:8086/envol/lefil" class="bigbutton blue">Toute l\'actualité</a>'),
     t('First News'),
     t('L\'actualité la plus récente, affichée en 1'),
     t('Sticky'),

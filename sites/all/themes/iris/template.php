@@ -240,11 +240,13 @@ function iris_preprocess_page(&$variables, $hook) {
       case 'http://iris.onera:8086':
         $lefil = drupal_http_request($base_url . '/envol/dist/lefil?ajax=1');
         break;
-      default:
+      case 'http://iris.local':
         $lefil = drupal_http_request('http://iris.envol.local/dist/lefil?ajax=1');
         break;
+      default:
+        $lefil = drupal_http_request($base_url . '/envol/dist/lefil?ajax=1');
+        break;
     }
-    
     $variables['page']['content']['lefil'] = $lefil->data;
   }
 }
