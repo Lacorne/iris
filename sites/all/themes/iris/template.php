@@ -247,7 +247,7 @@ function iris_preprocess_page(&$variables, $hook) {
         $lefil = drupal_http_request($base_url . '/envol/dist/lefil?ajax=1');
         break;
     }
-    $variables['page']['content']['lefil'] = $lefil->data;
+    if (isset($lefil) && !empty($lefil)) $variables['page']['content']['lefil'] = $lefil->data;
   }
 }
 
