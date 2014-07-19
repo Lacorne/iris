@@ -304,3 +304,4 @@ features_exclude[image][] = 484
 features_exclude[image][] = 232
 features_exclude[image][] = 232
 features_exclude[image][] = 232
+features_exclude[image][] = 232

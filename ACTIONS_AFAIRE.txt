@@ -43,4 +43,20 @@ est bien "home", sinon indiquer "home".
 Ce module permet de créer des fausses pages pour la démo.
 Il sera supprimé par la suite.
 
+# Livraison du 19/07/2014
+-------------------------
+Livraison spéciale démo du 22 Juillet.
+
+drush iris.onera.accueil fr-all -yv
+drush iris.onera.accueil cc all -yv
+
+drush iris.onera.envol fr-all -yv
+drush iris.onera.envol cc all -yv
+
+J'ai modifié le mot de passe superDRI sur accueil et envol
+Login: superDRI
+Mot de pase: superdri
+Le mail de superDRI est : migration.drupal@onera.fr
+Je renvoie la base de donnée via wetransfer car j'y ai intégré les actualités pour la démo et également en raison du changement de mot de passe de superDRI
+
 

@@ -243,6 +243,9 @@ function iris_preprocess_page(&$variables, $hook) {
       case 'http://iris.local':
         $lefil = drupal_http_request('http://iris.envol.local/dist/lefil?ajax=1');
         break;
+      case 'http://iris.accueil.local':
+        $lefil = drupal_http_request('http://iris.envol.local/dist/lefil?ajax=1');
+        break;
       default:
         $lefil = drupal_http_request($base_url . '/envol/dist/lefil?ajax=1');
         break;

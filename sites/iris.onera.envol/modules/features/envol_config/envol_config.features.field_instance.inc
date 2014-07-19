@@ -1822,7 +1822,7 @@ function envol_config_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_category',
     'label' => 'Catégorie',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1874,7 +1874,7 @@ function envol_config_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_chapo',
     'label' => 'Chapô',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 1,
       'user_register_form' => FALSE,
