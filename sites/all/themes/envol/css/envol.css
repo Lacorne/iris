@@ -1,4 +1,4 @@
-/*! Onera_envol_project 18-07-2014|01:21:50 */
+/*! Onera_envol_project 19-07-2014|09:54:00 */
 
 /* line 440 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 
@@ -247,11 +247,11 @@ body:after {
   z-index: -1;
   height: 200px;
   border-top: solid 25px #303133;
-  background: -webkit-linear-gradient(top, #fff, #fff 92px, #000 92px);
-  background: -moz-linear-gradient(top, #fff, #fff 92px, #000 92px);
-  background: -o-linear-gradient(top, #fff, #fff 92px, #000 92px);
-  background: -ms-linear-gradient(top, #fff, #fff 92px, #000 92px);
-  background: linear-gradient(to bottom, #fff, #fff 92px, #000 92px);
+  background: -webkit-linear-gradient(top, #fff, #fff 91px, #000 91px);
+  background: -moz-linear-gradient(top, #fff, #fff 91px, #000 91px);
+  background: -o-linear-gradient(top, #fff, #fff 91px, #000 91px);
+  background: -ms-linear-gradient(top, #fff, #fff 91px, #000 91px);
+  background: linear-gradient(to bottom, #fff, #fff 91px, #000 91px);
 }
 
 /* line 17 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\header.styl */
@@ -268,30 +268,30 @@ body:after {
   z-index: -1;
   height: 200px;
   border-top: solid 25px #303133;
-  background: -webkit-linear-gradient(top, #fff, #fff 92px, #64747d 92px);
-  background: -moz-linear-gradient(top, #fff, #fff 92px, #64747d 92px);
-  background: -o-linear-gradient(top, #fff, #fff 92px, #64747d 92px);
-  background: -ms-linear-gradient(top, #fff, #fff 92px, #64747d 92px);
-  background: linear-gradient(to bottom, #fff, #fff 92px, #64747d 92px);
+  background: -webkit-linear-gradient(top, #fff, #fff 91px, #64747d 91px);
+  background: -moz-linear-gradient(top, #fff, #fff 91px, #64747d 91px);
+  background: -o-linear-gradient(top, #fff, #fff 91px, #64747d 91px);
+  background: -ms-linear-gradient(top, #fff, #fff 91px, #64747d 91px);
+  background: linear-gradient(to bottom, #fff, #fff 91px, #64747d 91px);
 }
 
 /* line 26 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\header.styl */
 .page-lefil #header:after,
 .node-type-story #header:after {
-  background: -webkit-linear-gradient(top, #fff, #fff 92px, #ed0361 92px);
-  background: -moz-linear-gradient(top, #fff, #fff 92px, #ed0361 92px);
-  background: -o-linear-gradient(top, #fff, #fff 92px, #ed0361 92px);
-  background: -ms-linear-gradient(top, #fff, #fff 92px, #ed0361 92px);
-  background: linear-gradient(to bottom, #fff, #fff 92px, #ed0361 92px);
+  background: -webkit-linear-gradient(top, #fff, #fff 91px, #ed0361 91px);
+  background: -moz-linear-gradient(top, #fff, #fff 91px, #ed0361 91px);
+  background: -o-linear-gradient(top, #fff, #fff 91px, #ed0361 91px);
+  background: -ms-linear-gradient(top, #fff, #fff 91px, #ed0361 91px);
+  background: linear-gradient(to bottom, #fff, #fff 91px, #ed0361 91px);
 }
 
 /* line 28 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\header.styl */
 .page-analyse #header:after {
-  background: -webkit-linear-gradient(top, #fff, #fff 92px, #91b355 92px);
-  background: -moz-linear-gradient(top, #fff, #fff 92px, #91b355 92px);
-  background: -o-linear-gradient(top, #fff, #fff 92px, #91b355 92px);
-  background: -ms-linear-gradient(top, #fff, #fff 92px, #91b355 92px);
-  background: linear-gradient(to bottom, #fff, #fff 92px, #91b355 92px);
+  background: -webkit-linear-gradient(top, #fff, #fff 91px, #91b355 91px);
+  background: -moz-linear-gradient(top, #fff, #fff 91px, #91b355 91px);
+  background: -o-linear-gradient(top, #fff, #fff 91px, #91b355 91px);
+  background: -ms-linear-gradient(top, #fff, #fff 91px, #91b355 91px);
+  background: linear-gradient(to bottom, #fff, #fff 91px, #91b355 91px);
 }
 
 /* line 30 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\header.styl */
@@ -447,7 +447,7 @@ body:after {
   content: "▼";
   display: block;
   position: absolute;
-  bottom: -10px;
+  bottom: -9px;
   left: 0;
   right: 0;
   text-align: center;
@@ -464,7 +464,7 @@ body:after {
   display: block;
   color: #fff;
   position: absolute;
-  bottom: -19px;
+  bottom: -18px;
   left: 0;
   right: 0;
   text-align: center;
@@ -510,7 +510,7 @@ body:after {
   content: "▼";
   display: block;
   position: absolute;
-  bottom: -10px;
+  bottom: -9px;
   left: 0;
   right: 0;
   text-align: center;
@@ -528,7 +528,7 @@ body:after {
   display: block;
   color: #fff;
   position: absolute;
-  bottom: -19px;
+  bottom: -18px;
   left: 0;
   right: 0;
   text-align: center;
