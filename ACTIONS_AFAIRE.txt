@@ -59,4 +59,8 @@ Mot de pase: superdri
 Le mail de superDRI est : migration.drupal@onera.fr
 Je renvoie la base de donnée via wetransfer car j'y ai intégré les actualités pour la démo et également en raison du changement de mot de passe de superDRI
 
+# Livraison du 31/07/2014
+-------------------------
+Activation du module nodeblock
+
 

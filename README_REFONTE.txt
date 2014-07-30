@@ -19,6 +19,7 @@ Drupal doit mettre à jour le nouveau chemin des modules contrib qui ont été dépl
 - display suite: https://www.drupal.org/project/ds
 - field collection: https://www.drupal.org/project/field_collection
 - wysiwyg_template: https://www.drupal.org/project/wysiwyg_template
+- nodeblock: https://www.drupal.org/project/nodeblock
 
 => Pour des besoins de fonctionnement du site
 - superfish: https://www.drupal.org/project/superfish
@@ -40,6 +41,7 @@ Drupal doit mettre à jour le nouveau chemin des modules contrib qui ont été dépl
 - transliteration
 - display suite
 - field collection
+- nodeblock
 
 #Liste des features
 sites/iris.onera.accueil/modules/features:
