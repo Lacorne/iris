@@ -73,43 +73,6 @@ function envol_config_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_category'
-  $field_bases['field_category'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_category',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
-    'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'taxonomy',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'category_news',
-          'parent' => 0,
-        ),
-      ),
-      'options_list_callback' => 'content_taxonomy_allowed_values',
-      'views_base_columns' => array(),
-      'views_base_table' => 0,
-    ),
-    'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
-  );
-
   // Exported field_base: 'field_chapo'
   $field_bases['field_chapo'] = array(
     'active' => 1,
@@ -203,6 +166,39 @@ function envol_config_field_default_field_bases() {
     'type' => 'datetime',
   );
 
+  // Exported field_base: 'field_date_agenda'
+  $field_bases['field_date_agenda'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_date_agenda',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'date',
+    'settings' => array(
+      'cache_count' => 4,
+      'cache_enabled' => 0,
+      'granularity' => array(
+        'day' => 'day',
+        'hour' => 0,
+        'minute' => 0,
+        'month' => 'month',
+        'second' => 0,
+        'year' => 'year',
+      ),
+      'repeat' => 0,
+      'timezone_db' => '',
+      'todate' => 'optional',
+      'tz_handling' => 'none',
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'datetime',
+  );
+
   // Exported field_base: 'field_fonction_invite'
   $field_bases['field_fonction_invite'] = array(
     'active' => 1,
@@ -288,10 +284,10 @@ function envol_config_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => FALSE,
+      'default_image' => 0,
       'uri_scheme' => 'public',
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'image',
@@ -575,7 +571,7 @@ function envol_config_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'thematique_focus',
+          'vocabulary' => 'thematiques',
           'parent' => 0,
         ),
       ),

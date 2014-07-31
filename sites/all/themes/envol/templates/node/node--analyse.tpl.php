@@ -12,7 +12,7 @@
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
     <header>
       <div class="wrapper-thematique">
-        <?php print $content['field_thematique'][0]['#title']; ?>
+        <?php print render($content['field_thematique']); ?>
       </div>
       <?php print render($title_prefix); ?>
         <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>

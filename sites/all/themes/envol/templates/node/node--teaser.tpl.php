@@ -12,7 +12,7 @@
   <a href="<?php print $node_url; ?>" class="left mr20"><?php print render($content['field_image_actu']); ?></a>
   <div class="wrapper-info">
     <?php print render($content['field_date']); ?>
-    <?php print render($content['field_category']); ?>
+    <?php print render($content['field_thematique']); ?>
     <?php if ($title_prefix || $title_suffix || !$page && $title): ?>
       <?php print render($title_prefix); ?>
       <?php if (!$page && $title): ?>

@@ -11,7 +11,7 @@
 
   <a href="<?php print $base_url . $node_url; ?>"><?php print render($content['field_image_actu']); ?></a>
   <div class="wrapper-info">
-    <?php print render($content['field_category']); ?>
+    <?php print render($content['field_thematique']); ?>
     <?php if ($title_prefix || $title_suffix || !$page && $title): ?>
       <?php print render($title_prefix); ?>
       <?php if (!$page && $title): ?>

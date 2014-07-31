@@ -9,29 +9,6 @@
  */
 function envol_config_taxonomy_default_vocabularies() {
   return array(
-    'category_news' => array(
-      'name' => 'Catégories actualités',
-      'machine_name' => 'category_news',
-      'description' => 'Vocabulaire permettant de classer les actualités',
-      'hierarchy' => 0,
-      'module' => 'taxonomy',
-      'weight' => 0,
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
-    ),
     'localisation' => array(
       'name' => 'Localisation',
       'machine_name' => 'localisation',
@@ -78,56 +55,10 @@ function envol_config_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'thematique_analyse' => array(
-      'name' => 'Thématique Analyse',
-      'machine_name' => 'thematique_analyse',
-      'description' => 'Gestion des thématiques de la rubrique Analyse',
-      'hierarchy' => 0,
-      'module' => 'taxonomy',
-      'weight' => 0,
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
-    ),
-    'thematique_focus' => array(
-      'name' => 'Thématique Focus',
-      'machine_name' => 'thematique_focus',
-      'description' => 'Gestion des thématiques de la rubrique Focus',
-      'hierarchy' => 0,
-      'module' => 'taxonomy',
-      'weight' => 0,
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
-    ),
-    'thematique_invite' => array(
-      'name' => 'Thématique Invité',
-      'machine_name' => 'thematique_invite',
-      'description' => 'Gestion des thématique de la rubrique Invité',
+    'thematiques' => array(
+      'name' => 'Thématiques',
+      'machine_name' => 'thematiques',
+      'description' => 'Gestion des thématiques du site',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
