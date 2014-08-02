@@ -24,7 +24,6 @@ dependencies[] = ds
 dependencies[] = entity
 dependencies[] = envol_contexts
 dependencies[] = envol_views
-dependencies[] = fake_pages
 dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = file

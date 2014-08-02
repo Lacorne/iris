@@ -9,22 +9,21 @@
 ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   
-  <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
-    <header>
-      <div class="wrapper-thematique">
-        <?php print render($content['field_thematique']); ?>
-      </div>
-      <?php print render($title_prefix); ?>
-        <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
-      <?php print render($title_suffix); ?>
+  <header>
+    <div class="wrapper-thematique">
+      <?php print render($content['field_thematique']); ?>
+    </div>
+    <?php print render($title_prefix); ?>
+      <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
+    <?php print render($title_suffix); ?>
 
-      <?php if ($unpublished): ?>
-        <mark class="unpublished"><?php print t('Unpublished'); ?></mark>
-      <?php endif; ?>
-    </header>
-  <?php endif; ?>
+    <?php if ($unpublished): ?>
+      <mark class="unpublished"><?php print t('Unpublished'); ?></mark>
+    <?php endif; ?>
+  </header>
 
   <?php
+    // Construction of bloc paroles experts.
     if (isset($content['experts'])) {
       $exp_elm = '';
       foreach ($content['experts'] as $key => $value) {
@@ -73,6 +72,7 @@
 
   <?php
     // Modification of name, to add "questions à ..."
+    /* This step must execute on regards exterieurs
     if (isset($content['field_paroles_experts'])) {
       foreach ($content['field_paroles_experts']['#items'] as $key => $value) {
         
@@ -82,7 +82,7 @@
         $content['field_paroles_experts'][$key]['entity']['field_collection_item'][$item]['field_nom_prenom'][0]['#markup'] = $new_name;
 
       }
-    }
+    }*/
   ?>
   <div class="wrapper-experts-complete">
     <h2 class="node-title">Paroles d'experts</h2>

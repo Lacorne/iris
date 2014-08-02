@@ -1,0 +1,82 @@
+// Structure of views lefil and page le fil (node-type-story)
+.page-agenda
+  #content
+    position relative
+    &:before
+      content " "
+      display block
+      width 1px
+      absolute top 56px bottom 40px right 0
+      background #000
+
+.page-agenda,
+.node-type-agenda
+  .field-name-field-date-agenda
+    color color_orange
+  .node-teaser
+    .wrapper-info
+      .node-title
+        font-size 16px
+        margin 12px 0
+  .pager
+    .pager-item
+      & a
+        color color_orange
+    .pager-current
+      color #fff
+      background color_orange
+  .sidebars
+    margin-top 40px
+
+.node-type-agenda
+  #content
+    position relative
+    &:before
+      content " "
+      display block
+      width 1px
+      absolute top 35px bottom 0 right 0
+      background #000
+  .wrapper-info
+    padding-left 53px
+    padding-bottom 45px
+    position relative
+    &:before
+      content " "
+      display block
+      width 1px
+      absolute top 292px bottom 0 left 34px
+      background color_orange
+    &:after
+      content " "
+      display block
+      width 35px
+      height 109px
+      absolute top 292px left 0
+      background url('../images/demo22/print.jpg') 0 0 no-repeat
+  .wrapper-image
+    float left
+    margin-right 20px
+    margin-bottom 20px
+  h1.node__title
+    font-size 34px
+    margin 15px 0
+  .field-name-field-chapo
+    font-weight bold
+    margin-bottom 15px
+    line-height 1.3em
+  .field-name-body
+    line-height 1.3em
+    a
+      color color_orange
+  .wrapper-pager
+    absolute bottom 0 left 0 right 0
+    .flippy
+      .prev,
+      .next
+        a
+          color color_orange
+        span
+          color #000
+    .bigbutton
+      absolute bottom 6px left 273px

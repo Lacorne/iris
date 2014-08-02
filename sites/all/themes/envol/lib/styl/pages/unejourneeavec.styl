@@ -1,0 +1,184 @@
+// Structure page une journee avec
+.page-une-journee-avec,
+.node-type-une-journee-avec
+  .sidebars
+    margin-top 32px
+  .wrapper-analyse
+    position relative
+    &:before
+      content " "
+      display block
+      width 1px
+      absolute top 0 bottom 0 right -20px
+      background #000
+  .wrapper-left-padding
+    padding-left 53px
+    position relative
+    &:before
+      content " "
+      display block
+      width 1px
+      absolute top 0 bottom 0 left 34px
+      background color_red
+    &:after
+      content " "
+      display block
+      width 35px
+      height 109px
+      absolute top 0 left 0
+      background url('../images/demo22/print.jpg') 0 0 no-repeat
+  .field-name-field-date
+    color color_red
+  .view-mode-full
+    position relative
+    h2
+      color #000
+      font-size 15px
+      margin 0 0 15px
+    p
+      margin-bottom 15px
+    .wrapper-thematique
+      color color_red
+    .field-name-field-chapo
+      box-sizing border-box
+      padding 20px
+      color #fff
+      font-size 16px
+      background #1c1c1b
+      .field-item
+        border-left solid 1px #fff
+        padding-left 20px
+        line-height 1.4em
+    .field-name-field-visuel
+      img
+        width 100%
+    .field-name-field-date
+      margin 15px 0
+    .field-name-body
+      line-height 1.3em
+    .field-name-field-auteur
+      float right
+      font-size 14px
+      font-weight bold
+      color #000
+      margin-bottom 20px
+    .wrapper-collaborateurs
+      box-sizing border-box
+      padding 20px 20px 20px 110px
+      background #e9e4df url('../images/trombone.png') 20px center no-repeat
+      p.first
+        margin 0
+        padding 0 0 15px 20px
+        border-left solid 1px #fff
+      .field-name-field-collaborateurs
+        box-sizing border-box
+        padding-left 20px
+        border-left solid 1px #fff
+        p
+          margin-bottom 5px
+          strong
+            font-size 15px
+    .wrapper-experts-complete
+      absolute top -2px bottom 0 left 0 right 0
+      display none
+      box-sizing border-box
+      background #fff
+      z-index 100
+      .node-title
+        font-size 40px
+      .field-name-field-visuel
+        float left
+        margin-right 20px
+      .field-name-field-nom-prenom,
+      .field-name-field-fonction-titre,
+      .field-name-field-localisation
+        font-size 15px
+        font-weight bold
+        color #000
+      .field-name-field-nom-prenom
+        display inline
+        margin-right 5px
+        color color_red
+        div
+          display inline
+        strong
+          color color_red
+      .field-name-field-fonction-titre
+        display inline
+        div
+          display inline
+      .field-name-field-localisation
+        color color_red
+        margin-top 5px
+      .field-name-field-parole-expert
+        padding-top 20px
+        line-height 1.3em
+        strong
+          font-size 14px
+      .field-collection-container
+        border none
+        margin 0
+        .field-item
+          margin 25px 0 0
+      .field-collection-view
+        padding 0 0 25px
+        margin 0
+        border-bottom solid 1px #eaeaea
+      .field-collection-view-final
+        border none
+      .entity-field-collection-item
+        .field-item
+          margin 0
+  .wrapper-experts
+    position relative
+    box-sizing border-box
+    padding 70px 20px
+    background-color #413733
+    color #fff
+    float left
+    margin 0 20px 0 0
+    width 260px
+    cursor pointer
+    &:before,
+    &:after
+      content " "
+      display block
+      width 51px
+      height 39px
+      background url('../images/ic-parole-expert.png') 0 0 no-repeat
+    &:before
+      absolute top 20px left 20px
+    &:after
+      absolute bottom 20px right 20px
+      background-position 0 -39px
+    .title-encart
+      text-transform uppercase
+      font-weight normal
+      font-size 16px
+      color #fff
+      margin 0
+      letter-spacing 0.18em
+    li
+      clearfix()
+      margin-top 20px
+    span
+      display block
+    .visuel-exp
+      float left
+      width 70px
+      height 86px
+      margin-right 20px
+      img
+        display block
+        width 100%
+        max-width 100%
+    .wrapper-info
+      float left
+      width 130px
+    .name-exp
+      font-size 15px
+      font-weight bold
+    .function-exp
+      margin 5px 0
+    .localisation-exp
+      color color_red

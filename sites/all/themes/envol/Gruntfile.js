@@ -97,11 +97,11 @@ module.exports = function(grunt) {
         livereload: true,
       },
       stylusSiteDev: {
-        files: ['<%= dirs.src.siteStylus %>/*.styl', '<%= dirs.src.libStylus %>/*.styl'],
+        files: ['<%= dirs.src.siteStylus %>/*.styl', '<%= dirs.src.libStylus %>/**/*.styl'],
         tasks: ['announce:stylus', 'stylus:devSite'/*, 'announce:csslint', 'csslint:site'*/],
       },
       stylusSiteDist: {
-        files: ['<%= dirs.src.siteStylus %>/*.styl', '<%= dirs.src.libStylus %>/*.styl'],
+        files: ['<%= dirs.src.siteStylus %>/*.styl', '<%= dirs.src.libStylus %>/**/*.styl'],
         tasks: ['announce:stylus', 'stylus:distSite'/*, 'announce:csslint', 'csslint:site'*/],
       }
     }

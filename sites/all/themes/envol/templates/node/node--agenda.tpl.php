@@ -10,11 +10,11 @@
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <div class="wrapper-image">
-    <?php print render($content['field_image_actu']);?>
+    <?php print render($content['field_visuel']);?>
   </div>
 
   <div class="wrapper-info">
-    <?php print render($content['field_date']);?>
+    <?php print render($content['field_date_agenda']);?>
     <?php print render($title_prefix); ?>
       <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
     <?php print render($title_suffix); ?>
@@ -24,7 +24,7 @@
 
   <div class="wrapper-pager">
     <?php print render($content['flippy_pager']);?>
-    <a href="/lefil" class="bigbutton magenta">Retour au fil actualité</a>
+    <a href="/agenda" class="bigbutton orange">Retour à l'agenda</a>
   </div>
 
   <?php print render($content['links']); ?>

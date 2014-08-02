@@ -62,5 +62,8 @@ Je renvoie la base de donnée via wetransfer car j'y ai intégré les actualité
 # Livraison du 31/07/2014
 -------------------------
 Activation du module nodeblock
+Export du fichier de traductions.
+Se rendre dans admin/config/regional/translate/import puis importer le fichier fr.po présent dans sites\iris.onera.envol\translations
+
 
 
