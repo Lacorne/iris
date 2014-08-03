@@ -88,95 +88,6 @@ function envol_views_views_default_views() {
   $handler->display->display_options['filters']['sticky']['field'] = 'sticky';
   $handler->display->display_options['filters']['sticky']['value'] = '0';
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Critère de filtrage: Contenu : Publié */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Critère de filtrage: Contenu : Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'story' => 'story',
-    'feed' => 'feed',
-  );
-  /* Critère de filtrage: Contenu : Mots-clefs (taxonomy_vocabulary_9) */
-  $handler->display->display_options['filters']['taxonomy_vocabulary_9_tid']['id'] = 'taxonomy_vocabulary_9_tid';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_9_tid']['table'] = 'field_data_taxonomy_vocabulary_9';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_9_tid']['field'] = 'taxonomy_vocabulary_9_tid';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_9_tid']['value'] = array(
-    0 => '157',
-  );
-  $handler->display->display_options['filters']['taxonomy_vocabulary_9_tid']['vocabulary'] = 'vocabulary_9';
-  /* Critère de filtrage: Contenu : Promu en page d'accueil */
-  $handler->display->display_options['filters']['promote']['id'] = 'promote';
-  $handler->display->display_options['filters']['promote']['table'] = 'node';
-  $handler->display->display_options['filters']['promote']['field'] = 'promote';
-  $handler->display->display_options['filters']['promote']['value'] = '1';
-  $handler->display->display_options['block_description'] = 'Bloc home 1 - lefil';
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block_1');
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Critère de filtrage: Contenu : Publié */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Critère de filtrage: Contenu : Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'story' => 'story',
-    'feed' => 'feed',
-  );
-  $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Critère de filtrage: Contenu : Mots-clefs (taxonomy_vocabulary_9) */
-  $handler->display->display_options['filters']['taxonomy_vocabulary_9_tid']['id'] = 'taxonomy_vocabulary_9_tid';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_9_tid']['table'] = 'field_data_taxonomy_vocabulary_9';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_9_tid']['field'] = 'taxonomy_vocabulary_9_tid';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_9_tid']['operator'] = 'not';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_9_tid']['value'] = array(
-    0 => '157',
-  );
-  $handler->display->display_options['filters']['taxonomy_vocabulary_9_tid']['group'] = 1;
-  $handler->display->display_options['filters']['taxonomy_vocabulary_9_tid']['vocabulary'] = 'vocabulary_9';
-  /* Critère de filtrage: Contenu : Archives (taxonomy_vocabulary_7) */
-  $handler->display->display_options['filters']['taxonomy_vocabulary_7_tid']['id'] = 'taxonomy_vocabulary_7_tid';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_7_tid']['table'] = 'field_data_taxonomy_vocabulary_7';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_7_tid']['field'] = 'taxonomy_vocabulary_7_tid';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_7_tid']['value'] = array(
-    73 => '73',
-    459 => '459',
-  );
-  $handler->display->display_options['filters']['taxonomy_vocabulary_7_tid']['group'] = 1;
-  $handler->display->display_options['filters']['taxonomy_vocabulary_7_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['taxonomy_vocabulary_7_tid']['vocabulary'] = 'vocabulary_7';
-  $handler->display->display_options['block_description'] = 'Bloc home 2 - Actus2';
-
   /* Display: Le fil */
   $handler = $view->new_display('page', 'Le fil', 'lefil');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -386,6 +297,60 @@ function envol_views_views_default_views() {
     'block' => 0,
     'block_1' => 0,
   );
+
+  /* Display: Agenda */
+  $handler = $view->new_display('page', 'Agenda', 'agenda');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Agenda';
+  $handler->display->display_options['display_description'] = 'Page agenda';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '◄◄';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '◄';
+  $handler->display->display_options['pager']['options']['tags']['next'] = '►';
+  $handler->display->display_options['pager']['options']['tags']['last'] = '►►';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'agenda' => 'agenda',
+  );
+  /* Critère de filtrage: Date : Date (node) */
+  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
+  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter']['default_date'] = 'now -66 days';
+  $handler->display->display_options['filters']['date_filter']['year_range'] = '-0:+1';
+  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
+    'node.created' => 'node.created',
+  );
+  $handler->display->display_options['path'] = 'agenda';
   $translatables['listescontenus'] = array(
     t('Master'),
     t('--aucun--'),
@@ -403,9 +368,6 @@ function envol_views_views_default_views() {
     t('suivant ›'),
     t('dernier »'),
     t('Titre'),
-    t('Block'),
-    t('Bloc home 1 - lefil'),
-    t('Bloc home 2 - Actus2'),
     t('Le fil'),
     t('Fil d\'actualités sur Envol'),
     t('◄◄'),
@@ -418,6 +380,8 @@ function envol_views_views_default_views() {
     t('L\'actualité la plus récente, affichée en 1'),
     t('Sticky'),
     t('L\'actualité épinglée en haut des liste (la plus récente)'),
+    t('Agenda'),
+    t('Page agenda'),
   );
   $export['listescontenus'] = $view;
 
@@ -566,6 +530,142 @@ function envol_views_views_default_views() {
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['path'] = 'invite';
+
+  /* Display: Chroniques */
+  $handler = $view->new_display('page', 'Chroniques', 'chroniques');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['display_description'] = 'Article Chronique le plus récent, affiché lors du clic sur le menu principal';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'chroniques' => 'chroniques',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  $handler->display->display_options['path'] = 'chroniques';
+
+  /* Display: Focus */
+  $handler = $view->new_display('page', 'Focus', 'focus');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['display_description'] = 'Article Focus le plus récent, affiché lors du clic sur le menu principal';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'focus' => 'focus',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  $handler->display->display_options['path'] = 'focus';
+
+  /* Display: Ensemble */
+  $handler = $view->new_display('page', 'Ensemble', 'ensemble');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['display_description'] = 'Article Ensemble le plus récent, affiché lors du clic sur le menu principal';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'ensemble' => 'ensemble',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  $handler->display->display_options['path'] = 'ensemble';
+
+  /* Display: Une journée avec */
+  $handler = $view->new_display('page', 'Une journée avec', 'unejourneeavec');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['display_description'] = 'Article Une journée avec le plus récent, affiché lors du clic sur le menu principal';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'une_journee_avec' => 'une_journee_avec',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  $handler->display->display_options['path'] = 'une-journee-avec';
   $translatables['rubriques'] = array(
     t('Master'),
     t('--aucun--'),
@@ -587,6 +687,14 @@ function envol_views_views_default_views() {
     t('Article analyse le plus récent, affiché lors du clic sur le menu principal'),
     t('Invite'),
     t('Article invité le plus récent, affiché lors du clic sur le menu principal'),
+    t('Chroniques'),
+    t('Article Chronique le plus récent, affiché lors du clic sur le menu principal'),
+    t('Focus'),
+    t('Article Focus le plus récent, affiché lors du clic sur le menu principal'),
+    t('Ensemble'),
+    t('Article Ensemble le plus récent, affiché lors du clic sur le menu principal'),
+    t('Une journée avec'),
+    t('Article Une journée avec le plus récent, affiché lors du clic sur le menu principal'),
   );
   $export['rubriques'] = $view;
 

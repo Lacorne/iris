@@ -50,17 +50,17 @@ function envol_config_menu_default_menu_links() {
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: menu-menu-haut_chroniques:standby
-  $menu_links['menu-menu-haut_chroniques:standby'] = array(
+  // Exported menu link: menu-menu-haut_chroniques:chroniques
+  $menu_links['menu-menu-haut_chroniques:chroniques'] = array(
     'menu_name' => 'menu-menu-haut',
-    'link_path' => 'standby',
-    'router_path' => 'standby',
+    'link_path' => 'chroniques',
+    'router_path' => 'chroniques',
     'link_title' => 'Chroniques',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-menu-haut_chroniques:standby',
+      'identifier' => 'menu-menu-haut_chroniques:chroniques',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -70,17 +70,17 @@ function envol_config_menu_default_menu_links() {
     'weight' => -44,
     'customized' => 1,
   );
-  // Exported menu link: menu-menu-haut_ensemble:standby
-  $menu_links['menu-menu-haut_ensemble:standby'] = array(
+  // Exported menu link: menu-menu-haut_ensemble:ensemble
+  $menu_links['menu-menu-haut_ensemble:ensemble'] = array(
     'menu_name' => 'menu-menu-haut',
-    'link_path' => 'standby',
-    'router_path' => 'standby',
+    'link_path' => 'ensemble',
+    'router_path' => 'ensemble',
     'link_title' => 'Ensemble',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-menu-haut_ensemble:standby',
+      'identifier' => 'menu-menu-haut_ensemble:ensemble',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -90,17 +90,17 @@ function envol_config_menu_default_menu_links() {
     'weight' => -46,
     'customized' => 1,
   );
-  // Exported menu link: menu-menu-haut_focus:standby
-  $menu_links['menu-menu-haut_focus:standby'] = array(
+  // Exported menu link: menu-menu-haut_focus:focus
+  $menu_links['menu-menu-haut_focus:focus'] = array(
     'menu_name' => 'menu-menu-haut',
-    'link_path' => 'standby',
-    'router_path' => 'standby',
+    'link_path' => 'focus',
+    'router_path' => 'focus',
     'link_title' => 'Focus',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-menu-haut_focus:standby',
+      'identifier' => 'menu-menu-haut_focus:focus',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -150,17 +150,17 @@ function envol_config_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
-  // Exported menu link: menu-menu-haut_une-journe-avec:standby
-  $menu_links['menu-menu-haut_une-journe-avec:standby'] = array(
+  // Exported menu link: menu-menu-haut_une-journe-avec:une-journee-avec
+  $menu_links['menu-menu-haut_une-journe-avec:une-journee-avec'] = array(
     'menu_name' => 'menu-menu-haut',
-    'link_path' => 'standby',
-    'router_path' => 'standby',
+    'link_path' => 'une-journee-avec',
+    'router_path' => 'une-journee-avec',
     'link_title' => 'Une journée avec',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'menu-menu-haut_une-journe-avec:standby',
+      'identifier' => 'menu-menu-haut_une-journe-avec:une-journee-avec',
     ),
     'module' => 'menu',
     'hidden' => 0,
