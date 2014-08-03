@@ -1,83 +1,14 @@
 /* SideBars */
 
-// Left Menu
-.region-sidebar-first
-  .collapsiblock
-    a
-      background #333
-      position relative
-      color #fff
-      text-transform uppercase
-      text-decoration none
-      font-size 12px
-      padding 12px 20px 12px 51px
-      &:before
-        display block
-        absolute top 0 bottom 0 left 0
-        width 36px
-        background #46a4b8 url('../images/icones.png') 0 0 no-repeat
-        content " "
-      &:after
-        display block
-        content "▲"
-        absolute top 15px right 20px
-        font-size 6px
-        color #fff
-        transform scaleX(1.5)
-  .block-outils
-    .collapsiblock
-      a
-        &:before
-          background-position center -11px
-  .block-contacts
-    .collapsiblock
-      a
-        &:before
-          background-position center -50px
-  .block-informatique
-    .collapsiblock
-      a
-        &:before
-          background-position center -87px
-  .block-nouveaux-arrivants
-    .collapsiblock
-      a
-        &:before
-          background-position center -125px
-  .block-transports
-    .collapsiblock
-      a
-        &:before
-          background-position center -161px
-  .collapsiblockCollapsed
-    a
-      &:after
-        content "▼"
-  .collapsiblock-processed
-    ul
-      background #f3f3f3
-      padding 6px 0
-      &:nth-child(2n+1)
-        background #eaeaea
-      a
-        position relative
-        font-size 12px
-        color #5e5d5d
-        padding 7px 15px 7px 30px
-        display block
-        text-decoration none
-        transition background-color .5s, color .5s
-        &:before
-          content "■"
-          display block
-          absolute top 6px left 15px
-          font-size 11px
-          color #999
-          transition color .5s
-        &:hover
-          background-color #46a4b8
-          color #fff
-          transition background-color .5s, color .5s
-          &:before
-            color #333
-            transition color .5s
+// General
+.sidebar-second
+  #content
+    position relative
+    &:before
+      content " "
+      display block
+      width 1px
+      absolute top 56px bottom 40px right 0
+      background #000
+
+// Right Zone

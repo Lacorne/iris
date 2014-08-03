@@ -22,7 +22,7 @@
     <?php endif; ?>
   </header>
 
-  <div class="wrapper-analyse">
+  <div class="wrapper-chroniques">
     <div class="wrapper-image">
       <?php print render($content['field_visuel']);?>
       <?php print render($content['field_chapo']);?>

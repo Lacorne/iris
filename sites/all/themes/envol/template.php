@@ -511,6 +511,23 @@ function envol_preprocess_block(&$variables, $hook) {
         if ( $variables['block']->subject != '') $variables['classes_array'][] = 'block-' . strtolower(str_replace(array(' ', '/', '\''), '-', $variables['block']->subject));
       }
       break;
+    case 'nodeblock':
+      if (isset($variables['elements'])) {
+        // Add classes bundle and view mode
+        $variables['classes_array'][] = 'block-type-' . '-' . $variables['elements']['#bundle'];
+        $variables['classes_array'][] = 'block-view-mode-' . '-' . $variables['elements']['#view_mode'];
+        // Add bundle hook theme suggestion
+        $variables['theme_hook_suggestions'][] = 'block__' . $variables['elements']['#bundle'];
+        switch ($variables['elements']['#bundle']) {
+          case 'regards_exterieurs':
+            $variables['block']->subject = str_replace('_', ' ', $variables['elements']['#bundle']);
+            break;
+          case 'temoignages':
+            $variables['block']->subject = str_replace('_', ' ', $variables['elements']['#bundle']);
+            break;
+        }
+      }
+      break;
   }
 }
 
