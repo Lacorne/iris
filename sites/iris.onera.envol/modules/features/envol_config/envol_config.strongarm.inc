@@ -20,6 +20,24 @@ function envol_config_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'bean_all_blacklist_bean';
+  $strongarm->value = TRUE;
+  $export['bean_all_blacklist_bean'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'bean_all_blacklist_system';
+  $strongarm->value = array(
+    0 => 'main',
+    1 => 'powered-by',
+    2 => 'help',
+  );
+  $export['bean_all_blacklist_system'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'collapsiblock_settings';
   $strongarm->value = array(
     'block-menu-menu-menu-haut' => '1',
@@ -636,6 +654,49 @@ function envol_config_strongarm() {
     ),
   );
   $export['field_bundle_settings_bean__fond_gris'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_bean__fond_gris_filet';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'default' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ical' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(
+        'label' => array(
+          'weight' => '0',
+        ),
+        'title' => array(
+          'weight' => '1',
+        ),
+        'revision' => array(
+          'weight' => '4',
+        ),
+        'view_mode' => array(
+          'weight' => '3',
+        ),
+      ),
+      'display' => array(
+        'title' => array(
+          'default' => array(
+            'weight' => '-9',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_bean__fond_gris_filet'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

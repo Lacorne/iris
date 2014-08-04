@@ -26,11 +26,35 @@ function envol_config_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-rubriques-other_analyse' => array(
+          'module' => 'views',
+          'delta' => 'rubriques-other_analyse',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
         'nodeblock-16' => array(
           'module' => 'nodeblock',
           'delta' => '16',
           'region' => 'sidebar_second',
-          'weight' => '-10',
+          'weight' => '-9',
+        ),
+        'bean--ej---pour-battlelab' => array(
+          'module' => 'bean',
+          'delta' => '-ej---pour-battlelab',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
+        ),
+        'bean-lessentiel-pour-battlelab' => array(
+          'module' => 'bean',
+          'delta' => 'lessentiel-pour-battlelab',
+          'region' => 'sidebar_second',
+          'weight' => '-7',
+        ),
+        'bean--cp---pour-battlelab' => array(
+          'module' => 'bean',
+          'delta' => '-cp---pour-battlelab',
+          'region' => 'sidebar_second',
+          'weight' => '-6',
         ),
       ),
     ),

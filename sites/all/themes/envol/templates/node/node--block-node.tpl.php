@@ -13,6 +13,6 @@
   <div class="wrapper-info">
     <?php print render($content); ?>
   </div>
-  <?php print render($content['links']); ?>
+  <a href="<?php print $node_url; ?>" class="left readmore"><span>►►</span> Lire la suite</a>
 
 </article>

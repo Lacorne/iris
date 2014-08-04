@@ -527,6 +527,14 @@ function envol_preprocess_block(&$variables, $hook) {
             break;
         }
       }
+    case 'bean':
+      if (isset($variables['elements']['bean'])) {
+        $delta = $variables['block']->delta;
+        // Add classes bundle
+        $variables['classes_array'][] = 'block-type-' . '-' . $variables['elements']['bean'][$delta]['#bundle'];
+        // Add bundle hook theme suggestion
+        $variables['theme_hook_suggestions'][] = 'block__' . $variables['elements']['bean'][$delta]['#bundle'];
+      }
       break;
   }
 }

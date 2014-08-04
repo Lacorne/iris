@@ -78,6 +78,40 @@ function envol_config_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'bean-fond_gris_filet-field_contenu_block'
+  $field_instances['bean-fond_gris_filet-field_contenu_block'] = array(
+    'bundle' => 'fond_gris_filet',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'bean',
+    'field_name' => 'field_contenu_block',
+    'label' => 'Contenu',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_paroles_experts-field_fonction_titre'
   $field_instances['field_collection_item-field_paroles_experts-field_fonction_titre'] = array(
     'bundle' => 'field_paroles_experts',
