@@ -28,29 +28,6 @@ function envol_config_ctools_plugin_api($module = NULL, $api = NULL) {
 function envol_config_image_default_styles() {
   $styles = array();
 
-  // Exported image style: 232x270.
-  $styles['232x270'] = array(
-    'name' => '232x270',
-    'label' => '232x270',
-    'effects' => array(
-      1 => array(
-        'label' => 'Mise à l’échelle et recadrage',
-        'help' => 'La mise à l\'échelle et le recadrage maintiendront les proportions originales de l\'image puis recadreront la dimension la plus large. C\'est très utile pour créer des vignettes carrées sans étirer les images.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => 232,
-          'height' => 270,
-        ),
-        'weight' => 2,
-      ),
-    ),
-  );
-
   // Exported image style: 232.
   $styles[232] = array(
     'name' => 232,
@@ -69,7 +46,7 @@ function envol_config_image_default_styles() {
           'width' => 232,
           'height' => 155,
         ),
-        'weight' => 4,
+        'weight' => 1,
       ),
     ),
   );
@@ -93,7 +70,7 @@ function envol_config_image_default_styles() {
           'height' => '',
           'upscale' => 1,
         ),
-        'weight' => 3,
+        'weight' => 2,
       ),
     ),
   );
@@ -116,10 +93,57 @@ function envol_config_image_default_styles() {
           'width' => 75,
           'height' => 95,
         ),
-        'weight' => 1,
+        'weight' => 3,
       ),
     ),
   );
+
+  // Exported image style: 232x270.
+  $styles['232x270'] = array(
+    'name' => '232x270',
+    'label' => '232x270',
+    'effects' => array(
+      1 => array(
+        'label' => 'Mise à l’échelle et recadrage',
+        'help' => 'La mise à l\'échelle et le recadrage maintiendront les proportions originales de l\'image puis recadreront la dimension la plus large. C\'est très utile pour créer des vignettes carrées sans étirer les images.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 232,
+          'height' => 270,
+        ),
+        'weight' => 4,
+      ),
+    ),
+  );
+
+  // Exported image style: 315x210.
+  $styles['315x210'] = array(
+    'name' => '315x210',
+    'label' => '315x210',
+    'effects' => array(
+      4 => array(
+        'label' => 'Mise à l’échelle et recadrage',
+        'help' => 'La mise à l\'échelle et le recadrage maintiendront les proportions originales de l\'image puis recadreront la dimension la plus large. C\'est très utile pour créer des vignettes carrées sans étirer les images.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 315,
+          'height' => 210,
+        ),
+        'weight' => 5,
+      ),
+    ),
+  );
+
 
   return $styles;
 }

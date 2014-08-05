@@ -69,6 +69,9 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
       <?php print render($page['content']); ?>
+      <?php if (render($page['second_content'])): ?>
+        <?php print render($page['second_content']); ?>
+      <?php endif; ?>
       <?php print $feed_icons; ?>
     </div>
 

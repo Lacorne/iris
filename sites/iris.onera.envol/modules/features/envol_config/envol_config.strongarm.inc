@@ -757,6 +757,12 @@ function envol_config_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'teaser_short' => array(
+        'custom_settings' => TRUE,
+      ),
+      'block_node' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -764,7 +770,22 @@ function envol_config_strongarm() {
           'weight' => '0',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'flippy_pager' => array(
+          'default' => array(
+            'weight' => '5',
+            'visible' => TRUE,
+          ),
+          'teaser_short' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__agenda'] = $strongarm;
@@ -797,13 +818,19 @@ function envol_config_strongarm() {
         'custom_settings' => FALSE,
       ),
       'teaser_big_img' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'teaser_small_img' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'revision' => array(
         'custom_settings' => FALSE,
+      ),
+      'block_node' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_short' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
@@ -845,13 +872,19 @@ function envol_config_strongarm() {
         'custom_settings' => FALSE,
       ),
       'teaser_big_img' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'teaser_small_img' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'revision' => array(
         'custom_settings' => FALSE,
+      ),
+      'block_node' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_short' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
@@ -893,13 +926,19 @@ function envol_config_strongarm() {
         'custom_settings' => FALSE,
       ),
       'teaser_big_img' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'teaser_small_img' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'revision' => array(
         'custom_settings' => FALSE,
+      ),
+      'block_node' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_short' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
@@ -941,13 +980,19 @@ function envol_config_strongarm() {
         'custom_settings' => FALSE,
       ),
       'teaser_big_img' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'teaser_small_img' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'revision' => array(
         'custom_settings' => FALSE,
+      ),
+      'block_node' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_short' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
@@ -989,13 +1034,19 @@ function envol_config_strongarm() {
         'custom_settings' => FALSE,
       ),
       'teaser_big_img' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'teaser_small_img' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'revision' => array(
         'custom_settings' => FALSE,
+      ),
+      'block_node' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_short' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
@@ -1099,6 +1150,12 @@ function envol_config_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'teaser_short' => array(
+        'custom_settings' => TRUE,
+      ),
+      'block_node' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1126,6 +1183,10 @@ function envol_config_strongarm() {
           'default' => array(
             'weight' => '7',
             'visible' => TRUE,
+          ),
+          'teaser_short' => array(
+            'weight' => '7',
+            'visible' => FALSE,
           ),
         ),
       ),
@@ -1212,13 +1273,19 @@ function envol_config_strongarm() {
         'custom_settings' => FALSE,
       ),
       'teaser_big_img' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'teaser_small_img' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'revision' => array(
         'custom_settings' => FALSE,
+      ),
+      'block_node' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_short' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
