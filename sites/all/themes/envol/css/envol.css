@@ -1,6 +1,6 @@
-/*! Onera_envol_project 04-08-2014|22:18:59 */
+/*! Onera_envol_project 07-08-2014|00:11:45 */
 
-/* line 203 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 204 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 
 /* line 2 : c:\wamp\www\onera\iris\sites\all\themes\envol\node_modules\grunt-contrib-stylus\node_modules\stylus\lib\functions\index.styl */
 
@@ -225,7 +225,30 @@ body:after {
 
 /* line 38 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\layout.styl */
 
-/* line 38 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\header.styl */
+/* line 38 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\sidebars.styl */
+
+/* line 4 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\sidebars.styl */
+
+/* line 5 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\sidebars.styl */
+.sidebar-second #content {
+  position: relative;
+}
+
+/* line 7 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\sidebars.styl */
+.sidebar-second #content:before {
+  content: " ";
+  display: block;
+  width: 1px;
+  position: absolute;
+  top: 56px;
+  bottom: 40px;
+  right: 0;
+  background: #000;
+}
+
+/* line 15 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\sidebars.styl */
+
+/* line 15 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\header.styl */
 
 /* line 14 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\header.styl */
 #header {
@@ -1009,18 +1032,20 @@ body:after {
 
 /* line 227 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 
-/* line 27 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 32 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 
-/* line 28 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 33 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .sidebars .block {
   margin-bottom: 20px;
 }
 
-/* line 35 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 40 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-nodeblock,
 .block-type--fond_blanc,
 .block-type--fond_gris,
-.block-type--fond_gris_filet {
+.block-type--fond_gris_filet,
+#block-views-listescontenus-lefil-home,
+#block-views-listescontenus-agenda-home {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1028,11 +1053,13 @@ body:after {
   line-height: 1.3;
 }
 
-/* line 39 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 44 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-nodeblock .block__title,
 .block-type--fond_blanc .block__title,
 .block-type--fond_gris .block__title,
-.block-type--fond_gris_filet .block__title {
+.block-type--fond_gris_filet .block__title,
+#block-views-listescontenus-lefil-home .block__title,
+#block-views-listescontenus-agenda-home .block__title {
   position: relative;
   display: inline-block;
   padding: 10px 10px 10px 15px;
@@ -1042,11 +1069,13 @@ body:after {
   background: #000;
 }
 
-/* line 47 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 52 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-nodeblock .block__title:after,
 .block-type--fond_blanc .block__title:after,
 .block-type--fond_gris .block__title:after,
-.block-type--fond_gris_filet .block__title:after {
+.block-type--fond_gris_filet .block__title:after,
+#block-views-listescontenus-lefil-home .block__title:after,
+#block-views-listescontenus-agenda-home .block__title:after {
   content: "▼";
   display: block;
   width: 20px;
@@ -1063,61 +1092,102 @@ body:after {
   transform: scaleX(1.5);
 }
 
-/* line 55 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 60 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-nodeblock ul,
 .block-type--fond_blanc ul,
 .block-type--fond_gris ul,
-.block-type--fond_gris_filet ul {
+.block-type--fond_gris_filet ul,
+#block-views-listescontenus-lefil-home ul,
+#block-views-listescontenus-agenda-home ul {
   padding-left: 15px;
 }
 
-/* line 57 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 62 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-nodeblock li,
 .block-type--fond_blanc li,
 .block-type--fond_gris li,
-.block-type--fond_gris_filet li {
+.block-type--fond_gris_filet li,
+#block-views-listescontenus-lefil-home li,
+#block-views-listescontenus-agenda-home li {
   list-style: square;
   margin-bottom: 10px;
 }
 
-/* line 63 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 66 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+#block-views-listescontenus-lefil-home,
+#block-views-listescontenus-agenda-home {
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+
+/* line 69 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+#block-views-listescontenus-lefil-home ul,
+#block-views-listescontenus-agenda-home ul {
+  padding-left: 0;
+}
+
+/* line 72 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+
+/* line 73 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+#block-views-listescontenus-lefil-home .field-name-field-thematique {
+  font-weight: bold;
+  color: #000;
+}
+
+/* line 76 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+#block-views-listescontenus-lefil-home li {
+  color: #f0015f;
+}
+
+/* line 79 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+
+/* line 80 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+#block-views-listescontenus-agenda-home .field-name-field-date-agenda {
+  font-size: 12px;
+  text-transforme: none;
+  color: #ff6c4b;
+}
+
+/* line 87 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-nodeblock,
 .block-type--fond_blanc {
   background: #fff;
 }
 
-/* line 67 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 91 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-type--fond_gris,
-.block-type--fond_gris_filet {
+.block-type--fond_gris_filet,
+#block-views-listescontenus-lefil-home,
+#block-views-listescontenus-agenda-home {
   padding: 20px;
   background: #e9e4df;
 }
 
-/* line 73 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 97 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 
-/* line 74 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 98 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-nodeblock .field-name-field-nom-prenom {
   margin-bottom: 15px;
 }
 
-/* line 76 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 100 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-nodeblock .field-name-field-nom-prenom strong {
   color: #000;
 }
 
-/* line 78 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 102 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-nodeblock .field-name-field-contenu-block {
   clear: both;
   padding-top: 15px;
 }
 
-/* line 81 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 105 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-nodeblock .field-name-field-contenu-block .field-items {
   padding-top: 13px;
   border-top: solid 1px #000;
 }
 
-/* line 84 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 108 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-nodeblock .readmore {
   font-size: 13px;
   font-weight: bold;
@@ -1126,76 +1196,76 @@ body:after {
   color: #000;
 }
 
-/* line 90 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 114 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-nodeblock .readmore span {
   color: #000;
   letter-spacing: -5px;
   margin-right: 5px;
 }
 
-/* line 94 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 118 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 
-/* line 95 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 119 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 
-/* line 96 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 120 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-analyse .block-nodeblock li p,
 .node-type-analyse .block-nodeblock li p {
   color: #90b450;
 }
 
-/* line 98 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 122 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-lefil .block-nodeblock li p,
 .node-type-story .block-nodeblock li p {
   color: #f0015f;
 }
 
-/* line 100 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 124 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-analyse .block-nodeblock li p,
 .node-type-analyse .block-nodeblock li p {
   color: #90b450;
 }
 
-/* line 102 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 126 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-invite .block-nodeblock li p,
 .node-type-invite .block-nodeblock li p {
   color: #009bde;
 }
 
-/* line 104 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 128 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-agenda .block-nodeblock li p,
 .node-type-agenda .block-nodeblock li p {
   color: #ff6c4b;
 }
 
-/* line 106 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 130 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-focus .block-nodeblock li p,
 .node-type-focus .block-nodeblock li p {
   color: #8e779a;
 }
 
-/* line 108 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 132 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-chroniques .block-nodeblock li p,
 .node-type-chroniques .block-nodeblock li p {
   color: #622d18;
 }
 
-/* line 110 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 134 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-ensemble .block-nodeblock li p,
 .node-type-ensemble .block-nodeblock li p {
   color: #e8b61f;
 }
 
-/* line 112 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 136 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-une-journee-avec .block-nodeblock li p,
 .node-type-une-journee-avec .block-nodeblock li p {
   color: #ca1430;
 }
 
-/* line 117 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 141 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 
-/* line 118 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 142 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 
-/* line 119 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 143 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-analyse .block-type--fond_blanc li,
 .page-analyse .block-type--fond_gris li,
 .page-analyse .block-type--fond_gris_filet li,
@@ -1205,7 +1275,7 @@ body:after {
   color: #90b450;
 }
 
-/* line 121 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 145 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-lefil .block-type--fond_blanc li,
 .page-lefil .block-type--fond_gris li,
 .page-lefil .block-type--fond_gris_filet li,
@@ -1215,7 +1285,7 @@ body:after {
   color: #f0015f;
 }
 
-/* line 123 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 147 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-analyse .block-type--fond_blanc li,
 .page-analyse .block-type--fond_gris li,
 .page-analyse .block-type--fond_gris_filet li,
@@ -1225,7 +1295,7 @@ body:after {
   color: #90b450;
 }
 
-/* line 125 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 149 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-invite .block-type--fond_blanc li,
 .page-invite .block-type--fond_gris li,
 .page-invite .block-type--fond_gris_filet li,
@@ -1235,7 +1305,7 @@ body:after {
   color: #009bde;
 }
 
-/* line 127 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 151 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-agenda .block-type--fond_blanc li,
 .page-agenda .block-type--fond_gris li,
 .page-agenda .block-type--fond_gris_filet li,
@@ -1245,7 +1315,7 @@ body:after {
   color: #ff6c4b;
 }
 
-/* line 129 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 153 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-focus .block-type--fond_blanc li,
 .page-focus .block-type--fond_gris li,
 .page-focus .block-type--fond_gris_filet li,
@@ -1255,7 +1325,7 @@ body:after {
   color: #8e779a;
 }
 
-/* line 131 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 155 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-chroniques .block-type--fond_blanc li,
 .page-chroniques .block-type--fond_gris li,
 .page-chroniques .block-type--fond_gris_filet li,
@@ -1265,7 +1335,7 @@ body:after {
   color: #622d18;
 }
 
-/* line 133 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 157 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-ensemble .block-type--fond_blanc li,
 .page-ensemble .block-type--fond_gris li,
 .page-ensemble .block-type--fond_gris_filet li,
@@ -1275,7 +1345,7 @@ body:after {
   color: #e8b61f;
 }
 
-/* line 135 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 159 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .page-une-journee-avec .block-type--fond_blanc li,
 .page-une-journee-avec .block-type--fond_gris li,
 .page-une-journee-avec .block-type--fond_gris_filet li,
@@ -1285,29 +1355,511 @@ body:after {
   color: #ca1430;
 }
 
-/* line 137 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 161 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-type--fond_blanc li p,
 .block-type--fond_gris li p,
 .block-type--fond_gris_filet li p {
   color: #666;
 }
 
-/* line 139 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 163 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-type--fond_blanc strong,
 .block-type--fond_gris strong,
 .block-type--fond_gris_filet strong {
   color: #000;
 }
 
-/* line 143 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 167 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 
-/* line 144 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 168 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
 .block-type--fond_gris_filet p {
   padding-left: 20px;
   border-left: solid 1px #000;
 }
 
-/* line 147 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+/* line 171 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\blocks.styl */
+
+/* line 10 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 10 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 11 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .page__title {
+  display: none;
+}
+
+/* line 14 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+/* line 17 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .block-title {
+  display: none;
+}
+
+/* line 19 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol {
+  height: 352px;
+  max-height: 352px;
+  margin-bottom: 20px;
+}
+
+/* line 23 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .field-name-field-thematique {
+  display: none;
+}
+
+/* line 25 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .wrapper-info {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 332px;
+}
+
+/* line 29 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .wrapper-big-title {
+  position: relative;
+  background: #000;
+  padding: 20px;
+}
+
+/* line 33 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .wrapper-big-title:after {
+  content: "▼";
+  display: block;
+  color: #000;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  -webkit-transform: scaleX(2);
+  -moz-transform: scaleX(2);
+  -o-transform: scaleX(2);
+  -ms-transform: scaleX(2);
+  transform: scaleX(2);
+}
+
+/* line 40 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .wrapper-big-title .node-type-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* line 45 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .wrapper-big-title .node__title {
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+/* line 49 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .wrapper-big-title .node__title a {
+  color: #fff;
+}
+
+/* line 51 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .field-name-body {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.3;
+  padding: 0 15px;
+  margin: 20px;
+  border-left: solid 1px #fff;
+}
+
+/* line 58 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .readmore {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 20px;
+  padding-left: 25px;
+  float: none;
+}
+
+/* line 66 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .readmore:before {
+  content: "►►";
+  display: block;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  letter-spacing: -5px;
+}
+
+/* line 73 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .field-name-field-visuel {
+  width: 652px;
+  float: left;
+}
+
+/* line 76 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .field-name-field-visuel img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 79 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .node-analyse {
+  background: #90b450;
+}
+
+/* line 81 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .node-analyse .node-type-title {
+  color: #90b450;
+}
+
+/* line 83 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .node-invite {
+  background: #009bde;
+}
+
+/* line 85 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .node-invite .node-type-title {
+  color: #009bde;
+}
+
+/* line 87 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .node-focus {
+  background: #8e779a;
+}
+
+/* line 89 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .node-focus .node-type-title {
+  color: #8e779a;
+}
+
+/* line 91 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .node-chroniques {
+  background: #622d18;
+}
+
+/* line 93 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .node-chroniques .node-type-title {
+  color: #622d18;
+}
+
+/* line 95 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .node-ensemble {
+  background: #e8b61f;
+}
+
+/* line 97 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .node-ensemble .node-type-title {
+  color: #e8b61f;
+}
+
+/* line 99 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .node-une-journee-avec {
+  background: #ca1430;
+}
+
+/* line 101 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-highlighted .view-display-id-first_article_home_envol .node-une-journee-avec .node-type-title {
+  color: #ca1430;
+}
+
+/* line 104 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 672.1600000000002px;
+  margin: 0 10.00000000000008px;
+  *width: 672.1600000000002px -correction;
+  *margin: 0 10.00000000000008px -correction;
+  margin-right: -682.1600000000002px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+
+/* line 109 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 112 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row .field-name-field-thematique {
+  display: none;
+}
+
+/* line 114 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row .node-type-title {
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* line 121 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row .node__title {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+/* line 125 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 126 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row .field-name-body h2,
+.front .view-display-id-home .views-row .field-name-body p {
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+/* line 129 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 130 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row .node-analyse .readmore,
+.front .view-display-id-home .views-row .node-analyse .node-type-title {
+  color: #90b450;
+}
+
+/* line 132 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 133 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row .node-invite .readmore,
+.front .view-display-id-home .views-row .node-invite .node-type-title {
+  color: #009bde;
+}
+
+/* line 135 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 136 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row .node-focus .readmore,
+.front .view-display-id-home .views-row .node-focus .node-type-title {
+  color: #8e779a;
+}
+
+/* line 138 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 139 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row .node-chroniques .readmore,
+.front .view-display-id-home .views-row .node-chroniques .node-type-title {
+  color: #622d18;
+}
+
+/* line 141 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 142 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row .node-ensemble .readmore,
+.front .view-display-id-home .views-row .node-ensemble .node-type-title {
+  color: #e8b61f;
+}
+
+/* line 144 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 145 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row .node-une-journee-avec .readmore,
+.front .view-display-id-home .views-row .node-une-journee-avec .node-type-title {
+  color: #ca1430;
+}
+
+/* line 147 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row:nth-child(n+3) {
+  clear: both;
+  margin-bottom: 15px;
+  padding-top: 20px;
+  border-top: solid 1px #eaeaea;
+}
+
+/* line 152 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row:nth-child(n+3) .field-name-field-visuel {
+  float: left;
+  width: 230px;
+  margin-right: 15px;
+}
+
+/* line 156 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row:nth-child(n+3) .field-name-field-visuel img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 159 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row:nth-child(n+3) .node-type-title {
+  margin-bottom: 10px;
+}
+
+/* line 161 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-1 {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 315.9999999999995px;
+  margin: 0 10.00000000000008px 0 0;
+  *width: 315.9999999999995px -correction;
+  *margin: 0 10.00000000000008px -correction;
+}
+
+/* line 163 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-2 {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 315.9999999999995px;
+  margin: 0 0 0 10.00000000000008px;
+  *width: 315.9999999999995px -correction;
+  *margin: 0 10.00000000000008px -correction;
+}
+
+/* line 165 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-1,
+.front .view-display-id-home .views-row-2 {
+  height: 400px;
+  max-height: 400px;
+  border: none;
+}
+
+/* line 169 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-1 .wrapper-info,
+.front .view-display-id-home .views-row-2 .wrapper-info {
+  padding-left: 15px;
+  border-left: solid 1px #000;
+}
+
+/* line 172 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-1 .node-type-title,
+.front .view-display-id-home .views-row-2 .node-type-title {
+  margin: 10px 0 10px 27px;
+}
+
+/* line 174 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-1 .node-type-title:before,
+.front .view-display-id-home .views-row-2 .node-type-title:before {
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  content: "";
+  height: 5px;
+  background: #fff;
+}
+
+/* line 180 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-1 .field-name-body,
+.front .view-display-id-home .views-row-2 .field-name-body {
+  white-space: normal;
+  overflow: hidden;
+}
+
+/* line 183 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-1 .field-name-field-visuel,
+.front .view-display-id-home .views-row-2 .field-name-field-visuel {
+  position: relative;
+  border-bottom: solid 10px #000;
+}
+
+/* line 186 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-1 .field-name-field-visuel:after,
+.front .view-display-id-home .views-row-2 .field-name-field-visuel:after {
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  content: "";
+  width: 55px;
+  height: 10px;
+}
+
+/* line 192 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 193 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 194 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-1 .node-analyse .field-name-field-visuel:after,
+.front .view-display-id-home .views-row-2 .node-analyse .field-name-field-visuel:after {
+  background: #90b450;
+}
+
+/* line 196 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 197 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 198 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-1 .node-invite .field-name-field-visuel:after,
+.front .view-display-id-home .views-row-2 .node-invite .field-name-field-visuel:after {
+  background: #009bde;
+}
+
+/* line 200 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 201 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 202 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-1 .node-focus .field-name-field-visuel:after,
+.front .view-display-id-home .views-row-2 .node-focus .field-name-field-visuel:after {
+  background: #8e779a;
+}
+
+/* line 204 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 205 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 206 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-1 .node-chroniques .field-name-field-visuel:after,
+.front .view-display-id-home .views-row-2 .node-chroniques .field-name-field-visuel:after {
+  background: #622d18;
+}
+
+/* line 208 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 209 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 210 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-1 .node-ensemble .field-name-field-visuel:after,
+.front .view-display-id-home .views-row-2 .node-ensemble .field-name-field-visuel:after {
+  background: #e8b61f;
+}
+
+/* line 212 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 213 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+
+/* line 214 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-1 .node-une-journee-avec .field-name-field-visuel:after,
+.front .view-display-id-home .views-row-2 .node-une-journee-avec .field-name-field-visuel:after {
+  background: #ca1430;
+}
+
+/* line 216 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .view-display-id-home .views-row-3 {
+  border-top: solid 1px #000 !important;
+}
+
+/* line 219 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
+.front .region-second-content {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 315.9999999999995px;
+  margin: 0 10.00000000000008px;
+  *width: 315.9999999999995px -correction;
+  *margin: 0 10.00000000000008px -correction;
+  margin-left: 682.0000000000005px;
+  margin-right: -997.9999999999999px;
+}
+
+/* line 223 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\home.styl */
 
 /* line 4 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 
@@ -1324,45 +1876,54 @@ body:after {
 /* line 8 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 
 /* line 9 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+.page-lefil .node-teaser .wrapper-info .field-name-field-thematique,
+.node-type-story .node-teaser .wrapper-info .field-name-field-thematique {
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* line 14 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .page-lefil .node-teaser .wrapper-info .node-title,
 .node-type-story .node-teaser .wrapper-info .node-title {
   font-size: 16px;
   margin: 12px 0;
 }
 
-/* line 12 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 17 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 
-/* line 13 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 18 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 
-/* line 14 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 19 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .page-lefil .pager .pager-item a,
 .node-type-story .pager .pager-item a {
   color: #f0015f;
 }
 
-/* line 16 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 21 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .page-lefil .pager .pager-current,
 .node-type-story .pager .pager-current {
   color: #fff;
   background: #f0015f;
 }
 
-/* line 19 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 24 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .page-lefil .sidebars,
 .node-type-story .sidebars {
   margin-top: 40px;
 }
 
-/* line 22 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 27 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 
-/* line 23 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 28 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .node-type-story .wrapper-info {
   padding-left: 53px;
   padding-bottom: 45px;
   position: relative;
 }
 
-/* line 27 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 32 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .node-type-story .wrapper-info:before {
   content: " ";
   display: block;
@@ -1374,7 +1935,7 @@ body:after {
   background: #f0015f;
 }
 
-/* line 33 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 38 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .node-type-story .wrapper-info:after {
   content: " ";
   display: block;
@@ -1386,37 +1947,37 @@ body:after {
   background: url("../images/demo22/print.jpg") 0 0 no-repeat;
 }
 
-/* line 40 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 45 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .node-type-story .wrapper-image {
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
 }
 
-/* line 44 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 49 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .node-type-story h1.node__title {
   font-size: 34px;
   margin: 15px 0;
 }
 
-/* line 47 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 52 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .node-type-story .field-name-field-chapo {
   font-weight: bold;
   margin-bottom: 15px;
   line-height: 1.3em;
 }
 
-/* line 51 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 56 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .node-type-story .field-name-body {
   line-height: 1.3em;
 }
 
-/* line 53 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 58 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .node-type-story .field-name-body a {
   color: #f0015f;
 }
 
-/* line 55 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 60 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .node-type-story .wrapper-pager {
   position: absolute;
   bottom: 0;
@@ -1424,30 +1985,30 @@ body:after {
   right: 0;
 }
 
-/* line 57 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 62 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 
-/* line 58 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 63 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 
-/* line 59 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 64 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .node-type-story .wrapper-pager .flippy .prev a,
 .node-type-story .wrapper-pager .flippy .next a {
   color: #f0015f;
 }
 
-/* line 61 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 66 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .node-type-story .wrapper-pager .flippy .prev span,
 .node-type-story .wrapper-pager .flippy .next span {
   color: #000;
 }
 
-/* line 63 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 68 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 .node-type-story .wrapper-pager .bigbutton {
   position: absolute;
   bottom: 6px;
   left: 273px;
 }
 
-/* line 65 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
+/* line 70 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\lefil.styl */
 
 /* line 3 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\invite.styl */
 
@@ -4024,65 +4585,42 @@ body:after {
   color: #ca1430;
 }
 
-/* line 186 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\pages\unejourneeavec.styl */
-
-/* line 186 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\sidebars.styl */
-
-/* line 4 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\sidebars.styl */
-
-/* line 5 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\sidebars.styl */
-.sidebar-second #content {
-  position: relative;
-}
-
-/* line 7 : c:\wamp\www\onera\iris\sites\all\themes\envol\lib\styl\sidebars.styl */
-.sidebar-second #content:before {
-  content: " ";
-  display: block;
-  width: 1px;
-  position: absolute;
-  top: 56px;
-  bottom: 40px;
-  right: 0;
-  background: #000;
-}
-
-/* line 36 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 37 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .left {
   float: left;
 }
 
-/* line 38 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 39 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .right {
   float: right;
 }
 
-/* line 40 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 41 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .clear {
   clear: both;
 }
 
-/* line 43 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 44 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .mr20 {
   margin-right: 20px;
 }
 
-/* line 45 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 46 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .ml20 {
   margin-left: 20px;
 }
 
-/* line 49 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 50 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 body {
   font-family: arial;
 }
 
-/* line 52 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 53 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 img {
   display: block;
 }
 
-/* line 55 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 56 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 #main {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -4109,7 +4647,7 @@ img {
   clear: both;
 }
 
-/* line 67 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 68 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .node-teaser {
   zoom: 1;
 }
@@ -4126,7 +4664,7 @@ img {
   clear: both;
 }
 
-/* line 70 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 71 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .page__title,
 .page-analyse.page-views .node h1,
 .page-invite.page-views .node h1,
@@ -4145,13 +4683,13 @@ img {
   margin-bottom: 16px;
 }
 
-/* line 74 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
-
 /* line 75 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 
 /* line 76 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 
 /* line 77 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+
+/* line 78 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .page-analyse.page-views .node h1,
 .page-invite.page-views .node h1,
 .page-focus.page-views .node h1,
@@ -4163,11 +4701,11 @@ img {
   letter-spacing: -1px;
 }
 
-/* line 82 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
-
 /* line 83 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 
 /* line 84 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+
+/* line 85 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .node-type-analyse .node h1,
 .node-type-invite .node h1,
 .node-type-focus .node h1,
@@ -4179,18 +4717,18 @@ img {
   letter-spacing: -1px;
 }
 
-/* line 90 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 91 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .node-title {
   color: #000;
 }
 
-/* line 92 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 93 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .node-title a {
   color: #000;
   text-decoration: none;
 }
 
-/* line 96 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 97 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .field-name-field-category {
   color: #666;
   text-transform: uppercase;
@@ -4200,7 +4738,7 @@ img {
   margin-top: 5px;
 }
 
-/* line 103 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 104 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .field-name-field-category:after {
   display: block;
   -webkit-box-sizing: border-box;
@@ -4215,14 +4753,14 @@ img {
   line-height: 0.45em;
 }
 
-/* line 111 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 112 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .wrapper-thematique {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-/* line 116 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 117 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .field-name-field-date,
 .field-name-field-date-agenda {
   font-size: 15px;
@@ -4230,60 +4768,60 @@ img {
   text-transform: uppercase;
 }
 
-/* line 121 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 122 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .field-name-body {
   font-size: 13px;
 }
 
-/* line 125 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 126 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .views-row {
   padding: 20px 0;
   border-bottom: solid 1px #eaeaea;
 }
 
-/* line 128 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 129 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .views-row-first {
   padding-top: 0;
 }
 
-/* line 130 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 131 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .views-row-last {
   border: none;
 }
 
-/* line 132 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 133 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .view-footer {
   clear: both;
   text-align: center;
 }
 
-/* line 135 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 136 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .readmore {
   float: right;
   color: #8fa5b1;
   text-decoration: none;
 }
 
-/* line 139 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
-
 /* line 140 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+
+/* line 141 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .item-list .pager {
   font-weight: bold;
 }
 
-/* line 142 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 143 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .item-list .pager li {
   padding: 8px 5px;
   margin: 0;
 }
 
-/* line 145 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 146 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .item-list .pager .pager-next,
 .item-list .pager .pager-previous {
   display: none;
 }
 
-/* line 147 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 148 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .item-list .pager .pager-first,
 .item-list .pager .pager-last {
   color: #000;
@@ -4291,29 +4829,29 @@ img {
   letter-spacing: -5px;
 }
 
-/* line 151 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 152 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .item-list .pager .pager-first a,
 .item-list .pager .pager-last a {
   color: #000;
 }
 
-/* line 153 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 154 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .item-list .pager a {
   text-decoration: none;
 }
 
-/* line 157 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 158 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy {
   font-weight: bold;
 }
 
-/* line 159 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 160 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy li {
   padding: 0;
   margin: 0;
 }
 
-/* line 162 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 163 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy .prev,
 .flippy .next {
   color: #000;
@@ -4321,49 +4859,49 @@ img {
   text-transform: uppercase;
 }
 
-/* line 166 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 167 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy .prev span,
 .flippy .next span {
   color: #000;
   letter-spacing: -5px;
 }
 
-/* line 169 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 170 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy .prev a,
 .flippy .next a {
   color: #000;
 }
 
-/* line 171 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 172 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy .prev {
   position: absolute;
   bottom: 0;
   left: 70px;
 }
 
-/* line 173 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 174 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy .prev span {
   margin-right: 4px;
 }
 
-/* line 175 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 176 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy .next {
   position: absolute;
   bottom: 0;
   right: 40px;
 }
 
-/* line 177 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 178 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy a {
   text-decoration: none;
 }
 
-/* line 181 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 182 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .wrapper-close-button {
   text-align: center;
 }
 
-/* line 183 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 184 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .bigbutton {
   display: inline-block;
   -webkit-box-sizing: border-box;
@@ -4376,25 +4914,25 @@ img {
   font-size: 12px;
 }
 
-/* line 191 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 192 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .bigbutton.blue {
   color: #fff;
   background: #009bde;
 }
 
-/* line 194 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 195 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .bigbutton.green {
   color: #fff;
   background: #90b450;
 }
 
-/* line 197 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 198 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .bigbutton.magenta {
   color: #fff;
   background: #f0015f;
 }
 
-/* line 200 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 201 : c:\wamp\www\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .bigbutton.orange {
   color: #fff;
   background: #ff6c4b;

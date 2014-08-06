@@ -1,4 +1,4 @@
-/*! Onera_iris_project 02-08-2014|15:28:49 */
+/*! Onera_iris_project 06-08-2014|21:20:32 */
 
 /* line 170 : c:\wamp\www\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
 
@@ -705,7 +705,7 @@ body {
   float: left;
   overflow: hidden;
   width: 231.99999999999986px;
-  margin: 0 0 0 10.00000000000008px;
+  margin: 0 10.00000000000008px 0 0;
   *width: 231.99999999999986px -correction;
   *margin: 0 10.00000000000008px -correction;
 }
@@ -716,7 +716,7 @@ body {
   float: left;
   overflow: hidden;
   width: 231.99999999999986px;
-  margin: 0 10.00000000000008px 0 0;
+  margin: 0 0 0 10.00000000000008px;
   *width: 231.99999999999986px -correction;
   *margin: 0 10.00000000000008px -correction;
 }

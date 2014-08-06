@@ -210,6 +210,12 @@ function envol_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-d00fbfc7faa9315747951b002c2e55be' => array(
+          'module' => 'views',
+          'delta' => 'd00fbfc7faa9315747951b002c2e55be',
+          'region' => 'highlighted',
+          'weight' => '-10',
+        ),
         'views-listescontenus-lefil_home' => array(
           'module' => 'views',
           'delta' => 'listescontenus-lefil_home',

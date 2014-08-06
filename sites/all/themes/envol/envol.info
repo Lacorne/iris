@@ -9,6 +9,7 @@ stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/envol.css
 
 scripts[] = js/vendors/jquery.browser.min.js
+scripts[] = js/front.js
 scripts[] = js/analyse.js
 
 regions[header]         = Header

@@ -311,6 +311,15 @@ function envol_process_maintenance_page(&$variables, $hook) {
  *   The name of the template being rendered ("node" in this case.)
  */
 function envol_preprocess_node(&$variables, $hook) {
+  // Add $title_type variable
+  $listoftypes = array('invite', 'analyse', 'une_journee_avec', 'focus', 'chroniques', 'ensemble');
+
+  if (in_array($variables['type'], $listoftypes)) {
+    if ($variables['view_mode'] == 'teaser_short' || $variables['is_front']) {
+      $variables['content']['title_type'] = str_replace('_', ' ', $variables['type']);
+      $variables['content']['set_title'] = true;
+    }
+  }
   // Add $unpublished variable.
   $variables['unpublished'] = (!$variables['status']) ? TRUE : FALSE;
   // Add pubdate to submitted variable.
@@ -360,6 +369,7 @@ function envol_preprocess_node(&$variables, $hook) {
     }
 
   }
+
 }
 
 /**

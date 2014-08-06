@@ -35,10 +35,11 @@
 
         //var func = multiline ? height : width;
         var func = multiline ? height : width;
-        
+
         while (text.length > 0 && func()) {
           text = text.substr(0, text.length - 1);
           t.html(text + "...");
+          console.log(t);
         }
 
         el.html(t.html());
@@ -49,11 +50,12 @@
 
   
   $(document).ready(function() {
-    //$('.front ').
-    var containerShortNew = $('.front .view-listescontenus:not(.view-display-id-first_news) .view-mode-teaser_small_img');
+    var containerShortNew = $('.front .view-display-id-home .views-row-1, .front .view-display-id-home .views-row-2');
+    var containerHomeHighlight = $('.front .view-display-id-first_article_home_envol');
     var 
       fieldBodyShortNew,
       titleShortNew,
+      titleNodeType,
       imgShortNew,
       catShortNew,
       heightFieldBody,
@@ -64,13 +66,26 @@
     containerShortNew.each(function(){
 
       titleShortNew = $(this).find('.node__title');
-      imgShortNew = $(this).find('.field-type-image');
-      catShortNew = $(this).find('.field-name-field-category');
+      titleNodeType = $(this).find('.node-type-title');
+      imgShortNew = $(this).find('.field-name-field-visuel');
+      catShortNew = $(this).find('.field-name-field-thematique');
       linkReadMore = $(this).find('.readmore');
       linksShortNew = $(this).find('.links');
       fieldBodyShortNew = $(this).find('.field-name-body');
 
-      heightFieldBody = $(this).height() - titleShortNew.outerHeight(true) - imgShortNew.outerHeight(true) - catShortNew.outerHeight(true) - linksShortNew.outerHeight(true) - linkReadMore.outerHeight(true);
+      heightFieldBody = $(this).height() - titleShortNew.outerHeight(true) - titleNodeType.outerHeight(true) - imgShortNew.outerHeight(true) - catShortNew.outerHeight(true) - linksShortNew.outerHeight(true) - linkReadMore.outerHeight(true);
+      console.log(heightFieldBody);
+      fieldBodyShortNew.css({'height':heightFieldBody + 'px'}).ellipsis();
+    });
+
+    containerHomeHighlight.each(function(){
+
+      titleNodeType = $(this).find('.wrapper-big-title');
+      linkReadMore = $(this).find('.readmore');
+      linksShortNew = $(this).find('.links');
+      fieldBodyShortNew = $(this).find('.field-name-body');
+
+      heightFieldBody = $(this).height() - titleNodeType.outerHeight(true) - catShortNew.outerHeight(true) - linksShortNew.outerHeight(true) - linkReadMore.outerHeight(true) - 40;
       console.log(heightFieldBody);
       fieldBodyShortNew.css({'height':heightFieldBody + 'px'}).ellipsis();
     });
