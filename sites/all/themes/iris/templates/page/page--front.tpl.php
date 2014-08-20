@@ -1,3 +1,4 @@
+
 <?php
 /**
  * @file
@@ -110,17 +111,17 @@
     <?php if ($sidebar_first || $sidebar_second): ?>
       <aside class="sidebars">
         <?php print $sidebar_first; ?>
-        <?php //print $sidebar_second; ?>
         <section class="region region-sidebar-second column sidebar">
-          <a href="/envol/analyse" style="display:block;border:none;"><img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-sidebar-droite-envol1.jpg" style="display:block;border:none;" /></a>
-          <a href="/envol/invite" style="display:block;border:none;"><img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-sidebar-droite-envol2.jpg" style="display:block;border:none;" /></a>
-          <a href="/envol/standby" style="display:block;border:none;"><img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-sidebar-droite-envol3.jpg" style="display:block;border:none;" /></a>
-          <a href="/envol/standby" style="display:block;border:none;"><img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-sidebar-droite-envol4.jpg" style="display:block;border:none;" /></a>
-          <a href="/envol/standby" style="display:block;border:none;"><img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-sidebar-droite-envol5.jpg" style="display:block;border:none;" /></a>
-          <a href="/envol/standby" style="display:block;border:none;"><img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-sidebar-droite-envol6.jpg" style="display:block;border:none;" /></a>
-          <a href="/envol/agenda" style="display:block;border:none;"><img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-sidebar-droite-agenda.jpg" style="display:block;border:none;" /></a>
-          <img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-sidebar-droite-plus.jpg" />
+          <div class="envol-last-news">
+            <h2 class="dist-title-news">Envol</h2>
+            <?php print render($page['content']['envol']); ?>
+          </div>
+          <div class="envol-agenda">
+            <h2>Agenda</h2>
+            <?php print render($page['content']['agenda']); ?>
+          </div>
         </section>
+        <?php print $sidebar_second; ?>
       </aside>
     <?php endif; ?>
 

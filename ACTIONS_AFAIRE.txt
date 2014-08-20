@@ -65,5 +65,13 @@ Activation du module nodeblock
 Export du fichier de traductions.
 Se rendre dans admin/config/regional/translate/import puis importer le fichier fr.po présent dans sites\iris.onera.envol\translations
 
+# Livraison du 20 Aout 2014
+---------------------------
+Recuperation de la bdd et installation de cette dernière.
+Récupération des sources et installation.
+=> https://github.com/Lacorne/iris
+
+flush du cache via l'admin.
+
 
 

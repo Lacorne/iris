@@ -49,7 +49,16 @@
 
   
   $(document).ready(function() {
-    //$('.front ').
+
+    //find first node of Envol
+    var
+      envolNews = $('.envol-last-news');
+      firstNodeEnvol = envolNews.find('.node:first')
+    ;
+    if(firstNodeEnvol.length) {
+      envolNews.addClass(firstNodeEnvol.attr('class').split(' ')[2]);
+    }
+
     var containerShortNew = $('.front .view-listescontenus:not(.view-display-id-first_news) .view-mode-teaser_small_img');
     var 
       fieldBodyShortNew,

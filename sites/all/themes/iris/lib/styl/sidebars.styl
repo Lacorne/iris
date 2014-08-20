@@ -81,3 +81,131 @@
           &:before
             color #333
             transition color .5s
+
+// Right sidebar
+.envol-last-news
+  background #000
+  .view-display-id-envol_iris
+    > div:nth-child(2)
+      padding 20px
+      li
+        color #fff
+        list-style square
+        margin-bottom 10px
+  .dist-title-news
+    display inline-block
+    font-size 25px
+    padding 10px 15px 10px 20px
+    color #fff
+  .field-name-field-thematique
+    display none
+  .node-type-title
+    text-transform uppercase
+    font-weight bold
+    color #fff
+    margin-bottom 5px
+  .node-title
+    font-size 12px
+    a
+      color #fff
+      text-decoration none
+  .attachment-before
+    box-sizing border-box
+    background #000
+    position relative
+    &:after
+      content "▼"
+      display block
+      width 100%
+      color #000
+      absolute bottom -10px left 0 right 0
+      text-align center
+      transform scaleX(1.5)
+    img
+      width 100%
+      height auto
+    .wrapper-info
+      clearfix()
+      padding 10px 20px
+    .node-title
+      font-size 17px
+      line-height 1.3em
+      margin 5px 0
+    .field-name-field-thematique
+      color #fff
+      text-transform uppercase
+      display block
+    .field-name-body
+      color #fff
+      font-weight bold
+      line-height 1.3em
+    .readmore
+      text-decoration none
+      float right
+  &.node-analyse
+    .attachment-before
+      .node-title a,
+      .readmore
+        color color_green
+    .dist-title-news,
+    .view-display-id-envol_iris
+      background color_green
+  &.node-story
+    .attachment-before
+      .node-title a,
+      .readmore
+        color color_magenta
+    .dist-title-news,
+    .view-display-id-envol_iris
+      background color_magenta
+  &.node-invite
+    .attachment-before
+      .node-title a,
+      .readmore
+        color color_blue
+    .dist-title-news,
+    .view-display-id-envol_iris
+      background color_blue
+  &.node-agenda
+    .attachment-before
+      .node-title a,
+      .readmore
+        color color_orange
+    .dist-title-news,
+    .view-display-id-envol_iris
+      background color_orange
+  &.node-focus
+    .attachment-before
+      .node-title a,
+      .readmore
+        color color_purple
+    .dist-title-news,
+    .view-display-id-envol_iris
+      background color_purple
+  &.node-chroniques
+    .attachment-before
+      .node-title a,
+      .readmore
+        color color_sepia
+    .dist-title-news,
+    .view-display-id-envol_iris
+      background color_sepia
+  &.node-ensemble
+    .attachment-before
+      .node-title a,
+      .readmore
+        color color_yellow
+    .dist-title-news,
+    .view-display-id-envol_iris
+      background color_yellow
+  &.node-une-journee-avec
+    .attachment-before
+      .node-title a,
+      .readmore
+        color color_red
+    .dist-title-news,
+    .view-display-id-envol_iris
+      background color_red
+
+.envol-agenda
+  display none

@@ -1,3 +1,4 @@
+
 <?php
 /**
  * @file
@@ -231,26 +232,42 @@ function iris_preprocess_page(&$variables, $hook) {
   else {
     $variables['secondary_menu_heading'] = '';
   }
-  // If front page load le fil from envol
+  // If front page load:
+  // le fil from envol
+  // last articles form envol
+  // Agenda from envol
   if ($variables['is_front']) {
     switch ($base_url) {
       case 'http://iris.onera':
         $lefil = drupal_http_request($base_url . '/envol/dist/lefil?ajax=1');
+        $envol = drupal_http_request($base_url . '/envol/dist/envol?ajax=1');
+        $agenda = drupal_http_request($base_url . '/envol/dist/agenda?ajax=1');
         break;
       case 'http://iris.onera:8086':
         $lefil = drupal_http_request($base_url . '/envol/dist/lefil?ajax=1');
+        $envol = drupal_http_request($base_url . '/envol/dist/envol?ajax=1');
+        $agenda = drupal_http_request($base_url . '/envol/dist/agenda?ajax=1');
         break;
       case 'http://iris.local':
         $lefil = drupal_http_request('http://iris.envol.local/dist/lefil?ajax=1');
+        $envol = drupal_http_request('http://iris.envol.local/dist/envol?ajax=1');
+        $agenda = drupal_http_request('http://iris.envol.local/dist/agenda?ajax=1');
         break;
       case 'http://iris.accueil.local':
         $lefil = drupal_http_request('http://iris.envol.local/dist/lefil?ajax=1');
+        $envol = drupal_http_request('http://iris.envol.local/dist/envol?ajax=1');
+        $agenda = drupal_http_request('http://iris.envol.local/dist/agenda?ajax=1');
         break;
       default:
         $lefil = drupal_http_request($base_url . '/envol/dist/lefil?ajax=1');
+        $envol = drupal_http_request($base_url . '/envol/dist/envol?ajax=1');
+        $agenda = drupal_http_request($base_url . '/envol/dist/agenda?ajax=1');
         break;
     }
+    //krumo($envol);
     if (isset($lefil) && !empty($lefil)) $variables['page']['content']['lefil'] = $lefil->data;
+    if (isset($envol) && !empty($lefil)) $variables['page']['content']['envol'] = $envol->data;
+    if (isset($agenda) && !empty($lefil)) $variables['page']['content']['agenda'] = $agenda->data;
   }
 }
 
