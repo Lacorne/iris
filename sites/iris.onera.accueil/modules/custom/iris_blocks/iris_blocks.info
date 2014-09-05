@@ -1,0 +1,5 @@
+name = Iris Custom Blocks Module
+description = "Create custom block for Iris"
+core = 7.x
+package = Iris
+version = "7.x"

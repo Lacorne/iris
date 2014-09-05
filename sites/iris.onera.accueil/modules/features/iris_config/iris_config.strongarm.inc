@@ -49,6 +49,7 @@ function iris_config_strongarm() {
     'block-block-27' => '1',
     'block-block-18' => '1',
     'block-superfish-1' => '1',
+    'block-iris-blocks-header-links' => '1',
   );
   $export['collapsiblock_settings'] = $strongarm;
 

@@ -52,13 +52,6 @@
     height 138px
     margin 0 auto
     padding 0 20px
-    &:before
-      content " "
-      display block
-      background url('../images/demo22/header.png') 0 0 no-repeat
-      width 213px
-      height 64px
-      absolute top 0 right 20px
     &:after
       content " "
       display block
@@ -108,3 +101,47 @@
       absolute top 40px left 15px
       width 205px
       height 65px
+
+    // block links
+    #block-envol-blocks-header-links
+      absolute top 0 right 0
+      text-transform uppercase
+      font-size 12px
+      li
+        display block
+        float left
+        &:first-child
+          position relative
+          margin-right 10px
+          &:after
+            display block
+            content "•"
+            color #fff
+            absolute top 13px right -2px
+            font-size 12px
+            line-height 0
+        &.link-normal
+          padding 7px 10px
+        &.gonera
+          background url('../images/ic-google.png') 0 5px no-repeat
+          padding-left 16px
+          span
+            absolute left -9999px
+        &.icone
+          a
+            width 24px
+            height 25px
+            background-size 300% auto
+          &.facebook
+            a
+              background-position -2px -4px
+          &.twitter
+            a
+              background-position -23px -4px
+          &.linkedin
+            a
+              background-position -44px -4px
+      a
+        color #fff
+        font-weight bold
+        text-decoration none

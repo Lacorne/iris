@@ -1,0 +1,51 @@
+<?php
+
+/**
+* Implements hook_block_info().
+*/
+function envol_blocks_block_info() {
+  $blocks = array();
+  $blocks['header_links'] = array(
+    'info' => t('Liens header'),
+  );
+  $blocks['footer_links'] = array(
+    'info' => t('Liens footer'),
+  );
+  return $blocks;
+}
+
+/**
+* Implements hook_block_view().
+*/
+function envol_blocks_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'header_links':
+      $block['subject'] = '';
+      $block['content'] = theme('header_links');
+      break;
+    case 'footer_links':
+      $block['subject'] = '';
+      $block['content'] = theme('footer_links');
+      break;
+  }
+  return $block;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function envol_blocks_theme($existing, $type, $theme, $path) {
+  return array(
+    'header_links' => array(
+      'render element' => 'element',
+      'path' => $path . '/theme',
+      'template' => 'header-links',
+    ),
+    'footer_links' => array(
+      'render element' => 'element',
+      'path' => $path . '/theme',
+      'template' => 'footer-links',
+    ),
+  );
+}

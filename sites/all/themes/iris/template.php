@@ -269,6 +269,8 @@ function iris_preprocess_page(&$variables, $hook) {
     if (isset($envol) && !empty($lefil)) $variables['page']['content']['envol'] = $envol->data;
     if (isset($agenda) && !empty($lefil)) $variables['page']['content']['agenda'] = $agenda->data;
   }
+
+  //krumo($variables['page']);
 }
 
 /**
@@ -398,6 +400,10 @@ function iris_preprocess_region(&$variables, $hook) {
   // Add a SMACSS-style class for header region.
   elseif ($variables['region'] == 'header') {
     array_unshift($variables['classes_array'], 'header__region');
+  }
+  // Add a SMACSS-style class for footer region.
+  elseif ($variables['region'] == 'footer') {
+    array_unshift($variables['classes_array'], 'footer__region');
   }
 }
 

@@ -1,0 +1,5 @@
+name = Envol Custom Blocks Module
+description = "Create custom block for Envol"
+core = 7.x
+package = Envol
+version = "7.x"

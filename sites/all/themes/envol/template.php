@@ -1,3 +1,4 @@
+
 <?php
 /**
  * @file
@@ -427,6 +428,10 @@ function envol_preprocess_region(&$variables, $hook) {
   // Add a SMACSS-style class for header region.
   elseif ($variables['region'] == 'header') {
     array_unshift($variables['classes_array'], 'header__region');
+  }
+  // Add a SMACSS-style class for footer region.
+  elseif ($variables['region'] == 'footer') {
+    array_unshift($variables['classes_array'], 'footer__region');
   }
 }
 

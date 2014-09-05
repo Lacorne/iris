@@ -119,6 +119,9 @@
           <div class="envol-agenda">
             <h2>Agenda</h2>
             <?php print render($page['content']['agenda']); ?>
+            <div class="view-footer">
+              <a href="http://iris.onera:8086/envol/agenda" class="bigbutton blue">Tout l'agenda</a>
+            </div>
           </div>
         </section>
         <?php print $sidebar_second; ?>

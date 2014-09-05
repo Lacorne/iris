@@ -73,5 +73,22 @@ Récupération des sources et installation.
 
 flush du cache via l'admin.
 
+# Livraison du 5 Septembre 2014
+-------------------------------
+-> Intégration block actu home iris
+-> intégration header/footer iris et envol
+
+drush iris.onera.accueil fr-all -yv
+drush iris.onera.accueil cc all -yv
+
+drush iris.onera.envol fr-all -yv
+drush iris.onera.envol cc all -yv
+
+Vérifier que le module iris_blocks (sur Iris) est bien activé, sinon l'activer par l'admin
+Vérifier que le module envol_blocks (sur Envol) est bien activé, sinon l'activer par l'admin
+
+Par acquis de conscience faire un flush du cache via l'admin.
+
+
 
 

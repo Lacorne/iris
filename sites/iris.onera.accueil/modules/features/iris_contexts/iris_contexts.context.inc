@@ -26,6 +26,12 @@ function iris_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'iris_blocks-header_links' => array(
+          'module' => 'iris_blocks',
+          'delta' => 'header_links',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
         'superfish-1' => array(
           'module' => 'superfish',
           'delta' => '1',
@@ -66,6 +72,12 @@ function iris_contexts_context_default_contexts() {
           'module' => 'block',
           'delta' => '6',
           'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'iris_blocks-footer_links' => array(
+          'module' => 'iris_blocks',
+          'delta' => 'footer_links',
+          'region' => 'footer',
           'weight' => '-10',
         ),
       ),

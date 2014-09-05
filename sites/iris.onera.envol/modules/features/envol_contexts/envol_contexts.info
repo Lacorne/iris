@@ -8,6 +8,7 @@ dependencies[] = bean
 dependencies[] = block
 dependencies[] = context
 dependencies[] = ctools
+dependencies[] = envol_blocks
 dependencies[] = filefield_paths
 dependencies[] = menu
 dependencies[] = nodeblock

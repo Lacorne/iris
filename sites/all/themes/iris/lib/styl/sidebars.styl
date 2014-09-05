@@ -83,6 +83,10 @@
             transition color .5s
 
 // Right sidebar
+.region-sidebar-second
+  > div
+    margin-bottom 20px
+    
 .envol-last-news
   background #000
   .view-display-id-envol_iris
@@ -208,4 +212,52 @@
       background color_red
 
 .envol-agenda
-  display none
+  background #f3f3f3
+  > h2
+    background #333
+    position relative
+    color #fff
+    text-transform uppercase
+    text-decoration none
+    font-size 12px
+    padding 12px 20px 12px 51px
+    &:before
+      display block
+      absolute top 0 bottom 0 left 0
+      width 36px
+      background #46a4b8 url('../images/icones.png') center -237px no-repeat
+      content " "
+    &:after
+      display block
+      width 100%
+      text-align center
+      content "▼"
+      absolute bottom -10px left 0 right 0
+      color #333
+      transform scaleX(1.5)
+  .view-display-id-agenda_iris
+    li
+      position relative
+      color #666
+      list-style none
+      margin 0
+      padding 10px 15px 10px 40px
+      .field-name-field-date-agenda
+        color #46a4b8
+        font-weight bold
+      .node-title
+        margin-top 3px
+        line-height 1.3em
+        a
+          color #000
+          font-weight bold
+          text-decoration none
+      &.views-row-even
+        background #eaeaea
+      &:before
+        display block
+        content "▪"
+        absolute top 8px left 25px
+        font-size 1.2em
+  .view-footer
+    text-align center

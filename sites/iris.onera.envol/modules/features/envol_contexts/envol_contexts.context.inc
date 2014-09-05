@@ -177,10 +177,22 @@ function envol_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'envol_blocks-header_links' => array(
+          'module' => 'envol_blocks',
+          'delta' => 'header_links',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
         'menu-menu-menu-haut' => array(
           'module' => 'menu',
           'delta' => 'menu-menu-haut',
           'region' => 'navigation',
+          'weight' => '-10',
+        ),
+        'envol_blocks-footer_links' => array(
+          'module' => 'envol_blocks',
+          'delta' => 'footer_links',
+          'region' => 'footer',
           'weight' => '-10',
         ),
       ),
