@@ -8,6 +8,8 @@
       .node-title
         font-size 16px
         margin 12px 0
+      .field-name-body
+        margin-bottom 10px
   .pager
     .pager-item
       & a
@@ -20,9 +22,10 @@
 
 .node-type-agenda
   .wrapper-info
+    position relative
+    min-height 355px
     padding-left 53px
     padding-bottom 45px
-    position relative
     &:before
       content " "
       display block
@@ -61,4 +64,6 @@
         span
           color #000
     .bigbutton
-      absolute bottom 6px left 273px
+      absolute bottom 6px left 465px
+      .sidebar-second &
+        absolute bottom 6px left 273px
