@@ -71,7 +71,7 @@
       catShortNew = $(this).find('.field-name-field-thematique');
       linkReadMore = $(this).find('.readmore');
       linksShortNew = $(this).find('.links');
-      fieldBodyShortNew = $(this).find('.field-name-body');
+      fieldBodyShortNew = $(this).find('.field-name-field-chapo');
 
       heightFieldBody = $(this).height() - titleShortNew.outerHeight(true) - titleNodeType.outerHeight(true) - imgShortNew.outerHeight(true) - catShortNew.outerHeight(true) - linksShortNew.outerHeight(true) - linkReadMore.outerHeight(true);
       console.log(heightFieldBody);
@@ -83,7 +83,7 @@
       titleNodeType = $(this).find('.wrapper-big-title');
       linkReadMore = $(this).find('.readmore');
       linksShortNew = $(this).find('.links');
-      fieldBodyShortNew = $(this).find('.field-name-body');
+      fieldBodyShortNew = $(this).find('.field-name-field-chapo');
 
       heightFieldBody = $(this).height() - titleNodeType.outerHeight(true) - catShortNew.outerHeight(true) - linksShortNew.outerHeight(true) - linkReadMore.outerHeight(true) - 40;
       console.log(heightFieldBody);

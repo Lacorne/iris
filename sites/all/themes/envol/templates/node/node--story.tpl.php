@@ -15,6 +15,7 @@
 
   <div class="wrapper-info">
     <?php print render($content['field_date']);?>
+    <?php print render($content['field_thematique']); ?>
     <?php print render($title_prefix); ?>
       <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
     <?php print render($title_suffix); ?>

@@ -21,7 +21,7 @@
       <?php endif; ?>
       <?php print render($title_suffix); ?>
     <?php endif; ?>
-    <?php print render($content['body']); ?>
+    <?php print render($content['field_chapo']); ?>
     <a href="<?php print $node_url; ?>" class="readmore">Suite</a>
     <?php
       if(isset($content['links']['node']['#links']['node-readmore'])) {

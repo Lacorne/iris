@@ -112,6 +112,402 @@ function envol_config_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'comment-comment_node_agenda-comment_body'
+  $field_instances['comment-comment_node_agenda-comment_body'] = array(
+    'bundle' => 'comment_node_agenda',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_analyse-comment_body'
+  $field_instances['comment-comment_node_analyse-comment_body'] = array(
+    'bundle' => 'comment_node_analyse',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_article-comment_body'
+  $field_instances['comment-comment_node_article-comment_body'] = array(
+    'bundle' => 'comment_node_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_chroniques-comment_body'
+  $field_instances['comment-comment_node_chroniques-comment_body'] = array(
+    'bundle' => 'comment_node_chroniques',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_ensemble-comment_body'
+  $field_instances['comment-comment_node_ensemble-comment_body'] = array(
+    'bundle' => 'comment_node_ensemble',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_focus-comment_body'
+  $field_instances['comment-comment_node_focus-comment_body'] = array(
+    'bundle' => 'comment_node_focus',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_invite-comment_body'
+  $field_instances['comment-comment_node_invite-comment_body'] = array(
+    'bundle' => 'comment_node_invite',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_page-comment_body'
+  $field_instances['comment-comment_node_page-comment_body'] = array(
+    'bundle' => 'comment_node_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_regards_exterieurs-comment_body'
+  $field_instances['comment-comment_node_regards_exterieurs-comment_body'] = array(
+    'bundle' => 'comment_node_regards_exterieurs',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_story-comment_body'
+  $field_instances['comment-comment_node_story-comment_body'] = array(
+    'bundle' => 'comment_node_story',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_temoignage-comment_body'
+  $field_instances['comment-comment_node_temoignage-comment_body'] = array(
+    'bundle' => 'comment_node_temoignage',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_une_journee_avec-comment_body'
+  $field_instances['comment-comment_node_une_journee_avec-comment_body'] = array(
+    'bundle' => 'comment_node_une_journee_avec',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_paroles_experts-field_fonction_titre'
   $field_instances['field_collection_item-field_paroles_experts-field_fonction_titre'] = array(
     'bundle' => 'field_paroles_experts',
@@ -327,12 +723,9 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 300,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 2,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -376,10 +769,11 @@ function envol_config_field_default_field_instances() {
         'weight' => 1,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'type' => 'text_default',
+        'weight' => 2,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -489,7 +883,8 @@ function envol_config_field_default_field_instances() {
   $field_instances['node-agenda-field_visuel'] = array(
     'bundle' => 'agenda',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Taille minimum attendue: 232px de large
+Une image de taille inférieure est acceptée, mais la qualité ne pourra être garantie',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -580,21 +975,15 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 300,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 200,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -604,12 +993,9 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser_small_img' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 300,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -668,7 +1054,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -705,16 +1091,18 @@ function envol_config_field_default_field_instances() {
         'weight' => 2,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -724,9 +1112,10 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser_small_img' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -784,7 +1173,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -936,7 +1325,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
@@ -954,7 +1343,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -1039,7 +1428,8 @@ function envol_config_field_default_field_instances() {
   $field_instances['node-analyse-field_visuel'] = array(
     'bundle' => 'analyse',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Taille minimum attendue: 672px de large par 480px de haut
+Une image de taille inférieure est acceptée, mais la qualité ne pourra être garantie',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1287,20 +1677,14 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 300,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 200,
-        ),
-        'type' => 'text_summary_or_trimmed',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'teaser_short' => array(
@@ -1311,12 +1695,9 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser_small_img' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 300,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -1357,7 +1738,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
@@ -1375,7 +1756,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -1412,16 +1793,18 @@ function envol_config_field_default_field_instances() {
         'weight' => 2,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -1431,9 +1814,10 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser_small_img' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -1473,7 +1857,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
@@ -1491,7 +1875,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -1559,7 +1943,7 @@ function envol_config_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -1685,7 +2069,8 @@ function envol_config_field_default_field_instances() {
   $field_instances['node-chroniques-field_visuel'] = array(
     'bundle' => 'chroniques',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Taille minimum attendue: 672px de large par 480px de haut
+Une image de taille inférieure est acceptée, mais la qualité ne pourra être garantie',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1796,21 +2181,15 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 300,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 200,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -1820,12 +2199,9 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser_small_img' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 300,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -1866,7 +2242,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
@@ -1921,16 +2297,18 @@ function envol_config_field_default_field_instances() {
         'weight' => 2,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -1940,9 +2318,10 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser_small_img' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -1982,7 +2361,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
@@ -2194,7 +2573,8 @@ function envol_config_field_default_field_instances() {
   $field_instances['node-ensemble-field_visuel'] = array(
     'bundle' => 'ensemble',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Taille minimum attendue: 672px de large par 480px de haut
+Une image de taille inférieure est acceptée, mais la qualité ne pourra être garantie',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -2305,21 +2685,15 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 300,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 200,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -2329,12 +2703,9 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser_small_img' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 300,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -2381,7 +2752,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -2430,16 +2801,18 @@ function envol_config_field_default_field_instances() {
         'weight' => 2,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -2449,9 +2822,10 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser_small_img' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -2703,7 +3077,8 @@ function envol_config_field_default_field_instances() {
   $field_instances['node-focus-field_visuel'] = array(
     'bundle' => 'focus',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Taille minimum attendue: 672px de large par 480px de haut
+Une image de taille inférieure est acceptée, mais la qualité ne pourra être garantie',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -2814,21 +3189,15 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 300,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 5,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 200,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -2838,12 +3207,9 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser_small_img' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 300,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -2939,16 +3305,18 @@ function envol_config_field_default_field_instances() {
         'weight' => 4,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'type' => 'text_default',
+        'weight' => 5,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -2958,9 +3326,10 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser_small_img' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -3171,7 +3540,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -3183,7 +3552,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -3230,7 +3599,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -3242,7 +3611,7 @@ function envol_config_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -3330,7 +3699,8 @@ function envol_config_field_default_field_instances() {
   $field_instances['node-invite-field_visuel'] = array(
     'bundle' => 'invite',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Taille minimum attendue: 672px de large par 480px de haut
+Une image de taille inférieure est acceptée, mais la qualité ne pourra être garantie',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -3491,12 +3861,9 @@ function envol_config_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -3540,9 +3907,10 @@ function envol_config_field_default_field_instances() {
         'weight' => 3,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'text_default',
         'weight' => 0,
       ),
     ),
@@ -3590,7 +3958,7 @@ Le block pourra être placé dans la barre latérale.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -3637,7 +4005,7 @@ Le block pourra être placé dans la barre latérale.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -3663,7 +4031,9 @@ Le block pourra être placé dans la barre latérale.',
   $field_instances['node-regards_exterieurs-field_image'] = array(
     'bundle' => 'regards_exterieurs',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Taille minimum attendue: 220px de large par 220px de haut.
+Taille maximale attendue: 220px de large par 270px de haut.
+Une image de taille inférieure ou supérieure ne sera pas acceptée.',
     'display' => array(
       'block_node' => array(
         'label' => 'hidden',
@@ -3689,7 +4059,7 @@ Le block pourra être placé dans la barre latérale.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -3763,7 +4133,7 @@ Le block pourra être placé dans la barre latérale.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -3801,21 +4171,15 @@ Le block pourra être placé dans la barre latérale.',
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 300,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 100,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 2,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -3825,12 +4189,9 @@ Le block pourra être placé dans la barre latérale.',
       ),
       'teaser_small_img' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 300,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 2,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -3868,16 +4229,18 @@ Le block pourra être placé dans la barre latérale.',
         'weight' => 3,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser_big_img' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'type' => 'text_default',
+        'weight' => 2,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -3886,10 +4249,11 @@ Le block pourra être placé dans la barre latérale.',
         'weight' => 3,
       ),
       'teaser_small_img' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'type' => 'text_default',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -3969,7 +4333,7 @@ Le block pourra être placé dans la barre latérale.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -4005,14 +4369,15 @@ Le block pourra être placé dans la barre latérale.',
   $field_instances['node-story-field_image_actu'] = array(
     'bundle' => 'story',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Taille minimum attendue: 232px de large
+Une image de taille inférieure est acceptée, mais la qualité ne pourra être garantie',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '232x270',
+          'image_style' => 232,
         ),
         'type' => 'image',
         'weight' => 2,
@@ -4067,15 +4432,15 @@ Le block pourra être placé dans la barre latérale.',
         'active_updating' => 0,
         'file_name' => array(
           'options' => array(
-            'pathauto' => 1,
-            'transliterate' => 1,
+            'pathauto' => FALSE,
+            'transliterate' => 0,
           ),
           'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
         ),
         'file_path' => array(
           'options' => array(
-            'pathauto' => 1,
-            'transliterate' => 1,
+            'pathauto' => FALSE,
+            'transliterate' => 0,
           ),
           'value' => '',
         ),
@@ -4490,7 +4855,7 @@ Le block pourra être placé dans la barre latérale.',
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -4548,12 +4913,9 @@ Le block pourra être placé dans la barre latérale.',
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -4597,9 +4959,10 @@ Le block pourra être placé dans la barre latérale.',
         'weight' => 3,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'text_default',
         'weight' => 0,
       ),
     ),
@@ -4647,7 +5010,7 @@ Le block pourra être placé dans la barre latérale.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -4694,7 +5057,7 @@ Le block pourra être placé dans la barre latérale.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -4720,7 +5083,9 @@ Le block pourra être placé dans la barre latérale.',
   $field_instances['node-temoignage-field_image'] = array(
     'bundle' => 'temoignage',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Taille minimum attendue: 220px de large par 220px de haut.
+Taille maximale attendue: 220px de large par 270px de haut.
+Une image de taille inférieure ou supérieure ne sera pas acceptée.',
     'display' => array(
       'block_node' => array(
         'label' => 'hidden',
@@ -4746,7 +5111,7 @@ Le block pourra être placé dans la barre latérale.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -4820,7 +5185,7 @@ Le block pourra être placé dans la barre latérale.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -4858,21 +5223,15 @@ Le block pourra être placé dans la barre latérale.',
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 300,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 200,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -4882,10 +5241,9 @@ Le block pourra être placé dans la barre latérale.',
       ),
       'teaser_small_img' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 3,
+        'type' => 'hidden',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -4926,7 +5284,7 @@ Le block pourra être placé dans la barre latérale.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
@@ -4981,16 +5339,18 @@ Le block pourra être placé dans la barre latérale.',
         'weight' => 3,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'teaser_short' => array(
         'label' => 'hidden',
@@ -5000,9 +5360,10 @@ Le block pourra être placé dans la barre latérale.',
       ),
       'teaser_small_img' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'type' => 'text_default',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -5042,7 +5403,7 @@ Le block pourra être placé dans la barre latérale.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser_big_img' => array(
         'label' => 'hidden',
@@ -5254,7 +5615,8 @@ Le block pourra être placé dans la barre latérale.',
   $field_instances['node-une_journee_avec-field_visuel'] = array(
     'bundle' => 'une_journee_avec',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Taille minimum attendue: 672px de large par 480px de haut
+Une image de taille inférieure est acceptée, mais la qualité ne pourra être garantie',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -5359,6 +5721,7 @@ Le block pourra être placé dans la barre latérale.');
   t('Chapô');
   t('Cliquez sur CTRL pour sélectionner plusieurs éléments de la liste.');
   t('Collaborateurs');
+  t('Comment');
   t('Contenu');
   t('Contenu du block généré');
   t('Contenu du blok généré');
@@ -5387,6 +5750,13 @@ Le block pourra être placé dans la barre latérale.');
   t('Saisissez une liste de mots séparés par des virgules pour décrire votre contenu.');
   t('Sélectionner le mois uniquement pour les Faits marquants');
   t('Tags');
+  t('Taille minimum attendue: 220px de large par 220px de haut.
+Taille maximale attendue: 220px de large par 270px de haut.
+Une image de taille inférieure ou supérieure ne sera pas acceptée.');
+  t('Taille minimum attendue: 232px de large
+Une image de taille inférieure est acceptée, mais la qualité ne pourra être garantie');
+  t('Taille minimum attendue: 672px de large par 480px de haut
+Une image de taille inférieure est acceptée, mais la qualité ne pourra être garantie');
   t('Thesaurus');
   t('Thématique');
   t('Titre ou Fonction');

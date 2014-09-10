@@ -25,7 +25,7 @@
         <?php print render($title_suffix); ?>
       <?php endif; ?>
     </div>
-    <?php print render($content['body']); ?>
+    <?php print render($content['field_chapo']); ?>
     <a href="<?php print $base_url . $node_url; ?>" class="readmore">Suite</a>
     <?php print render($content['links']); ?>
   </div>

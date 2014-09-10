@@ -77,7 +77,7 @@
       catShortNew = $(this).find('.field-name-field-category');
       linkReadMore = $(this).find('.readmore');
       linksShortNew = $(this).find('.links');
-      fieldBodyShortNew = $(this).find('.field-name-body');
+      fieldBodyShortNew = $(this).find('.field-name-field-chapo');
 
       heightFieldBody = $(this).height() - titleShortNew.outerHeight(true) - imgShortNew.outerHeight(true) - catShortNew.outerHeight(true) - linksShortNew.outerHeight(true) - linkReadMore.outerHeight(true);
       console.log(heightFieldBody);

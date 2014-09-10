@@ -89,6 +89,21 @@ Vérifier que le module envol_blocks (sur Envol) est bien activé, sinon l'activ
 
 Par acquis de conscience faire un flush du cache via l'admin.
 
+# Livraison du 10 Septembre 2014
+-------------------------------
+-> Activation du module pathauto sur envol
+
+drush iris.onera.accueil fr-all -yv
+drush iris.onera.accueil cc all -yv
+
+drush iris.onera.envol fr-all -yv
+drush iris.onera.envol cc all -yv
+
+Vérifier que le module pathauto (sur Envol) est bien activé, sinon l'activer par l'admin.
+Dans admin/config/search/path/update_bulk, cocher "Content paths" et cliquer sur mettre à jour.
+
+Par acquis de conscience faire un flush du cache via l'admin.
+
 
 
 
