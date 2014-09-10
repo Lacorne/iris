@@ -10,7 +10,6 @@
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <a href="<?php print $base_url . $node_url; ?>"><?php print render($content['field_visuel']); ?></a>
-  <?php print render($content['field_thematique']); ?>
   <?php if (isset($content['set_title']) && $content['set_title']): ?>
     <div class="node-type-title">
       <?php print $content['title_type']; ?>

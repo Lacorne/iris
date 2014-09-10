@@ -12,7 +12,6 @@
   <a href="<?php print $base_url . $node_url; ?>"><?php print render($content['field_visuel']); ?></a>
   <div class="wrapper-info">
     <div class="wrapper-big-title">
-      <?php print render($content['field_thematique']); ?>
       <?php if (isset($content['set_title']) && $content['set_title']): ?>
           <div class="node-type-title">
             <?php print $content['title_type']; ?>

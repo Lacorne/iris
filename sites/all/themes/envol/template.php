@@ -1,4 +1,5 @@
 
+
 <?php
 /**
  * @file
@@ -316,7 +317,7 @@ function envol_preprocess_node(&$variables, $hook) {
   $listoftypes = array('invite', 'analyse', 'une_journee_avec', 'focus', 'chroniques', 'ensemble');
 
   if (in_array($variables['type'], $listoftypes)) {
-    if ($variables['view_mode'] == 'teaser_short' || $variables['is_front']) {
+    if ($variables['view_mode'] == 'teaser_short' || $variables['view_mode'] == 'teaser_big_img' || $variables['view_mode'] == 'teaser_small_img' || $variables['is_front']) {
       $variables['content']['title_type'] = str_replace('_', ' ', $variables['type']);
       $variables['content']['set_title'] = true;
     }
