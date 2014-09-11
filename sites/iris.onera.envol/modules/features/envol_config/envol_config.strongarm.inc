@@ -97,6 +97,7 @@ function envol_config_strongarm() {
   $strongarm->name = 'collapsiblock_settings';
   $strongarm->value = array(
     'block-menu-menu-menu-haut' => '1',
+    'block-nodeblock-17' => '1',
   );
   $export['collapsiblock_settings'] = $strongarm;
 
@@ -3159,7 +3160,7 @@ function envol_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_transliterate';
-  $strongarm->value = FALSE;
+  $strongarm->value = 1;
   $export['pathauto_transliterate'] = $strongarm;
 
   $strongarm = new stdClass();

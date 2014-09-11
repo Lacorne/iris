@@ -51,6 +51,7 @@ dependencies[] = superfish
 dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = token
+dependencies[] = transliteration
 dependencies[] = views
 dependencies[] = views_field
 dependencies[] = views_field_view

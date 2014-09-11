@@ -1,15 +1,8 @@
-// Structure of views lefil and page le fil (node-type-story)
-.page-lefil,
-.node-type-story
-  .field-name-field-date
-    color color_magenta
+// Structure of views regards exterieurs and page regards exerieurs (node-type-regards-exterieurs)
+.page-temoignage,
+.node-type-temoignage
   .node-teaser
     .wrapper-info
-      .field-name-field-thematique
-        margin-top 5px
-        text-transform uppercase
-        font-weight bold
-        font-size 12px
       .node-title
         font-size 16px
         margin 12px 0
@@ -19,19 +12,14 @@
   .pager
     .pager-item
       & a
-        color color_magenta
+        color color_grey
     .pager-current
       color #fff
-      background color_magenta
+      background color_grey
   .sidebars
     margin-top 40px
 
-.node-type-story
-  .field-name-field-thematique
-    margin-top 5px
-    text-transform uppercase
-    font-weight bold
-    font-size 12px
+.node-type-temoignage
   .wrapper-info
     position relative
     min-height 355px
@@ -42,7 +30,7 @@
       display block
       width 1px
       absolute top 292px bottom 0 left 34px
-      background color_magenta
+      background color_grey
     &:after
       content " "
       display block
@@ -64,17 +52,22 @@
   .field-name-body
     line-height 1.3em
     a
-      color color_magenta
+      color color_grey
+    p
+      margin 15px 0
+  .field-name-field-fonction-titre
+    font-weight bold
+    margin-bottom 15px
   .wrapper-pager
     absolute bottom 0 left 0 right 0
     .flippy
       .prev,
       .next
         a
-          color color_magenta
+          color color_grey
         span
           color #000
     .bigbutton
       absolute bottom 6px left 465px
-      .sidebar-second&
-        absolute bottom 6px left 268px
+      .sidebar-second &
+        absolute bottom 6px left 273px

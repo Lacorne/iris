@@ -538,7 +538,7 @@ function envol_preprocess_block(&$variables, $hook) {
           case 'regards_exterieurs':
             $variables['block']->subject = str_replace('_', ' ', $variables['elements']['#bundle']);
             break;
-          case 'temoignages':
+          case 'temoignage':
             $variables['block']->subject = str_replace('_', ' ', $variables['elements']['#bundle']);
             break;
         }

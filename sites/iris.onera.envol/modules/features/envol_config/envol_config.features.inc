@@ -144,6 +144,7 @@ function envol_config_image_default_styles() {
     ),
   );
 
+
   return $styles;
 }
 
