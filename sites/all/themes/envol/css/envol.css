@@ -1,6 +1,6 @@
-/*! Onera_envol_project 11-09-2014|17:16:05 */
+/*! Onera_envol_project 11-09-2014|17:41:15 */
 
-/* line 219 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 221 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 
 /* line 2 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\node_modules\grunt-contrib-stylus\node_modules\stylus\lib\functions\index.styl */
 
@@ -5358,77 +5358,83 @@ img {
   font-size: 13px;
 }
 
-/* line 130 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 129 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+.field-name-body p,
+.field-name-field-chapo p {
+  margin: 15px 0;
+}
+
+/* line 132 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .icone {
   margin-left: 1px;
 }
 
-/* line 132 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 134 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .icone:first-child {
   margin: 0;
 }
 
-/* line 134 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 136 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .icone a {
   display: block;
   background: #535356 url("../images/icones-social.png") 0 0 no-repeat;
 }
 
-/* line 137 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 139 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .icone a span {
   position: absolute;
   left: -9999px;
 }
 
-/* line 141 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 143 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .views-row {
   padding: 20px 0;
   border-bottom: solid 1px #eaeaea;
 }
 
-/* line 144 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 146 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .views-row-first {
   padding-top: 0;
 }
 
-/* line 146 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 148 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .views-row-last {
   border: none;
 }
 
-/* line 148 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 150 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .view-footer {
   clear: both;
   text-align: center;
 }
 
-/* line 151 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 153 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .readmore {
   float: right;
   color: #8fa5b1;
   text-decoration: none;
 }
 
-/* line 155 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 157 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 
-/* line 156 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 158 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .item-list .pager {
   font-weight: bold;
 }
 
-/* line 158 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 160 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .item-list .pager li {
   padding: 8px 5px;
   margin: 0;
 }
 
-/* line 161 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 163 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .item-list .pager .pager-next,
 .item-list .pager .pager-previous {
   display: none;
 }
 
-/* line 163 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 165 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .item-list .pager .pager-first,
 .item-list .pager .pager-last {
   color: #000;
@@ -5436,29 +5442,29 @@ img {
   letter-spacing: -5px;
 }
 
-/* line 167 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 169 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .item-list .pager .pager-first a,
 .item-list .pager .pager-last a {
   color: #000;
 }
 
-/* line 169 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 171 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .item-list .pager a {
   text-decoration: none;
 }
 
-/* line 173 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 175 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy {
   font-weight: bold;
 }
 
-/* line 175 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 177 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy li {
   padding: 0;
   margin: 0;
 }
 
-/* line 178 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 180 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy .prev,
 .flippy .next {
   color: #000;
@@ -5466,49 +5472,49 @@ img {
   text-transform: uppercase;
 }
 
-/* line 182 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 184 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy .prev span,
 .flippy .next span {
   color: #000;
   letter-spacing: -5px;
 }
 
-/* line 185 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 187 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy .prev a,
 .flippy .next a {
   color: #000;
 }
 
-/* line 187 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 189 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy .prev {
   position: absolute;
   bottom: 0;
   left: 70px;
 }
 
-/* line 189 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 191 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy .prev span {
   margin-right: 4px;
 }
 
-/* line 191 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 193 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy .next {
   position: absolute;
   bottom: 0;
   right: 40px;
 }
 
-/* line 193 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 195 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .flippy a {
   text-decoration: none;
 }
 
-/* line 197 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 199 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .wrapper-close-button {
   text-align: center;
 }
 
-/* line 199 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 201 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .bigbutton {
   display: inline-block;
   -webkit-box-sizing: border-box;
@@ -5521,25 +5527,25 @@ img {
   font-size: 12px;
 }
 
-/* line 207 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 209 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .bigbutton.blue {
   color: #fff;
   background: #009bde;
 }
 
-/* line 210 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 212 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .bigbutton.green {
   color: #fff;
   background: #90b450;
 }
 
-/* line 213 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 215 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .bigbutton.magenta {
   color: #fff;
   background: #f0015f;
 }
 
-/* line 216 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
+/* line 218 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\envol\src\styl\envol.styl */
 .bigbutton.orange {
   color: #fff;
   background: #ff6c4b;
