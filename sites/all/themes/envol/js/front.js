@@ -50,6 +50,8 @@
 
   
   $(document).ready(function() {
+
+    // Resize elm on front page (essential chapo)
     var containerShortNew = $('.front .view-display-id-home .views-row-1, .front .view-display-id-home .views-row-2');
     var containerHomeHighlight = $('.front .view-display-id-first_article_home_envol');
     var 
@@ -89,6 +91,13 @@
       console.log(heightFieldBody);
       fieldBodyShortNew.css({'height':heightFieldBody + 'px'}).ellipsis();
     });
+
+    // Show or Hide other articles
+    $('.block-rubriques-other .content').hide();
+    $('.block-rubriques-other .block__title').on('click', function(){
+      $(this).next().slideToggle('swing');
+    });
+
   });
 
 })(jQuery, Drupal, this, this.document);

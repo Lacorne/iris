@@ -462,7 +462,6 @@ function envol_preprocess_block(&$variables, $hook) {
 
   $variables['title_attributes_array']['class'][] = 'block__title';
   $variables['title_attributes_array']['class'][] = 'block-title';
-
   // Add Aria Roles via attributes.
   switch ($variables['block']->module) {
     case 'system':
@@ -525,6 +524,15 @@ function envol_preprocess_block(&$variables, $hook) {
       if ($variables['block']->region == 'sidebar_first') {
         $variables['attributes_array']['role'] = 'navigation';
         if ( $variables['block']->subject != '') $variables['classes_array'][] = 'block-' . strtolower(str_replace(array(' ', '/', '\''), '-', $variables['block']->subject));
+      }
+      break;
+    case 'views':
+      if ($variables['block']->region == 'sidebar_second') {
+        $class_rub_to_check = 'rubriques-other';
+        $check_view_type_other_article = strpos($variables['block']->delta, $class_rub_to_check);
+        if ($check_view_type_other_article !== false) {
+          $variables['classes_array'][] = 'block-' . $class_rub_to_check;
+        }
       }
       break;
     case 'nodeblock':

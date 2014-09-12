@@ -59,9 +59,9 @@ function envol_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-rubriques-other_analyse' => array(
+        'views-rubriques-other_analyse_home' => array(
           'module' => 'views',
-          'delta' => 'rubriques-other_analyse',
+          'delta' => 'rubriques-other_analyse_home',
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
@@ -116,7 +116,18 @@ function envol_contexts_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'nodeblock-17' => array(
+          'module' => 'nodeblock',
+          'delta' => '17',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables
@@ -209,6 +220,66 @@ function envol_contexts_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'common_invite';
+  $context->description = 'Gestion des blocks de la home Invité';
+  $context->tag = 'Pages Invité';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'invite' => 'invite',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-rubriques-other_invite' => array(
+          'module' => 'views',
+          'delta' => 'rubriques-other_invite',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Gestion des blocks de la home Invité');
+  t('Pages Invité');
+  $export['common_invite'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'common_lefil';
+  $context->description = '';
+  $context->tag = 'Pages le fil';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'story' => 'story',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array();
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Pages le fil');
+  $export['common_lefil'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'home';
   $context->description = 'Blocks de la page d\'accueil d\'Envol';
   $context->tag = 'Home';
@@ -250,6 +321,45 @@ function envol_contexts_context_default_contexts() {
   t('Blocks de la page d\'accueil d\'Envol');
   t('Home');
   $export['home'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'invite';
+  $context->description = 'Blocks communs aux pages invité';
+  $context->tag = 'Pages Invité';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'invite' => 'invite',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-rubriques-other_invite_home' => array(
+          'module' => 'views',
+          'delta' => 'rubriques-other_invite_home',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'nodeblock-17' => array(
+          'module' => 'nodeblock',
+          'delta' => '17',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Blocks communs aux pages invité');
+  t('Pages Invité');
+  $export['invite'] = $context;
 
   return $export;
 }

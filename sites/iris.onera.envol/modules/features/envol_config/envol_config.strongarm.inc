@@ -622,6 +622,13 @@ function envol_config_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_envol_court';
+  $strongarm->value = 'd.m.Y';
+  $export['date_format_envol_court'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'date_format_envol_long';
   $strongarm->value = 'd F Y';
   $export['date_format_envol_long'] = $strongarm;
@@ -3190,6 +3197,7 @@ function envol_config_strongarm() {
   $strongarm->name = 'path_alias_whitelist';
   $strongarm->value = array(
     'node' => TRUE,
+    'taxonomy' => TRUE,
   );
   $export['path_alias_whitelist'] = $strongarm;
 
