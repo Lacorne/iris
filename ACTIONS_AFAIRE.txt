@@ -104,6 +104,19 @@ Dans admin/config/search/path/update_bulk, cocher "Content paths" et cliquer sur
 
 Par acquis de conscience faire un flush du cache via l'admin.
 
+# Livraison du 11 Septembre 2014
+-------------------------------
+-> Activation du module transliteration sur envol
 
+drush iris.onera.accueil fr-all -yv
+drush iris.onera.accueil cc all -yv
+
+drush iris.onera.envol fr-all -yv
+drush iris.onera.envol cc all -yv
+
+Vérifier que le module transliteration (sur Envol) est bien activé, sinon l'activer par l'admin.
+Cocher  la case "Transliterate prior to creating alias" dans "admin/config/search/path/settings" (apparemment ceci n'est pas exportable en feature...)
+
+Par acquis de conscience faire un flush du cache via l'admin.
 
 
