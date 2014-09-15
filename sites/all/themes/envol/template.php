@@ -1,5 +1,3 @@
-
-
 <?php
 /**
  * @file
@@ -313,6 +311,7 @@ function envol_process_maintenance_page(&$variables, $hook) {
  *   The name of the template being rendered ("node" in this case.)
  */
 function envol_preprocess_node(&$variables, $hook) {
+  krumo($variables);
   // Add $title_type variable
   $listoftypes = array('invite', 'analyse', 'une_journee_avec', 'focus', 'chroniques', 'ensemble');
 

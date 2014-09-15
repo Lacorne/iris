@@ -103,8 +103,41 @@ function envol_contexts_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'chroniques';
+  $context->description = 'Gestion des blocks de la home Chroniques';
+  $context->tag = 'Pages Chroniques';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'chroniques' => 'chroniques',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-rubriques-other_chroniques_home' => array(
+          'module' => 'views',
+          'delta' => 'rubriques-other_chroniques_home',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Gestion des blocks de la home Chroniques');
+  t('Pages Chroniques');
+  $export['chroniques'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'common_agenda';
-  $context->description = 'Blocks communs aux pages agenda';
+  $context->description = 'Blocks communs aux pages Agenda';
   $context->tag = 'Pages Agenda';
   $context->conditions = array(
     'node' => array(
@@ -116,23 +149,12 @@ function envol_contexts_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'nodeblock-17' => array(
-          'module' => 'nodeblock',
-          'delta' => '17',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 0;
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Blocks communs aux pages agenda');
+  t('Blocks communs aux pages Agenda');
   t('Pages Agenda');
   $export['common_agenda'] = $context;
 
@@ -140,7 +162,7 @@ function envol_contexts_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'common_analyse';
-  $context->description = 'Blocks communs aux pages analyse';
+  $context->description = 'Blocks communs aux pages Analyse';
   $context->tag = 'Pages Analyse';
   $context->conditions = array(
     'node' => array(
@@ -168,7 +190,7 @@ function envol_contexts_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Blocks communs aux pages analyse');
+  t('Blocks communs aux pages Analyse');
   t('Pages Analyse');
   $export['common_analyse'] = $context;
 
@@ -216,6 +238,114 @@ function envol_contexts_context_default_contexts() {
   t('Commun');
   t('Configuration générale des blocks du site.');
   $export['common_blocks'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'common_chroniques';
+  $context->description = 'Blocks communs aux pages Chroniques';
+  $context->tag = 'Pages Chroniques';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'chroniques' => 'chroniques',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-rubriques-other_chroniques' => array(
+          'module' => 'views',
+          'delta' => 'rubriques-other_chroniques',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Blocks communs aux pages Chroniques');
+  t('Pages Chroniques');
+  $export['common_chroniques'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'common_ensemble';
+  $context->description = 'Blocks communs aux pages Ensemble';
+  $context->tag = 'Pages Ensemble';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'ensemble' => 'ensemble',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-rubriques-other_ensemble' => array(
+          'module' => 'views',
+          'delta' => 'rubriques-other_ensemble',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Blocks communs aux pages Ensemble');
+  t('Pages Ensemble');
+  $export['common_ensemble'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'common_focus';
+  $context->description = 'Blocks communs aux pages Focus';
+  $context->tag = 'Pages Focus';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'focus' => 'focus',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-rubriques-other_focus' => array(
+          'module' => 'views',
+          'delta' => 'rubriques-other_focus',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Blocks communs aux pages Focus');
+  t('Pages Focus');
+  $export['common_focus'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
@@ -280,6 +410,108 @@ function envol_contexts_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'common_unejourneeavec';
+  $context->description = 'Blocks communs aux pages Une journée avec';
+  $context->tag = 'Pages Une journée avec';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'une_journee_avec' => 'une_journee_avec',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-rubriques-other_unejourneeavec' => array(
+          'module' => 'views',
+          'delta' => 'rubriques-other_unejourneeavec',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Blocks communs aux pages Une journée avec');
+  t('Pages Une journée avec');
+  $export['common_unejourneeavec'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'ensemble';
+  $context->description = 'Gestion des blocks de la home Ensemble';
+  $context->tag = 'Pages Ensemble';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'ensemble' => 'ensemble',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-rubriques-other_ensemble_home' => array(
+          'module' => 'views',
+          'delta' => 'rubriques-other_ensemble_home',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Gestion des blocks de la home Ensemble');
+  t('Pages Ensemble');
+  $export['ensemble'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'focus';
+  $context->description = 'Gestion des blocks de la home Focus';
+  $context->tag = 'Pages Focus';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'focus' => 'focus',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-rubriques-other_focus_home' => array(
+          'module' => 'views',
+          'delta' => 'rubriques-other_focus_home',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Gestion des blocks de la home Focus');
+  t('Pages Focus');
+  $export['focus'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'home';
   $context->description = 'Blocks de la page d\'accueil d\'Envol';
   $context->tag = 'Home';
@@ -326,7 +558,7 @@ function envol_contexts_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'invite';
-  $context->description = 'Blocks communs aux pages invité';
+  $context->description = 'Blocks communs aux pages Invité';
   $context->tag = 'Pages Invité';
   $context->conditions = array(
     'path' => array(
@@ -357,9 +589,42 @@ function envol_contexts_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Blocks communs aux pages invité');
+  t('Blocks communs aux pages Invité');
   t('Pages Invité');
   $export['invite'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'une_journee_avec';
+  $context->description = 'Blocks communs aux pages Une journée avec';
+  $context->tag = 'Pages Une journée avec';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'une-journee-avec' => 'une-journee-avec',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-f9ea6b484a15f591cdfdf0b114940810' => array(
+          'module' => 'views',
+          'delta' => 'f9ea6b484a15f591cdfdf0b114940810',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Blocks communs aux pages Une journée avec');
+  t('Pages Une journée avec');
+  $export['une_journee_avec'] = $context;
 
   return $export;
 }
