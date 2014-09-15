@@ -29,6 +29,9 @@
     </div>
 
     <div class="wrapper-info">
+      <div class="wrapper-print">
+        <?php print render($content['print_links']);?>
+      </div>
       <?php print render($content['field_date']);?>
       <div class="wrapper-left-padding">
         <?php print render($content['body']);?>

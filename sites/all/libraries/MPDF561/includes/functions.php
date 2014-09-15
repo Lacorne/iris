@@ -1,17 +1,12 @@
 <?php
 
-
-function urlencode_part($url) {	// mPDF 5.6.02
-	if (!preg_match('/^[a-z]+:\/\//i',$url)) { return $url; }
-	$file=$url;
-	$query='';
+ 
+function urldecode_pathonly($url) {	// mPDF 5.5.03
 	if (preg_match('/[?]/',$url)) {
 		$bits = preg_split('/[?]/',$url,2);
-		$file=$bits[0];
-		$query='?'.$bits[1];
+		return (urldecode($bits[0]).'?'.$bits[1]);
 	}
-	$file = str_replace(array(" ","!","$","&","'","(",")","*","+",",",";","="),array("%20","%21","%24","%26","%27","%28","%29","%2A","%2B","%2C","%3B","%3D"),$file);
-	return $file.$query;
+	else return urldecode($url);
 }
 
 

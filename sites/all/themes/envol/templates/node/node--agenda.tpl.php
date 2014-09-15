@@ -14,6 +14,9 @@
   </div>
 
   <div class="wrapper-info">
+    <div class="wrapper-print">
+      <?php print render($content['print_links']);?>
+    </div>
     <?php print render($content['field_date_agenda']);?>
     <?php print render($title_prefix); ?>
       <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>

@@ -54,6 +54,10 @@ img
   clearfix()
 
 // Generic Elements
+article,
+.wrapper-info
+  position relative
+  
 .node-teaser
   clearfix()
 
@@ -136,6 +140,37 @@ img
     span
       absolute left -9999px
 
+// Print
+.wrapper-print
+  background #000
+  width 35px
+  height 109px
+  z-index 100
+  absolute top 30px left 0
+  .node-story &,
+  .node-agenda &,
+  .node-regards-exterieurs &,
+  .node-temoignage &
+    absolute top 292px left 0
+  .print_html,
+  .print_mail,
+  .print_pdf
+    display block
+    width 35px
+    height 35px
+    padding 0
+    margin 0
+    a
+      display block
+      width 35px
+      height 35px
+      background url('../images/print.jpg') 0 0 no-repeat
+      &.print-html
+        background-position 0 0
+      &.print-mail
+        background-position 0 -38px
+      &.print-pdf
+        background-position 0 -74px
 // Views
 .views-row
   padding 20px 0

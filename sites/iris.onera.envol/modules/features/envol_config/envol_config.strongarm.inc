@@ -3266,14 +3266,14 @@ function envol_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'print_html_link_text';
-  $strongarm->value = 'Version imprimable';
+  $strongarm->value = '';
   $export['print_html_link_text'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'print_html_link_text_enabled';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['print_html_link_text_enabled'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -3404,14 +3404,14 @@ function envol_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'print_mail_link_text';
-  $strongarm->value = 'Send by email';
+  $strongarm->value = '';
   $export['print_mail_link_text'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'print_mail_link_text_enabled';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['print_mail_link_text_enabled'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -3584,14 +3584,14 @@ function envol_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'print_pdf_link_text';
-  $strongarm->value = 'PDF version';
+  $strongarm->value = '';
   $export['print_pdf_link_text'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'print_pdf_link_text_enabled';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['print_pdf_link_text_enabled'] = $strongarm;
 
   $strongarm = new stdClass();

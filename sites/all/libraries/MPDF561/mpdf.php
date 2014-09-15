@@ -70,11 +70,6 @@ class mPDF
 // EXTERNAL (PUBLIC) VARIABLES
 // Define these in config.php
 ///////////////////////////////
-// mPDF 5.6.01
-var $layers;
-var $current_layer;
-var $open_layer_pane;
-
 var $margBuffer;	// mPDF 5.4.04
 var $splitTableBorderWidth;	// mPDF 5.4.16
 
@@ -853,11 +848,6 @@ function mPDF($mode='',$format='A4',$default_font_size=0,$default_font='',$mgl=1
 	$this->KeepColumns =& $this->keepColumns;
 	$this->useOddEven =& $this->mirrorMargins;
 	$this->useSubstitutionsMB =& $this->useSubstitutions;
-
-	// mPDF 5.6.01
-	$this->layers = array();
-	$this->current_layer = 0;
-	$this->open_layer_pane = false;
 
 	$this->visibility='visible';
 
@@ -1719,20 +1709,14 @@ function SetVisibility($v) {
 		$this->pdf_version='1.5';
 	if($this->visibility!='visible') {
 		$this->_out('EMC');
-		$this->hasOC=intval($this->hasOC );	// mPDF 5.6.01
+		$this->hasOC = true;
 	}
-	if($v=='printonly') {
+	if($v=='printonly') 
 		$this->_out('/OC /OC1 BDC');
-		$this->hasOC=($this->hasOC | 1);	// mPDF 5.6.01
-	}
-	elseif($v=='screenonly') {
+	elseif($v=='screenonly')
 		$this->_out('/OC /OC2 BDC');
-		$this->hasOC=($this->hasOC | 2);	// mPDF 5.6.01
-	}
-	elseif($v=='hidden') {
+	elseif($v=='hidden')
 		$this->_out('/OC /OC3 BDC');
-		$this->hasOC=($this->hasOC | 4);	// mPDF 5.6.01
-	}
 	elseif($v!='visible')
 		$this->Error('Incorrect visibility: '.$v);
 	$this->visibility=$v;
@@ -1777,8 +1761,6 @@ function Close() {
 
 	if($this->visibility!='visible')
 		$this->SetVisibility('visible');
-	// mPDF 5.6.01 - LAYERS
-	$this->EndLayer();
 
 	if (!$this->tocontents || !$this->tocontents->TOCmark) { //Page footer
 		$this->InFooter=true;
@@ -1957,12 +1939,6 @@ function PrintPageBackgrounds($adjustmenty=0) {
 	foreach($this->pageBackgrounds AS $bl=>$pbs) {
 		foreach ($pbs AS $pb) {
 		  if ((!isset($pb['image_id']) && !isset($pb['gradient'])) || isset($pb['shadowonly'])) {	// Background colour or boxshadow
-			// mPDF 5.6.01  - LAYERS
-			if($pb['z-index']>0) {
-				$this->current_layer = $pb['z-index'];
-				$s .= "\n".'/OCBZ-index /ZI'.$pb['z-index'].' BDC'."\n";
-			}
-
 			if($pb['visibility']!='visible') {
 				if($pb['visibility']=='printonly') 
 					$s .= '/OC /OC1 BDC'."\n";
@@ -1985,30 +1961,17 @@ function PrintPageBackgrounds($adjustmenty=0) {
 			if (isset($pb['clippath']) && $pb['clippath']) { $s .= 'Q'."\n"; }
 			if($pb['visibility']!='visible')
 				$s .= 'EMC'."\n";
-
-			// mPDF 5.6.01  - LAYERS
-			if($pb['z-index']>0) {
-				$s .= "\n".'EMCBZ-index'."\n";
-				$this->current_layer = 0;
-			}
 		  }
 		}
 /*-- BACKGROUNDS --*/
 		foreach ($pbs AS $pb) {
-		 // mPDF 5.6.01  - LAYERS
-	 	 if ((isset($pb['gradient']) && $pb['gradient']) || (isset($pb['image_id']) && $pb['image_id'])) {
-		 	if($pb['z-index']>0) {
-				$this->current_layer = $pb['z-index'];
-				$s .= "\n".'/OCGZ-index /ZI'.$pb['z-index'].' BDC'."\n";
-		 	}
-		 	if($pb['visibility']!='visible') {
+		 if($pb['visibility']!='visible') {
 				if($pb['visibility']=='printonly') 
 					$s .= '/OC /OC1 BDC'."\n";
 				else if($pb['visibility']=='screenonly')
 					$s .= '/OC /OC2 BDC'."\n";
 				else if($pb['visibility']=='hidden')
 					$s .= '/OC /OC3 BDC'."\n";
-		 	}
 		 }
 	 	 if (isset($pb['gradient']) && $pb['gradient']) {
 			if (isset($pb['clippath']) && $pb['clippath']) { $s .= $pb['clippath']."\n"; }
@@ -2075,16 +2038,8 @@ function PrintPageBackgrounds($adjustmenty=0) {
 			}
 			if (isset($pb['clippath']) && $pb['clippath']) { $s .= 'Q'."\n"; }
 		  }
-	 	  if ((isset($pb['gradient']) && $pb['gradient']) || (isset($pb['image_id']) && $pb['image_id'])) {
-		 	if($pb['visibility']!='visible')
-				$s .= 'EMC'."\n";
-
-			// mPDF 5.6.01  - LAYERS
-			if($pb['z-index']>0) {
-				$s .= "\n".'EMCGZ-index'."\n";
-				$this->current_layer = 0;
-			}
-		  }
+		 if($pb['visibility']!='visible')
+			$s .= 'EMC'."\n";
 
 		}
 /*-- END BACKGROUNDS --*/
@@ -2134,29 +2089,6 @@ function PrintTableBackgrounds($adjustmenty=0) {
 /*-- END BACKGROUNDS --*/
 	return $s;
 }
-
-// mPDF 5.6.01 - LAYERS
-function BeginLayer($id) {
-	if($this->current_layer>0) $this->EndLayer();
-	if ($id < 1) { return false; }
-	if (!isset($this->layers[$id])) { 
-		$this->layers[$id] = array('name'=>'Layer '.($id) );
-		if (($this->PDFA || $this->PDFX)) { $this->PDFAXwarnings[] = "Cannot use layers when using PDFA or PDFX"; return ''; }
-		else if (!$this->PDFA && !$this->PDFX) { $this->pdf_version='1.5'; }
-	}
-	$this->current_layer = $id;
-	$this->_out('/OCZ-index /ZI'.$id.' BDC');
-
-	$this->pageoutput[$this->page] = array();
-}
-
-function EndLayer() {
-	if($this->current_layer>0) {
-		$this->_out('EMCZ-index');
-		$this->current_layer = 0;
-	}
-}
-
 
 
 // Depracated - can use AddPage for all
@@ -2319,14 +2251,6 @@ function AddPage($orientation='',$condition='', $resetpagenum='', $pagenumstyle=
 	$this->table_rotate = 0;	// *TABLES*
 	$save_kwt = $this->kwt;
 	$this->kwt = 0;
-	// mPDF 5.6.01 - LAYERS
-	$save_layer = $this->current_layer;
-	$save_vis = $this->visibility;
-
-	if($this->visibility!='visible')
-		$this->SetVisibility('visible');
-	// mPDF 5.6.01 - LAYERS
-	$this->EndLayer();
 
 	// Paint Div Border if necessary
    	//PAINTS BACKGROUND COLOUR OR BORDERS for DIV - DISABLED FOR COLUMNS (cf. AcceptPageBreak) AT PRESENT in ->PaintDivBB
@@ -2339,25 +2263,11 @@ function AddPage($orientation='',$condition='', $resetpagenum='', $pagenumstyle=
 		else { $toplvl = $this->blklvl-1; }
 		$sy = $this->y;
 		for ($bl=1;$bl<=$toplvl;$bl++) {
-
-			// mPDF 5.6.01 - LAYERS
-			if ($this->blk[$bl]['z-index']>0) {
-				$this->BeginLayer($this->blk[$bl]['z-index']);
-			}
-			if (isset($this->blk[$bl]['visibility']) && $this->blk[$bl]['visibility'] && $this->blk[$bl]['visibility']!='visible') {
-				$this->SetVisibility($this->blk[$bl]['visibility']);
-			}
-
 			$this->PaintDivBB('pagebottom',0,$bl);
 		}
 		$this->y = $sy;
 		// RESET block y0 and x0 - see below
 	}
-
-	if($this->visibility!='visible')
-		$this->SetVisibility('visible');
-	// mPDF 5.6.01 - LAYERS
-	$this->EndLayer();
 
 	// BODY Backgrounds
 	if ($this->page > 0) {
@@ -2381,6 +2291,9 @@ function AddPage($orientation='',$condition='', $resetpagenum='', $pagenumstyle=
 	}
 /*-- END COLUMNS --*/
 
+	$save_vis = $this->visibility;
+	if($this->visibility!='visible')
+		$this->SetVisibility('visible');
 
 	$family=$this->FontFamily;
 	$style=$this->FontStyle.($this->U ? 'U' : '').($this->S ? 'S' : '');
@@ -2470,10 +2383,6 @@ function AddPage($orientation='',$condition='', $resetpagenum='', $pagenumstyle=
 	$this->TextColor=$tc;
 	$this->ColorFlag=$cf;
  	$this->InFooter=false;
-
-	// mPDF 5.6.01 - LAYERS
-	if ($save_layer>0)
-		$this->BeginLayer($save_layer);
 
 	if($save_vis!='visible')
 		$this->SetVisibility($save_vis);
@@ -5278,10 +5187,6 @@ function printobjectbuffer($is_table=false, $blockdir=false) {
 		   }
 		// IMAGE
 		   if ($objattr['type'] == 'image') {
-			// mPDF 5.6.01  - LAYERS
-			if (isset($objattr['z-index']) && $objattr['z-index'] > 0 && $this->currentlayer==0) {
-				$this->BeginLayer($objattr['z-index']);
-			}
 			if(isset($objattr['visibility']) && $objattr['visibility']!='visible' && $objattr['visibility']) {
 				$this->SetVisibility($objattr['visibility']);
 			}
@@ -5353,10 +5258,6 @@ function printobjectbuffer($is_table=false, $blockdir=false) {
 			if ((isset($objattr['border_top']) && $objattr['border_top']>0) || (isset($objattr['border_left']) && $objattr['border_left']>0) || (isset($objattr['border_right']) && $objattr['border_right']>0) || (isset($objattr['border_bottom']) && $objattr['border_bottom']>0)) { $this->PaintImgBorder($objattr,$is_table); }
 			if(isset($objattr['visibility']) && $objattr['visibility']!='visible' && $objattr['visibility']) {
 				$this->SetVisibility('visible');
-			}
-			// mPDF 5.6.01  - LAYERS
-			if (isset($objattr['z-index']) && $objattr['z-index'] > 0 && $this->currentlayer==0) {
-				$this->EndLayer();
 			}
 
 		   }
@@ -8835,32 +8736,13 @@ function _putcatalog() {
 		}
 		$this->_out('>>');
 	}
-	// mPDF 5.6.01
-	if($this->open_layer_pane && ($this->hasOC || count($this->layers)))
-		$this->_out('/PageMode /UseOC');
-
-	// mPDF 5.6.01
-	if ($this->hasOC || count($this->layers)) {
-		$p = $v = $h = $l = $as = '';
-		if ($this->hasOC) {
-			if (($this->hasOC & 1) == 1) $p=$this->n_ocg_print.' 0 R';
-			if (($this->hasOC & 2) == 2) $v=$this->n_ocg_view.' 0 R';
-			if (($this->hasOC & 4) == 4) $h=$this->n_ocg_hidden.' 0 R';
-			$as="<</Event /Print /OCGs [$p $v $h] /Category [/Print]>> <</Event /View /OCGs [$p $v $h] /Category [/View]>>";
-		}
-
-		if(count($this->layers)) {
-			foreach($this->layers as $layer) {
-				$l .= $layer['n'].' 0 R ';
-			}
-		}
-		$this->_out("/OCProperties <</OCGs [$p $v $h $l] /D <</ON [$p $l] /OFF [$v $h] ");
-		$this->_out("/Order [$v $p $h $l] ");
-		if ($as) $this->_out("/AS [$as] ");
-		$this->_out(">>>>");
-
+	if ($this->hasOC) {
+		$p=$this->n_ocg_print.' 0 R';
+		$v=$this->n_ocg_view.' 0 R';
+		$h=$this->n_ocg_hidden.' 0 R';
+		$as="<</Event /Print /OCGs [$p $v $h] /Category [/Print]>> <</Event /View /OCGs [$p $v $h] /Category [/View]>>";
+		$this->_out("/OCProperties <</OCGs [$p $v $h] /D <</ON [$p] /OFF [$v] /OFF [$h] /AS [$as]>>>>");
 	}
-
 }
 
 // Inactive function left for backwards compatability
@@ -8888,35 +8770,6 @@ function _enddoc() {
 				}
 		}
 	   }
-	}
-
-	// mPDF 5.6.01 - LAYERS
-	if (count($this->layers)) {
-	  foreach($this->pages AS $pn=>$page) { 
-		preg_match_all('/\/OCZ-index \/ZI(\d+) BDC(.*?)(EMCZ)-index/is',$this->pages[$pn],$m1);
-		preg_match_all('/\/OCBZ-index \/ZI(\d+) BDC(.*?)(EMCBZ)-index/is',$this->pages[$pn],$m2);
-		preg_match_all('/\/OCGZ-index \/ZI(\d+) BDC(.*?)(EMCGZ)-index/is',$this->pages[$pn],$m3);
-		$m = array();
-		for ($i=0;$i<4;$i++) {
-			$m[$i] = array_merge($m1[$i],$m2[$i],$m3[$i]);
-		}
-		if (count($m[0])) {
-			$sortarr = array();
-			for($i=0;$i<count($m[0]);$i++) {
-				$key = $m[1][$i]*2;
-				if ($m[3][$i]=='EMCZ') $key +=2;	// background first then gradient then normal
-				else if ($m[3][$i]=='EMCGZ') $key +=1;
-				$sortarr[$i] = $key;
-			} 
-			asort($sortarr);
-			foreach($sortarr AS $i=>$k) {
-				$this->pages[$pn] = str_replace($m[0][$i],'',$this->pages[$pn] );
-				$this->pages[$pn] .= "\n".$m[0][$i]."\n";
-			} 
-			$this->pages[$pn] = preg_replace('/\/OC[BG]{0,1}Z-index \/ZI(\d+) BDC/is','/OC /ZI\\1 BDC ',$this->pages[$pn]); 
-			$this->pages[$pn] = preg_replace('/EMC[BG]{0,1}Z-index/is','EMC',$this->pages[$pn]); 
-		}
-	  }
 	}
 
 	$this->_putpages();
@@ -9307,7 +9160,7 @@ function _endpage() {
 
 	if($this->visibility!='visible')
 		$this->SetVisibility('visible');
-	$this->EndLayer();	// mPDF 5.6.01
+
 	//End of page contents
 	$this->state=1;
 }
@@ -9358,11 +9211,12 @@ function _getImage(&$file, $firsttime=true, $allowvector=true, $orig_srcpath=fal
 		$file = md5($data);
 	}
 
-	// mPDF 5.6.02
-	if ($firsttime && $file && substr($file,0,5)!='data:') { $file = urlencode_part($file); }
-	if ($firsttime && $orig_srcpath && substr($orig_srcpath,0,5)!='data:') { $orig_srcpath = urlencode_part($orig_srcpath); }
-
+	$file = urldecode_pathonly($file);	// mPDF 5.5.03 // mPDF 5.5.12
+	if ($orig_srcpath && substr($orig_srcpath,0,5)!='data:') { $orig_srcpath = urldecode_pathonly($orig_srcpath); }	// mPDF 5.5.03 5.4.21
 	$ppUx = 0;
+	if ($firsttime && preg_match('/(.*\/)([^\/]*)/',$file,$fm)) {
+		if (strlen($fm[2])) { $file = $fm[1].preg_replace('/ /','%20',$fm[2]); }
+	}
 	if ($orig_srcpath && isset($this->images[$orig_srcpath])) { $file=$orig_srcpath; return $this->images[$orig_srcpath]; }
 	if (isset($this->images[$file])) { return $this->images[$file]; }
 	else if ($orig_srcpath && isset($this->formobjects[$orig_srcpath])) { $file=$orig_srcpath; return $this->formobjects[$file]; }
@@ -9379,12 +9233,12 @@ function _getImage(&$file, $firsttime=true, $allowvector=true, $orig_srcpath=fal
 			$data = file_get_contents($file);
 			$type = $this->_imageTypeFromString($data);
 		}
-		if (!$data && $check = @fopen($file,"rb")) {
+		if (!$data && $check = @fopen($file,"rb")) { 
 			fclose($check); 
 			$data = file_get_contents($file);
 			$type = $this->_imageTypeFromString($data);
 		}
-		if ((!$data || !$type) && !ini_get('allow_url_fopen') ) {	// only worth trying if remote file and !ini_get('allow_url_fopen')
+		if ((!$data || !$type) && !ini_get('allow_url_fopen')) {	// only worth trying if remote file and !ini_get('allow_url_fopen')
 			$this->file_get_contents_by_socket($file, $data);	// needs full url?? even on local (never needed for local)
 			if ($data) { $type = $this->_imageTypeFromString($data); }
 		}
@@ -13088,7 +12942,6 @@ function WriteFixedPosHTML($html='',$x, $y, $w, $h, $overflow='visible', $boundi
 		if (isset($p['LETTER-SPACING'])) { $css .= 'letter-spacing: '.strtolower($p['LETTER-SPACING']).'; '; }
 		if (isset($p['FONT-VARIANT'])) { $css .= 'font-variant: '.strtolower($p['FONT-VARIANT']).'; '; }
 		if (isset($p['COLOR'])) { $css .= 'color: '.strtolower($p['COLOR']).'; '; }
-		if (isset($p['Z-INDEX'])) { $css .= 'z-index: '.$p['Z-INDEX'].'; '; }	// mPDF 5.6.01
 		if ($css) {
 			$html = '<div style="'.$css.'">'.$html.'</div>';
 		}
@@ -16366,15 +16219,6 @@ function OpenTag($tag,$attr)
 	}
 	if ($lastbottommargin && isset($properties['MARGIN-TOP']) && $properties['MARGIN-TOP'] && empty($properties['FLOAT'])) { $currblk['lastbottommargin'] = $lastbottommargin; }
 
-	// mPDF 5.6.01  - LAYERS
-	if (isset($properties['Z-INDEX']) && $this->currentlayer==0) {
-		$v = intval($properties['Z-INDEX']); 
-		if ($v > 0) {
-			$currblk['z-index'] = $v; 
-			$this->BeginLayer($v);
-		}
-	}
-
 	$this->setCSS($properties,'BLOCK',$tag); //name(id/class/style) found in the CSS array!
 	$currblk['InlineProperties'] = $this->saveInlineProperties();
 
@@ -17409,14 +17253,6 @@ function OpenTag($tag,$attr)
 		if(isset($properties ['DISPLAY']) && strtolower($properties ['DISPLAY'])=='none') { 
 			return; 
 		}
-		// mPDF 5.6.01  - LAYERS
-		if (isset($properties['Z-INDEX']) && $this->currentlayer==0) {
-			$v = intval($properties['Z-INDEX']); 
-			if ($v > 0) {
-				$objattr['z-index'] = $v; 
-			}
-		}
-
 		$objattr['visibility'] = 'visible'; 
 		if (isset($properties['VISIBILITY'])) {
 			$v = strtolower($properties['VISIBILITY']);
@@ -19267,16 +19103,12 @@ function CloseTag($tag)
 		$this->SetVisibility('visible');
 	}
 
+
 	if (isset($this->blk[$this->blklvl]['page_break_after'])) { $page_break_after = $this->blk[$this->blklvl]['page_break_after']; }
 	else { $page_break_after = ''; }
 
 	//Reset values
 	$this->Reset();
-
-	// mPDF 5.6.01  - LAYERS
-	if (isset($this->blk[$this->blklvl]['z-index']) && $this->blk[$this->blklvl]['z-index'] > 0) {
-		$this->EndLayer();
-	}
 
 	if ($this->blklvl > 0) {	// ==0 SHOULDN'T HAPPEN - NOT XHTML 
 	   if ($this->blk[$this->blklvl]['tag'] == $tag) {
@@ -21661,7 +21493,6 @@ function PaintDivBB($divider='',$blockstate=0,$blvl=0) {
 	// BACKGROUNDS are disabled in columns/kbt/headers - messes up the repositioning in printcolumnbuffer
 	if ($this->ColActive || $this->kwt || $this->keep_block_together) { return ; }
 
-
 	$bgx0 = $x0;
 	$bgx1 = $x1;
 	$bgy0 = $y0;
@@ -22031,10 +21862,10 @@ function PaintDivBB($divider='',$blockstate=0,$blvl=0) {
 	$s .= ' W n ';	// Ends path no-op & Sets the clipping path
 
 	if ($this->blk[$blvl]['bgcolor']) {
-		$this->pageBackgrounds[$blvl][] = array('x'=>$x0, 'y'=>$y0, 'w'=>$w, 'h'=>$h, 'col'=>$this->blk[$blvl]['bgcolorarray'], 'clippath'=>$s, 'visibility'=>$this->visibility, 'shadow'=>$shadow, 'z-index'=>$this->current_layer);	// mPDF 5.6.01
+		$this->pageBackgrounds[$blvl][] = array('x'=>$x0, 'y'=>$y0, 'w'=>$w, 'h'=>$h, 'col'=>$this->blk[$blvl]['bgcolorarray'], 'clippath'=>$s, 'visibility'=>$this->visibility, 'shadow'=>$shadow);
 	}
 	else 	if ($shadow) {
-		$this->pageBackgrounds[$blvl][] = array('shadowonly'=>true, 'col'=>'', 'clippath'=>'', 'visibility'=>$this->visibility, 'shadow'=>$shadow, 'z-index'=>$this->current_layer);	// mPDF 5.6.01
+		$this->pageBackgrounds[$blvl][] = array('shadowonly'=>true, 'col'=>'', 'clippath'=>'', 'visibility'=>$this->visibility, 'shadow'=>$shadow);
 	}
 
 /*-- BACKGROUNDS --*/
@@ -22043,7 +21874,7 @@ function PaintDivBB($divider='',$blockstate=0,$blvl=0) {
 		if ($g) {
 			$gx = $x0;
 			$gy = $y0;
-			$this->pageBackgrounds[$blvl][] = array('gradient'=>true, 'x'=>$gx, 'y'=>$gy, 'w'=>$w, 'h'=>$h, 'gradtype'=>$g['type'], 'stops'=>$g['stops'], 'colorspace'=>$g['colorspace'], 'coords'=>$g['coords'], 'extend'=>$g['extend'], 'clippath'=>$s, 'visibility'=>$this->visibility, 'z-index'=>$this->current_layer);	// mPDF 5.6.01
+			$this->pageBackgrounds[$blvl][] = array('gradient'=>true, 'x'=>$gx, 'y'=>$gy, 'w'=>$w, 'h'=>$h, 'gradtype'=>$g['type'], 'stops'=>$g['stops'], 'colorspace'=>$g['colorspace'], 'coords'=>$g['coords'], 'extend'=>$g['extend'], 'clippath'=>$s, 'visibility'=>$this->visibility);
 		}
 	}
 
@@ -22053,7 +21884,7 @@ function PaintDivBB($divider='',$blockstate=0,$blvl=0) {
 		if ($g) {
 			$gx = $x0;
 			$gy = $y0;
-			$this->pageBackgrounds[$blvl][] = array('gradient'=>true, 'x'=>$gx, 'y'=>$gy, 'w'=>$w, 'h'=>$h, 'gradtype'=>$g['type'], 'stops'=>$g['stops'], 'colorspace'=>$g['colorspace'], 'coords'=>$g['coords'], 'extend'=>$g['extend'], 'clippath'=>$s, 'visibility'=>$this->visibility, 'z-index'=>$this->current_layer);	// mPDF 5.6.01
+			$this->pageBackgrounds[$blvl][] = array('gradient'=>true, 'x'=>$gx, 'y'=>$gy, 'w'=>$w, 'h'=>$h, 'gradtype'=>$g['type'], 'stops'=>$g['stops'], 'colorspace'=>$g['colorspace'], 'coords'=>$g['coords'], 'extend'=>$g['extend'], 'clippath'=>$s, 'visibility'=>$this->visibility);
 		}
 	   }
 	   else { 
@@ -22067,7 +21898,7 @@ function PaintDivBB($divider='',$blockstate=0,$blvl=0) {
 		$resize = $this->blk[$blvl]['background-image']['resize'];
 		$opacity = $this->blk[$blvl]['background-image']['opacity'];
 		$itype = $this->blk[$blvl]['background-image']['itype'];
-		$this->pageBackgrounds[$blvl][] = array('x'=>$x0, 'y'=>$y0, 'w'=>$w, 'h'=>$h, 'image_id'=>$image_id, 'orig_w'=>$orig_w, 'orig_h'=>$orig_h, 'x_pos'=>$x_pos, 'y_pos'=>$y_pos, 'x_repeat'=>$x_repeat, 'y_repeat'=>$y_repeat, 'clippath'=>$s, 'resize'=>$resize, 'opacity'=>$opacity, 'itype'=>$itype, 'visibility'=>$this->visibility, 'z-index'=>$this->current_layer);	// mPDF 5.6.01	
+		$this->pageBackgrounds[$blvl][] = array('x'=>$x0, 'y'=>$y0, 'w'=>$w, 'h'=>$h, 'image_id'=>$image_id, 'orig_w'=>$orig_w, 'orig_h'=>$orig_h, 'x_pos'=>$x_pos, 'y_pos'=>$y_pos, 'x_repeat'=>$x_repeat, 'y_repeat'=>$y_repeat, 'clippath'=>$s, 'resize'=>$resize, 'opacity'=>$opacity, 'itype'=>$itype, 'visibility'=>$this->visibility);	
 	   }
 	}
 /*-- END BACKGROUNDS --*/
@@ -22607,7 +22438,7 @@ function ReadCSS($html) {
 			$file = _MPDF_TEMP_PATH.'_tempCSSidata'.RAND(1,10000).'_'.$i.'.'.$idata[2][$i];
 			//Save to local file
 			file_put_contents($file, base64_decode($idata[3][$i]));
-			// $this->GetFullPath($file);	// ? is this needed - NO  mPDF 5.6.03
+			$this->GetFullPath($file);	// ? is this needed
 			$CSSstr = str_replace($idata[0][$i], 'url("'.$file.'")', $CSSstr); 	// mPDF 5.5.17
 		}
 	}
@@ -27673,6 +27504,7 @@ function _tableWrite(&$table, $split=false, $startrow=0, $startcol=0, $splitpg=0
 /////////////////////////END OF TABLE CODE//////////////////////////////////
 /*-- END TABLES --*/
 
+
 function _putextgstates() {
 	for ($i = 1; $i <= count($this->extgstates); $i++) {
             $this->_newobj();
@@ -27686,33 +27518,21 @@ function _putextgstates() {
 }
 
 function _putocg() {
-	if ($this->hasOC) { 	// mPDF 5.6.01
-		$this->_newobj();
-		$this->n_ocg_print=$this->n;
-		$this->_out('<</Type /OCG /Name '.$this->_textstring('Print only'));
-		$this->_out('/Usage <</Print <</PrintState /ON>> /View <</ViewState /OFF>>>>>>');
-		$this->_out('endobj');
-		$this->_newobj();
-		$this->n_ocg_view=$this->n;
-		$this->_out('<</Type /OCG /Name '.$this->_textstring('Screen only'));
-		$this->_out('/Usage <</Print <</PrintState /OFF>> /View <</ViewState /ON>>>>>>');
-		$this->_out('endobj');
-		$this->_newobj();
-		$this->n_ocg_hidden=$this->n;
-		$this->_out('<</Type /OCG /Name '.$this->_textstring('Hidden'));
-		$this->_out('/Usage <</Print <</PrintState /OFF>> /View <</ViewState /OFF>>>>>>');
-		$this->_out('endobj');
-	}
-	// mPDF 5.6.01  Add Layers
-	if (count($this->layers)) {
-		ksort($this->layers);
-		foreach($this->layers as $id=>$layer) {
-			$this->_newobj();
-			$this->layers[$id]['n'] = $this->n;
-			$this->_out('<</Type /OCG /Name '.$this->_UTF16BEtextstring($layer['name']).'>>');
-			$this->_out('endobj');
-		}
-	}
+	$this->_newobj();
+	$this->n_ocg_print=$this->n;
+	$this->_out('<</Type /OCG /Name '.$this->_textstring('print'));
+	$this->_out('/Usage <</Print <</PrintState /ON>> /View <</ViewState /OFF>>>>>>');
+	$this->_out('endobj');
+	$this->_newobj();
+	$this->n_ocg_view=$this->n;
+	$this->_out('<</Type /OCG /Name '.$this->_textstring('view'));
+	$this->_out('/Usage <</Print <</PrintState /OFF>> /View <</ViewState /ON>>>>>>');
+	$this->_out('endobj');
+	$this->_newobj();
+	$this->n_ocg_hidden=$this->n;
+	$this->_out('<</Type /OCG /Name '.$this->_textstring('hidden'));
+	$this->_out('/Usage <</Print <</PrintState /OFF>> /View <</ViewState /OFF>>>>>>');
+	$this->_out('endobj');
 }
 
 
@@ -28138,7 +27958,7 @@ function _putspotcolors() {
 
 
 function _putresources() {
-	if ($this->hasOC || count($this->layers)) 	// mPDF 5.6.01
+	if ($this->hasOC) 
 		$this->_putocg();
 	$this->_putextgstates();
 	$this->_putspotcolors();
@@ -28159,7 +27979,6 @@ function _putresources() {
 	$this->_putshaders();
 	$this->_putpatterns();
 /*-- END BACKGROUNDS --*/
-
 
 	//Resource dictionary
 	$this->offsets[2]=strlen($this->buffer);
@@ -28240,18 +28059,8 @@ function _putresources() {
 	}
 /*-- END BACKGROUNDS --*/
 
-	// mPDF 5.6.01
-	if ($this->hasOC || count($this->layers)) { 
-		$this->_out('/Properties <<');
-		if ($this->hasOC) { 
-			$this->_out('/OC1 '.$this->n_ocg_print.' 0 R /OC2 '.$this->n_ocg_view.' 0 R /OC3 '.$this->n_ocg_hidden.' 0 R ');
-		}
-		if (count($this->layers)) {
-			foreach($this->layers as $id=>$layer)
-				$this->_out('/ZI'.$id.' '.$layer['n'].' 0 R');
-		}
-		$this->_out('>>');
-	}
+	if ($this->hasOC) 
+		$this->_out('/Properties <</OC1 '.$this->n_ocg_print.' 0 R /OC2 '.$this->n_ocg_view.' 0 R /OC3 '.$this->n_ocg_hidden.' 0 R>>');
 
 	$this->_out('>>');
 	$this->_out('endobj');	// end resource dictionary

@@ -9,15 +9,14 @@
 ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <div class="wrapper-print">
-    <?php print render($content['print_links']);?>
-  </div>
-
   <div class="wrapper-image">
     <?php print render($content['field_image_actu']);?>
   </div>
 
   <div class="wrapper-info">
+    <div class="wrapper-print">
+      <?php print render($content['print_links']);?>
+    </div>
     <?php print render($content['field_date']);?>
     <?php print render($content['field_thematique']); ?>
     <?php print render($title_prefix); ?>
