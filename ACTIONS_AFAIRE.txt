@@ -119,4 +119,30 @@ Cocher  la case "Transliterate prior to creating alias" dans "admin/config/searc
 
 Par acquis de conscience faire un flush du cache via l'admin.
 
+# Livraison du 15 Septembre 2014
+-------------------------------
+-> Activation du module print sur envol
+-> block autres articles
+-> pages listes
 
+drush iris.onera.accueil fr-all -yv
+drush iris.onera.accueil cc all -yv
+
+drush iris.onera.envol fr-all -yv
+drush iris.onera.envol cc all -yv
+
+Vérifier que le module print et ses dépendances (sur Envol) sont bien activés, sinon les activer par l'admin.
+- Printer-friendly pages
+- Printer-friendly pages UI
+- Send by email
+- PDF version
+- dompdf library handler 
+- mPDF library handler
+- wkhtmltopdf library handler
+
+Modifier les droits et ajouter pour les visiteurs les droits suivants:
+- Access the printer-friendly page
+- Access the PDF version
+- Access the Send by email functionality
+
+Faire un flush du cache via l'admin.
