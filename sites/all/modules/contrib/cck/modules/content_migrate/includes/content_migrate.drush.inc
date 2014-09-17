@@ -23,6 +23,7 @@ function content_migrate_drush_help($section) {
   }
 }
 
+
 /**
  * Implementation of hook_drush_command().
  */
@@ -55,6 +56,7 @@ function content_migrate_drush_command() {
       'name' => 'A field system name.',
     ),
   );
+
   return $items;
 }
 
