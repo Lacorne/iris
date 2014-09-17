@@ -160,6 +160,8 @@ drush iris.onera.envol cc all -yv
 Se rendre sur iris.onera(:votre port)/update.php et lancer l'update
 Se rendre sur iris.onera(:votre port)/envol/update.php et lancer l'update
 
+Se rendre pour Envol dans admin/structure/views/settings/advanced et clicker sur "vider le cache des vues"
+
 -> Sur Iris il faut reactiver les features "iris" (config, context, views).
 -> Dans le dossier themes, à la racine, et non dans sites/all/themes, il y avait un thème "Carnot".
 Ce dernier est déplacé dans sites/all/themes.

@@ -226,7 +226,10 @@ function envol_html_head_alter(&$head) {
  */
 function envol_preprocess(&$variables, $hook) {
   global $base_url;
-  ($base_url == 'http://iris.onera.fr') ? $variables['base_url'] = $base_url . '/envol' : $variables['base_url'] = $base_url;
+  $variables['base_url'] = $base_url;
+  /*
+  ($base_url == 'http://iris.onera') ? $variables['base_url'] = $base_url . '/envol' : $variables['base_url'] = $base_url;
+  */
 }
 
 /**
@@ -264,7 +267,7 @@ function envol_preprocess_page(&$variables, $hook) {
   }
 
   //Set a variable to return to Iris
-  ($base_url == 'http://iris.onera.fr') ? $back_to_iris = $base_url : $back_to_iris = 'http://iris.local';
+  ($base_url == 'http://iris.onera') ? $back_to_iris = $base_url : $back_to_iris = 'http://iris.local';
   $variables['page']['back_to_iris'] = $back_to_iris;
 
 }
