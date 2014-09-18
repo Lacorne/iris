@@ -10,6 +10,155 @@
 function iris_config_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-in_situ-body'
+  $field_instances['node-in_situ-body'] = array(
+    'bundle' => 'in_situ',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'edit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'edit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Titre du lien',
+    'required' => 1,
+    'settings' => array(
+      'display_summary' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance: 'node-in_situ-field_center'
+  $field_instances['node-in_situ-field_center'] = array(
+    'bundle' => 'in_situ',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'edit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'edit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_center',
+    'label' => 'Nom du centre',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'node-in_situ-field_link'
+  $field_instances['node-in_situ-field_link'] = array(
+    'bundle' => 'in_situ',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'edit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'edit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_link',
+    'label' => 'Lien',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 33,
+    ),
+  );
+
   // Exported field_instance: 'node-page2-body'
   $field_instances['node-page2-body'] = array(
     'bundle' => 'page2',
@@ -626,11 +775,14 @@ function iris_config_field_default_field_instances() {
   t('Entrez "Une" pour mettre l\'article en exergue sur la homepage, puis un autre mot-clef pour le ranger dans les actualités');
   t('File attachments');
   t('Image actualité');
+  t('Lien');
   t('Mois');
   t('Mots-clefs');
+  t('Nom du centre');
   t('Pour poster de l\'actualité sur la page d\'accueil d\'iris.onera');
   t('Sélectionner le mois uniquement pour les Faits marquants');
   t('Thesaurus');
+  t('Titre du lien');
 
   return $field_instances;
 }

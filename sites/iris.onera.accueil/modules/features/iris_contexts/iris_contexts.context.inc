@@ -91,5 +91,38 @@ function iris_contexts_context_default_contexts() {
   t('Configuration générale des blocks du site.');
   $export['common_blocks'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'home';
+  $context->description = 'Contexte de la page accueil d\'Iris';
+  $context->tag = 'Pages';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-in_situ-block_insitu' => array(
+          'module' => 'views',
+          'delta' => 'in_situ-block_insitu',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Contexte de la page accueil d\'Iris');
+  t('Pages');
+  $export['home'] = $context;
+
   return $export;
 }

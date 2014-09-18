@@ -21,7 +21,7 @@ function iris_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'collapsiblock_default_state';
-  $strongarm->value = '3';
+  $strongarm->value = '1';
   $export['collapsiblock_default_state'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -66,6 +66,60 @@ function iris_config_strongarm() {
   $strongarm->name = 'collapsiblock_slide_type';
   $strongarm->value = '1';
   $export['collapsiblock_slide_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__in_situ';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ical' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_big_img' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_small_img' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(
+        'title' => array(
+          'weight' => '-5',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__in_situ'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -194,6 +248,13 @@ function iris_config_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_in_situ';
+  $strongarm->value = '0';
+  $export['language_content_type_in_situ'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_page2';
   $strongarm->value = '0';
   $export['language_content_type_page2'] = $strongarm;
@@ -204,6 +265,13 @@ function iris_config_strongarm() {
   $strongarm->name = 'language_content_type_story';
   $strongarm->value = '0';
   $export['language_content_type_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_in_situ';
+  $strongarm->value = array();
+  $export['menu_options_in_situ'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -222,6 +290,13 @@ function iris_config_strongarm() {
     0 => 'main-menu',
   );
   $export['menu_options_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_in_situ';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_in_situ'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -247,6 +322,15 @@ function iris_config_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_in_situ';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_in_situ'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_page2';
   $strongarm->value = array(
     0 => 'status',
@@ -267,6 +351,13 @@ function iris_config_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_in_situ';
+  $strongarm->value = '1';
+  $export['node_preview_in_situ'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_page2';
   $strongarm->value = '1';
   $export['node_preview_page2'] = $strongarm;
@@ -277,6 +368,13 @@ function iris_config_strongarm() {
   $strongarm->name = 'node_preview_story';
   $strongarm->value = '1';
   $export['node_preview_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_in_situ';
+  $strongarm->value = 0;
+  $export['node_submitted_in_situ'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

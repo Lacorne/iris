@@ -227,9 +227,6 @@ function envol_html_head_alter(&$head) {
 function envol_preprocess(&$variables, $hook) {
   global $base_url;
   $variables['base_url'] = $base_url;
-  /*
-  ($base_url == 'http://iris.onera') ? $variables['base_url'] = $base_url . '/envol' : $variables['base_url'] = $base_url;
-  */
 }
 
 /**
@@ -349,7 +346,10 @@ function envol_preprocess_node(&$variables, $hook) {
   $variables['theme_hook_suggestions'][] = 'node' . '__' . $variables['view_mode'] . '__' . $variables['type'];
 
   // Add node_url for template node
-  $variables['content']['node_url'] = $variables['node_url'];
+  $node_url_noenvol = explode('/envol', $variables['node_url']);
+  var_dump(count($node_url_noenvol));
+  (count($node_url_noenvol) > 1) ? $variables['content']['node_url'] = $node_url_noenvol[1] : $variables['content']['node_url'] = $node_url_noenvol[0];
+  var_dump($variables['content']['node_url']);
 
   // Check if analyse, so we create a array of parole experts in content
   if($variables['type'] == 'analyse'){

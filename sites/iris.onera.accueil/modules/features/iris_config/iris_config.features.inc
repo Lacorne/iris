@@ -21,6 +21,14 @@ function iris_config_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function iris_config_node_info() {
   $items = array(
+    'in_situ' => array(
+      'name' => t('In Situ'),
+      'base' => 'node_content',
+      'description' => t('Liens vers des articles des intranets de centre'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'page2' => array(
       'name' => t('page2'),
       'base' => 'node_content',
@@ -38,5 +46,6 @@ function iris_config_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }

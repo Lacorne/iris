@@ -36,7 +36,7 @@ function iris_config_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'text_with_summary',
@@ -79,6 +79,37 @@ function iris_config_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
+  // Exported field_base: 'field_center'
+  $field_bases['field_center'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_center',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_image_actu'
   $field_bases['field_image_actu'] = array(
     'active' => 1,
@@ -109,6 +140,36 @@ function iris_config_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'image',
+  );
+
+  // Exported field_base: 'field_link'
+  $field_bases['field_link'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_link',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'text_long',
   );
 
   // Exported field_base: 'taxonomy_vocabulary_12'
