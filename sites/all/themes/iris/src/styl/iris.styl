@@ -182,3 +182,50 @@ body
     white-space normal
     overflow hidden
 
+#block-views-in-situ-block-insitu
+  margin-top 20px
+  .block__title
+    position relative
+    font-size 22px
+    color #000
+    text-transform uppercase
+    padding-bottom 5px
+    margin-bottom 10px
+    border-bottom solid 2px #02e3ff
+    &:after
+      content " "
+      display block
+      width 75px
+      height 2px
+      background #13a0b2
+      absolute bottom -2px left 0
+  ul
+    padding 0
+  li
+    position relative
+    color #666
+    list-style none
+    margin 0
+    padding 10px 15px 10px 15px
+    line-height 1.3em
+    border-bottom solid 1px #e0e0e0
+    &.views-row-last
+      border none
+    a
+      color #666
+      text-decoration none
+    .wrapper-center
+      color #000
+      font-weight bold
+      font-size 14px
+      display inline-block
+    .wrapper-titlelink
+      margin-top 3px
+      line-height 1.3em
+      display inline-block
+    &:before
+      display block
+      content "▪"
+      absolute top 11px left 0
+      font-size 1.8em
+      color #46a4b8

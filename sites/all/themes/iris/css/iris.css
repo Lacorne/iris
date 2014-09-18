@@ -1,6 +1,6 @@
-/*! Onera_iris_project 18-09-2014|10:40:50 */
+/*! Onera_iris_project 18-09-2014|17:46:16 */
 
-/* line 184 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+/* line 232 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
 
 /* line 2 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\node_modules\grunt-contrib-stylus\node_modules\stylus\lib\functions\index.styl */
 
@@ -1571,4 +1571,85 @@ body {
 .view-mode-teaser_small_img .field-name-field-chapo {
   white-space: normal;
   overflow: hidden;
+}
+
+/* line 185 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+#block-views-in-situ-block-insitu {
+  margin-top: 20px;
+}
+
+/* line 187 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+#block-views-in-situ-block-insitu .block__title {
+  position: relative;
+  font-size: 22px;
+  color: #000;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: solid 2px #02e3ff;
+}
+
+/* line 195 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+#block-views-in-situ-block-insitu .block__title:after {
+  content: " ";
+  display: block;
+  width: 75px;
+  height: 2px;
+  background: #13a0b2;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+/* line 202 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+#block-views-in-situ-block-insitu ul {
+  padding: 0;
+}
+
+/* line 204 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+#block-views-in-situ-block-insitu li {
+  position: relative;
+  color: #666;
+  list-style: none;
+  margin: 0;
+  padding: 10px 15px 10px 15px;
+  line-height: 1.3em;
+  border-bottom: solid 1px #e0e0e0;
+}
+
+/* line 212 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+#block-views-in-situ-block-insitu li.views-row-last {
+  border: none;
+}
+
+/* line 214 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+#block-views-in-situ-block-insitu li a {
+  color: #666;
+  text-decoration: none;
+}
+
+/* line 217 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+#block-views-in-situ-block-insitu li .wrapper-center {
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+}
+
+/* line 222 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+#block-views-in-situ-block-insitu li .wrapper-titlelink {
+  margin-top: 3px;
+  line-height: 1.3em;
+  display: inline-block;
+}
+
+/* line 226 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
+#block-views-in-situ-block-insitu li:before {
+  display: block;
+  content: "▪";
+  position: absolute;
+  top: 11px;
+  left: 0;
+  font-size: 1.8em;
+  color: #46a4b8;
 }

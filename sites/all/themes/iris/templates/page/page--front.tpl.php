@@ -70,7 +70,6 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
       <?php print render($page['content']['lefil']); ?>
-      <br /><br /><img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-insitu.jpg" />
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
     </div>
