@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-08-02 16:36+0200\n"
-"PO-Revision-Date: 2014-08-02 16:36+0200\n"
+"POT-Creation-Date: 2014-09-18 22:47+0200\n"
+"PO-Revision-Date: 2014-09-18 22:47+0200\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -13784,6 +13784,4071 @@ msgstr ""
 msgid "Page agenda"
 msgstr ""
 
+#: /admin/structure/views/view/rubriques/edit/chroniques
+msgid ""
+"Article Chronique le plus récent, affiché lors du clic sur le menu "
+"principal"
+msgstr ""
+
+#: /admin/structure/views/view/rubriques/edit/focus
+msgid ""
+"Article Focus le plus récent, affiché lors du clic sur le menu "
+"principal"
+msgstr ""
+
+#: /admin/structure/views/view/rubriques/edit/ensemble
+msgid ""
+"Article Ensemble le plus récent, affiché lors du clic sur le menu "
+"principal"
+msgstr ""
+
+#: /admin/structure/views/view/rubriques/edit/unejourneeavec
+msgid ""
+"Article Une journée avec le plus récent, affiché lors du clic sur "
+"le menu principal"
+msgstr ""
+
+#: /index.php
+msgid "A log message associated with the revision."
+msgstr ""
+
+#: /index.php
+msgid "Administer block types"
+msgstr ""
+
+#: /index.php
+msgid "Create and delete fields on beans, and set their permissions."
+msgstr ""
+
+#: /index.php
+msgid "Administer beans"
+msgstr ""
+
+#: /index.php
+msgid "Edit and view all beans."
+msgstr ""
+
+#: /index.php
+msgid "Access the Bean overview page"
+msgstr ""
+
+#: /index.php
+msgid "Visit !url"
+msgstr ""
+
+#: /index.php
+msgid "Change the View Mode of the Bean"
+msgstr ""
+
+#: /index.php
+msgid "Ability to change the view mode on the bean form"
+msgstr ""
+
+#: /index.php
+msgid "View Bean page"
+msgstr ""
+
+#: /index.php
+msgid "Administer Bean Settings"
+msgstr ""
+
+#: /index.php
+msgid "View Bean revisions"
+msgstr ""
+
+#: /index.php
+msgid "The Title of the block."
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "The machine-readable name identifying this @entity."
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "Internal, numeric @entity ID"
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "The ID used to identify this @entity internally."
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "The human readable label."
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "The bean label"
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "The bean title"
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "View Mode"
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "View mode of the bean"
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "The delta of the block"
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "Block Delta"
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "The bean type."
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "The block type"
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "Edit link for bean block"
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "Delete link for bean block"
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "Contextual / Operation links"
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "Display all the available contextual / operation links for the block."
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "Manage blocks used on your site."
+msgstr ""
+
+#: /admin/structure/block/add
+msgid "Add Block"
+msgstr ""
+
+#: /admin/content/blocks
+msgid "Items Per Page"
+msgstr ""
+
+#: /admin/content/blocks
+msgid "There are no Block Available"
+msgstr ""
+
+#: /admin/modules
+msgid "Create Bean (Block Entities)"
+msgstr ""
+
+#: /admin/modules
+msgid "Integrates the Bean module with the Entitycache module"
+msgstr ""
+
+#: /admin/modules
+msgid "Add the ability to create Block Types in the UI"
+msgstr ""
+
+#: /admin/modules
+msgid "Integrate all blocks with beans."
+msgstr ""
+
+#: /admin/modules
+msgid "View Bean (Block Entities) Usage"
+msgstr ""
+
+#: /admin/modules
+msgid "Allow deploying bean blocks through Deploy and UUID modules."
+msgstr ""
+
+#: /admin/modules
+msgid "Bean"
+msgstr ""
+
+#: /admin/modules
+msgid "Performance and scalability"
+msgstr ""
+
+#: /admin/modules
+msgid "Block types"
+msgstr ""
+
+#: /admin/modules
+msgid "Manage block types, including fields, settings, etc."
+msgstr ""
+
+#: /admin/modules
+msgid "Add block type"
+msgstr ""
+
+#: /admin/structure/block-types/add
+msgid "The human-readable name of this block type."
+msgstr ""
+
+#: /admin/structure/block-types/add
+msgid "The description of this block type."
+msgstr ""
+
+#: /admin/structure/block-types/add
+msgid ""
+"A unique machine-readable name for this block type. It must only "
+"contain lowercase letters, numbers, and underscores."
+msgstr ""
+
+#: /admin/structure/block-types/add
+msgid "Save Block type"
+msgstr ""
+
+#: /admin/structure/block-types
+msgid "There are no Block Types Available"
+msgstr ""
+
+#: /admin/structure/block-types/manage/fond-gris/fields
+msgid "Bean module element"
+msgstr ""
+
+#: /admin/structure/block-types/manage/fond-gris/fields
+msgid "Revision settings"
+msgstr ""
+
+#: /block/add/fond-gris
+msgid "Create @type block"
+msgstr ""
+
+#: /block/add/fond-gris
+msgid "Name that displays in the admin interface"
+msgstr ""
+
+#: /block/add/fond-gris
+msgid ""
+"The Title of the block. The &lt;em&gt;, &lt;strong&gt;, &lt;i&gt; and "
+"&lt;b&gt; HTML tags are allowed, all others will be filtered out."
+msgstr ""
+
+#: /block/add/fond-gris
+msgid "Edit the view mode of the Bean"
+msgstr ""
+
+#: /admin/modules
+msgid "Bean Settings"
+msgstr ""
+
+#: /admin/structure/block-types/manage/fond-blanc/edit
+msgid "Delete Block type"
+msgstr ""
+
+#: /block/add
+msgid "<span class=\"icon\"></span>@label"
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "Maintain Nodeblock on a node"
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "Allows users to maintain Nodeblock settings per node."
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "%type_name: Add Bean"
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "%type_name: Edit Bean"
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "%type_name: View Bean"
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "%type_name: Delete Bean"
+msgstr ""
+
+#: /admin/modules
+msgid "Node Block"
+msgstr ""
+
+#: /admin/modules
+msgid "Node Block turns nodes into blocks."
+msgstr ""
+
+#: /admin/modules
+msgid "The block title for this node."
+msgstr ""
+
+#: /admin/modules
+msgid "Block available"
+msgstr ""
+
+#: /admin/modules
+msgid "Whether the node is available as block."
+msgstr ""
+
+#: /admin/modules
+msgid "Available"
+msgstr ""
+
+#: /admin/modules
+msgid "Available as node block"
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs
+msgid "Node Block settings"
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs
+msgid "Should these nodes be made available as blocks?"
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs
+msgid "Default view mode"
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs
+msgid ""
+"Select a default View Mode for Node Blocks of this Content Type. "
+"'Disabled' View Modes will show the default View Mode until enabled in "
+"the 'Custom Display Settings' fieldset on the 'Manage Display' tab."
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs
+msgid "Default links display"
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs
+msgid ""
+"Select the default Node('Read More') link display for Node Blocks of "
+"this Content Type."
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs
+msgid "Default comments display"
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs
+msgid ""
+"Select the default Comment link display for Node Blocks of this "
+"Content Type."
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs
+msgid "Overrides per node"
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs
+msgid "Links display"
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs
+msgid "Comments display"
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs
+msgid "Translation fallback"
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs
+msgid "Allow users to override these values per node."
+msgstr ""
+
+#: /admin/config/system/bean-all
+msgid "Select Blocks to not appear as Block Types"
+msgstr ""
+
+#: /admin/structure/ds
+msgid "operations"
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "Administer view modes"
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "Manage custom view modes for every entity."
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "Administer fields"
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "Manage fields for every entity."
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "Administer classes"
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "Manage classes."
+msgstr ""
+
+#: /admin/modules
+msgid "CSS classes"
+msgstr ""
+
+#: /admin/modules
+msgid "Define extra CSS class names for regions and fields."
+msgstr ""
+
+#: /admin/modules
+msgid "Manage fields for all content."
+msgstr ""
+
+#: /admin/modules
+msgid "Add a block field"
+msgstr ""
+
+#: /admin/modules
+msgid "Manage a block field"
+msgstr ""
+
+#: /admin/modules
+msgid "Add a code field"
+msgstr ""
+
+#: /admin/modules
+msgid "Manage a field"
+msgstr ""
+
+#: /admin/modules
+msgid "Add a dynamic field"
+msgstr ""
+
+#: /admin/modules
+msgid "Manage a dynamic field"
+msgstr ""
+
+#: /admin/modules
+msgid "Add a preprocess field"
+msgstr ""
+
+#: /admin/modules
+msgid "Manage a preprocess field"
+msgstr ""
+
+#: /admin/modules
+msgid "Delete a field"
+msgstr ""
+
+#: /admin/modules
+msgid "Delete a field."
+msgstr ""
+
+#: /admin/modules
+msgid "Revert a custom field"
+msgstr ""
+
+#: /admin/modules
+msgid "Revert a custom field."
+msgstr ""
+
+#: /admin/modules
+msgid "View modes"
+msgstr ""
+
+#: /admin/modules
+msgid "Manage view modes for all content."
+msgstr ""
+
+#: /admin/modules
+msgid "Add a view mode"
+msgstr ""
+
+#: /admin/modules
+msgid "Manage a view mode"
+msgstr ""
+
+#: /admin/modules
+msgid "Delete a view mode"
+msgstr ""
+
+#: /admin/modules
+msgid "Delete a custom view mode."
+msgstr ""
+
+#: /admin/modules
+msgid "Revert a view mode"
+msgstr ""
+
+#: /admin/modules
+msgid "Revert a view mode."
+msgstr ""
+
+#: /admin/structure/ds/fields
+msgid "No custom fields have been defined."
+msgstr ""
+
+#: /admin/structure/ds/classes
+msgid "CSS classes for regions"
+msgstr ""
+
+#: /admin/structure/ds/classes
+msgid ""
+"Configure CSS classes which you can add to regions on the \"manage "
+"display\" screens. Add multiple CSS classes line by line.<br />If you "
+"want to have a friendly name, separate class and friendly name by |, "
+"but this is not required. eg:<br /><em>class_name_1<br "
+"/>class_name_2|Friendly name<br />class_name_3</em>"
+msgstr ""
+
+#: /admin/structure/ds/classes
+msgid "CSS classes for fields"
+msgstr ""
+
+#: /admin/structure/ds/classes
+msgid ""
+"Configure CSS classes which you can add to fields on the \"manage "
+"display\" screens. Add multiple CSS classes line by line.<br />If you "
+"want to have a friendly name, separate class and friendly name by |, "
+"but this is not required. eg:<br /><em>class_name_1<br "
+"/>class_name_2|Friendly name<br />class_name_3</em>"
+msgstr ""
+
+#: /admin/structure/ds/view_modes/manage
+msgid "The human-readable label of the view mode. This name must be unique."
+msgstr ""
+
+#: /admin/structure/ds/view_modes/manage
+msgid ""
+"The machine-readable name of this view mode. This name must contain "
+"only lowercase letters and underscores. This name must be unique."
+msgstr ""
+
+#: /admin/structure/ds/view_modes/manage
+msgid "Entities"
+msgstr ""
+
+#: /admin/structure/ds/view_modes/manage
+msgid "Select the entities for which this view mode will be made available."
+msgstr ""
+
+#: /admin/structure/ds/view_modes/manage
+msgid "The view mode %view_mode has been saved"
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs/display/teaser
+msgid "Manage view modes"
+msgstr ""
+
+#: /admin/structure/types/manage/regards_exterieurs/display
+msgid "Block Node"
+msgstr ""
+
+#: /node/add/regards-exterieurs
+msgid "Create a block for this node"
+msgstr ""
+
+#: /node/add/regards-exterieurs
+msgid "Should a block be created for this node?"
+msgstr ""
+
+#: /admin/structure/context/add
+msgid "Local"
+msgstr ""
+
+#: /admin/structure/context/add
+msgid ""
+"The name can only consist of lowercase letters, underscores, dashes, "
+"and numbers."
+msgstr ""
+
+#: /admin/structure/views
+msgid "Bean Block Overview"
+msgstr ""
+
+#: /admin/structure/views/view/bean_blocks_overview/edit
+msgid "Étiquette"
+msgstr ""
+
+#: /admin/structure/views/view/bean_blocks_overview/edit
+msgid "Lien de suppression"
+msgstr ""
+
+#: /admin/structure/views/view/bean_blocks_overview/edit
+msgid "Fond Gris"
+msgstr ""
+
+#: /admin/structure/views/view/bean_blocks_overview/edit
+msgid "Fond Blanc"
+msgstr ""
+
+#: /admin/structure/views/view/bean_blocks_overview/edit
+msgid "Fond Gris avec filet"
+msgstr ""
+
+#: /admin/structure/features/envol_config/recreate
+msgid ""
+"Ce contenu sera affiché sur le block généré.\r\n"
+"Le block pourra être placé dans la barre latérale."
+msgstr ""
+
+#: /admin/structure/features/envol_config/recreate
+msgid "Contenu"
+msgstr ""
+
+#: /admin/structure/features/envol_config/recreate
+msgid "Contenu du block généré"
+msgstr ""
+
+#: /admin/structure/features/envol_config/recreate
+msgid "Contenu du blok généré"
+msgstr ""
+
+#: /admin/structure/features/envol_config/recreate
+msgid "Gestion des blocks de la home Analyse"
+msgstr ""
+
+#: /admin/structure/features/envol_config/recreate
+msgid "Pages Analyse"
+msgstr ""
+
+#: /admin/structure/views/ajax/add-item/rubriques/block_1/field
+msgid ""
+"<p>The following tokens are available for this field. Note that due to "
+"rendering order, you cannot use fields that come after this field; if "
+"you need a field not listed here, rearrange your fields.\n"
+"If you would like to have the characters '[' and ']' please use the "
+"html entity codes '%5B' or  '%5D' or they will get replaced with empty "
+"space.</p>"
+msgstr ""
+
+#: /admin/structure/views/ajax/add-item/rubriques/block_1/field
+msgid ""
+"Provide text to display if this field contains an empty result. You "
+"may include HTML. You may enter data from this view as per the "
+"\"Replacement patterns\" in the \"Rewrite Results\" section below."
+msgstr ""
+
+#: /admin/structure/views/view/rubriques/edit/other_analyse
+msgid "Autres articles Analyse"
+msgstr ""
+
+#: /admin/structure/views/view/rubriques/edit/other_analyse
+msgid "Autres articles analyse"
+msgstr ""
+
+#: /admin/structure/views/ajax/add-item/rubriques/other_analyse/filter
+msgid "Left field"
+msgstr ""
+
+#: /admin/structure/views/ajax/add-item/rubriques/other_analyse/filter
+msgid "Right field"
+msgstr ""
+
+#: /admin/structure/views/ajax/display/rubriques/other_analyse/query
+msgid ""
+"This will prevent views from adding the base column to the distinct "
+"field. If this is not selected and the base column is a primary key, "
+"then a non-pure distinct will not function properly because the "
+"primary key is always unique."
+msgstr ""
+
+#: /admin/structure/views/ajax/display/rubriques/other_analyse/query
+msgid ""
+"If set, these tags will be appended to the query and can be used to "
+"identify the query in a module. This can be helpful for altering "
+"queries."
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "Computed"
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "Create field data via PHP code."
+msgstr ""
+
+#: /admin/modules
+msgid "Unsanitized"
+msgstr ""
+
+#: /admin/modules
+msgid "Filtered markup"
+msgstr ""
+
+#: /admin/modules
+msgid "Raw value, no display code"
+msgstr ""
+
+#: /admin/structure/views/ajax/add-item/rubriques/other_analyse/field
+msgid "Voir le compteur de résultats"
+msgstr ""
+
+#: /admin/structure/views/ajax/add-item/rubriques/other_analyse/argument
+msgid "Go"
+msgstr ""
+
+#: /admin/structure/views/ajax/add-item/rubriques/other_analyse/argument
+msgid "- Choose -"
+msgstr ""
+
+#: /admin/structure/views/ajax/add-item/rubriques/other_analyse/argument
+msgid "Selector label"
+msgstr ""
+
+#: /admin/structure/views/ajax/add-item/rubriques/other_analyse/argument
+msgid ""
+"The text that will appear as the the label of the selector element. If "
+"blank no label tag will be used."
+msgstr ""
+
+#: /admin/structure/views/ajax/add-item/rubriques/other_analyse/argument
+msgid "Set this field to display inline"
+msgstr ""
+
+#: /block/lessentiel-pour-battlelab/view
+msgid "Edit Block"
+msgstr ""
+
+#: /block/lessentiel-pour-battlelab/view
+msgid "Delete Block"
+msgstr ""
+
+#: /block/lessentiel-pour-battlelab/edit?destination=admin/content/blocks
+msgid "Edit @type: @title"
+msgstr ""
+
+#: /block/lessentiel-pour-battlelab/edit?destination=admin/content/blocks
+msgid "Set Revision as default"
+msgstr ""
+
+#: /admin/structure/features/envol_contexts/recreate
+msgid "Gestion des blocks de la home Agenda"
+msgstr ""
+
+#: /admin/structure/features/envol_contexts/recreate
+msgid "Pages Agenda"
+msgstr ""
+
+#: /admin/structure/features/envol_contexts/recreate
+msgid "Blocks communs aux pages agenda"
+msgstr ""
+
+#: /admin/structure/features/envol_contexts/recreate
+msgid "Blocks communs aux pages analyse"
+msgstr ""
+
+#: /admin/structure/types/manage/analyse/fields
+msgid "Booléen"
+msgstr ""
+
+#: /admin/structure/types/manage/analyse/fields
+msgid "Case à cocher on/off unique"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/page_1
+msgid ""
+"Remontée des derniers articles sur les home (Analyse, L’invité, "
+"Focus, Ensemble, Une journée avec, Chroniques)"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/page_1
+msgid "Field tables"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/page_1
+msgid "@field_name => @column"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/page_1
+msgid "@field_name"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/page_1
+msgid "Columns from the @field table."
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/page_1
+msgid "The @id_field ID."
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/page_1
+msgid "The node relationship."
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/page_1
+msgid "@base_table => @relationship_table"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/page_1
+msgid ""
+"Relate the @base_table table to the @relationship_table table using "
+"@base_field => @relationship_field."
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/page_1
+msgid "Revision tables"
+msgstr ""
+
+#: /admin/structure/types/manage/analyse/fields
+msgid "Cases à cocher/boutons radio"
+msgstr ""
+
+#: /admin/structure/views/ajax/config-item/listescontenus/first_news/filter/date_filter
+msgid "Relative date"
+msgstr ""
+
+#: /admin/structure/views/ajax/config-item/listescontenus/first_news/filter/date_filter
+msgid "Select a date"
+msgstr ""
+
+#: /admin/structure/views/ajax/config-item/listescontenus/first_news/filter/date_filter
+msgid ""
+"Relative dates are computed when the view is displayed. Examples: now, "
+"now +1 day, 12AM today, Monday next week. <a "
+"href=\"@relative_format\">More examples of relative date formats in "
+"the PHP documentation</a>."
+msgstr ""
+
+#: /admin/structure/views/ajax/config-item/listescontenus/first_news/filter/date_filter
+msgid "Relative start date"
+msgstr ""
+
+#: /admin/structure/views/ajax/config-item/listescontenus/first_news/filter/date_filter
+msgid "Relative end date"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/first_news
+msgid "First News by Sticky"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/first_news
+msgid "L'actualité la plus récente des epinglées, affichée en 1"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/block_1
+msgid "First news by Date"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/block_1
+msgid "First news by date (special for views lefil pour iris)"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/attachment_1
+msgid "First Article Home by Sticky"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/attachment_1
+msgid "L'article le plus récent des epinglées, affichée en 1"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/default
+msgid "First Article Home by Date"
+msgstr ""
+
+#: /admin/structure/types/manage/analyse/display
+msgid "teaser short"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/block_1
+msgid "Le fil sur la Home"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/default
+msgid "Le fil home"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/agenda_home
+msgid "Agenda sur la Home"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/block_1
+msgid "Agenda home"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/block_1
+msgid "Agenda sur la Home d'Iris"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/block_1
+msgid "Agenda pour Iris"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/block_1
+msgid ""
+"<a href=\"http://iris.onera:8086/envol/lefil\" class=\"bigbutton "
+"blue\">Tout l'agenda</a>"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/agenda_iris
+msgid "Agenda sur la home d'Iris"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/envol_iris
+msgid ""
+"Remontée des derniers articles sur Iris (Analyse, L’invité, Focus, "
+"Ensemble, Une journée avec, Chroniques)"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/first_article_home
+msgid "Derniers Articles pour Iris"
+msgstr ""
+
+#: /admin/structure/context/list/home/edit
+msgid "Second Content"
+msgstr ""
+
+#: /admin/structure/features/envol_contexts/recreate
+msgid "Blocks de la page d'accueil d'Envol"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/first_article_home_envol
+msgid "First news by date (HOME ENVOL)"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/first_article_home_envol
+msgid "First Article Home by Sticky (ENVOL)"
+msgstr ""
+
+#: /admin/structure/views/view/listescontenus/edit/first_article_home_envol
+msgid "First news by STICKY (HOME ENVOL)"
+msgstr ""
+
+#: /admin/people
+msgid "administer blocks"
+msgstr ""
+
+#: /admin/people
+msgid "create any fond_blanc bean"
+msgstr ""
+
+#: /admin/people
+msgid "delete any fond_blanc bean"
+msgstr ""
+
+#: /admin/people
+msgid "edit any fond_blanc bean"
+msgstr ""
+
+#: /admin/people
+msgid "view any fond_blanc bean"
+msgstr ""
+
+#: /admin/people
+msgid "create any fond_gris_filet bean"
+msgstr ""
+
+#: /admin/people
+msgid "delete any fond_gris_filet bean"
+msgstr ""
+
+#: /admin/people
+msgid "edit any fond_gris_filet bean"
+msgstr ""
+
+#: /admin/people
+msgid "view any fond_gris_filet bean"
+msgstr ""
+
+#: /admin/people
+msgid "create any fond_gris bean"
+msgstr ""
+
+#: /admin/people
+msgid "delete any fond_gris bean"
+msgstr ""
+
+#: /admin/people
+msgid "edit any fond_gris bean"
+msgstr ""
+
+#: /admin/people
+msgid "view any fond_gris bean"
+msgstr ""
+
+#: /admin/people
+msgid "administer bean settings"
+msgstr ""
+
+#: /admin/people
+msgid "view bean revisions"
+msgstr ""
+
+#: /admin/people
+msgid "access bean overview"
+msgstr ""
+
+#: /admin/people
+msgid "administer beans"
+msgstr ""
+
+#: /admin/people
+msgid "administer bean types"
+msgstr ""
+
+#: /admin/people
+msgid "edit bean view mode"
+msgstr ""
+
+#: /admin/people
+msgid "view bean page"
+msgstr ""
+
+#: /admin/people
+msgid "administer ckeditor"
+msgstr ""
+
+#: /admin/people
+msgid "customize ckeditor"
+msgstr ""
+
+#: /admin/people
+msgid "administer comments"
+msgstr ""
+
+#: /admin/people
+msgid "edit own comments"
+msgstr ""
+
+#: /admin/people
+msgid "post comments"
+msgstr ""
+
+#: /admin/people
+msgid "skip comment approval"
+msgstr ""
+
+#: /admin/people
+msgid "access comments"
+msgstr ""
+
+#: /admin/people
+msgid "access contextual links"
+msgstr ""
+
+#: /admin/people
+msgid "context ajax block access"
+msgstr ""
+
+#: /admin/people
+msgid "administer contexts"
+msgstr ""
+
+#: /admin/people
+msgid "access dashboard"
+msgstr ""
+
+#: /admin/people
+msgid "view date repeats"
+msgstr ""
+
+#: /admin/people
+msgid "administer date tools"
+msgstr ""
+
+#: /admin/people
+msgid "admin_classes"
+msgstr ""
+
+#: /admin/people
+msgid "admin_fields"
+msgstr ""
+
+#: /admin/people
+msgid "admin_view_modes"
+msgstr ""
+
+#: /admin/people
+msgid "administer field collections"
+msgstr ""
+
+#: /admin/people
+msgid "administer filters"
+msgstr ""
+
+#: /admin/people
+msgid "use text format filtered_html"
+msgstr ""
+
+#: /admin/people
+msgid "use text format full_html"
+msgstr ""
+
+#: /admin/people
+msgid "use text format php_code"
+msgstr ""
+
+#: /admin/people
+msgid "administer image styles"
+msgstr ""
+
+#: /admin/people
+msgid "administer languages"
+msgstr ""
+
+#: /admin/people
+msgid "translate interface"
+msgstr ""
+
+#: /admin/people
+msgid "administer menu"
+msgstr ""
+
+#: /admin/people
+msgid "administer module filter"
+msgstr ""
+
+#: /admin/people
+msgid "create story content"
+msgstr ""
+
+#: /admin/people
+msgid "edit any story content"
+msgstr ""
+
+#: /admin/people
+msgid "edit own story content"
+msgstr ""
+
+#: /admin/people
+msgid "delete any story content"
+msgstr ""
+
+#: /admin/people
+msgid "delete own story content"
+msgstr ""
+
+#: /admin/people
+msgid "create agenda content"
+msgstr ""
+
+#: /admin/people
+msgid "edit any agenda content"
+msgstr ""
+
+#: /admin/people
+msgid "edit own agenda content"
+msgstr ""
+
+#: /admin/people
+msgid "delete any agenda content"
+msgstr ""
+
+#: /admin/people
+msgid "delete own agenda content"
+msgstr ""
+
+#: /admin/people
+msgid "create analyse content"
+msgstr ""
+
+#: /admin/people
+msgid "edit any analyse content"
+msgstr ""
+
+#: /admin/people
+msgid "edit own analyse content"
+msgstr ""
+
+#: /admin/people
+msgid "delete any analyse content"
+msgstr ""
+
+#: /admin/people
+msgid "delete own analyse content"
+msgstr ""
+
+#: /admin/people
+msgid "create article content"
+msgstr ""
+
+#: /admin/people
+msgid "edit any article content"
+msgstr ""
+
+#: /admin/people
+msgid "edit own article content"
+msgstr ""
+
+#: /admin/people
+msgid "delete any article content"
+msgstr ""
+
+#: /admin/people
+msgid "delete own article content"
+msgstr ""
+
+#: /admin/people
+msgid "create chroniques content"
+msgstr ""
+
+#: /admin/people
+msgid "edit any chroniques content"
+msgstr ""
+
+#: /admin/people
+msgid "edit own chroniques content"
+msgstr ""
+
+#: /admin/people
+msgid "delete any chroniques content"
+msgstr ""
+
+#: /admin/people
+msgid "delete own chroniques content"
+msgstr ""
+
+#: /admin/people
+msgid "create ensemble content"
+msgstr ""
+
+#: /admin/people
+msgid "edit any ensemble content"
+msgstr ""
+
+#: /admin/people
+msgid "edit own ensemble content"
+msgstr ""
+
+#: /admin/people
+msgid "delete any ensemble content"
+msgstr ""
+
+#: /admin/people
+msgid "delete own ensemble content"
+msgstr ""
+
+#: /admin/people
+msgid "create focus content"
+msgstr ""
+
+#: /admin/people
+msgid "edit any focus content"
+msgstr ""
+
+#: /admin/people
+msgid "edit own focus content"
+msgstr ""
+
+#: /admin/people
+msgid "delete any focus content"
+msgstr ""
+
+#: /admin/people
+msgid "delete own focus content"
+msgstr ""
+
+#: /admin/people
+msgid "create invite content"
+msgstr ""
+
+#: /admin/people
+msgid "edit any invite content"
+msgstr ""
+
+#: /admin/people
+msgid "edit own invite content"
+msgstr ""
+
+#: /admin/people
+msgid "delete any invite content"
+msgstr ""
+
+#: /admin/people
+msgid "delete own invite content"
+msgstr ""
+
+#: /admin/people
+msgid "create page content"
+msgstr ""
+
+#: /admin/people
+msgid "edit any page content"
+msgstr ""
+
+#: /admin/people
+msgid "edit own page content"
+msgstr ""
+
+#: /admin/people
+msgid "delete any page content"
+msgstr ""
+
+#: /admin/people
+msgid "delete own page content"
+msgstr ""
+
+#: /admin/people
+msgid "create regards_exterieurs content"
+msgstr ""
+
+#: /admin/people
+msgid "edit any regards_exterieurs content"
+msgstr ""
+
+#: /admin/people
+msgid "edit own regards_exterieurs content"
+msgstr ""
+
+#: /admin/people
+msgid "delete any regards_exterieurs content"
+msgstr ""
+
+#: /admin/people
+msgid "delete own regards_exterieurs content"
+msgstr ""
+
+#: /admin/people
+msgid "create temoignage content"
+msgstr ""
+
+#: /admin/people
+msgid "edit any temoignage content"
+msgstr ""
+
+#: /admin/people
+msgid "edit own temoignage content"
+msgstr ""
+
+#: /admin/people
+msgid "delete any temoignage content"
+msgstr ""
+
+#: /admin/people
+msgid "delete own temoignage content"
+msgstr ""
+
+#: /admin/people
+msgid "create une_journee_avec content"
+msgstr ""
+
+#: /admin/people
+msgid "edit any une_journee_avec content"
+msgstr ""
+
+#: /admin/people
+msgid "edit own une_journee_avec content"
+msgstr ""
+
+#: /admin/people
+msgid "delete any une_journee_avec content"
+msgstr ""
+
+#: /admin/people
+msgid "delete own une_journee_avec content"
+msgstr ""
+
+#: /admin/people
+msgid "revert revisions"
+msgstr ""
+
+#: /admin/people
+msgid "delete revisions"
+msgstr ""
+
+#: /admin/people
+msgid "view own unpublished content"
+msgstr ""
+
+#: /admin/people
+msgid "access content"
+msgstr ""
+
+#: /admin/people
+msgid "view revisions"
+msgstr ""
+
+#: /admin/people
+msgid "access content overview"
+msgstr ""
+
+#: /admin/people
+msgid "administer nodes"
+msgstr ""
+
+#: /admin/people
+msgid "administer content types"
+msgstr ""
+
+#: /admin/people
+msgid "bypass node access"
+msgstr ""
+
+#: /admin/people
+msgid "maintain nodeblock"
+msgstr ""
+
+#: /admin/people
+msgid "administer url aliases"
+msgstr ""
+
+#: /admin/people
+msgid "create url aliases"
+msgstr ""
+
+#: /admin/people
+msgid "use PHP for settings"
+msgstr ""
+
+#: /admin/people
+msgid "administer search"
+msgstr ""
+
+#: /admin/people
+msgid "search content"
+msgstr ""
+
+#: /admin/people
+msgid "use advanced search"
+msgstr ""
+
+#: /admin/people
+msgid "administer shortcuts"
+msgstr ""
+
+#: /admin/people
+msgid "switch shortcut sets"
+msgstr ""
+
+#: /admin/people
+msgid "customize shortcut links"
+msgstr ""
+
+#: /admin/people
+msgid "administer superfish"
+msgstr ""
+
+#: /admin/people
+msgid "administer actions"
+msgstr ""
+
+#: /admin/people
+msgid "administer modules"
+msgstr ""
+
+#: /admin/people
+msgid "administer themes"
+msgstr ""
+
+#: /admin/people
+msgid "block IP addresses"
+msgstr ""
+
+#: /admin/people
+msgid "access site in maintenance mode"
+msgstr ""
+
+#: /admin/people
+msgid "access administration pages"
+msgstr ""
+
+#: /admin/people
+msgid "access site reports"
+msgstr ""
+
+#: /admin/people
+msgid "administer site configuration"
+msgstr ""
+
+#: /admin/people
+msgid "administer software updates"
+msgstr ""
+
+#: /admin/people
+msgid "view the administration theme"
+msgstr ""
+
+#: /admin/people
+msgid "administer taxonomy"
+msgstr ""
+
+#: /admin/people
+msgid "edit terms in 8"
+msgstr ""
+
+#: /admin/people
+msgid "edit terms in 3"
+msgstr ""
+
+#: /admin/people
+msgid "edit terms in 7"
+msgstr ""
+
+#: /admin/people
+msgid "edit terms in 10"
+msgstr ""
+
+#: /admin/people
+msgid "edit terms in 9"
+msgstr ""
+
+#: /admin/people
+msgid "edit terms in 4"
+msgstr ""
+
+#: /admin/people
+msgid "edit terms in 1"
+msgstr ""
+
+#: /admin/people
+msgid "delete terms in 8"
+msgstr ""
+
+#: /admin/people
+msgid "delete terms in 3"
+msgstr ""
+
+#: /admin/people
+msgid "delete terms in 7"
+msgstr ""
+
+#: /admin/people
+msgid "delete terms in 10"
+msgstr ""
+
+#: /admin/people
+msgid "delete terms in 9"
+msgstr ""
+
+#: /admin/people
+msgid "delete terms in 4"
+msgstr ""
+
+#: /admin/people
+msgid "delete terms in 1"
+msgstr ""
+
+#: /admin/people
+msgid "change own username"
+msgstr ""
+
+#: /admin/people
+msgid "access user profiles"
+msgstr ""
+
+#: /admin/people
+msgid "administer permissions"
+msgstr ""
+
+#: /admin/people
+msgid "administer users"
+msgstr ""
+
+#: /admin/people
+msgid "cancel account"
+msgstr ""
+
+#: /admin/people
+msgid "select account cancellation method"
+msgstr ""
+
+#: /admin/people
+msgid "administer wysiwyg templates"
+msgstr ""
+
+#: /admin/people
+msgid "import wysiwyg templates"
+msgstr ""
+
+#: /admin/people
+msgid "admin_display_suite"
+msgstr ""
+
+#: /admin/people
+msgid "administer views"
+msgstr ""
+
+#: /admin/people
+msgid "access all views"
+msgstr ""
+
+#: /admin/people
+msgid "administer features"
+msgstr ""
+
+#: /admin/people
+msgid "generate features"
+msgstr ""
+
+#: /admin/people
+msgid "manage features"
+msgstr ""
+
+#: /admin/people
+msgid "access devel information"
+msgstr ""
+
+#: /admin/people
+msgid "execute php code"
+msgstr ""
+
+#: /admin/people
+msgid "switch users"
+msgstr ""
+
+#: /admin/people
+msgid "access administration menu"
+msgstr ""
+
+#: /admin/people
+msgid "display drupal links"
+msgstr ""
+
+#: /admin/people
+msgid "flush caches"
+msgstr ""
+
+#: /index.php
+msgid "Liens header"
+msgstr ""
+
+#: /index.php
+msgid "Liens footer"
+msgstr ""
+
+#: /admin/config/content/ckeditor
+msgid ""
+"The <em>CKEditor Global Profile</em> profile is using %skin skin which "
+"cannot be found. Please <a href=\"@profile_settings\">update your "
+"settings</a>."
+msgstr ""
+
+#: /admin/config/content/ckeditor
+msgid "Input format"
+msgstr ""
+
+#: /admin/config/content/ckeditor
+msgid "clone"
+msgstr ""
+
+#: /admin/config/content/ckeditor
+msgid "Create a new profile"
+msgstr ""
+
+#: /admin/config/content/ckeditor
+msgid "CKEditor Global Profile"
+msgstr ""
+
+#: /admin/config/content/ckeditor
+msgid ""
+"Profiles are linked with input format types. A CKEditor profile "
+"defines which buttons are available in the editor, how the editor is "
+"displayed, and a few other editor functions. The Global Profile stores "
+"some general information about CKEditor."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Edit the CKEditor profile"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Basic setup"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Profile name"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Enter a name for this profile. This name is only visible within the "
+"CKEditor administration page."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Choose the text formats where you want to load CKEditor."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Security"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"The CKEditor security system protects you from executing malicious "
+"code that is already in your database. In plain textareas database "
+"content is harmless because it is not executed, but the CKEditor "
+"WYSIWYG editor interprets HTML like a web browser and thus the content "
+"needs to be filtered before it is loaded."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Security filters"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Below is a list of security filters along with their status for each "
+"text format.<br /><br />The following statuses are available: "
+"!img_enabled - the filter is configured for a given text format and "
+"will be run on the content during the filtering process. !img_disabled "
+"- the filter is disabled for a given text format and will not be run "
+"on the content during the filtering process.<br /><br />In order to "
+"modify the security filters settings for each of the text formats, you "
+"need to visit the text format configuration sections as listed below: "
+"!elem_format_config"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "!title <a href=\"!link\" target=\"_blank\">project page</a>"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "<i>Not installed</i>"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "!title"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "@data"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "!data"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Security settings"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Always run security filters for CKEditor."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Run security filters only when CKEditor is set to start automatically."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"There are two ways of starting CKEditor: automatically and manually "
+"(via toggle). If you decide to apply security filters only when "
+"CKEditor starts automatically, you will not be protected when toggling "
+"manually from plain textarea to CKEditor. Choose this option only if "
+"you can detect various attacks (mainly XSS) by yourself just by "
+"looking at the HTML code."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Editor appearance"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "CKEditor default"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Select manually"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Load sample toolbar: !toolbars"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Current toolbar"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Currently used buttons"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "DrupalBreak"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "MediaEmbed"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Available buttons"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "All available buttons"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Toolbar state on startup"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Expanded"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Collapsed"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "The toolbar will start in an expanded or collapsed state."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Default editor state"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Default editor state. If disabled, the rich text editor may still be "
+"enabled by using toggle."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "User interface color"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Choose the plugins that you want to enable in CKEditor."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Editor interface width in pixels or percent. Examples: 400, 100%."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "The language for the CKEditor user interface."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Language direction"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Get from current locale (default)"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Left-To-Right"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Right-To-Left"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Choose the language direction used in the editing area. Even when "
+"CKEditor automatically detects the user language and adjusts its user "
+"interface, the editing area is not automatically changed into the LTR "
+"or RTL mode. To be able to type LTR (like English) and RTL (like "
+"Arabic, Hebrew, Persian) content at the same time, please make sure "
+"that the <strong>!bidiltr</strong> and <strong>!bidirtl</strong> "
+"buttons are enabled in the toolbar."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Advanced content filter"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "this blog post"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Configure input data filtering in CKEditor. See !link for more "
+"information about ACF."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"<strong>Example:</strong> if only Bold and Link buttons are enabled, "
+"only !strong and !a tags will be allowed. Any !b tags will "
+"automatically be converted into !strong. The !img tag will not be "
+"allowed, unless the Image button is added to the toolbar."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"<strong>Warning:</strong> CKEditor will not use the set of tags "
+"associated with text format. Only the buttons enabled in the toolbar "
+"and optional plugins will determine which tags/attributes/styles are "
+"handled by CKEditor. Enabling ACF in CKEditor does not affect "
+"server-side filtering done by Drupal in any way."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"CKEditor will only allow tags/attributes/styles provided by CKEditor "
+"features. Disallowed content will be removed directly by CKEditor. "
+"When configured properly, it helps to ensure a true WYSIWYG "
+"experience."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"CKEditor will not filter any tags and as a result, the user will be "
+"able to insert any content into the editor. The content will only be "
+"filtered by server-side filters associated with input formats."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Extra allowed content"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "CKEditor documentation"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Set additional allowed content rules for CKEditor. Separate rules with "
+"a semicolon. See !docs for more information."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "<strong>Example:</strong> !rules"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Cleanup and output"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Enter mode"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Set which tag should be used by CKEditor when the <em>Enter</em> key "
+"is pressed."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Shift+Enter mode"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Set which tag should be used by CKEditor when the <em>Shift+Enter</em> "
+"key combination is pressed."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Font formats"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Semicolon-separated list of HTML font formats. Allowed values are: "
+"!allowed_values"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Use custom formatting options"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Custom formatting options"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Indent the element contents."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Break line before the opening tag."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Break line after the opening tag."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Break line before the closing tag."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Break line after the closing tag."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Indent the <code>&lt;pre&gt;</code> element contents."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "CSS"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Editor CSS"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Use theme CSS"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Define CSS"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Defines the CSS to be used in the editor area.!title_theme_css &ndash; "
+"load the !style_css file from the current site theme.!title_define_css "
+"&ndash; enter the CSS file path below.!title_ckeditor_default &ndash; "
+"use the default editor CSS."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "CSS file path"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Enter the path to the CSS file (Example: !example1) or a list of CSS "
+"files separated with a comma (Example: !example2). Make sure you "
+"select the !title_define_css option above."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Available placeholders:!h &ndash; host name (!host).!t &ndash; path to "
+"theme (!theme)."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Predefined styles"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Use theme ckeditor.styles.js"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Define path to ckeditor.styles.js"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Define the location of the !ckeditor_styles_js_file file. It is used "
+"by the <strong>Style</strong> drop-down list available in the default "
+"toolbar. Copy the !ckeditor_styles_js_path file into your theme "
+"directory (!theme) and adjust it to your needs."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Predefined styles path"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Enter the path to a file with predefined styles (Example: !example1). "
+"Make sure you select the !style_define_path option above."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Available placeholders:!h &ndash; host name (!host).!t &ndash; path to "
+"theme (!theme).!m &ndash; path to the CKEditor module (!module)."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "File browser settings"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "elFinder"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Set the file browser settings. A file browser will allow you to browse "
+"the files stored on the server and embed them as links, images, or "
+"Flash movies. CKEditor is compatible with such Drupal modules as !imce "
+"or !elfinder. CKEditor can be also integrated with !ckfinder, an "
+"advanced Ajax file manager."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Same as in the Link dialog window"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "File browser type (Link dialog window)"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Select the file browser that you would like to use to upload files."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "File browser type (Image dialog window)"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Select the file browser that you would like to use to upload images."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "File browser type (Flash dialog window)"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Select the file browser that you would like to use to upload Flash "
+"movies."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "CKFinder settings"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Path to uploaded files"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Path to uploaded files relative to the document root."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Available placeholders:!b &ndash; the base URL path of the Drupal "
+"installation (!base).!f &ndash; the Drupal file system path where the "
+"files are stored (!files).!u &ndash; User ID.!n &ndash; Username."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Current path: !path"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Absolute path to uploaded files"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"The path to the local directory (on the server) which points to the "
+"path defined above. If left empty, CKEditor will try to discover the "
+"right path."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"Available placeholders:!d &ndash; the server path to the document root "
+"(!root).!b &ndash; the base URL path of the Drupal installation "
+"(!base).!f &ndash; the Drupal file system path where the files are "
+"stored (!files).!u &ndash; User ID.!n &ndash; Username."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Force pasting as plain text"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"If enabled, HTML content will be automatically changed to plain text "
+"when pasting."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "HTML Entities"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Convert all applicable characters to HTML entities."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Spellchecker"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"If enabled, turns on SCAYT (Spell Check As You Type) automatically "
+"after loading the editor."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Load !ckeditor_config_js from the theme path"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"When enabled, the editor will try to load the !ckeditor_config_js file "
+"from the theme directory."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid "Custom JavaScript configuration"
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"In order to change CKEditor configuration globally, you should modify "
+"the !ckeditor_config configuration file. Sometimes it is required to "
+"change the CKEditor configuration for a single profile only. Use this "
+"box to define settings that are unique for this profile. Available "
+"options are listed in the !docs. Add the following code snippet to "
+"change the fonts available in the CKEditor <strong>Font</strong> and "
+"<strong>Size</strong> drop-down lists: "
+"<pre>@code</pre><strong>Warning</strong>: If you make a mistake here, "
+"CKEditor may not load correctly."
+msgstr ""
+
+#: /admin/config/content/ckeditor/edit/Full
+msgid ""
+"CKEditor is highly configurable. The most commonly used features are "
+"listed below. You can also adjust CKEditor to your needs by changing "
+"the !ckeditor_module_config configuration file."
+msgstr ""
+
+#: /admin/config/content/ckeditor/skinframe?token=ZM18EULvTJerBMEST9x9tWSC7KVk3So9V6J4FAZ4yMg&skin=moono&uicolor=D3D3D3
+msgid "Change skin of CKEditor"
+msgstr ""
+
+#: /admin/config/content/ckeditor/skinframe?token=ZM18EULvTJerBMEST9x9tWSC7KVk3So9V6J4FAZ4yMg&skin=moono&uicolor=D3D3D3
+msgid "Configure skin for CKEditor."
+msgstr ""
+
+#: /admin/config/search/settings
+msgid ""
+"Influence is a numeric multiplier used in ordering search results. A "
+"higher number means the corresponding factor has more influence on "
+"search results; zero means the factor is ignored. Changing these "
+"numbers does not require the search index to be rebuilt. Changes take "
+"effect immediately."
+msgstr ""
+
+#: /admin/config/search/settings
+msgid "Influence"
+msgstr ""
+
+#: /admin/config/user-interface/modulefilter
+msgid "Divide module groups into tabbed list."
+msgstr ""
+
+#: /admin/config/user-interface/modulefilter
+msgid "Settings used with the tabs view of the modules page."
+msgstr ""
+
+#: /admin/config/user-interface/modulefilter
+msgid "Number of enabled modules"
+msgstr ""
+
+#: /admin/config/user-interface/modulefilter
+msgid ""
+"Display the number of enabled modules in the active tab along with the "
+"total number of modules."
+msgstr ""
+
+#: /admin/config/user-interface/modulefilter
+msgid "Visuals for newly enabled and disabled modules"
+msgstr ""
+
+#: /admin/config/user-interface/modulefilter
+msgid ""
+"Adds a basic count to tabs of modules being enabled/disabled and "
+"colors the module row pending it's being enabled or disabled"
+msgstr ""
+
+#: /admin/config/user-interface/modulefilter
+msgid "Dynamically position save button"
+msgstr ""
+
+#: /admin/config/user-interface/modulefilter
+msgid ""
+"DEVELOPMENTAL: For sites with lots of tabs, enable to help keep the "
+"'Save configuration' button more accessible."
+msgstr ""
+
+#: /index.php
+msgid "Administer pathauto"
+msgstr ""
+
+#: /index.php
+msgid ""
+"Allows a user to configure patterns for automated aliases and bulk "
+"delete URL-aliases."
+msgstr ""
+
+#: /index.php
+msgid "Notify of Path Changes"
+msgstr ""
+
+#: /index.php
+msgid "Determines whether or not users are notified."
+msgstr ""
+
+#: /index.php
+msgid "Update node alias"
+msgstr ""
+
+#: /index.php
+msgid "Update taxonomy term alias"
+msgstr ""
+
+#: /index.php
+msgid "Update user alias"
+msgstr ""
+
+#: /index.php
+msgid ""
+"Taille minimum attendue: 220px de large par 220px de haut.\r\n"
+"Taille maximale attendue: 220px de large par 270px de haut.\r\n"
+"Une image de taille inférieure ou supérieure ne sera pas acceptée."
+msgstr ""
+
+#: /index.php
+msgid ""
+"Taille minimum attendue: 232px de large\r\n"
+"Une image de taille inférieure est acceptée, mais la qualité ne "
+"pourra être garantie"
+msgstr ""
+
+#: /index.php
+msgid ""
+"Taille minimum attendue: 672px de large par 480px de haut\r\n"
+"Une image de taille inférieure est acceptée, mais la qualité ne "
+"pourra être garantie"
+msgstr ""
+
+#: /admin/config
+msgid "Joined path"
+msgstr ""
+
+#: /admin/config
+msgid ""
+"The array values each cleaned by Pathauto and then joined with the "
+"slash into a string that resembles an URL."
+msgstr ""
+
+#: /admin/config
+msgid "Bulk update"
+msgstr ""
+
+#: /admin/config
+msgid "Delete aliases"
+msgstr ""
+
+#: /admin/config
+msgid "Patterns"
+msgstr ""
+
+#: /admin/config
+msgid "pathauto"
+msgstr ""
+
+#: /admin/config/search/path/patterns
+msgid "Content paths"
+msgstr ""
+
+#: /admin/config/search/path/patterns
+msgid ""
+"Default path pattern (applies to all content types with blank patterns "
+"below)"
+msgstr ""
+
+#: /admin/config/search/path/patterns
+msgid "language neutral"
+msgstr ""
+
+#: /admin/config/search/path/patterns
+msgid "Pattern for all @node_type paths"
+msgstr ""
+
+#: /admin/config/search/path/patterns
+msgid "Taxonomy term paths"
+msgstr ""
+
+#: /admin/config/search/path/patterns
+msgid ""
+"Default path pattern (applies to all vocabularies with blank patterns "
+"below)"
+msgstr ""
+
+#: /admin/config/search/path/patterns
+msgid "Pattern for all %vocab-name paths"
+msgstr ""
+
+#: /admin/config/search/path/patterns
+msgid "User paths"
+msgstr ""
+
+#: /admin/config/search/path/patterns
+msgid "Pattern for user account page paths"
+msgstr ""
+
+#: /une-journee-avec
+msgid "Path module form elements"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Verbose"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Display alias changes (except during bulk updates)."
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid ""
+"Character used to separate words in titles. This will replace any "
+"spaces and punctuation characters. Using a space or + character can "
+"cause unexpected results."
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Character case"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Leave case the same as source token values."
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Change to lower case"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Maximum alias length"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid ""
+"Maximum length of aliases to generate. 100 is the recommended length. "
+"@max is the maximum possible length. See <a "
+"href=\"@pathauto-help\">Pathauto help</a> for details."
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Maximum component length"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid ""
+"Maximum text length of any component in the alias (e.g., [title]). 100 "
+"is the recommended length. @max is the maximum possible length. See <a "
+"href=\"@pathauto-help\">Pathauto help</a> for details."
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid ""
+"What should Pathauto do when updating an existing content item which "
+"already has an alias?"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid ""
+"Considering installing the <a href=\"!url\">Redirect module</a> to get "
+"redirects when your aliases change."
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Update action"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Do nothing. Leave the old alias intact."
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Create a new alias. Leave the existing alias functioning."
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Create a new alias. Delete the old alias."
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Transliterate prior to creating alias"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid ""
+"When a pattern includes certain characters (such as those with "
+"accents) should Pathauto attempt to transliterate them into the "
+"ASCII-96 alphabet? Transliteration is handled by the Transliteration "
+"module."
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Reduce strings to letters and numbers"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid ""
+"Filters the new alias to only letters and numbers found in the "
+"ASCII-96 set."
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Strings to Remove"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid ""
+"Words to strip out of the URL alias, separated by commas. Do not use "
+"this to remove punctuation."
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Punctuation"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Double quotation marks"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Single quotation marks (apostrophe)"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Back tick"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Period"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Hyphen"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Underscore"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Colon"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Semicolon"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Vertical bar (pipe)"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Left curly bracket"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Left square bracket"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Right curly bracket"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Right square bracket"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Plus sign"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Equal sign"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Asterisk"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Percent sign"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Caret"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Dollar sign"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Number sign (pound sign, hash)"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "At sign"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Exclamation mark"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Tilde"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Left parenthesis"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Right parenthesis"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Question mark"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Less-than sign"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Greater-than sign"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Slash"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Backslash"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "Replace by separator"
+msgstr ""
+
+#: /admin/config/search/path/settings
+msgid "No action (do not replace)"
+msgstr ""
+
+#: /admin/config/search/path/update_bulk
+msgid "Select the types of un-aliased paths for which to generate URL aliases"
+msgstr ""
+
+#: /admin/config/search/path/update_bulk
+msgid "Bulk updating URL aliases"
+msgstr ""
+
+#: /batch?id=4&op=do
+msgid ""
+"The automatically generated alias %original_alias conflicted with an "
+"existing alias. Alias changed to %alias."
+msgstr ""
+
+#: /batch?id=4&op=do
+msgid "Updated alias for node @nid."
+msgstr ""
+
+#: /batch?id=4&op=finished
+msgid "Generated @count URL aliases."
+msgstr ""
+
+#: /batch?id=5&op=finished
+msgid "No new URL aliases to generate."
+msgstr ""
+
+#: /index.php
+msgid "Gestion des blocks de la home Chroniques"
+msgstr ""
+
+#: /index.php
+msgid "Pages Chroniques"
+msgstr ""
+
+#: /index.php
+msgid "Blocks communs aux pages Agenda"
+msgstr ""
+
+#: /index.php
+msgid "Blocks communs aux pages Analyse"
+msgstr ""
+
+#: /index.php
+msgid "Blocks communs aux pages Chroniques"
+msgstr ""
+
+#: /index.php
+msgid "Blocks communs aux pages Ensemble"
+msgstr ""
+
+#: /index.php
+msgid "Pages Ensemble"
+msgstr ""
+
+#: /index.php
+msgid "Blocks communs aux pages Focus"
+msgstr ""
+
+#: /index.php
+msgid "Pages Focus"
+msgstr ""
+
+#: /index.php
+msgid "Gestion des blocks de la home Invité"
+msgstr ""
+
+#: /index.php
+msgid "Pages Invité"
+msgstr ""
+
+#: /index.php
+msgid "Pages le fil"
+msgstr ""
+
+#: /index.php
+msgid "Blocks communs aux pages Une journée avec"
+msgstr ""
+
+#: /index.php
+msgid "Pages Une journée avec"
+msgstr ""
+
+#: /index.php
+msgid "Gestion des blocks de la home Ensemble"
+msgstr ""
+
+#: /index.php
+msgid "Gestion des blocks de la home Focus"
+msgstr ""
+
+#: /index.php
+msgid "Blocks communs aux pages Invité"
+msgstr ""
+
+#: /index.php
+msgid "Liste analyse"
+msgstr ""
+
+#: /index.php
+msgid "Liste des articles analyse"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles analyse (Principal)"
+msgstr ""
+
+#: /index.php
+msgid "Bloc destiné à apparaître sur la page analyse principale"
+msgstr ""
+
+#: /index.php
+msgid "<a href=\"/analyse/liste\" class=\"bigbutton\">Plus d'articles</a>"
+msgstr ""
+
+#: /index.php
+msgid "Tout"
+msgstr ""
+
+#: /index.php
+msgid "Liste invite"
+msgstr ""
+
+#: /index.php
+msgid "Liste des articles invité"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles invité (Principal)"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles Invité"
+msgstr ""
+
+#: /index.php
+msgid "Bloc destiné à apparaître sur la page invité principale"
+msgstr ""
+
+#: /index.php
+msgid "<a href=\"/invite/liste\" class=\"bigbutton\">Plus d'articles</a>"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles invité"
+msgstr ""
+
+#: /index.php
+msgid "Liste chroniques"
+msgstr ""
+
+#: /index.php
+msgid "Liste des articles chroniques"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles chroniques (Principal)"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles Chroniques"
+msgstr ""
+
+#: /index.php
+msgid "Bloc destiné à apparaître sur la page chroniques principale"
+msgstr ""
+
+#: /index.php
+msgid "<a href=\"/chroniques/liste\" class=\"bigbutton\">Plus d'articles</a>"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles chroniques"
+msgstr ""
+
+#: /index.php
+msgid "Liste focus"
+msgstr ""
+
+#: /index.php
+msgid "Liste des focus chroniques"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles focus (Principal)"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles Focus"
+msgstr ""
+
+#: /index.php
+msgid "Bloc destiné à apparaître sur la page focus principale"
+msgstr ""
+
+#: /index.php
+msgid "<a href=\"/focus/liste\" class=\"bigbutton\">Plus d'articles</a>"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles focus"
+msgstr ""
+
+#: /index.php
+msgid "Liste ensemble"
+msgstr ""
+
+#: /index.php
+msgid "Liste des ensemble"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles ensemble (Principal)"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles Ensemble"
+msgstr ""
+
+#: /index.php
+msgid "Bloc destiné à apparaître sur la page ensembe principale"
+msgstr ""
+
+#: /index.php
+msgid "<a href=\"/ensemble/liste\" class=\"bigbutton\">Plus d'articles</a>"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles ensemble"
+msgstr ""
+
+#: /index.php
+msgid "Liste une journée avec"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles une journée avec (Principal)"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles Une journée avec"
+msgstr ""
+
+#: /index.php
+msgid "Bloc destiné à apparaître sur la page une journée avec principale"
+msgstr ""
+
+#: /index.php
+msgid ""
+"<a href=\"/une-journee-avec/liste\" class=\"bigbutton\">Plus "
+"d'articles</a>"
+msgstr ""
+
+#: /index.php
+msgid "Autres articles une journée avec"
+msgstr ""
+
+#: /index.php
+msgid ""
+"Administration > Configuration > User interface > Printer, email and "
+"PDF versions"
+msgstr ""
+
+#: /index.php
+msgid "Printer-friendly Page settings are available under !link"
+msgstr ""
+
+#: /index.php
+msgid ""
+"Transliteration has been installed. <a "
+"href=\"@transliteration-url\">Fix existing file names</a>."
+msgstr ""
+
+#: /index.php
+msgid "Administer the module"
+msgstr ""
+
+#: /index.php
+msgid "Perform maintenance tasks for the print module."
+msgstr ""
+
+#: /index.php
+msgid "Access the printer-friendly page"
+msgstr ""
+
+#: /index.php
+msgid ""
+"View the printer-friendly pages and the links to them in the original "
+"pages."
+msgstr ""
+
+#: /index.php
+msgid "Access the PDF version"
+msgstr ""
+
+#: /index.php
+msgid "View the PDF versions and the links to them in the original pages."
+msgstr ""
+
+#: /index.php
+msgid "Node-specific configuration"
+msgstr ""
+
+#: /index.php
+msgid "Enable access to the per-node settings."
+msgstr ""
+
+#: /index.php
+msgid "Most printed"
+msgstr ""
+
+#: /index.php
+msgid "Printer, email and PDF versions"
+msgstr ""
+
+#: /index.php
+msgid "Most PDFd"
+msgstr ""
+
+#: /index.php
+msgid "Display a printer-friendly version of this page."
+msgstr ""
+
+#: /index.php
+msgid "Web: Show link"
+msgstr ""
+
+#: /index.php
+msgid "Whether to show the printer-friendly version link."
+msgstr ""
+
+#: /index.php
+msgid "Web: Show link in individual comments"
+msgstr ""
+
+#: /index.php
+msgid ""
+"Whether to show the printer-friendly version link in individual "
+"comments."
+msgstr ""
+
+#: /index.php
+msgid "Web: Show Printer-friendly URLs list"
+msgstr ""
+
+#: /index.php
+msgid "Whether to show the URL list."
+msgstr ""
+
+#: /index.php
+msgid "Web: Number of page accesses"
+msgstr ""
+
+#: /index.php
+msgid "Counter of accesses to the printer-friendly version for this node."
+msgstr ""
+
+#: /index.php
+msgid "Web: Last access"
+msgstr ""
+
+#: /index.php
+msgid "The date of the last access to the node's printer-friendly version."
+msgstr ""
+
+#: /index.php
+msgid "PDF: Show link"
+msgstr ""
+
+#: /index.php
+msgid "Whether to show the PDF version link."
+msgstr ""
+
+#: /index.php
+msgid "PDF: Show link in individual comments"
+msgstr ""
+
+#: /index.php
+msgid "Whether to show the PDF version link in individual comments."
+msgstr ""
+
+#: /index.php
+msgid "PDF: Show Printer-friendly URLs list"
+msgstr ""
+
+#: /index.php
+msgid "PDF: Paper size"
+msgstr ""
+
+#: /index.php
+msgid "Configured PDF paper size"
+msgstr ""
+
+#: /index.php
+msgid "PDF: Page orientation"
+msgstr ""
+
+#: /index.php
+msgid "Configured PDF page orientation."
+msgstr ""
+
+#: /index.php
+msgid "PDF: Number of page accesses"
+msgstr ""
+
+#: /index.php
+msgid "Counter of accesses to the PDF version for this node."
+msgstr ""
+
+#: /index.php
+msgid "PDF: Last access"
+msgstr ""
+
+#: /index.php
+msgid "The date of the last access to the node's PDF version."
+msgstr ""
+
+#: /index.php
+msgid "PDF version"
+msgstr ""
+
+#: /index.php
+msgid "Display a PDF version of this page."
+msgstr ""
+
+#: /index.php
+msgid "The EPUB library to download. Available choices: !libs."
+msgstr ""
+
+#: /index.php
+msgid ""
+"A path to the download folder. If omitted Drush will use the default "
+"location (@path)."
+msgstr ""
+
+#: /index.php
+msgid "Download and extract a EPUB library."
+msgstr ""
+
+#: /index.php
+msgid "The EPUB library to download. Available choices: phpepub."
+msgstr ""
+
+#: /index.php
+msgid ""
+"A path to the download folder. If omitted Drush will use the default "
+"location (sites/all/libraries)."
+msgstr ""
+
+#: /index.php
+msgid "The PDF library to download. Available choices: !libs."
+msgstr ""
+
+#: /index.php
+msgid "Download and extract a PDF library."
+msgstr ""
+
+#: /index.php
+msgid ""
+"The PDF library to download. Available choices: dompdf, mpdf, tcpdf, "
+"wkhtmltopdf."
+msgstr ""
+
+#: /index.php
+msgid "Convert all characters to US-ASCII"
+msgstr ""
+
+#: /user/1
+msgid "Transliteration"
+msgstr ""
+
+#: /user/1
+msgid "Convert existing file names to US-ASCII."
+msgstr ""
+
+#: /user/1
+msgid ""
+"Adds a printer-friendly version link to content and administrative "
+"pages."
+msgstr ""
+
+#: /user/1
+msgid "Links"
+msgstr ""
+
+#: /user/1
+msgid "Configure the print module links."
+msgstr ""
+
+#: /user/1
+msgid "PDF"
+msgstr ""
+
+#: /user/1
+msgid "Configure the settings of the PDF generation functionality."
+msgstr ""
+
+#: /user/1
+msgid "dompdf"
+msgstr ""
+
+#: /user/1
+msgid "Configure the dompdf options."
+msgstr ""
+
+#: /user/1
+msgid "wkhtmltopdf"
+msgstr ""
+
+#: /user/1
+msgid "Configure the wkhtmltopdf options."
+msgstr ""
+
+#: /user/1
+msgid "Settings for the common functionalities for all the print sub-modules."
+msgstr ""
+
+#: /user/1
+msgid "Web page"
+msgstr ""
+
+#: /user/1
+msgid "print"
+msgstr ""
+
+#: /user/1
+msgid "print_ui"
+msgstr ""
+
+#: /admin/structure/types/manage/story
+msgid "Show link"
+msgstr ""
+
+#: /admin/structure/types/manage/story
+msgid "Show link in individual comments"
+msgstr ""
+
+#: /admin/structure/types/manage/story
+msgid "Show Printer-friendly URLs list"
+msgstr ""
+
+#: /admin/structure/types/manage/story
+msgid "Paper size"
+msgstr ""
+
+#: /admin/structure/types/manage/story
+msgid "Choose the paper size of the generated PDF."
+msgstr ""
+
+#: /admin/structure/types/manage/story
+msgid "Page orientation"
+msgstr ""
+
+#: /admin/structure/types/manage/story
+msgid "Portrait"
+msgstr ""
+
+#: /admin/structure/types/manage/story
+msgid "Landscape"
+msgstr ""
+
+#: /admin/structure/types/manage/story
+msgid "Choose the page orientation of the generated PDF."
+msgstr ""
+
+#: /admin/config
+msgid "Printer, email and PDF versions - PDF generation library"
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid "Web page options"
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid "Open the printer-friendly version in a new window"
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid ""
+"Setting this option will make the printer-friendly version open in a "
+"new window/tab."
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid "Send to printer"
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid ""
+"Automatically calls the browser's print function when the "
+"printer-friendly version is displayed."
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid "Close window after sending to printer"
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid ""
+"When the above options are enabled, this option will close the window "
+"after its contents are printed."
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid "Printer-friendly URLs list in system pages"
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid ""
+"Enabling this option will display a list of printer-friendly "
+"destination URLs at the bottom of the page."
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid "Robots META tags"
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid "Add noindex"
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid ""
+"Instruct robots to not index printer-friendly pages. Recommended for "
+"good search engine karma."
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid "Add nofollow"
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid ""
+"Instruct robots to not follow outgoing links on printer-friendly "
+"pages."
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid "Add noarchive"
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid ""
+"Non-standard tag to instruct search engines to not show a \"Cached\" "
+"link for your printer-friendly pages. Recognized by Googlebot."
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid "Custom link text"
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid "Enable custom link text"
+msgstr ""
+
+#: /admin/config/user-interface/print
+msgid "Text used in the link to the printer-friendly version."
+msgstr ""
+
+#: /admin/modules
+msgid "PDF generation library using dompdf."
+msgstr ""
+
+#: /admin/modules
+msgid "Create custom block for Envol"
+msgstr ""
+
+#: /admin/modules
+msgid ""
+"Adds the capability to export pages as EPUB. Requires an EPUB library "
+"and the respective handler module."
+msgstr ""
+
+#: /admin/modules
+msgid "PDF generation library using mPDF."
+msgstr ""
+
+#: /admin/modules
+msgid "Maximum alias and component length"
+msgstr ""
+
+#: /admin/modules
+msgid ""
+"The <strong>maximum alias length</strong> and <strong>maximum "
+"component length</strong> values default to 100 and have a limit of "
+"@max from Pathauto. This length is limited by the length of the "
+"\"alias\" column of the url_alias database table. The default database "
+"schema for this column is @max. If you set a length that is equal to "
+"that of the one set in the \"alias\" column it will cause problems in "
+"situations where the system needs to append additional words to the "
+"aliased URL. You should enter a value that is the length of the "
+"\"alias\" column minus the length of any strings that might get added "
+"to the end of the URL. The length of strings that might get added to "
+"the end of your URLs depends on which modules you have enabled and on "
+"your Pathauto settings. The recommended and default value is 100."
+msgstr ""
+
+#: /admin/modules
+msgid ""
+"Adds the capability to export pages as PDF. Requires a PDF library and "
+"the respective handler module."
+msgstr ""
+
+#: /admin/modules
+msgid "EPUB generation library using PHPePub."
+msgstr ""
+
+#: /admin/modules
+msgid "Generates a printer-friendly version of Drupal pages."
+msgstr ""
+
+#: /admin/modules
+msgid ""
+"Manages the printer-friendly versions link display conditions. Without "
+"this module, those links are not displayed."
+msgstr ""
+
+#: /admin/modules
+msgid "Provides the capability to send the web page by email"
+msgstr ""
+
+#: /admin/modules
+msgid "PDF generation library using TCPDF."
+msgstr ""
+
+#: /admin/modules
+msgid "PDF generation library using wkhtmltopdf."
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid "PDF options"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid "PDF generation tool"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid ""
+"This option selects the PDF generation tool being used by this module "
+"to create the PDF version."
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid "Open PDF in"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid "Same browser window"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid "New browser window"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid "Save dialog"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid "Select the desired method for opening the PDF in the user's browser."
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid "Enable caching of generated PDFs"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid "Cache Lifetime"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid ""
+"The lifetime of cached PDFs. A cached PDF is only removed when a node "
+"is updated, deleted, or cron is run and the last access is older than "
+"this value."
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid "Access images via local file access"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid ""
+"Enabling this option will make the tool use local file access for "
+"image files. This option is not recommended to use in conjunction with "
+"modules like imagecache which generate the image after it's first "
+"accessed. However, it may be necessary in low-end hosting services "
+"where the web server is not allowed to open URLs and the user can't "
+"modify that configuration setting."
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid "Auto-configure the PDF tool settings"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid ""
+"If you disable this option, the pdf tool settings must be configured "
+"manually. For TCDPF, edit the tcpdf/config/tcpdf_config.php file. For "
+"dompdf, edit the dompdf/dompdf_config.inc.php file."
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid "PDF filename"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid ""
+"If left empty the generated filename defaults to the node's path. "
+"Tokens may be used to build the filename (see following list). The "
+".pdf extension will be appended automatically."
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf
+msgid "Text used in the link to the PDF version."
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "Access the Send by email functionality"
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid ""
+"Provides the ability to send pages by email and the links to them in "
+"the original pages."
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "Send unlimited emails"
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid ""
+"Overrides the built-in hourly threshold limits when sending emails. "
+"This permission should only be granted to trusted users, due to it's "
+"potential in enabling the use of your site as a source of email spam."
+msgstr ""
+
+#: /admin/modules/list/confirm
+msgid "Most emailed"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Link options"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Link location"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Links area"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Content corner"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Help area"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid ""
+"Choose the location of the link(s) to the printer-friendly version "
+"pages. The Links area is usually below the node content, whereas the "
+"Content corner is placed in the upper-right corner of the node content "
+"(these apply only in node pages). The Help area is used for system "
+"pages. Enabling the block area link will allow links of this format in "
+"the provided links module. Unselect all options to disable the link. "
+"Even if the link is disabled, you can still go to %path where nid is "
+"the numeric id of the node."
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Display link in teaser"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Enabling this will display the link in teaser mode."
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Send by email"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Send this page by email."
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Advanced link options"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Link style"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Text only"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Icon only"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Icon and Text"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Select the visual style of the link."
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Use URL alias instead of node ID"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid ""
+"Enabling this will create the link using the URL alias instead of the "
+"node ID."
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid ""
+"This can be used by themers to change the link style or by jQuery "
+"modules to open in a new window (e.g. greybox or thickbox). Multiple "
+"classes can be specified, separated by spaces."
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Show link in system (non-content) pages"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Show on every page except the listed pages."
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Show on only the listed pages."
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid ""
+"Setting this option will add a link on pages created by Drupal or the "
+"enabled modules."
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid ""
+"Enter one page per line as Drupal paths. The '*' character is a "
+"wildcard. Example paths are %blog for the blog page and %blog-wildcard "
+"for every personal blog. %front is the front page."
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid ""
+"Show if the following PHP code returns <code>TRUE</code> (PHP-mode, "
+"experts only)."
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid ""
+"If the PHP-mode is chosen, enter PHP code between %php. Note that "
+"executing incorrect PHP-code can break your Drupal site."
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Link in book hierarchy nodes"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Current page and sub-pages"
+msgstr ""
+
+#: /admin/config/user-interface/print/ui
+msgid "Current page only"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Email: Show link"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Whether to show the send by email link."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Email: Show link in individual comments"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Whether to show the send by email link in individual comments."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Email: Show Printer-friendly URLs list"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Email: Number of page accesses"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Counter of accesses to the send by email form for this node."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Email: Last access"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "The date of the last access to the node's send by email form."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Email: Number of sent emails"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Counter of emails sent for this node."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Email: Last email sent"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "The date when the node was last sent by email."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Common settings"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Custom stylesheet"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid ""
+"The path to your custom print cascading stylesheet, if any. The path "
+"provided must be relative to the base path. When none is specified, "
+"the default module CSS file is used."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Macros: %t (path to theme: \"%theme\")"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Requires the <em>Administer site configuration</em> permission."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Keep the current theme CSS"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid ""
+"If set, the current theme css will still be applied to the "
+"printer-friendly versions."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Printer-friendly URLs list"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid ""
+"If set, a list of the destination URLs for the page links will be "
+"displayed at the bottom of the page."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Content Types page"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid ""
+"Note that you can enable/disable the URL list for each content type "
+"individually from the !url."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Include named anchors in printer-friendly URLs list"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid ""
+"If set, the list of the URLs at the bottom of the page will include "
+"anchors links on the same page."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Include comments in printer-friendly version"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid ""
+"When this option is active, user comments are also included in the "
+"printer-friendly version. Requires the comment module."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "New window method"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Use HTML target (does not validate as XHTML Strict)"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Use Javascript (requires browser support)"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Choose the method used to open pages in a new window/tab."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Logo options"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Logo type"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "None (Disabled)"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Current theme's logo"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "User-specified"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid ""
+"Select the type of logo to display on the printer-friendly version. In "
+"case of a user-specified location, insert the path or URL below."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Logo URL"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Upload logo"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Footer options"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Footer type"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Site's footer"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid ""
+"Select the type of footer to display on the printer-friendly version. "
+"In case of a user-specified footer, insert it below."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Source URL"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Display source URL"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid ""
+"When this option is selected, the URL for the original page will be "
+"displayed at the bottom of the printer-friendly version."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Add current time/date to the source URL"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Display the current date and time in the Source URL line."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Force use of node ID in source URL"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid ""
+"Drupal will attempt to use the page's defined alias in case there is "
+"one. To force the use of the fixed URL, activate this option."
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "email"
+msgstr ""
+
+#: /admin/config/user-interface/print/common
+msgid "Configure the settings of the send by email functionality."
+msgstr ""
+
+#: /printpdf/9
+msgid "Printer-friendly PDF"
+msgstr ""
+
+#: /printpdf/9
+msgid "Published on %site_name"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf/dompdf
+msgid "dompdf options"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf/dompdf
+msgid "Use dompdf's Unicode Mode"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf/dompdf
+msgid ""
+"If enabled, dompdf's Unicode mode is used. If not, the module will "
+"attempt to convert some non-ASCII chars to ISO-8859-1."
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf/dompdf
+msgid "Enable font subsetting"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf/dompdf
+msgid ""
+"Only embed those font characters that are actually used.  This can "
+"generates smaller PDF files but may significantly slow down "
+"processing."
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf/wkhtmltopdf
+msgid "wkhtmltopdf options"
+msgstr ""
+
+#: /admin/config/user-interface/print/pdf/wkhtmltopdf
+msgid ""
+"(wkhtmltopdf only) Set any additional options to be passed to the "
+"wkhtmltopdf executable. Tokens may be used in these options (see list "
+"below)."
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid "Send by email options"
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid "Hourly threshold"
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid "The maximum number of emails a user can send per hour."
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid "Use Reply-To header"
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid ""
+"When enabled, any email sent will use the provided user and username "
+"in the 'Reply-To' header, with the site's email address used in the "
+"'From' header (configured in !link). Enabling this helps in preventing "
+"email being flagged as spam."
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid "Send only the teaser"
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid ""
+"If selected, the default choice will be to send only the node's teaser "
+"instead of the full content."
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid "Enable user list recipients"
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid ""
+"If selected, a user list will be included as possible email "
+"recipients."
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid "Enable teaser/full mode choice"
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid ""
+"If checked, the user will be able to choose between sending the full "
+"content or only the teaser at send time."
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid "Default email sending format"
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid "Inline HTML"
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid "Send emails using queue"
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid ""
+"Selecting this option, email delivery will be performed by the system "
+"queue during each cron run. Leaving this unselected, the email will be "
+"sent immediately, but the site will take slightly longer to reply to "
+"the user."
+msgstr ""
+
+#: /admin/config/user-interface/print/email
+msgid "Text used in the link to the send by email form."
+msgstr ""
+
+#: /print/9
+msgid "Printer-friendly"
+msgstr ""
+
+#: /printmail/9
+msgid "View page"
+msgstr ""
+
+#: /printmail/9
+msgid "Someone"
+msgstr ""
+
+#: /printmail/9
+msgid "an interesting site"
+msgstr ""
+
+#: /printmail/9
+msgid "!user has sent you a message from !site"
+msgstr ""
+
+#: /node/add/invite
+msgid "Generate automatic URL alias"
+msgstr ""
+
+#: /node/add/invite
+msgid "Uncheck this to create a custom alias below."
+msgstr ""
+
+#: /node/add/invite
+msgid "Configure URL alias patterns."
+msgstr ""
+
+#: sites/all/modules/contrib/pathauto/pathauto.js
+msgid "Automatic alias"
+msgstr ""
+
+#: /
+msgid "Date views"
+msgstr ""
+
+#: /
+msgid "Configure settings for date views."
+msgstr ""
+
+#: /admin/structure/views/view/rubriques/edit
+msgid "Edit feature machine name"
+msgstr ""
+
+#: /admin/structure/views/view/rubriques/edit
+msgid "Allows editing machine name of a disabled feature"
+msgstr ""
+
+#: /admin/structure/context/settings
+msgid "Show all regions"
+msgstr ""
+
+#: /admin/structure/context/settings
+msgid ""
+"Show all regions including those that are empty. Enable if you are "
+"administering your site using the inline editor."
+msgstr ""
+
+#: /admin/structure/context/settings
+msgid "Enable debug reaction on all contexts"
+msgstr ""
+
+#: /admin/structure/context/settings
+msgid "Enable the debug reaction on all contexts."
+msgstr ""
+
+#: /admin/structure/context/settings
+msgid "Use Context Editor Dialog"
+msgstr ""
+
+#: /admin/structure/context/settings
+msgid ""
+"When enabled all contextual links will have a Edit Layout link that "
+"will refresh the page with the context editor in a dialog box."
+msgstr ""
+
+#: /admin/structure/features/envol_views
+msgid "This item is unlocked and will be rebuilt/reverted as normal."
+msgstr ""
+
+#: /admin/structure/features/envol_views
+msgid "Lock"
+msgstr ""
+
+#: /admin/structure/features/envol_views/lock/ajax/views_view?token=hya99HM9j43BoK8qroMYmDOdsqBslbOO0CJXjyEBZp4
+msgid "Lock a feature or components."
+msgstr ""
+
+#: /admin/structure/features/envol_views/lock/ajax/views_view?token=hya99HM9j43BoK8qroMYmDOdsqBslbOO0CJXjyEBZp4
+msgid "This item is locked and features will not be rebuilt or reverted."
+msgstr ""
+
+#: /admin/structure/features/envol_views/lock/ajax/views_view?token=hya99HM9j43BoK8qroMYmDOdsqBslbOO0CJXjyEBZp4
+msgid "UnLock"
+msgstr ""
+
 msgid "Public files"
 msgstr "Fichiers publics"
 
@@ -13993,9 +18058,11 @@ msgstr "Explication ou directives pour la contribution"
 msgid "Article"
 msgstr "Article"
 
+#: ; modules/filter/filter.admin.js
 msgid "Disabled"
 msgstr "Désactivé"
 
+#: ; modules/filter/filter.admin.js
 msgid "Enabled"
 msgstr "Activé"
 
@@ -19341,11 +23408,11 @@ msgstr "Par @name"
 msgid "Not in menu"
 msgstr "Pas dans le menu"
 
-#: ; modules/path/path.js
+#: ; modules/path/path.js; sites/all/modules/contrib/pathauto/pathauto.js
 msgid "Alias: @alias"
 msgstr "Alias : @alias"
 
-#: ; modules/path/path.js
+#: ; modules/path/path.js; sites/all/modules/contrib/pathauto/pathauto.js
 msgid "No alias"
 msgstr "Aucun alias"
 
@@ -23226,6 +27293,7 @@ msgstr "Vérifier les mises à jour des modules et thèmes désactivés"
 msgid "Fetcher"
 msgstr "Extracteur"
 
+#: ; modules/user/user.permissions.js
 msgid "This permission is inherited from the authenticated user role."
 msgstr "Ce droit est héritée du rôle de l'utilisateur authentifié."
 
@@ -44497,4 +48565,30 @@ msgstr "Résultats du formulaire Webform"
 #: /node/13
 msgid "!start-date to !end-date"
 msgstr "Du !start-date au !end-date"
+
+#: /printmail/9
+msgid "Your email"
+msgstr "Votre mail"
+
+#: /printmail/9
+msgid "Send to"
+msgstr "Envoyer à"
+
+#: /printmail/9
+msgid "Enter multiple addresses separated by commas and/or different lines."
+msgstr ""
+"Indiquez plusieurs emails séparés par une virgule ou en passant à "
+"la ligne."
+
+#: /printmail/9
+msgid "Page to be sent"
+msgstr "Page à envoyer"
+
+#: /printmail/9
+msgid "Your message"
+msgstr "Votre message"
+
+#: /printmail/9
+msgid "Send email"
+msgstr "Envoyer le mail"
 

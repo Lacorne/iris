@@ -166,6 +166,25 @@ Se rendre pour Envol dans admin/structure/views/settings/advanced et clicker sur
 -> Dans le dossier themes, à la racine, et non dans sites/all/themes, il y avait un thème "Carnot".
 Ce dernier est déplacé dans sites/all/themes.
 
+# Livraison du 18 Septembre 2014
+--------------------------------
+-> ajout du type de contenu In situ
+-> ajout de la vue In situ
+-> corrections vues avec David notamment:
+  -> voir pour les doubles flèches sur la home Envol (suite)
+  -> Voir pour ne pas couper les chapo (home envol + iris, sauf sur la remontée principal d'envol)
+  -> supprimer les logos twitter, etc ... sur le header Envol
+  -> Voir pour la longueur du nom des experts dans le block paroles d'experts.
+  -> sur le lien "email" des articles, faire un mailto
+
+Lancer les commandes suivantes:
+drush iris.onera.accueil fr-all -yv
+drush iris.onera.accueil cc all -yv
+
+Il n'y a pas de feature cette fois sur Envol.
+
+Faire un flush des caches via chacune des admin (iris et envol)
+
 
 
 

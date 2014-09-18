@@ -226,7 +226,11 @@ function envol_html_head_alter(&$head) {
  */
 function envol_preprocess(&$variables, $hook) {
   global $base_url;
+  global $theme;
+  $path_to_theme = drupal_get_path('theme', $theme);
   $variables['base_url'] = $base_url;
+  $variables['current_theme'] = $theme;
+  $variables['path_to_theme'] = $path_to_theme;
 }
 
 /**
@@ -794,4 +798,17 @@ function envol_mark($variables) {
  */
 function envol_panels_default_style_render_region($variables) {
   return implode('', $variables['panes']);
+}
+
+/**
+ * Implements hook_url_outbound_alter().
+ */
+function envol_url_outbound_alter(&$path, &$options, $original_path) {
+  // Special for print module... alter url printemail and change to mailto
+  $findme   = 'printmail';
+  $pos = strpos($path, $findme);
+  if ($pos !== false) {
+      $path = 'mailto:david.mariette@onera.fr';
+      $options['external'] = TRUE;
+  }
 }
