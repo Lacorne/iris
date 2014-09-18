@@ -65,6 +65,7 @@
       linksShortNew
     ;
 
+    /*
     containerShortNew.each(function(){
 
       titleShortNew = $(this).find('.node__title');
@@ -79,7 +80,7 @@
       console.log(heightFieldBody);
       fieldBodyShortNew.css({'height':heightFieldBody + 'px'}).ellipsis();
     });
-
+    */
     containerHomeHighlight.each(function(){
 
       titleNodeType = $(this).find('.wrapper-big-title');
@@ -87,7 +88,7 @@
       linksShortNew = $(this).find('.links');
       fieldBodyShortNew = $(this).find('.field-name-field-chapo');
 
-      heightFieldBody = $(this).height() - titleNodeType.outerHeight(true) - catShortNew.outerHeight(true) - linksShortNew.outerHeight(true) - linkReadMore.outerHeight(true) - 40;
+      heightFieldBody = $(this).height() - titleNodeType.outerHeight(true) - linksShortNew.outerHeight(true) - linkReadMore.outerHeight(true) - 40;
       console.log(heightFieldBody);
       fieldBodyShortNew.css({'height':heightFieldBody + 'px'}).ellipsis();
     });

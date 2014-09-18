@@ -59,6 +59,8 @@
       envolNews.addClass(firstNodeEnvol.attr('class').split(' ')[2]);
     }
 
+    /*
+    //Cut chapô
     var containerShortNew = $('.front .view-listescontenus:not(.view-display-id-first_news) .view-mode-teaser_small_img');
     var 
       fieldBodyShortNew,
@@ -83,6 +85,7 @@
       console.log(heightFieldBody);
       fieldBodyShortNew.css({'height':heightFieldBody + 'px'}).ellipsis();
     });
+    */
   });
 
 })(jQuery, Drupal, this, this.document);

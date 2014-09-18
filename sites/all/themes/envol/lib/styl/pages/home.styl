@@ -2,7 +2,8 @@
 .front
   .page__title
     display none
-
+  .views-row
+    border-bottom none
   .region-highlighted
     box-sizing border-box
     padding 0 10px
@@ -49,6 +50,8 @@
         margin 20px
         border-left solid 1px #fff
         overflow hidden
+        p
+          margin 0
       .readmore
         position relative
         color #fff
@@ -61,7 +64,7 @@
           content "►►"
           display block
           color #fff
-          absolute left 0
+          absolute top 0 left 0
           text-align center
           letter-spacing -5px
       .field-name-field-visuel
@@ -166,8 +169,6 @@
       column(4, 12, noright)
     .views-row-1,
     .views-row-2
-      height 400px
-      max-height 400px
       border none
       margin-bottom 20px
       .wrapper-info
@@ -185,6 +186,8 @@
       .field-name-field-chapo
         white-space normal
         overflow hidden
+        p
+          margin 0
       .field-name-field-visuel
         position relative
         border-bottom solid 10px #000
