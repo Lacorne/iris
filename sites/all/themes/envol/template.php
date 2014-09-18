@@ -351,9 +351,9 @@ function envol_preprocess_node(&$variables, $hook) {
 
   // Add node_url for template node
   $node_url_noenvol = explode('/envol', $variables['node_url']);
-  //var_dump(count($node_url_noenvol));
+  var_dump(count($node_url_noenvol));
   (count($node_url_noenvol) > 1) ? $variables['content']['node_url'] = $node_url_noenvol[1] : $variables['content']['node_url'] = $node_url_noenvol[0];
-  //var_dump($variables['content']['node_url']);
+  var_dump($variables['content']['node_url']);
 
   // Check if analyse, so we create a array of parole experts in content
   if($variables['type'] == 'analyse'){
