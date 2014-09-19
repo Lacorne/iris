@@ -341,9 +341,6 @@ function iris_preprocess_node(&$variables, $hook) {
   $variables['theme_hook_suggestions'][] = 'node' . '__' . $variables['view_mode'];
   $variables['theme_hook_suggestions'][] = 'node' . '__' . $variables['view_mode'] . '__' . $variables['type'];
 
-  // Add node_url for template node
-  $variables['content']['node_url'] = $variables['node_url'];
-
 }
 
 /**

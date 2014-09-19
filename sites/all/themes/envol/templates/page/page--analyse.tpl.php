@@ -94,7 +94,7 @@
       <?php print render($page['navigation']); ?>
 
     </div>
-
+    <?php var_dump(block_get_blocks_by_region('sidebar_second')); ?>
     <?php
       // Render the sidebars to see if there's anything in them.
       $sidebar_first  = render($page['sidebar_first']);
