@@ -185,6 +185,13 @@ Il n'y a pas de feature cette fois sur Envol.
 
 Faire un flush des caches via chacune des admin (iris et envol)
 
+# Livraison du 19 Septembre 2014
+--------------------------------
+-> correctif du pb de répétition de envol/ dans l'url
+-> Modification de la vue sur Iris pour ne pas afficher la mise en avant lorsqu'il ny a pas d'actu épinglée en haut des listes.
 
+Lancer la commande suivante sur Envol
+drush iris.onera.envol fr envol_views -yv
 
+Faire un flush des caches via les admin respectives.
 
