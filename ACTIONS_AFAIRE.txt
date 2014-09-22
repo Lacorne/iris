@@ -195,3 +195,8 @@ drush iris.onera.envol fr envol_views -yv
 
 Faire un flush des caches via les admin respectives.
 
+# Livraison du 22 Septembre 2014
+--------------------------------
+-> 2 correctifs de bugs suignalés par David (couleurs puces + dépassement filet sur la home Envol).
+-> Suppression du var_dump qui trainait dans un template.
+

@@ -35,8 +35,15 @@
   ul
     padding-left 15px
   li
-    list-style square
+    position relative
+    list-style none
     margin-bottom 10px
+    &:before
+      content "▪"
+      display block
+      absolute top 7px left -15px
+      font-size 1.5em
+      line-height 0
 
 #block-views-listescontenus-lefil-home,
 #block-views-listescontenus-agenda-home
@@ -133,33 +140,35 @@
 .block-type--fond_gris,
 .block-type--fond_gris_filet
   li
-    .page-analyse &,
-    .node-type-analyse &
-      color color_green
-    .page-lefil &,
-    .node-type-story &
-      color color_magenta
-    .page-analyse &,
-    .node-type-analyse &
-      color color_green
-    .page-invite &,
-    .node-type-invite &
-      color color_blue
-    .page-agenda &,
-    .node-type-agenda &
-      color color_orange
-    .page-focus &,
-    .node-type-focus &
-      color color_purple
-    .page-chroniques &,
-    .node-type-chroniques &
-      color color_sepia
-    .page-ensemble &,
-    .node-type-ensemble &
-      color color_yellow
-    .page-une-journee-avec &,
-    .node-type-une-journee-avec &
-      color color_red
+    color #666
+    &:before
+      .page-analyse &,
+      .node-type-analyse &
+        color color_green
+      .page-lefil &,
+      .node-type-story &
+        color color_magenta
+      .page-analyse &,
+      .node-type-analyse &
+        color color_green
+      .page-invite &,
+      .node-type-invite &
+        color color_blue
+      .page-agenda &,
+      .node-type-agenda &
+        color color_orange
+      .page-focus &,
+      .node-type-focus &
+        color color_purple
+      .page-chroniques &,
+      .node-type-chroniques &
+        color color_sepia
+      .page-ensemble &,
+      .node-type-ensemble &
+        color color_yellow
+      .page-une-journee-avec &,
+      .node-type-une-journee-avec &
+        color color_red
     p
       color #666
   strong
