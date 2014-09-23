@@ -202,4 +202,10 @@ Faire un flush des caches via les admin respectives.
 
 # Livraison du 23 Septembre 2014
 --------------------------------
-drush iris.onera.envol fr envol_config -yv
+-> Correctif url des node teaser
+-> Suppression de l'appel au visuel sur les affichages détaillés des actus et de agenda
+-> Activation du module IMCE
+drush iris.onera.envol cc all -yv
+Dans l'admin vider les caches du site également.
+
+

@@ -9,10 +9,6 @@
 ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <div class="wrapper-image">
-    <?php print render($content['field_image_actu']);?>
-  </div>
-
   <div class="wrapper-info">
     <div class="wrapper-print">
       <?php print render($content['print_links']);?>

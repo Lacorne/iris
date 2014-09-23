@@ -1,3 +1,4 @@
+
 <?php
 /**
  * @file
@@ -8,10 +9,6 @@
  */
 ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
-  <div class="wrapper-image">
-    <?php print render($content['field_visuel']);?>
-  </div>
 
   <div class="wrapper-info">
     <div class="wrapper-print">
