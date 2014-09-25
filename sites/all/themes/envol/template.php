@@ -806,7 +806,9 @@ function envol_url_outbound_alter(&$path, &$options, $original_path) {
   $findme   = 'printmail';
   $pos = strpos($path, $findme);
   if ($pos !== false) {
-      $path = 'mailto:intranet@onera.fr';
-      $options['external'] = TRUE;
+    $nid = explode("/", $original_path);
+    $node = node_load($nid[1]);
+    $path = 'mailto:intranet@onera.fr?subject=Réagir à l\'article ['. $node->title . ']&body=Réaction à l\'article: http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    $options['external'] = TRUE;
   }
 }
