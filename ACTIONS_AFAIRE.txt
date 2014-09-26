@@ -208,4 +208,21 @@ Faire un flush des caches via les admin respectives.
 drush iris.onera.envol cc all -yv
 Dans l'admin vider les caches du site également.
 
+# Livraison du 26 Septembre 2014
+--------------------------------
+-> Ajout de styles dans le wysiwyg
+-> Ajout du survol des pictos "print"
+-> Activation du module "Search" et "Custom search"
+
+Commande : drush iris.onera.envol fr envol_config -yv
+Vider les caches via l'administration.
+
+Activer les droits suivants pour les users anonymes:
+Custom Search: Use custom search
+Search: Utiliser la recherche
+
+Contexte sur Envol:
+Pour "Commun", dans le contexte "common_blocks"
+Ajouter le block "Formulaire de recherche" du module "SEARCH" dans la zone "header" (impérativement!)
+
 

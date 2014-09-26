@@ -21,7 +21,7 @@
  */
 ?>
 <?php if ($search_results) : ?>
-  <h2>Résultats de recherche</h2>
+  <h2>Résultats de recherche toto</h2>
   <?php if (isset($filter) && $filter != '' && $filter_position == 'above') : ?>
     <div class="custom-search-filter">
       <?php print $filter; ?>
