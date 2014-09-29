@@ -24,7 +24,7 @@
 
   <div class="wrapper-pager">
     <?php print render($content['flippy_pager']);?>
-    <a href="/agenda" class="bigbutton orange">Retour à l'agenda</a>
+    <a href="/envol/agenda" class="bigbutton orange">Retour à l'agenda</a>
   </div>
 
   <?php print render($content['links']); ?>

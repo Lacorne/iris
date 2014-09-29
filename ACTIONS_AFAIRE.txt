@@ -226,3 +226,19 @@ Pour "Commun", dans le contexte "common_blocks"
 Ajouter le block "Formulaire de recherche" du module "SEARCH" dans la zone "header" (impérativement!)
 
 
+# Livraison du 29 Septembre 2014
+--------------------------------
+-> Theming page de resultat de recherche sur envol
+-> correctif lien sur détail lefil et aganda
+-> suppression du lien IRIS sur le site iris.
+
+Commandes à faire:
+envol:
+flush des caches (via l'admin)
+
+iris:
+drush iris.onera.accueil fr iris_config -yv
+drush iris.onera.accueil fr iris_views -yv
+puis flush des caches (via l'admin)
+
+

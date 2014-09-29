@@ -45,16 +45,22 @@
  * @see template_preprocess_custom_search_result()
  */
 ?>
-<li>
-  <?php if ($info) : ?>
-    <p class="search-info"><?php print $info; ?></p>
-  <?php endif; ?>
-  <h3 class="title">
-    <a href="<?php print $url; ?>"><?php print $title; ?></a>
-  </h3>
-  <div class="search-snippet-info">
-    <?php if ($snippet) : ?>
+<li class="row-search-result">
+  <article>
+
+    <a href="<?php print $url; ?>" class="left mr20 link-img">
+      <?php if (!empty($variables['content']['vignette_232'])) : ?>
+        <div class="search-vignette"><?php print render($variables['content']['vignette_232']); ?></div>
+      <?php endif; ?>
+    </a>
+    <div class="wrapper-info">
+      <?php if (!empty($variables['content']['thematique'])) : ?>
+        <div class="field-name-field-thematique"><?php print render($variables['content']['thematique']); ?></div>
+      <?php endif; ?>
+      <h2 class="node-title"><a href="<?php print $url; ?>"><?php print $title; ?></a></h2>
       <p class="search-snippet"><?php print $snippet; ?></p>
-    <?php endif; ?>
-  </div>
+      <a href="<?php print $url; ?>" class="readmore">Suite</a>
+    </div>
+
+  </article>
 </li>

@@ -378,6 +378,44 @@ function envol_preprocess_node(&$variables, $hook) {
 }
 
 /**
+ * Override or insert variables into the search results.
+ *
+ */
+/*
+function envol_preprocess_search_results(&$variables) {
+}
+*/
+/**
+ * Override or insert variables into the search result.
+ *
+ */
+function envol_preprocess_search_result(&$variables) {
+
+  $display = array(
+    'label' => 'hidden',
+    'type' => 'image',
+    'settings' => array(
+      'size' => '232',
+      'image_style' => '232',
+    ),
+  );
+
+  if (isset($variables['result']['node']->field_image_actu) && !empty($variables['result']['node']->field_image_actu)) {
+    $variables['content']['vignette_' . $display['settings']['size']] = field_view_field('node', $variables['result']['node'], 'field_image_actu', $display);
+  }
+  if (isset($variables['result']['node']->field_visuel) && !empty($variables['result']['node']->field_visuel)) {
+    $variables['content']['vignette_' . $display['settings']['size']] = field_view_field('node', $variables['result']['node'], 'field_visuel', $display);
+  }
+  if (isset($variables['result']['node']->field_image) && !empty($variables['result']['node']->field_image)) {
+    $variables['content']['vignette_' . $display['settings']['size']] = field_view_field('node', $variables['result']['node'], 'field_image', $display);
+  }
+  if (isset($variables['result']['node']->field_thematique) && !empty($variables['result']['node']->field_thematique)) {
+    $variables['content']['thematique'] = $variables['result']['node']->field_thematique['und'][0]['taxonomy_term']->name;
+  }
+
+}
+
+/**
  * Override or insert variables into the comment templates.
  *
  * @param $variables

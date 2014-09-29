@@ -85,6 +85,7 @@ function iris_config_ckeditor_profile_defaults() {
             'path' => '%editor_path%plugins/tableresize/',
             'buttons' => FALSE,
             'default' => 't',
+            'active' => 0,
           ),
         ),
       ),
