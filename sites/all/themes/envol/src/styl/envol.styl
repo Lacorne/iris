@@ -38,9 +38,11 @@
 // Redactionnel
 sup
   vertical-align super
+  line-height 0
   font-size 10px
 sub
   vertical-align sub
+  line-height 0
   font-size 10px
 .img-right
   float right
@@ -62,7 +64,7 @@ sub
   color #000
   font-size 11px
 td
-  border solid 1px #666
+  border-color #666
 
 // Title
 .view-mode-full
@@ -92,6 +94,16 @@ img
   clearfix()
 
 // Generic Elements
+article
+  ol,
+  ul
+    padding-left 40px
+    margin 15px 0
+  ol
+    list-style decimal
+  ul
+    list-style disc
+
 article,
 .wrapper-info
   position relative

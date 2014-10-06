@@ -111,17 +111,22 @@
       <aside class="sidebars">
         <?php print $sidebar_first; ?>
         <section class="region region-sidebar-second column sidebar">
+
           <div class="envol-last-news">
             <h2 class="dist-title-news">Envol</h2>
             <?php print render($page['content']['envol']); ?>
           </div>
-          <div class="envol-agenda">
-            <h2>Agenda</h2>
-            <?php print render($page['content']['agenda']); ?>
-            <div class="view-footer">
-              <a href="http://iris.onera:8086/envol/agenda" class="bigbutton blue">Tout l'agenda</a>
+
+          <?php if (isset($page['content']['agenda'])): ?>
+            <div class="envol-agenda">
+              <h2>Agenda</h2>
+              <?php print render($page['content']['agenda']); ?>
+              <div class="view-footer">
+                <a href="http://iris.onera:8086/envol/agenda" class="bigbutton blue">Tout l'agenda</a>
+              </div>
             </div>
-          </div>
+          <?php endif; ?>
+          
         </section>
         <?php print $sidebar_second; ?>
       </aside>

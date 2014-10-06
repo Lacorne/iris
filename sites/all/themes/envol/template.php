@@ -267,9 +267,16 @@ function envol_preprocess_page(&$variables, $hook) {
     $variables['theme_hook_suggestions'][] = 'page__' . $node->type;
   }
 
-  //Set a variable to return to Iris
+  // Set a variable to return to Iris
   ($base_url == 'http://iris.onera') ? $back_to_iris = $base_url : $back_to_iris = 'http://iris.local';
   $variables['page']['back_to_iris'] = $back_to_iris;
+
+  //Set title when we are on lefil/arg(1)
+  if (arg(0) == 'lefil') {
+    if (arg(1) !== null) {
+      drupal_set_title(ucfirst(str_replace('-', ' ', arg(1))));
+    }
+  }
 
 }
 

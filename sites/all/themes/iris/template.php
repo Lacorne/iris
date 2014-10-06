@@ -1,4 +1,3 @@
-
 <?php
 /**
  * @file
@@ -264,10 +263,9 @@ function iris_preprocess_page(&$variables, $hook) {
         $agenda = drupal_http_request($base_url . '/envol/dist/agenda?ajax=1');
         break;
     }
-    //krumo($envol);
     if (isset($lefil) && !empty($lefil)) $variables['page']['content']['lefil'] = $lefil->data;
-    if (isset($envol) && !empty($lefil)) $variables['page']['content']['envol'] = $envol->data;
-    if (isset($agenda) && !empty($lefil)) $variables['page']['content']['agenda'] = $agenda->data;
+    if (isset($envol) && !empty($envol)) $variables['page']['content']['envol'] = $envol->data;
+    if (isset($agenda) && !empty($agenda) && strpos($agenda->data, 'pas de résultat') === false) $variables['page']['content']['agenda'] = $agenda->data;
   }
 
   //krumo($variables['page']);

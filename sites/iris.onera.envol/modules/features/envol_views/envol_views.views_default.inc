@@ -261,6 +261,18 @@ function envol_views_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Filtre contextuel: Contenu : Thesaurus (taxonomy_vocabulary_8:delta) */
+  $handler->display->display_options['arguments']['delta']['id'] = 'delta';
+  $handler->display->display_options['arguments']['delta']['table'] = 'field_data_taxonomy_vocabulary_8';
+  $handler->display->display_options['arguments']['delta']['field'] = 'delta';
+  $handler->display->display_options['arguments']['delta']['exception']['title'] = 'Tout';
+  $handler->display->display_options['arguments']['delta']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['delta']['title'] = '%1';
+  $handler->display->display_options['arguments']['delta']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['delta']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['delta']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['delta']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Critère de filtrage: Contenu : Publié */
@@ -551,6 +563,13 @@ function envol_views_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'teaser_short';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* Comportement en l'absence de résultats: Global : Texte non filtré */
+  $handler->display->display_options['empty']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area_text_custom']['content'] = 'pas de résultat';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Critère de filtrage: Contenu : Publié */
@@ -711,6 +730,8 @@ function envol_views_views_default_views() {
     t('◄'),
     t('►'),
     t('►►'),
+    t('Tout'),
+    t('%1'),
     t('Le fil pour Iris'),
     t('<a href="http://iris.onera:8086/envol/lefil" class="bigbutton blue">Toute l\'actualité</a>'),
     t('First News by Sticky'),
@@ -724,6 +745,7 @@ function envol_views_views_default_views() {
     t('Agenda sur la Home'),
     t('Agenda pour Iris'),
     t('Agenda sur la home d\'Iris'),
+    t('pas de résultat'),
     t('Derniers Articles pour Iris'),
     t('Envol'),
     t('Remontée des derniers articles sur Iris (Analyse, L’invité, Focus, Ensemble, Une journée avec, Chroniques)'),

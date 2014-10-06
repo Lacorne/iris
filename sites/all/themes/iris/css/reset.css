@@ -1,6 +1,6 @@
-/*! Onera_iris_project 18-09-2014|17:46:16 */
+/*! Onera_iris_project 06-10-2014|15:50:40 */
 
-/* line 232 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+/* line 286 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
 
 /* line 2 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\node_modules\grunt-contrib-stylus\node_modules\stylus\lib\functions\index.styl */
 
@@ -207,14 +207,13 @@ table {
   border-spacing: 0;
 }
 
-/* line 63 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+/* line 64 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
 caption,
 tbody,
 tfoot,
 thead,
 tr,
-th,
-td {
+th {
   margin: 0;
   padding: 0;
   border: 0;
@@ -224,7 +223,7 @@ td {
   background: transparent;
 }
 
-/* line 66 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
+/* line 67 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\reset.styl */
 *:focus {
   outline: 0;
 }

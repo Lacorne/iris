@@ -241,4 +241,47 @@ drush iris.onera.accueil fr iris_config -yv
 drush iris.onera.accueil fr iris_views -yv
 puis flush des caches (via l'admin)
 
+# Livraison du 06 Octobre 2014
+------------------------------
+Iris:
+-----
+Ajouter le logo ONERA dans le bandeau (cf. "Home-Iris-logo-onera.jpg")
+-> Fait.
+
+Masquer l'agenda sur la home Iris et dans le menu supérieur Envol
+-> Fait.
+
+Augmenter de 100px la largeur de la zone centrale (Le Fil) de Iris
+
+Ouvrir l'onglet "Outils" par défaut dans le bloc de gauche de la home Iris
+-> Déjà expliqué, mais voici la marche à suivre:
+  - aller dans admin/structure/block/manage/block
+  - choisir le bloc "Outils, regroupement de plusieurs type de lien", le modifier en choisissant "Collapsible, collapsed by default."
+    dans les options "COLLCAPSIBLE"
+
+
+Il faudrait que les liens au sein du chapô des articles aient le même style que dans le corps du texte.
+-> Fait.
+
+Les <sup> ou <sub> ne semblent pas être acceptés dans le chapô (en back ça passe mais en front ça ressort en normal)
+-> Fait.
+
+
+Envol:
+------
+Quant à Focus...je te tiens au jus dès que j'ai l'info.
+-> Apparemment plus d'actualité.
+
+Dans les contenus, prendre en compte le border '0' ou '1' pour les tableaux
+-> Fait.
+
+Dans les contenus, les puces (des listes) apparaissent bien en back mais pas en front
+-> Fait.
+
+Quand on a pas de collaborateur à mettre dans le bloc "Cet article a été réalisé en collaboration avec", comme pour l'invité ou le seul collabo, c'est justement l'invité lui-même, il faudrait que le bloc ne soit plus visible
+-> Fait.
+
+Mot du président
+-> Fait, utiliser le lien "lefil/mot-du-president"
+
 

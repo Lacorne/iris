@@ -64,11 +64,15 @@
       <?php print render($content['field_date']);?>
       <div class="wrapper-left-padding">
         <?php print render($content['body']);?>
-        <?php print render($content['field_auteur']);?>
+        <?php if (isset($content['field_auteur']) && !empty($content['field_auteur'])): ?>
+          <?php print render($content['field_auteur']);?>
+        <?php endif; ?>
+        <?php if (isset($content['field_collaborateurs']) && !empty($content['field_collaborateurs'])): ?>
         <div class="wrapper-collaborateurs clear">
           <p class="first">Cet article a été réalisé en collaboration avec</p>
           <?php print render($content['field_collaborateurs']);?>
         </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
