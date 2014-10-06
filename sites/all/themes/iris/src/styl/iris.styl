@@ -68,6 +68,16 @@ td
   border-color #666
 
 // Generic Elements
+article
+  ol,
+  ul
+    padding-left 40px
+    margin 15px 0
+  ol
+    list-style decimal
+  ul
+    list-style disc
+
 .page__title
   font-size 22px
   color #000
@@ -109,6 +119,57 @@ td
     background #535356 url('../images/icones-social.png') 0 0 no-repeat
     span
       absolute left -9999px
+
+// General
+body
+  font-family arial
+  text-rendering optimizeLegibility
+
+img
+  display block
+
+#content
+  h2,
+  h3
+    color #000
+    margin 0 0 15px
+    a
+      color #000
+  h2
+    font-size 15px
+  h3
+  font-size 12px
+  p
+    margin 15px 0
+  a
+    color #027ac6
+    text-decoration none
+
+// Taxonomy page
+.page-taxonomy
+  article
+    border-bottom solid 1px #ccc
+    margin-bottom 15px
+    padding-bottom 15px
+    img
+      padding 0 10px 10px 0
+    .field-type-taxonomy-term-reference
+      clear both
+    .links
+      float right
+      margin 0
+
+// Pager
+.item-list
+  .pager
+    li
+      padding 5px
+      margin 5px
+
+// Pages generales
+.field-name-body
+  .field-label
+    display none
 
 // Structure of home page
 .front

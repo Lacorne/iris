@@ -56,7 +56,6 @@
 
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
@@ -133,10 +132,10 @@
     <?php endif; ?>
 
   </div>
-
+  <!--
   <div class="wrapper-quizz">
-    <img src="<?php print $base_path . drupal_get_path('theme', 'iris'); ?>/images/demo22/iris-quizz.jpg" />
   </div>
+  -->
 
   <footer class="footer" id="footer" role="banner">
 
