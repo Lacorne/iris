@@ -243,6 +243,11 @@ puis flush des caches (via l'admin)
 
 # Livraison du 06 Octobre 2014
 ------------------------------
+Commandes:
+drush iris.onera.envol fr envol_views -yv
+
+Vider les caches dans chacunes des deux admin.
+
 Iris:
 -----
 Ajouter le logo ONERA dans le bandeau (cf. "Home-Iris-logo-onera.jpg")
