@@ -252,6 +252,7 @@ Masquer l'agenda sur la home Iris et dans le menu supérieur Envol
 -> Fait.
 
 Augmenter de 100px la largeur de la zone centrale (Le Fil) de Iris
+-> Plus tard
 
 Ouvrir l'onglet "Outils" par défaut dans le bloc de gauche de la home Iris
 -> Déjà expliqué, mais voici la marche à suivre:
@@ -264,6 +265,9 @@ Il faudrait que les liens au sein du chapô des articles aient le même style qu
 -> Fait.
 
 Les <sup> ou <sub> ne semblent pas être acceptés dans le chapô (en back ça passe mais en front ça ressort en normal)
+-> Fait.
+
+Gérer le theme de base
 -> Fait.
 
 
