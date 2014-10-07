@@ -67,6 +67,30 @@ sub
 td
   border-color #666
 
+// General
+body
+  font-family arial
+  text-rendering optimizeLegibility
+
+img
+  display block
+
+body:not(.front)
+  #content
+    h2,
+    h3
+      color #000
+      margin 0 0 15px
+      a
+        color #000
+    h2
+      font-size 15px
+    h3
+    font-size 12px
+    a
+      color #027ac6
+      text-decoration none
+
 // Generic Elements
 article
   ol,
@@ -88,8 +112,6 @@ article
 .field-name-field-chapo
   line-height 1.3em
   font-size 13px
-  p
-    margin 15px 0
   a
     color #027ac6
     text-decoration none
@@ -98,17 +120,19 @@ article
   clear both
   text-align center
 
-.bigbutton
-  display inline-block
-  box-sizing border-box
-  padding 5px 15px
-  font-weight bold
-  text-transform uppercase
-  text-decoration none
-  font-size 12px
-  &.blue
-    color #fff
-    background #46a4b8
+#content,
+.sidebars
+  .bigbutton
+    display inline-block
+    box-sizing border-box
+    padding 5px 15px
+    font-weight bold
+    text-transform uppercase
+    text-decoration none
+    font-size 12px
+    &.blue
+      color #fff
+      background #46a4b8
 
 .icone
   margin-left 1px
@@ -119,31 +143,6 @@ article
     background #535356 url('../images/icones-social.png') 0 0 no-repeat
     span
       absolute left -9999px
-
-// General
-body
-  font-family arial
-  text-rendering optimizeLegibility
-
-img
-  display block
-
-#content
-  h2,
-  h3
-    color #000
-    margin 0 0 15px
-    a
-      color #000
-  h2
-    font-size 15px
-  h3
-  font-size 12px
-  p
-    margin 15px 0
-  a
-    color #027ac6
-    text-decoration none
 
 // Taxonomy page
 .page-taxonomy

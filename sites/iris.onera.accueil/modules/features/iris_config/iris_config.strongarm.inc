@@ -429,7 +429,7 @@ function iris_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_slogan';
-  $strongarm->value = 'Intranet Onera';
+  $strongarm->value = 'Intranet ONERA';
   $export['site_slogan'] = $strongarm;
 
   $strongarm = new stdClass();

@@ -68,12 +68,6 @@ function iris_contexts_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-6',
         ),
-        'block-6' => array(
-          'module' => 'block',
-          'delta' => '6',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
         'iris_blocks-footer_links' => array(
           'module' => 'iris_blocks',
           'delta' => 'footer_links',
