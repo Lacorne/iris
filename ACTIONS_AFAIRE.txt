@@ -294,3 +294,17 @@ Mot du président
 -> Fait, utiliser le lien "lefil/mot-du-president"
 
 
+# Livraison du 07 Octobre 2014
+------------------------------
+-> Correctifs css sur envol et iris
+-> ajout de parole d'experts sur Focus
+
+Commandes:
+----------
+drush iris.onera.accueil fr-all -yv
+drush iris.onera.accueil cc all -yv
+
+drush iris.onera.envol fr envol_config -yv
+
+Flush des caches via l'admin sur les 2 sites.
+
