@@ -1681,11 +1681,17 @@ function envol_config_strongarm() {
       'teaser_short' => array(
         'custom_settings' => TRUE,
       ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
           'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '9',
         ),
       ),
       'display' => array(),

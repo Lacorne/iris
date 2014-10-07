@@ -360,8 +360,8 @@ function envol_preprocess_node(&$variables, $hook) {
   $node_url_noenvol = explode('/envol', $variables['node_url']);
   (count($node_url_noenvol) > 1) ? $variables['node_url'] = $node_url_noenvol[1] : $variables['node_url'] = $node_url_noenvol[0];
 
-  // Check if analyse, so we create a array of parole experts in content
-  if($variables['type'] == 'analyse'){
+  // Check if analyse or focus, so we create a array of parole experts in content
+  if(in_array($variables['type'], array('analyse', 'focus'))){
 
     if (isset($variables['content']['field_paroles_experts'])) {
 

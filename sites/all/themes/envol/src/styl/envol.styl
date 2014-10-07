@@ -94,16 +94,6 @@ img
   clearfix()
 
 // Generic Elements
-article
-  ol,
-  ul
-    padding-left 40px
-    margin 15px 0
-  ol
-    list-style decimal
-  ul
-    list-style disc
-
 article,
 .wrapper-info
   position relative
@@ -127,7 +117,6 @@ article,
       h1
         @extend .page__title
         margin-top 10px
-        margin-left -3px
         letter-spacing -1px
 .node-type-analyse,
 .node-type-invite,
@@ -178,6 +167,14 @@ article,
 .field-name-field-chapo
   line-height 1.3em
   font-size 13px
+  ol,
+  ul
+    padding-left 40px
+    margin 15px 0
+  ol
+    list-style decimal
+  ul
+    list-style disc
   p
     margin 15px 0
   a
@@ -335,12 +332,24 @@ article,
   &.green
     color #fff
     background color_green
+  &.purple
+    color #fff
+    background color_purple
   &.magenta
     color #fff
     background color_magenta
   &.orange
     color #fff
     background color_orange
+  &.yellow
+    color #fff
+    background color_yellow
+  &.red
+    color #fff
+    background color_red
+  &.sepia
+    color #fff
+    background color_sepia
 
 // Tempo Element for images in chapo
 .field-name-field-chapo

@@ -10,7 +10,7 @@ stylesheets[all][] = css/envol.css
 
 scripts[] = js/vendors/jquery.browser.min.js
 scripts[] = js/front.js
-scripts[] = js/analyse.js
+scripts[] = js/showexperts.js
 
 regions[header]         = Header
 regions[navigation]     = Navigation bar
