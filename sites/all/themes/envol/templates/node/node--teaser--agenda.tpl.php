@@ -10,7 +10,7 @@
 ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <a href="<?php print $node_url; ?>" class="left mr20"><?php print render($content['field_visuel']); ?></a>
+  <a href="<?php print $base_url . $node_url; ?>" class="left mr20"><?php print render($content['field_visuel']); ?></a>
   <div class="wrapper-info">
     <?php print render($content['field_date_agenda']); ?>
     <?php print render($content['field_thematique']); ?>
