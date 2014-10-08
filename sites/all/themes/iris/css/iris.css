@@ -1,4 +1,4 @@
-/*! Onera_iris_project 07-10-2014|13:18:28 */
+/*! Onera_iris_project 08-10-2014|16:47:11 */
 
 /* line 346 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\src\styl\iris.styl */
 
@@ -271,11 +271,11 @@ body:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 140px;
-  height: 35px;
+  width: 237px;
+  height: 66px;
   position: absolute;
-  top: 44px;
-  right: 0;
+  top: 53px;
+  left: -51px;
   background: url("../images/logo-onera-blanc.png") 0 0 no-repeat;
   -webkit-background-size: 100% auto;
   -moz-background-size: 100% auto;
@@ -311,8 +311,9 @@ body:after {
   box-sizing: border-box;
   position: absolute;
   top: 55px;
-  width: 134px;
-  height: 54px;
+  left: 207px;
+  width: 65px;
+  height: 30px;
 }
 
 /* line 50 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\lib\styl\header.styl */
@@ -324,10 +325,10 @@ body:after {
 /* line 53 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\lib\styl\header.styl */
 #header .wrapper-content-header .header__site-slogan {
   position: absolute;
-  top: 33px;
-  left: 82px;
+  top: 58px;
+  left: 280px;
   color: #fff;
-  font-size: 20px;
+  font-size: 27px;
 }
 
 /* line 59 : c:\wamp\www\Sandbox\onera\iris\sites\all\themes\iris\lib\styl\header.styl */
