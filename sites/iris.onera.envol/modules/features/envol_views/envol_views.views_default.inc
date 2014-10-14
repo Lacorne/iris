@@ -262,17 +262,6 @@ function envol_views_views_default_views() {
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Filtre contextuel: Contenu : Thesaurus (taxonomy_vocabulary_8:delta) */
-  $handler->display->display_options['arguments']['delta']['id'] = 'delta';
-  $handler->display->display_options['arguments']['delta']['table'] = 'field_data_taxonomy_vocabulary_8';
-  $handler->display->display_options['arguments']['delta']['field'] = 'delta';
-  $handler->display->display_options['arguments']['delta']['exception']['title'] = 'Tout';
-  $handler->display->display_options['arguments']['delta']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['delta']['title'] = '%1';
-  $handler->display->display_options['arguments']['delta']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['delta']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['delta']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['delta']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Critère de filtrage: Contenu : Publié */
@@ -313,7 +302,7 @@ function envol_views_views_default_views() {
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<a href="http://iris.onera:8086/envol/lefil" class="bigbutton blue">Toute l\'actualité</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="http://iris.onera/envol/lefil" class="bigbutton blue">Toute l\'actualité</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Critère de tri: Contenu : Date de publication */
@@ -700,6 +689,68 @@ function envol_views_views_default_views() {
   $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['filters']['promote']['group'] = 1;
   $handler->display->display_options['block_description'] = 'First news by STICKY (HOME ENVOL)';
+
+  /* Display: Le mot du président */
+  $handler = $view->new_display('page', 'Le mot du président', 'page_mot_du_president');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Le mot du président';
+  $handler->display->display_options['display_description'] = 'Le mot du président';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '◄◄';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '◄';
+  $handler->display->display_options['pager']['options']['tags']['next'] = '►';
+  $handler->display->display_options['pager']['options']['tags']['last'] = '►►';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Critère de tri: Contenu : Date de publication */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'story' => 'story',
+    'feed' => 'feed',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Critère de filtrage: Contenu : Thesaurus (taxonomy_vocabulary_8) */
+  $handler->display->display_options['filters']['taxonomy_vocabulary_8_tid']['id'] = 'taxonomy_vocabulary_8_tid';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_8_tid']['table'] = 'field_data_taxonomy_vocabulary_8';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_8_tid']['field'] = 'taxonomy_vocabulary_8_tid';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_8_tid']['value'] = array(
+    6 => '6',
+  );
+  $handler->display->display_options['filters']['taxonomy_vocabulary_8_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_8_tid']['vocabulary'] = 'vocabulary_8';
+  $handler->display->display_options['path'] = 'lefil/mot-du-president';
   $translatables['listescontenus'] = array(
     t('Master'),
     t('--aucun--'),
@@ -730,10 +781,8 @@ function envol_views_views_default_views() {
     t('◄'),
     t('►'),
     t('►►'),
-    t('Tout'),
-    t('%1'),
     t('Le fil pour Iris'),
-    t('<a href="http://iris.onera:8086/envol/lefil" class="bigbutton blue">Toute l\'actualité</a>'),
+    t('<a href="http://iris.onera/envol/lefil" class="bigbutton blue">Toute l\'actualité</a>'),
     t('First News by Sticky'),
     t('L\'actualité la plus récente des epinglées, affichée en 1'),
     t('First news by Date'),
@@ -751,6 +800,7 @@ function envol_views_views_default_views() {
     t('Remontée des derniers articles sur Iris (Analyse, L’invité, Focus, Ensemble, Une journée avec, Chroniques)'),
     t('First Article Home by Sticky (ENVOL)'),
     t('First news by STICKY (HOME ENVOL)'),
+    t('Le mot du président'),
   );
   $export['listescontenus'] = $view;
 
