@@ -65,9 +65,9 @@ function envol_contexts_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
-        'nodeblock-16' => array(
+        'nodeblock-1460' => array(
           'module' => 'nodeblock',
-          'delta' => '16',
+          'delta' => '1460',
           'region' => 'sidebar_second',
           'weight' => '-9',
         ),
@@ -77,17 +77,11 @@ function envol_contexts_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-8',
         ),
-        'bean-lessentiel-pour-battlelab' => array(
-          'module' => 'bean',
-          'delta' => 'lessentiel-pour-battlelab',
-          'region' => 'sidebar_second',
-          'weight' => '-7',
-        ),
         'bean--cp---pour-battlelab' => array(
           'module' => 'bean',
           'delta' => '-cp---pour-battlelab',
           'region' => 'sidebar_second',
-          'weight' => '-6',
+          'weight' => '-7',
         ),
       ),
     ),
@@ -121,6 +115,12 @@ function envol_contexts_context_default_contexts() {
           'delta' => 'rubriques-other_chroniques_home',
           'region' => 'sidebar_second',
           'weight' => '-10',
+        ),
+        'bean---esp----test' => array(
+          'module' => 'bean',
+          'delta' => '--esp----test',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
         ),
       ),
     ),
@@ -215,6 +215,12 @@ function envol_contexts_context_default_contexts() {
           'delta' => 'header_links',
           'region' => 'header',
           'weight' => '-10',
+        ),
+        'search-form' => array(
+          'module' => 'search',
+          'delta' => 'form',
+          'region' => 'header',
+          'weight' => '-9',
         ),
         'menu-menu-menu-haut' => array(
           'module' => 'menu',
@@ -465,6 +471,18 @@ function envol_contexts_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
+        'bean--octobre-2014---ensemble-le-cont' => array(
+          'module' => 'bean',
+          'delta' => '-octobre-2014---ensemble-le-cont',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+        'bean--octobre-2014---ensemble-les-enj' => array(
+          'module' => 'bean',
+          'delta' => '-octobre-2014---ensemble-les-enj',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
+        ),
       ),
     ),
   );
@@ -497,6 +515,18 @@ function envol_contexts_context_default_contexts() {
           'delta' => 'rubriques-other_focus_home',
           'region' => 'sidebar_second',
           'weight' => '-10',
+        ),
+        'bean--octobre-2014---focus-le-context' => array(
+          'module' => 'bean',
+          'delta' => '-octobre-2014---focus-le-context',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+        'bean--octobre-2014---focus-les-enjeux' => array(
+          'module' => 'bean',
+          'delta' => '-octobre-2014---focus-les-enjeux',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
         ),
       ),
     ),
@@ -576,9 +606,9 @@ function envol_contexts_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
-        'nodeblock-17' => array(
-          'module' => 'nodeblock',
-          'delta' => '17',
+        'bean--linvite-octobre-2014-pour-en-sa' => array(
+          'module' => 'bean',
+          'delta' => '-linvite-octobre-2014-pour-en-sa',
           'region' => 'sidebar_second',
           'weight' => '-9',
         ),
@@ -592,6 +622,279 @@ function envol_contexts_context_default_contexts() {
   t('Blocks communs aux pages Invité');
   t('Pages Invité');
   $export['invite'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'octobre_2014_analyse-teledetection';
+  $context->description = 'Octobre 2014 - Analyse - Télédétection';
+  $context->tag = 'Pages Analyse';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'analyse/les-nouveaux-horizons-de-la-teledetection' => 'analyse/les-nouveaux-horizons-de-la-teledetection',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'nodeblock-1460' => array(
+          'module' => 'nodeblock',
+          'delta' => '1460',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'bean-le-contexte' => array(
+          'module' => 'bean',
+          'delta' => 'le-contexte',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+        'bean--ej---pour-battlelab' => array(
+          'module' => 'bean',
+          'delta' => '-ej---pour-battlelab',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
+        ),
+        'bean--cp---pour-battlelab' => array(
+          'module' => 'bean',
+          'delta' => '-cp---pour-battlelab',
+          'region' => 'sidebar_second',
+          'weight' => '-7',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Octobre 2014 - Analyse - Télédétection');
+  t('Pages Analyse');
+  $export['octobre_2014_analyse-teledetection'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'octobre_2014_chroniques_rias';
+  $context->description = 'Octobre 2014 - Chroniques - RIAS';
+  $context->tag = 'Pages Chroniques';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'chroniques/1988-le-radar-rias-est-operationnel' => 'chroniques/1988-le-radar-rias-est-operationnel',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean---esp----test' => array(
+          'module' => 'bean',
+          'delta' => '--esp----test',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'bean--chroniques-octobre-2014-cette-a' => array(
+          'module' => 'bean',
+          'delta' => '-chroniques-octobre-2014-cette-a',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Octobre 2014 - Chroniques - RIAS');
+  t('Pages Chroniques');
+  $export['octobre_2014_chroniques_rias'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'octobre_2014_ensemble_contrats_conquete';
+  $context->description = 'Octobre 2014 - Ensemble - conquête nouveaux clients';
+  $context->tag = 'Pages Ensemble';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'ensemble/a-la-conquete-de-nouveaux-clients' => 'ensemble/a-la-conquete-de-nouveaux-clients',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean--octobre-2014---ensemble-le-cont' => array(
+          'module' => 'bean',
+          'delta' => '-octobre-2014---ensemble-le-cont',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'bean--octobre-2014---ensemble-les-enj' => array(
+          'module' => 'bean',
+          'delta' => '-octobre-2014---ensemble-les-enj',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Octobre 2014 - Ensemble - conquête nouveaux clients');
+  t('Pages Ensemble');
+  $export['octobre_2014_ensemble_contrats_conquete'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'octobre_2014_focus_investir';
+  $context->description = 'Octobre 2014 - Focus - Investir';
+  $context->tag = 'Pages Focus';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'focus/investir-pour-preparer-avenir' => 'focus/investir-pour-preparer-avenir',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean--octobre-2014---focus-le-context' => array(
+          'module' => 'bean',
+          'delta' => '-octobre-2014---focus-le-context',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'bean--octobre-2014---focus-les-enjeux' => array(
+          'module' => 'bean',
+          'delta' => '-octobre-2014---focus-les-enjeux',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Octobre 2014 - Focus - Investir');
+  t('Pages Focus');
+  $export['octobre_2014_focus_investir'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'octobre_2014_invite_bruno-sainjon';
+  $context->description = 'Octobre 2014 - L\'invité - Bruno Sainjon';
+  $context->tag = 'Pages Invité';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'invite/edito-du-president-octobre-2014' => 'invite/edito-du-president-octobre-2014',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean--linvite-octobre-2014-pour-en-sa' => array(
+          'module' => 'bean',
+          'delta' => '-linvite-octobre-2014-pour-en-sa',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Octobre 2014 - L\'invité - Bruno Sainjon');
+  t('Pages Invité');
+  $export['octobre_2014_invite_bruno-sainjon'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'octobre_2014_lefil_mem';
+  $context->description = 'Octobre 2014 - Le Fil - MEM';
+  $context->tag = 'Pages le fil';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'lefil/MEM-proteger-les-satellites-des-orages-magnetiques' => 'lefil/MEM-proteger-les-satellites-des-orages-magnetiques',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean--octobre-2014---le-fil-mem---pro' => array(
+          'module' => 'bean',
+          'delta' => '-octobre-2014---le-fil-mem---pro',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Octobre 2014 - Le Fil - MEM');
+  t('Pages le fil');
+  $export['octobre_2014_lefil_mem'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'octobre_2014_une_journee_avec_nightglow';
+  $context->description = 'Octobre 2014 - Une journée avec - Nightglow';
+  $context->tag = 'Pages Une journée avec';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'une-journee-avec/nightglow' => 'une-journee-avec/nightglow',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean--une-journee-avec-octobre-2014-l' => array(
+          'module' => 'bean',
+          'delta' => '-une-journee-avec-octobre-2014-l',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'bean--une-journee-avec-octobre-2014-0' => array(
+          'module' => 'bean',
+          'delta' => '-une-journee-avec-octobre-2014-0',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Octobre 2014 - Une journée avec - Nightglow');
+  t('Pages Une journée avec');
+  $export['octobre_2014_une_journee_avec_nightglow'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
@@ -614,6 +917,18 @@ function envol_contexts_context_default_contexts() {
           'delta' => 'f9ea6b484a15f591cdfdf0b114940810',
           'region' => 'sidebar_second',
           'weight' => '-10',
+        ),
+        'bean--une-journee-avec-octobre-2014-l' => array(
+          'module' => 'bean',
+          'delta' => '-une-journee-avec-octobre-2014-l',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+        'bean--une-journee-avec-octobre-2014-0' => array(
+          'module' => 'bean',
+          'delta' => '-une-journee-avec-octobre-2014-0',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
         ),
       ),
     ),

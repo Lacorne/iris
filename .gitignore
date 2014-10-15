@@ -7,4 +7,8 @@
 
 sites/all/themes/iris/node_modules
 sites/all/themes/envol/node_modules
+sites/iris.onera.envol/files
+sites/iris.onera.envol/tmp
+sites/iris.onera.accueil/files
+sites/iris.onera.accueil/tmp
 sites/sites.php

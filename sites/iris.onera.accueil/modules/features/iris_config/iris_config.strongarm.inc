@@ -36,7 +36,7 @@ function iris_config_strongarm() {
     'block-system-main' => '1',
     'block-views-une2-block' => '1',
     'block-views-une2-block-1' => '1',
-    'block-block-8' => '3',
+    'block-block-8' => '2',
     'block-block-19' => '1',
     'block-views-archives-block-1' => '1',
     'block-block-21' => '3',
@@ -429,7 +429,7 @@ function iris_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_slogan';
-  $strongarm->value = 'L\'intranet de l\'ONERA';
+  $strongarm->value = 'L\'INTRANET DE L\'ONERA';
   $export['site_slogan'] = $strongarm;
 
   $strongarm = new stdClass();

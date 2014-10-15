@@ -26,7 +26,7 @@ function iris_config_node_info() {
       'base' => 'node_content',
       'description' => t('Liens vers des articles des intranets de centre'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titre'),
       'help' => '',
     ),
     'page2' => array(
@@ -34,7 +34,7 @@ function iris_config_node_info() {
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titre'),
       'help' => '',
     ),
     'story' => array(

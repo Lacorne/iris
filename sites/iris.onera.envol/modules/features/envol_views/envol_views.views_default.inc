@@ -746,10 +746,11 @@ function envol_views_views_default_views() {
   $handler->display->display_options['filters']['taxonomy_vocabulary_8_tid']['table'] = 'field_data_taxonomy_vocabulary_8';
   $handler->display->display_options['filters']['taxonomy_vocabulary_8_tid']['field'] = 'taxonomy_vocabulary_8_tid';
   $handler->display->display_options['filters']['taxonomy_vocabulary_8_tid']['value'] = array(
-    6 => '6',
+    57 => '57',
   );
   $handler->display->display_options['filters']['taxonomy_vocabulary_8_tid']['type'] = 'select';
   $handler->display->display_options['filters']['taxonomy_vocabulary_8_tid']['vocabulary'] = 'vocabulary_8';
+  $handler->display->display_options['filters']['taxonomy_vocabulary_8_tid']['hierarchy'] = 1;
   $handler->display->display_options['path'] = 'lefil/mot-du-president';
   $translatables['listescontenus'] = array(
     t('Master'),

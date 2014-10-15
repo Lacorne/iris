@@ -2003,7 +2003,7 @@ function envol_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'file_temporary_path';
-  $strongarm->value = 'c:/wamp/tmp';
+  $strongarm->value = 'sites/iris.onera.envol/tmp';
   $export['file_temporary_path'] = $strongarm;
 
   $strongarm = new stdClass();
