@@ -314,7 +314,22 @@ function envol_process_maintenance_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
+
+function _nbJours($debut, $fin, $limit) {
+  $nbSecondes= 60*60*24;
+  $debut_ts = $debut;
+  $fin_ts = $fin;
+  $diff = $fin_ts - $debut_ts;
+  if (round($diff / $nbSecondes) + 1 <= $limit) {
+    return true;
+  } else { return false; }
+}
+
 function envol_preprocess_node(&$variables, $hook) {
+
+  // Add diff between created date and now
+  $variables['diffcreatednow'] = _nbJours($variables['created'], strtotime(date('Y-m-d')), 7);
+
   // Add $title_type variable
   $listoftypes = array('invite', 'analyse', 'une_journee_avec', 'focus', 'chroniques', 'ensemble');
 
