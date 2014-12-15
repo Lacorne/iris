@@ -159,6 +159,57 @@ function iris_config_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-info_dri-body'
+  $field_instances['node-info_dri-body'] = array(
+    'bundle' => 'info_dri',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'edit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'edit' => array(
+            'editor' => 'form',
+          ),
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Body',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => TRUE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-page2-body'
   $field_instances['node-page2-body'] = array(
     'bundle' => 'page2',
@@ -751,11 +802,31 @@ function iris_config_field_default_field_instances() {
     'settings' => array(
       'description_field' => 1,
       'file_directory' => '',
-      'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp swf avi mpeg mpg mov rm flv wmv 3gp mp4 dir dcr ogg mp3',
+      'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp swf avi mpeg mpg mov rm flv wmv 3gp mp4 dir dcr ogg mp3 7z',
+      'filefield_paths' => array(
+        'active_updating' => 0,
+        'file_name' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+        ),
+        'file_path' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '',
+        ),
+        'retroactive_update' => 0,
+      ),
+      'filefield_paths_enabled' => 1,
       'max_filesize' => '100 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'file',
       'settings' => array(
         'progress_indicator' => 'throbber',

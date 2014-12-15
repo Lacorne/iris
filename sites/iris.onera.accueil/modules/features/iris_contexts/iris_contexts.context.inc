@@ -68,12 +68,6 @@ function iris_contexts_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-6',
         ),
-        'block-6' => array(
-          'module' => 'block',
-          'delta' => '6',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
         'iris_blocks-footer_links' => array(
           'module' => 'iris_blocks',
           'delta' => 'footer_links',
@@ -107,6 +101,12 @@ function iris_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-infos_dri-block_dri' => array(
+          'module' => 'views',
+          'delta' => 'infos_dri-block_dri',
+          'region' => 'highlighted',
+          'weight' => '-10',
+        ),
         'views-in_situ-block_insitu' => array(
           'module' => 'views',
           'delta' => 'in_situ-block_insitu',

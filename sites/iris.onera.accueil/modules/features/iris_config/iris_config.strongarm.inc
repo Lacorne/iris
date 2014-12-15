@@ -43,7 +43,7 @@ function iris_config_strongarm() {
     'block-block-22' => '3',
     'block-block-23' => '3',
     'block-block-24' => '1',
-    'block-block-28' => '3',
+    'block-block-28' => '2',
     'block-block-25' => '1',
     'block-block-26' => '1',
     'block-block-27' => '1',
@@ -66,6 +66,26 @@ function iris_config_strongarm() {
   $strongarm->name = 'collapsiblock_slide_type';
   $strongarm->value = '1';
   $export['collapsiblock_slide_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__info_dri';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '2',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__info_dri'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -242,7 +262,7 @@ function iris_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'jquery_update_jquery_version';
-  $strongarm->value = '1.10';
+  $strongarm->value = '1.7';
   $export['jquery_update_jquery_version'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -322,6 +342,13 @@ function iris_config_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_info_dri';
+  $strongarm->value = array();
+  $export['node_options_info_dri'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_in_situ';
   $strongarm->value = array(
     0 => 'status',
@@ -351,6 +378,13 @@ function iris_config_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_info_dri';
+  $strongarm->value = '1';
+  $export['node_preview_info_dri'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_in_situ';
   $strongarm->value = '1';
   $export['node_preview_in_situ'] = $strongarm;
@@ -368,6 +402,13 @@ function iris_config_strongarm() {
   $strongarm->name = 'node_preview_story';
   $strongarm->value = '1';
   $export['node_preview_story'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_info_dri';
+  $strongarm->value = 0;
+  $export['node_submitted_info_dri'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -948,12 +989,12 @@ sites/all/libraries/superfish/sfsmallscreen.js';
     'default_logo' => 1,
     'logo_path' => '',
     'logo_upload' => '',
-    'default_favicon' => 1,
-    'favicon_path' => '',
-    'favicon_upload' => '',
+    'default_favicon' => 0,
+    'favicon_path' => 'public://favicon_1.ico',
     'collapsiblock_block' => 'div.block',
     'collapsiblock_title' => ':header:first',
     'collapsiblock_content' => 'div.content',
+    'favicon_mimetype' => 'image/vnd.microsoft.icon',
   );
   $export['theme_settings'] = $strongarm;
 

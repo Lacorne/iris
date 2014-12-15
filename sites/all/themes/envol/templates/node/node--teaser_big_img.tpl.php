@@ -15,6 +15,9 @@
       <?php if (isset($content['set_title']) && $content['set_title']): ?>
           <div class="node-type-title">
             <?php print $content['title_type']; ?>
+            <?php if ($variables['diffcreatednow']): ?>
+              <span class="new-content">Nouveau</span>
+            <?php endif; ?>
           </div>
       <?php endif; ?>
       <?php if ($title_prefix || $title_suffix || !$page && $title): ?>
