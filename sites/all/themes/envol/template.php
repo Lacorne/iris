@@ -865,3 +865,13 @@ function envol_url_outbound_alter(&$path, &$options, $original_path) {
     $options['external'] = TRUE;
   }
 }
+
+/**
+ * Implements hook_preprocess_pager().
+ */
+function envol_preprocess_pager(&$variables, $hook) {
+  $variables['tags'][0] = '◄◄';
+  $variables['tags'][1] = '◄';
+  $variables['tags'][3] = '►';
+  $variables['tags'][4] = '►►';
+}
