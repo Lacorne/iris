@@ -188,7 +188,7 @@ article
 #block-views-infos-dri-block-dri
   position relative
   box-sizing border-box
-  padding 25px 3px 3px
+  padding 25px 0 3px
   border solid 2px #b00606
   background #fff
   color #101010
@@ -197,21 +197,25 @@ article
     margin 0
   li
     margin 0
+  .links
+    padding 0 3px
   .node-readmore
     a
       color #13a0b2
       text-decoration none
   .contextual-links-region
     position initial
+  .content
+    margin-top -25px
   .block__title
     box-sizing border-box
     absolute top left
     color #fff
     padding 4px
-    background #b00606
+    /*background #b00606*/
     z-index 100
   .node__title
-    absolute top left right
+    position relative
     display block
     box-sizing border-box
     padding 4px 4px 4px 35px
@@ -220,8 +224,15 @@ article
     a
       color #000
       text-decoration none
+    &:before
+      display block
+      content " "
+      absolute top bottom left
+      background #b00606
+      width 31px
   .field-name-body
     margin-bottom 5px
+    padding 0 3px
 
 
 // Structure of home page

@@ -38,7 +38,8 @@
         absolute bottom -18px left 0 right 0
         text-align center
         transform scaleX(1.15)
-    .page-lefil &.active
+    .page-lefil &.active,
+    .page-archive &.active
       background color_magenta
       &:before
         color color_magenta
@@ -73,6 +74,7 @@
 
 // Gestion des couleurs quand l'active trail n'est pas en place
 .page-lefil,
+.page-archive,
 .node-type-story
   #navigation
     .menu li:nth-child(1) a

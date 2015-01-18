@@ -484,6 +484,13 @@ function envol_views_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'teaser_short';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Pied de page: Global : Zone de texte */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="http://iris.onera/envol/archive" class="more"><span>►►</span>Archives</a>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Critère de filtrage: Contenu : Publié */
@@ -791,6 +798,7 @@ function envol_views_views_default_views() {
     t('Page agenda'),
     t('Le fil home'),
     t('Le fil sur la Home'),
+    t('<a href="http://iris.onera/envol/archive" class="more"><span>►►</span>Archives</a>'),
     t('Agenda home'),
     t('Agenda sur la Home'),
     t('Agenda pour Iris'),
@@ -1226,7 +1234,7 @@ function envol_views_views_default_views() {
   /* Display: Autres articles invité */
   $handler = $view->new_display('block', 'Autres articles invité', 'other_invite');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Autres articles Analyse';
+  $handler->display->display_options['title'] = 'Autres articles Invité';
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
@@ -2024,7 +2032,7 @@ function envol_views_views_default_views() {
   $handler->display->display_options['path'] = 'une-journee-avec/liste';
 
   /* Display: Autres articles une journée avec (Principal) */
-  $handler = $view->new_display('block', 'Autres articles une journée avec (Principal)', 'other_unejourneeavec_home');
+  $handler = $view->new_display('block', 'Autres articles une journée avec (Principal)', 'other_journee_home');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Autres articles Une journée avec';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -2088,7 +2096,7 @@ function envol_views_views_default_views() {
   );
 
   /* Display: Autres articles une journée avec */
-  $handler = $view->new_display('block', 'Autres articles une journée avec', 'other_unejourneeavec');
+  $handler = $view->new_display('block', 'Autres articles une journée avec', 'other_journee');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Autres articles Une journée avec';
   $handler->display->display_options['defaults']['group_by'] = FALSE;
@@ -2237,6 +2245,450 @@ function envol_views_views_default_views() {
     t('Autres articles une journée avec'),
   );
   $export['rubriques'] = $view;
+
+  $view = new view();
+  $view->name = 'archive';
+  $view->description = 'Display a list of months that link to content for that month.';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Archive';
+  $view->core = 0;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Monthly archive';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'plus';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'node';
+  /* Pied de page: Global : Zone de texte */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  /* Critère de tri: Contenu : Date de publication */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filtre contextuel: Contenu : Année + mois de création */
+  $handler->display->display_options['arguments']['created_year_month']['id'] = 'created_year_month';
+  $handler->display->display_options['arguments']['created_year_month']['table'] = 'node';
+  $handler->display->display_options['arguments']['created_year_month']['field'] = 'created_year_month';
+  $handler->display->display_options['arguments']['created_year_month']['default_action'] = 'summary';
+  $handler->display->display_options['arguments']['created_year_month']['exception']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_year_month']['exception']['title'] = 'Tout';
+  $handler->display->display_options['arguments']['created_year_month']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_year_month']['title'] = '%1';
+  $handler->display->display_options['arguments']['created_year_month']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['created_year_month']['summary']['sort_order'] = 'desc';
+  $handler->display->display_options['arguments']['created_year_month']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['created_year_month']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['created_year_month']['summary_options']['items_per_page'] = '30';
+  $handler->display->display_options['arguments']['created_year_month']['specify_validation'] = TRUE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'story' => 'story',
+  );
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_archive');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '30';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Filtre contextuel: Contenu : Année + mois de création */
+  $handler->display->display_options['arguments']['created_year_month']['id'] = 'created_year_month';
+  $handler->display->display_options['arguments']['created_year_month']['table'] = 'node';
+  $handler->display->display_options['arguments']['created_year_month']['field'] = 'created_year_month';
+  $handler->display->display_options['arguments']['created_year_month']['default_action'] = 'summary';
+  $handler->display->display_options['arguments']['created_year_month']['exception']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_year_month']['exception']['title'] = 'Tout';
+  $handler->display->display_options['arguments']['created_year_month']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_year_month']['title'] = '%1';
+  $handler->display->display_options['arguments']['created_year_month']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['created_year_month']['summary']['sort_order'] = 'desc';
+  $handler->display->display_options['arguments']['created_year_month']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['created_year_month']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['created_year_month']['summary_options']['override'] = TRUE;
+  $handler->display->display_options['arguments']['created_year_month']['summary_options']['items_per_page'] = '30';
+  $handler->display->display_options['arguments']['created_year_month']['specify_validation'] = TRUE;
+  $handler->display->display_options['path'] = 'archive';
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Critère de tri: Contenu : Date de publication */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Filtre contextuel: Contenu : Année + mois de création */
+  $handler->display->display_options['arguments']['created_year_month']['id'] = 'created_year_month';
+  $handler->display->display_options['arguments']['created_year_month']['table'] = 'node';
+  $handler->display->display_options['arguments']['created_year_month']['field'] = 'created_year_month';
+  $handler->display->display_options['arguments']['created_year_month']['default_action'] = 'summary';
+  $handler->display->display_options['arguments']['created_year_month']['exception']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_year_month']['exception']['title'] = 'Tout';
+  $handler->display->display_options['arguments']['created_year_month']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_year_month']['title'] = '%1';
+  $handler->display->display_options['arguments']['created_year_month']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['created_year_month']['summary']['sort_order'] = 'desc';
+  $handler->display->display_options['arguments']['created_year_month']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['created_year_month']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['created_year_month']['summary_options']['items_per_page'] = '30';
+  $handler->display->display_options['arguments']['created_year_month']['specify_validation'] = TRUE;
+
+  /* Display: Archive pour Iris */
+  $handler = $view->new_display('page', 'Archive pour Iris', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Archives';
+  $handler->display->display_options['display_description'] = 'Archive affiché sur le site Iris';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Pied de page: Global : Zone de texte */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="http://iris.onera/envol/archive" class="menubutton">Toutes les archives</a>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Filtre contextuel: Contenu : Année + mois de création */
+  $handler->display->display_options['arguments']['created_year_month']['id'] = 'created_year_month';
+  $handler->display->display_options['arguments']['created_year_month']['table'] = 'node';
+  $handler->display->display_options['arguments']['created_year_month']['field'] = 'created_year_month';
+  $handler->display->display_options['arguments']['created_year_month']['default_action'] = 'summary';
+  $handler->display->display_options['arguments']['created_year_month']['exception']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_year_month']['exception']['title'] = 'Tout';
+  $handler->display->display_options['arguments']['created_year_month']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['created_year_month']['title'] = '%1';
+  $handler->display->display_options['arguments']['created_year_month']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['created_year_month']['summary']['sort_order'] = 'desc';
+  $handler->display->display_options['arguments']['created_year_month']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['created_year_month']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['created_year_month']['summary_options']['items_per_page'] = '30';
+  $handler->display->display_options['arguments']['created_year_month']['specify_validation'] = TRUE;
+  $handler->display->display_options['path'] = 'dist/archive';
+  $translatables['archive'] = array(
+    t('Master'),
+    t('Monthly archive'),
+    t('plus'),
+    t('Appliquer'),
+    t('Réinitialiser'),
+    t('Trier par'),
+    t('Asc'),
+    t('Desc'),
+    t('Éléments par page'),
+    t('- Tout -'),
+    t('Décalage'),
+    t('« premier'),
+    t('‹ précédent'),
+    t('suivant ›'),
+    t('dernier »'),
+    t('Tout'),
+    t('%1'),
+    t('Page'),
+    t('Block'),
+    t('Archive pour Iris'),
+    t('Archives'),
+    t('Archive affiché sur le site Iris'),
+    t('<a href="http://iris.onera/envol/archive" class="menubutton">Toutes les archives</a>'),
+  );
+  $export['archive'] = $view;
+
+  $view = new view();
+  $view->name = 'feeds_log';
+  $view->description = 'Feeds log displays for overview, standalone importers and feed nodes.';
+  $view->tag = 'Feeds';
+  $view->base_table = 'feeds_log';
+  $view->human_name = '';
+  $view->core = 0;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Defaults */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'plus';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'administer feeds';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '50';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'log_time' => 'log_time',
+    'request_time' => 'request_time',
+    'message' => 'message',
+    'severity' => 'severity',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'log_time' => array(
+      'sortable' => 0,
+      'align' => '',
+      'separator' => '',
+    ),
+    'request_time' => array(
+      'sortable' => 0,
+      'align' => '',
+      'separator' => '',
+    ),
+    'message' => array(
+      'align' => '',
+      'separator' => '',
+    ),
+    'severity' => array(
+      'align' => '',
+      'separator' => '',
+    ),
+  );
+  /* Comportement en l'absence de résultats: Global : Zone de texte */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['content'] = 'There are no log messages.';
+  $handler->display->display_options['empty']['area']['format'] = '1';
+  /* Champ: Feeds log : Log time */
+  $handler->display->display_options['fields']['log_time']['id'] = 'log_time';
+  $handler->display->display_options['fields']['log_time']['table'] = 'feeds_log';
+  $handler->display->display_options['fields']['log_time']['field'] = 'log_time';
+  $handler->display->display_options['fields']['log_time']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['log_time']['custom_date_format'] = 'Y-m-d H:i:s';
+  /* Champ: Feeds log : Request time */
+  $handler->display->display_options['fields']['request_time']['id'] = 'request_time';
+  $handler->display->display_options['fields']['request_time']['table'] = 'feeds_log';
+  $handler->display->display_options['fields']['request_time']['field'] = 'request_time';
+  $handler->display->display_options['fields']['request_time']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['request_time']['custom_date_format'] = 'Y-m-d H:i:s';
+  /* Champ: Feeds log : Log message */
+  $handler->display->display_options['fields']['message']['id'] = 'message';
+  $handler->display->display_options['fields']['message']['table'] = 'feeds_log';
+  $handler->display->display_options['fields']['message']['field'] = 'message';
+  $handler->display->display_options['fields']['message']['label'] = 'Message';
+  /* Champ: Feeds log : Severity */
+  $handler->display->display_options['fields']['severity']['id'] = 'severity';
+  $handler->display->display_options['fields']['severity']['table'] = 'feeds_log';
+  $handler->display->display_options['fields']['severity']['field'] = 'severity';
+  $handler->display->display_options['fields']['severity']['label'] = 'Importance';
+  /* Critère de tri: Feeds log : Log time */
+  $handler->display->display_options['sorts']['log_time']['id'] = 'log_time';
+  $handler->display->display_options['sorts']['log_time']['table'] = 'feeds_log';
+  $handler->display->display_options['sorts']['log_time']['field'] = 'log_time';
+  $handler->display->display_options['sorts']['log_time']['order'] = 'DESC';
+  /* Filtre contextuel: Feeds log : Importer id */
+  $handler->display->display_options['arguments']['id']['id'] = 'id';
+  $handler->display->display_options['arguments']['id']['table'] = 'feeds_log';
+  $handler->display->display_options['arguments']['id']['field'] = 'id';
+  $handler->display->display_options['arguments']['id']['default_action'] = 'empty';
+  $handler->display->display_options['arguments']['id']['exception']['title'] = 'Tout';
+  $handler->display->display_options['arguments']['id']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['id']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['id']['validate']['fail'] = 'empty';
+  $handler->display->display_options['arguments']['id']['limit'] = '0';
+  /* Critère de filtrage: Feeds log : Feed node id */
+  $handler->display->display_options['filters']['feed_nid']['id'] = 'feed_nid';
+  $handler->display->display_options['filters']['feed_nid']['table'] = 'feeds_log';
+  $handler->display->display_options['filters']['feed_nid']['field'] = 'feed_nid';
+  $handler->display->display_options['filters']['feed_nid']['value']['value'] = '0';
+  /* Critère de filtrage: Feeds log : Severity */
+  $handler->display->display_options['filters']['severity']['id'] = 'severity';
+  $handler->display->display_options['filters']['severity']['table'] = 'feeds_log';
+  $handler->display->display_options['filters']['severity']['field'] = 'severity';
+  $handler->display->display_options['filters']['severity']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['severity']['expose']['operator_id'] = 'severity_op';
+  $handler->display->display_options['filters']['severity']['expose']['label'] = 'Severity';
+  $handler->display->display_options['filters']['severity']['expose']['operator'] = 'severity_op';
+  $handler->display->display_options['filters']['severity']['expose']['identifier'] = 'severity';
+
+  /* Display: Standalone importer page */
+  $handler = $view->new_display('page', 'Standalone importer page', 'page_1');
+  $handler->display->display_options['path'] = 'import/%/log';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Log';
+  $handler->display->display_options['menu']['weight'] = '0';
+
+  /* Display: Feed node page */
+  $handler = $view->new_display('page', 'Feed node page', 'page_2');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Filtre contextuel: Feeds log : Feed node id */
+  $handler->display->display_options['arguments']['feed_nid']['id'] = 'feed_nid';
+  $handler->display->display_options['arguments']['feed_nid']['table'] = 'feeds_log';
+  $handler->display->display_options['arguments']['feed_nid']['field'] = 'feed_nid';
+  $handler->display->display_options['arguments']['feed_nid']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['feed_nid']['exception']['title'] = 'Tout';
+  $handler->display->display_options['arguments']['feed_nid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['feed_nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Feeds log : Severity */
+  $handler->display->display_options['filters']['severity']['id'] = 'severity';
+  $handler->display->display_options['filters']['severity']['table'] = 'feeds_log';
+  $handler->display->display_options['filters']['severity']['field'] = 'severity';
+  $handler->display->display_options['filters']['severity']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['severity']['expose']['operator_id'] = 'severity_op';
+  $handler->display->display_options['filters']['severity']['expose']['label'] = 'Severity';
+  $handler->display->display_options['filters']['severity']['expose']['operator'] = 'severity_op';
+  $handler->display->display_options['filters']['severity']['expose']['identifier'] = 'severity';
+  $handler->display->display_options['path'] = 'node/%/log';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Log';
+  $handler->display->display_options['menu']['weight'] = '12';
+
+  /* Display: All entries */
+  $handler = $view->new_display('page', 'All entries', 'page_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Feeds log';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relation: Feeds log : Feed node */
+  $handler->display->display_options['relationships']['feed_nid']['id'] = 'feed_nid';
+  $handler->display->display_options['relationships']['feed_nid']['table'] = 'feeds_log';
+  $handler->display->display_options['relationships']['feed_nid']['field'] = 'feed_nid';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Feeds log : Log time */
+  $handler->display->display_options['fields']['log_time']['id'] = 'log_time';
+  $handler->display->display_options['fields']['log_time']['table'] = 'feeds_log';
+  $handler->display->display_options['fields']['log_time']['field'] = 'log_time';
+  $handler->display->display_options['fields']['log_time']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['log_time']['custom_date_format'] = 'Y-m-d H:i:s';
+  /* Champ: Feeds log : Request time */
+  $handler->display->display_options['fields']['request_time']['id'] = 'request_time';
+  $handler->display->display_options['fields']['request_time']['table'] = 'feeds_log';
+  $handler->display->display_options['fields']['request_time']['field'] = 'request_time';
+  $handler->display->display_options['fields']['request_time']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['request_time']['custom_date_format'] = 'Y-m-d H:i:s';
+  /* Champ: Feeds log : Log message */
+  $handler->display->display_options['fields']['message']['id'] = 'message';
+  $handler->display->display_options['fields']['message']['table'] = 'feeds_log';
+  $handler->display->display_options['fields']['message']['field'] = 'message';
+  $handler->display->display_options['fields']['message']['label'] = 'Message';
+  /* Champ: Feeds log : Severity */
+  $handler->display->display_options['fields']['severity']['id'] = 'severity';
+  $handler->display->display_options['fields']['severity']['table'] = 'feeds_log';
+  $handler->display->display_options['fields']['severity']['field'] = 'severity';
+  $handler->display->display_options['fields']['severity']['label'] = 'Importance';
+  /* Champ: Feeds log : Importer name */
+  $handler->display->display_options['fields']['importer_name']['id'] = 'importer_name';
+  $handler->display->display_options['fields']['importer_name']['table'] = 'feeds_log';
+  $handler->display->display_options['fields']['importer_name']['field'] = 'importer_name';
+  $handler->display->display_options['fields']['importer_name']['label'] = 'Importer';
+  $handler->display->display_options['fields']['importer_name']['link'] = '2';
+  /* Champ: Contenu : Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'feed_nid';
+  $handler->display->display_options['fields']['title']['label'] = 'Feed node';
+  $handler->display->display_options['fields']['title']['alter']['max_length'] = '40';
+  $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Feeds log : Severity */
+  $handler->display->display_options['filters']['severity']['id'] = 'severity';
+  $handler->display->display_options['filters']['severity']['table'] = 'feeds_log';
+  $handler->display->display_options['filters']['severity']['field'] = 'severity';
+  $handler->display->display_options['filters']['severity']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['severity']['expose']['operator_id'] = 'severity_op';
+  $handler->display->display_options['filters']['severity']['expose']['label'] = 'Severity';
+  $handler->display->display_options['filters']['severity']['expose']['operator'] = 'severity_op';
+  $handler->display->display_options['filters']['severity']['expose']['identifier'] = 'severity';
+  $handler->display->display_options['path'] = 'admin/reports/feeds';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Feeds log';
+  $handler->display->display_options['menu']['description'] = 'Review log messages of imports and subscriptions to feeds.';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'management';
+  $translatables['feeds_log'] = array(
+    t('Defaults'),
+    t('plus'),
+    t('Appliquer'),
+    t('Réinitialiser'),
+    t('Trier par'),
+    t('Asc'),
+    t('Desc'),
+    t('Éléments par page'),
+    t('- Tout -'),
+    t('Décalage'),
+    t('« premier'),
+    t('‹ précédent'),
+    t('suivant ›'),
+    t('dernier »'),
+    t('There are no log messages.'),
+    t('Log time'),
+    t('Request time'),
+    t('Message'),
+    t('Importance'),
+    t('Tout'),
+    t('Severity'),
+    t('Standalone importer page'),
+    t('Feed node page'),
+    t('All entries'),
+    t('Feeds log'),
+    t('Feed node'),
+    t('Importer'),
+  );
+  $export['feeds_log'] = $view;
 
   return $export;
 }
