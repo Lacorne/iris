@@ -221,7 +221,8 @@
     ul
       padding 0
     li
-      list-style square
+      list-style none
+      position relative
       color #fff
       margin-bottom 10px
       padding-bottom 10px
@@ -231,10 +232,16 @@
       clearfix()
       .views-field
         float left
-        margin-top -14px
+        /*margin-top -14px*/
       .views-field-field-date
         width 35%
         color #ccfd01
+        &:before
+          content "■"
+          absolute top left
+          color #fff
+          font-size .7em
+          margin-left -1.5em
       .views-field-title
         width 65%
         a

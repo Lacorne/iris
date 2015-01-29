@@ -35,7 +35,7 @@
 
         //var func = multiline ? height : width;
         var func = multiline ? height : width;
-        
+
         while (text.length > 0 && func()) {
           text = text.substr(0, text.length - 1);
           t.html(text + "...");
@@ -47,22 +47,34 @@
     });
   };
 
-  
+
   $(document).ready(function() {
 
     //find first node of Envol
     var
       envolNews = $('.envol-last-news');
-      firstNodeEnvol = envolNews.find('.node:first')
+      firstNodeEnvol = envolNews.find('.node:first'),
+      viewArchive = $('.view-display-id-archive_iris')
     ;
     if(firstNodeEnvol.length) {
       envolNews.addClass(firstNodeEnvol.attr('class').split(' ')[2]);
     }
 
+    if (viewArchive.length) {
+      viewArchive.find('.view-content').css({'display':'none'});
+      viewArchive.find('.view-footer').appendTo('.view-display-id-archive_iris .view-content');
+      viewArchive.on('click', '.block-title', function(e) {
+        e.preventDefault();
+        self = $(this);
+        self.toggleClass('collapsiblockCollapsed');
+        viewArchive.find('.view-content').slideToggle();
+      });
+    }
+
     /*
     //Cut chapô
     var containerShortNew = $('.front .view-listescontenus:not(.view-display-id-first_news) .view-mode-teaser_small_img');
-    var 
+    var
       fieldBodyShortNew,
       titleShortNew,
       imgShortNew,

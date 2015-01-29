@@ -14,13 +14,23 @@
 
   $(document).ready(function() {
 
-    var minExperts = $('.wrapper-experts');
-    var allExperts = $('.wrapper-experts-complete');
-    var close = $('.close');
+    var minExperts = $('.wrapper-experts'),
+        wPage = $('.wrapper-focus, wrapper-analyse, wrapper-invite, wrapper-ensemble, wrapper-journee'),
+        hWPage = wPage.outerHeight(true),
+        allExperts = $('.wrapper-experts-complete'),
+        close = $('.close'),
+        isHeightFocusModified = false,
+        hAllExperts
+    ;
 
     minExperts.on('click', function(e) {
       e.preventDefault();
       allExperts.fadeIn('slow', function(){
+        hAllExperts = allExperts.find('.field-collection-container').outerHeight(true) + allExperts.find('.node-title').outerHeight(true) + allExperts.find('.wrapper-close-button').outerHeight(true);
+        if (hAllExperts > hWPage) {
+          isHeightFocusModified = true;
+          wPage.css({'height': hAllExperts + 'px'});
+        }
         $("html, body").animate({ scrollTop: 0 }, "slow");
       });
     });
@@ -28,6 +38,9 @@
     close.on('click', function(e) {
       e.preventDefault();
       allExperts.fadeOut('slow');
+      if (isHeightFocusModified) {
+        wPage.css({'height':''});
+      }
     });
 
   });

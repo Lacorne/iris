@@ -102,6 +102,9 @@
 
     <?php
       // Render the sidebars to see if there's anything in them.
+      //var_dump($page['content']['archive']);
+      //$page['sidebar_first']['archive'] = $page['content']['archive'];
+      //var_dump($page['sidebar_first']); die;
       $sidebar_first  = render($page['sidebar_first']);
       $sidebar_second = render($page['sidebar_second']);
     ?>
@@ -125,7 +128,7 @@
               </div>
             </div>
           <?php endif; ?>
-          
+
         </section>
         <?php print $sidebar_second; ?>
       </aside>

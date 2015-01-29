@@ -2279,6 +2279,10 @@ function envol_views_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
+  /* Entête: Global : Zone de texte */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
   /* Pied de page: Global : Zone de texte */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
@@ -2382,20 +2386,36 @@ function envol_views_views_default_views() {
   $handler->display->display_options['arguments']['created_year_month']['specify_validation'] = TRUE;
 
   /* Display: Archive pour Iris */
-  $handler = $view->new_display('page', 'Archive pour Iris', 'page_1');
+  $handler = $view->new_display('page', 'Archive pour Iris', 'archive_iris');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Archives';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'collapsiblock-processed';
   $handler->display->display_options['display_description'] = 'Archive affiché sur le site Iris';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '12';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['class'] = 'content';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Entête: Global : Zone de texte */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="block__title block-title collapsiblock collapsiblockCollapsed"><a href="#" role="link">Archives</a></h2>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Pied de page: Global : Zone de texte */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<a href="http://iris.onera/envol/archive" class="menubutton">Toutes les archives</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="http://iris.onera/envol/archive" class="menubutton"><span>►►</span> Toutes les archives</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Filtre contextuel: Contenu : Année + mois de création */
@@ -2411,6 +2431,8 @@ function envol_views_views_default_views() {
   $handler->display->display_options['arguments']['created_year_month']['summary']['sort_order'] = 'desc';
   $handler->display->display_options['arguments']['created_year_month']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['created_year_month']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['created_year_month']['summary_options']['base_path'] = 'envol/archive';
+  $handler->display->display_options['arguments']['created_year_month']['summary_options']['count'] = FALSE;
   $handler->display->display_options['arguments']['created_year_month']['summary_options']['items_per_page'] = '30';
   $handler->display->display_options['arguments']['created_year_month']['specify_validation'] = TRUE;
   $handler->display->display_options['path'] = 'dist/archive';
@@ -2437,7 +2459,8 @@ function envol_views_views_default_views() {
     t('Archive pour Iris'),
     t('Archives'),
     t('Archive affiché sur le site Iris'),
-    t('<a href="http://iris.onera/envol/archive" class="menubutton">Toutes les archives</a>'),
+    t('<h2 class="block__title block-title collapsiblock collapsiblockCollapsed"><a href="#" role="link">Archives</a></h2>'),
+    t('<a href="http://iris.onera/envol/archive" class="menubutton"><span>►►</span> Toutes les archives</a>'),
   );
   $export['archive'] = $view;
 

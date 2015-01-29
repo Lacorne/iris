@@ -235,39 +235,50 @@ function iris_preprocess_page(&$variables, $hook) {
   // le fil from envol
   // last articles form envol
   // Agenda from envol
+  // Archive from envol
   if ($variables['is_front']) {
     switch ($base_url) {
       case 'http://iris.onera':
         $lefil = drupal_http_request($base_url . '/envol/dist/lefil?ajax=1');
         $envol = drupal_http_request($base_url . '/envol/dist/envol?ajax=1');
         $agenda = drupal_http_request($base_url . '/envol/dist/agenda?ajax=1');
+        $archive = drupal_http_request($base_url . '/envol/dist/archive?ajax=1');
         break;
       case 'http://iris.onera:8086':
         $lefil = drupal_http_request($base_url . '/envol/dist/lefil?ajax=1');
         $envol = drupal_http_request($base_url . '/envol/dist/envol?ajax=1');
         $agenda = drupal_http_request($base_url . '/envol/dist/agenda?ajax=1');
+        $archive = drupal_http_request($base_url . '/envol/dist/archive?ajax=1');
         break;
       case 'http://iris.local':
         $lefil = drupal_http_request('http://iris.envol.local/dist/lefil?ajax=1');
         $envol = drupal_http_request('http://iris.envol.local/dist/envol?ajax=1');
         $agenda = drupal_http_request('http://iris.envol.local/dist/agenda?ajax=1');
+        $archive = drupal_http_request('http://iris.envol.local/dist/archive?ajax=1');
         break;
       case 'http://iris.accueil.local':
         $lefil = drupal_http_request('http://iris.envol.local/dist/lefil?ajax=1');
         $envol = drupal_http_request('http://iris.envol.local/dist/envol?ajax=1');
         $agenda = drupal_http_request('http://iris.envol.local/dist/agenda?ajax=1');
+        $archive = drupal_http_request('http://iris.envol.local/dist/archive?ajax=1');
         break;
       default:
         $lefil = drupal_http_request($base_url . '/envol/dist/lefil?ajax=1');
         $envol = drupal_http_request($base_url . '/envol/dist/envol?ajax=1');
         $agenda = drupal_http_request($base_url . '/envol/dist/agenda?ajax=1');
+        $archive = drupal_http_request($base_url . '/envol/dist/archive?ajax=1');
         break;
     }
     if (isset($lefil) && !empty($lefil)) $variables['page']['content']['lefil'] = $lefil->data;
     if (isset($envol) && !empty($envol)) $variables['page']['content']['envol'] = $envol->data;
     if (isset($agenda) && !empty($agenda) && strpos($agenda->data, 'pas de résultat') === false) $variables['page']['content']['agenda'] = $agenda->data;
+    if (isset($archive) && !empty($archive)) $variables['page']['content']['archive'] = $archive->data;
   }
-
+  $variables['page']['sidebar_first']['archive'] = array(
+    '#weight' => 100,
+    '#markup' => $archive->data,
+    '#title' => 'Transports',
+  );
   //krumo($variables['page']);
 }
 
@@ -520,6 +531,7 @@ function iris_process_block(&$variables, $hook) {
  *   Nested array of renderable elements that make up the page.
  */
 function iris_page_alter(&$page) {
+
   // Look in each visible region for blocks.
   foreach (system_region_list($GLOBALS['theme'], REGIONS_VISIBLE) as $region => $name) {
     if (!empty($page[$region])) {
@@ -533,6 +545,7 @@ function iris_page_alter(&$page) {
       }
     }
   }
+
 }
 
 /**
