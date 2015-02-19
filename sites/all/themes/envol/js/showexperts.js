@@ -15,7 +15,7 @@
   $(document).ready(function() {
 
     var minExperts = $('.wrapper-experts'),
-        wPage = $('.wrapper-focus, wrapper-analyse, wrapper-invite, wrapper-ensemble, wrapper-journee'),
+        wPage = $('.wrapper-focus, .wrapper-analyse, .wrapper-invite, .wrapper-ensemble, .wrapper-journee'),
         hWPage = wPage.outerHeight(true),
         allExperts = $('.wrapper-experts-complete'),
         close = $('.close'),
